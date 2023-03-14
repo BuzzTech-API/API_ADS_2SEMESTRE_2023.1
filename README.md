@@ -1,7 +1,3 @@
-
-# API_ADS_2SEMESTE_2023.1
-
-
 <p align="center">
       <img src="/doc/frontend/logo-BuzzTech.png" alt="logo da Buzz Tech" width="200">
       <h2 align="center"> Buzz Tech</h2>
@@ -30,12 +26,9 @@
 <br>
 
 <h4 align="center">
- <a href="https://docs.python.org/3/"><img src = "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/></a>
- <a href="https://www.w3schools.com/tags/tag_doctype.asp"><img src = "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
- <a href="https://www.w3schools.com/css/"><img src = "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/></a>
- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><img src = "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/></a>
- <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/"><img src = "https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/></a>
- <a href="https://flask.palletsprojects.com/en/2.2.x/"><img src = "https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"/></a>
+ <a href="https://docs.oracle.com/en/java/"><img src = "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/></a>
+ <a href="https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html"><img src = "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
+ <a href="https://help.figma.com/hc/en-us"><img src = "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/></a>
  <a href="https://docs.github.com/pt"><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
  <a href="https://dev.mysql.com/doc/"><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
 </h4>
@@ -45,25 +38,25 @@
 <br>
 <br>
 
-> Status do Projeto: Em Processo! :white_check_mark:
+> Status do Projeto: Em Construção! :construction:
 
 <br>
 
 
 
-### 	:art: Identificações visuais
+### :bust_in_silhouette: Cadastro das Turmas
 
 <img src="doc/sprints/sprint4/img/idVisual.gif" alt="aprimoramento da identidade visual" style="zoom: 150%;" />
 
 
 
-### :telephone: Contatos
+### :bust_in_silhouette: Cadastro dos Alunos
 
 <img src="doc/sprints/sprint4/img/contatos.gif" alt="criação da páginad de contatos" style="zoom: 150%;" />
 
 
 
-### 	:traffic_light: Modificar status
+### :pencil: Cadastro das Notas
 
 <img src="doc/sprints/sprint4/img/status.gif" alt="modificação do status do chamado" style="zoom: 150%;" />
 
@@ -96,14 +89,14 @@ Toda a documentação de desenvolvimento deverá ser lastreada no GitHub com tod
  > *Requisitos Funcionais*
 
 - [x] Linguagem Java (Requisito Fatec)
-- [x] Plataforma de Software Multimídia JavaFX 
+- [x] Interface GUI no Java - Swing
 - [x] Editor Online Figma
 - [x] Apresentação via Github.
 - [x] O aplicativo desktop deverá ser intuitivo e não ter poluições de informações, isso deverá ser uma preocupação constante dos desenvolvedores sugestões de controles serão bem-vindas e bem avaliadas.
 
  > *Requisitos Não Funcionais*
 
-- [x] Github
+- [x] Sistema de gerenciamento de banco de dados - MySQL
 
 <br>
 
@@ -145,13 +138,13 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 
 
-🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em construção :white_check_mark:
+🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em construção :construction:
 
-🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Em construção :white_check_mark:
+🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Em construção :construction:
 
-🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Em construção :white_check_mark:
+🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Em construção :construction:
 
-🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Em construção :white_check_mark:
+🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Em construção :construction:
 
 <br>
 
@@ -210,7 +203,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | Danilo Rodrigues | Desenvolvedor | <a href="https://github.com/Circerion"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/danilo-baptistella-5757aa20a"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Giuliano Bianco  | Desenvolvedor | <a href="https://github.com/giuliano-marcus-bianco"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/giuliano-marcus-bianco/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Joice de Araújo  | Desenvolvedor | <a href="https://github.com/Joice-Araujo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/joice-aparecida-581226250"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Jacqueline | Desenvolvedor | <a href=""><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Jacqueline Bezerra | Desenvolvedor | <a href="https://github.com/jxcqln"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/jacqueline-mariane"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Vitor Lima  | Desenvolvedor | <a href="https://github.com/lima2206"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vitor-spricigo-lima-84a377184"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 
 <br>
