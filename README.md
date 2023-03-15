@@ -188,6 +188,11 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | US01<a id='us01'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
 | US02<a id='us02'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
 | US03<a id='us03'></a> | Catarina, professora, precisa cadastrar as notas das provas e trabalhos dos alunos de acordo com cada bimestre. |
+| US04<a id='us04'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no software. |
+| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no software. |
+| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir as notas já cadastradas no software. |
+| US07<a id='us07'></a> | Catarina, professora, precisa de um ambiente no qual os dados cadastrados fiquem armazenados no aplicativo. |
+| US08<a id='us08'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das notas já lançadas para ter um controle das atividades que ainda faltam entregar e para participar das reuniões com a coordenação. |
 
 <br>
 
