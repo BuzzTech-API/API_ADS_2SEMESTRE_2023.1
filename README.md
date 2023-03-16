@@ -68,15 +68,15 @@
 
 
 
-Desenvolver um **Aplicativo Desktop em Java** que automatize o controle de notas para professores de uma escola estadual. Para que os desenvolvedores iniciem o aplicativo, é preciso definir os requisitos do sistema, que incluem:
+Desenvolver um **Programa Desktop em Java** que automatize o controle de atividades avaliativas para professores de uma escola estadual. Para que os desenvolvedores iniciem o software, é preciso definir os requisitos do sistema, que incluem:
 
 - Cadastro das turmas e seus respectivos alunos;
 - Registro dos instrumentos avaliativos da disciplina;
-- Cálculo da média das notas da turma e dos alunos;
+- Cálculo da média das atividades entregues da turma e dos alunos;
 - Geração de relatórios de desempenho dos alunos por disciplina;
 - Interface gráfica intuitiva e fácil de usar.
 
-Toda a documentação de desenvolvimento deverá ser lastreada no GitHub com todos os processos necessários para a fidelização do cliente.
+
 
 <br>
 
@@ -92,7 +92,7 @@ Toda a documentação de desenvolvimento deverá ser lastreada no GitHub com tod
 - [x] Interface GUI no Java - Swing
 - [x] Editor Online Figma
 - [x] Apresentação via Github.
-- [x] O aplicativo desktop deverá ser intuitivo e não ter poluições de informações, isso deverá ser uma preocupação constante dos desenvolvedores sugestões de controles serão bem-vindas e bem avaliadas.
+- [x] O programa desktop deverá ser intuitivo e sem excesso de informações.
 
  > *Requisitos Não Funcionais*
 
@@ -129,7 +129,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 - Cadastrar turmas;
 - Cadastrar alunos;
-- Cadastrar notas de provas e trabalhos;
+- Cadastrar atividades;
 
 
 <br>
@@ -185,14 +185,16 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 |          ID           |                     História de Usuário                      |
 | :-------------------: | :----------------------------------------------------------: |
-| US01<a id='us01'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
-| US02<a id='us02'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
-| US03<a id='us03'></a> | Catarina, professora, precisa cadastrar as notas das provas e trabalhos dos alunos de acordo com cada bimestre. |
-| US04<a id='us04'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no software. |
-| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no software. |
-| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir as notas já cadastradas no software. |
-| US07<a id='us07'></a> | Catarina, professora, precisa de um ambiente no qual os dados cadastrados fiquem armazenados no aplicativo. |
-| US08<a id='us08'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das notas já lançadas para ter um controle das atividades que ainda faltam entregar e para participar das reuniões com a coordenação. |
+| US01<a id='us01'></a> | Catarina, professora, precisa de uma interface gráfica ágil e prática para interagir com o programa. |
+| US02<a id='us02'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
+| US03<a id='us03'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
+| US04<a id='us04'></a> | Catarina, professora, precisa cadastrar as atividades realizadas pelos alunos de acordo com cada bimestre. |
+| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no programa. |
+| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
+| US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
+| US08<a id='us08'></a> | Catarina, professora, precisa de um ambiente de armazenamento virtual seguro para acumular todas as informações cadastradas. |
+| US09<a id='us09'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
 
 <br>
 
