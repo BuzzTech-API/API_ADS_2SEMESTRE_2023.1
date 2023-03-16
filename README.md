@@ -188,7 +188,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | US01<a id='us01'></a> | Catarina, professora, precisa de uma interface gráfica ágil e prática para interagir com o programa. |
 | US02<a id='us02'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
 | US03<a id='us03'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
-| US04<a id='us04'></a> | Catarina, professora, precisa cadastrar as atividades realizadas pelos alunos de acordo com cada bimestre. |
+| US04<a id='us04'></a> | Catarina, professora, precisa cadastrar as atividades realizadas pelos seus alunos. |
 | US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no programa. |
 | US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
 | US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
