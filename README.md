@@ -72,9 +72,9 @@ Desenvolver um **Programa Desktop em Java** que automatize o controle de ativida
 
 - Cadastro das turmas e seus respectivos alunos;
 - Registro dos instrumentos avaliativos da disciplina;
-- Cálculo da média das atividades entregues da turma e dos alunos;
-- Geração de relatórios de desempenho dos alunos por disciplina;
-- Interface gráfica intuitiva e fácil de usar.
+- Cálculo da média das atividades entregues das turmas e dos alunos;
+- Interface gráfica intuitiva e fácil de visualizar o desempenho dos alunos na disciplina.
+
 
 
 
@@ -125,7 +125,7 @@ Para embasar a tomada de decisão e priorizar as tarefas com maior entrega de va
 
 
 
-A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética, porém funcional, do aplicativo desktop para controle de notas de uma escola estadual. Nele o usuário poderá inserir as seguintes informações:
+A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética, porém funcional, do programa desktop para controle das atividades dos alunos de uma escola estadual. Nele o usuário poderá inserir as seguintes informações:
 
 - Cadastrar turmas;
 - Cadastrar alunos;
