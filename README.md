@@ -154,12 +154,15 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 |                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
-|                Cadastro das turmas                | Criação do protótipo do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Média    |   1    |          4h           | :construction: |
-|            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :construction: |
-|         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Alta    |   1    |          20h          | :construction: |
+|                Montagem do Wireframe                | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :construction: |
+|                Cadastro das turmas                | Criação do protótipo do software que cadastra as turmas. | <a href='#us02'>US02</a> |   Média    |   1    |          4h           | :construction: |
+|            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :construction: |
+|         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Alta    |   1    |          20h          | :construction: |
 |                Diagrama de Classe das Turmas                | Desenvolver o Diagrama de Classes das turmas em Java. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a> |   Média    |   1    |          4h           | :construction: |
 |                Diagrama de Classe dos Alunos                | Desenvolver o Diagrama de Classes dos alunos em Java. Este diagrama mostra a relação entre as classes Alunos, Turmas e Atividades e os atributos e métodos de cada uma. | <a href='#us03'>US03</a> |   Média    |   1    |          4h           | :construction: |
 |                Diagrama de Classe das Atividades                | Desenvolver o Diagrama de Classes das Atividades em Java. Este diagrama mostra a relação entre as classes Atividades, Turmas e Alunos e os atributos e métodos de cada uma. | <a href='#us04'>US04</a> |   Média    |   1    |          4h           | :construction: |
+
+
 
 
 <br>
