@@ -1,8 +1,9 @@
-# API-ADS-SoftwareRendimentoEscolar
+# API ADS 2º Semestre 
+# Software Rendimento Escolar - VAPT
 
 
 <p align="center">
-      <img src="/doc/frontend/logo-BuzzTech.png" alt="logo da Buzz Tech" width="200">
+      <img src="/doc/img/logo-BuzzTech.png" alt="logo da Buzz Tech" width="200">
       <h2 align="center"> Buzz Tech</h2>
 
 
