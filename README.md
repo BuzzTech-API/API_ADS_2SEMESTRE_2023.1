@@ -29,9 +29,8 @@
 <br>
 
 <h4 align="center">
- <a href="https://docs.oracle.com/en/java/"><img src = "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/></a>
- <a href="https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html"><img src = "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
- <a href="https://help.figma.com/hc/en-us"><img src = "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/></a>
+ <a href="https://docs.oracle.com/en/java/"><img src = "	https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/></a>
+ <a href="https://help.figma.com/hc/en-us"><img src = "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
  <a href="https://docs.github.com/pt"><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
  <a href="https://dev.mysql.com/doc/"><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
 </h4>
@@ -100,6 +99,7 @@ Desenvolver um **Programa Desktop em Java** que automatize o controle de ativida
  > *Requisitos Não Funcionais*
 
 - [x] Sistema de gerenciamento de banco de dados - MySQL
+- [x] Usabilidade 
 
 <br>
 
