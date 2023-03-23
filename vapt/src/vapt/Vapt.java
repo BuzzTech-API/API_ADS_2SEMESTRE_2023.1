@@ -8,7 +8,7 @@ package vapt;
  *
  * @author DELL
  */
-public class VAPT {
+public class Vapt {
 
     /**
      * @param args the command line arguments
