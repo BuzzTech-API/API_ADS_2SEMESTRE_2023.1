@@ -214,7 +214,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
 | US11<a id='us11'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
 | US12<a id='us12'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
-| US13<a id='us13'></a> | Catarina, professora, precisa de um software confiável e sem falhas. |
+| US13<a id='us13'></a> | Catarina, professora, precisa de um software confiável e que não tenha problemas de desempenho. |
 
 <br>
 
