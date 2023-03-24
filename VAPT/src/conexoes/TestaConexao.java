@@ -11,15 +11,17 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 
 import dao.AtividadesDao;
+import dao.TurmaDao;
 import modelo.Atividades;
+import modelo.Turma;
 
 public class TestaConexao {
     
     public static void main(String[] args) throws SQLException {
         Connection conexao = new Conection().getConnection();
         System.out.println("Conexão Aberta");
-        AtividadesDao atividadesDao = new AtividadesDao();
-        Atividades atividades = new Atividades();
+
+        // Não apagar essa parte abaixo
         String dataString = "23/03/2023"; 
         String dataString1 = "23/05/2023"; 
         DateFormat fmt = new SimpleDateFormat("dd/MM/yyyy"); 
