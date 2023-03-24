@@ -38,10 +38,14 @@ public class AtividadesDao {
      * <p>Esse método recebe como parâmetro um Objeto da Classe Atividades que será inserido no banco de dados</p>
     */
     public void adicionar(Atividades atividades) {
-        String sql = "INSERT INTO atividades(, , ) VALUES(?, ?, ?)";
+        String sql = "INSERT INTO atividade(tipo, descricao, data_inicio, data_fim, Turma_id_turma) VALUES(?, ?, ?, ?, ?)";
         try {
             stmt = conexao.prepareStatement(sql);
-            
+            stmt.setString(1, atividades.getTipo());
+            stmt.setString(2, atividades.getDescricao());
+            stmt.setDate(3, atividades.getData_inicio());
+            stmt.setDate(4, atividades.getData_fim());
+            stmt.setInt(5, atividades.getTurma_id_turma());
             stmt.execute();
             stmt.close();
             JOptionPane.showMessageDialog(null,"Ativididade Cadastrada com Sucesso!");
