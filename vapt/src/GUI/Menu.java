@@ -162,6 +162,12 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
+
         addAluno.setFont(new java.awt.Font("Segoe UI Semibold", 0, 26)); // NOI18N
         addAluno.setText("Adicionar Aluno");
 
@@ -261,14 +267,21 @@ public class Menu extends javax.swing.JFrame {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
-        CadastroAlunos cadastroalunos = new CadastroAlunos();
+        CadastroAtividades cadastroatividades = new CadastroAtividades();
         cadastrar.removeAll();
-        cadastrar.add(cadastroalunos).setVisible(true);
+        cadastrar.add(cadastroatividades).setVisible(true);
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastrarMouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        // TODO add your handling code here:
+        CadastroAlunos cadastroalunos = new CadastroAlunos();
+        cadastrar.removeAll();
+        cadastrar.add(cadastroalunos).setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
 
     /**
      * @param args the command line arguments
