@@ -334,15 +334,18 @@ public class Menu extends javax.swing.JFrame {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
+        CadastroAlunos cadastroalunos = new CadastroAlunos();
+        cadastrar.removeAll();
+        cadastrar.add(cadastroalunos).setVisible(true);
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastrarMouseClicked
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-        CadastroAlunos cadastroalunos = new CadastroAlunos();
+        CadastroAtividades cadastroatividades = new CadastroAtividades();
         cadastrar.removeAll();
-        cadastrar.add(cadastroalunos).setVisible(true);
+        cadastrar.add(cadastroatividades).setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked
     
     private void homeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseEntered
@@ -386,6 +389,8 @@ public class Menu extends javax.swing.JFrame {
     private void cadastrarButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseExited
         cadastrarBut.setBackground(new java.awt.Color(2,31,54));
     }//GEN-LAST:event_cadastrarButMouseExited
+
+   
 
     /**
      * @param args the command line arguments
