@@ -267,7 +267,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
-       
+        CadastroAtividades cadastroatividades = new CadastroAtividades();
+        cadastrar.removeAll();
+        cadastrar.add(cadastroatividades).setVisible(true);
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarMouseClicked
@@ -276,7 +278,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         // TODO add your handling code here:
-         CadastroAlunos cadastroalunos = new CadastroAlunos();
+        CadastroAlunos cadastroalunos = new CadastroAlunos();
         cadastrar.removeAll();
         cadastrar.add(cadastroalunos).setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked
