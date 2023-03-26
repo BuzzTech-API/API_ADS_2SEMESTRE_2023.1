@@ -9,14 +9,14 @@ package GUI;
  * @author DELL
  */
 public class Menu extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form menu
      */
     public Menu() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,10 +27,13 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         aba = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        bemVinda = new javax.swing.JLabel();
+        homeBut = new javax.swing.JPanel();
+        homeTxt = new javax.swing.JLabel();
+        atividadesBut = new javax.swing.JPanel();
+        homeTxt1 = new javax.swing.JLabel();
+        cadastrarBut = new javax.swing.JPanel();
+        homeTxt2 = new javax.swing.JLabel();
         home = new javax.swing.JPanel();
         atividades = new javax.swing.JPanel();
         cadastrar = new javax.swing.JPanel();
@@ -47,60 +50,142 @@ public class Menu extends javax.swing.JFrame {
 
         aba.setBackground(new java.awt.Color(2, 31, 54));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Bem Vinda!");
+        bemVinda.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        bemVinda.setForeground(new java.awt.Color(255, 255, 255));
+        bemVinda.setText("Bem Vinda!");
 
-        jButton4.setText("Home");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+        homeBut.setBackground(new java.awt.Color(2, 31, 54));
+        homeBut.setToolTipText("Home");
+        homeBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        homeBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeButMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                homeButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                homeButMouseExited(evt);
             }
         });
 
-        jButton5.setText("Atividades");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+        homeTxt.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        homeTxt.setForeground(new java.awt.Color(255, 255, 255));
+        homeTxt.setText("Home");
+
+        javax.swing.GroupLayout homeButLayout = new javax.swing.GroupLayout(homeBut);
+        homeBut.setLayout(homeButLayout);
+        homeButLayout.setHorizontalGroup(
+            homeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homeButLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(homeTxt)
+                .addGap(124, 124, 124))
+        );
+        homeButLayout.setVerticalGroup(
+            homeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homeButLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(homeTxt)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        atividadesBut.setBackground(new java.awt.Color(2, 31, 54));
+        atividadesBut.setToolTipText("Home");
+        atividadesBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        atividadesBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                atividadesButMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atividadesButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atividadesButMouseExited(evt);
             }
         });
 
-        jButton6.setText("Cadastrar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+        homeTxt1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        homeTxt1.setForeground(new java.awt.Color(255, 255, 255));
+        homeTxt1.setText("Atividades");
+
+        javax.swing.GroupLayout atividadesButLayout = new javax.swing.GroupLayout(atividadesBut);
+        atividadesBut.setLayout(atividadesButLayout);
+        atividadesButLayout.setHorizontalGroup(
+            atividadesButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(atividadesButLayout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(homeTxt1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        atividadesButLayout.setVerticalGroup(
+            atividadesButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(atividadesButLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(homeTxt1)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        cadastrarBut.setBackground(new java.awt.Color(2, 31, 54));
+        cadastrarBut.setToolTipText("Home");
+        cadastrarBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cadastrarBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cadastrarButMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cadastrarButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cadastrarButMouseExited(evt);
             }
         });
+
+        homeTxt2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        homeTxt2.setForeground(new java.awt.Color(255, 255, 255));
+        homeTxt2.setText("Cadastrar");
+
+        javax.swing.GroupLayout cadastrarButLayout = new javax.swing.GroupLayout(cadastrarBut);
+        cadastrarBut.setLayout(cadastrarButLayout);
+        cadastrarButLayout.setHorizontalGroup(
+            cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cadastrarButLayout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(homeTxt2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cadastrarButLayout.setVerticalGroup(
+            cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cadastrarButLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(homeTxt2)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout abaLayout = new javax.swing.GroupLayout(aba);
         aba.setLayout(abaLayout);
         abaLayout.setHorizontalGroup(
             abaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaLayout.createSequentialGroup()
-                .addGroup(abaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(abaLayout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel1))
-                    .addGroup(abaLayout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addGroup(abaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton6)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(56, 56, 56)
+                .addComponent(bemVinda)
                 .addContainerGap(62, Short.MAX_VALUE))
+            .addComponent(homeBut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(atividadesBut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cadastrarBut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         abaLayout.setVerticalGroup(
             abaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(jLabel1)
-                .addGap(112, 112, 112)
-                .addComponent(jButton4)
-                .addGap(98, 98, 98)
-                .addComponent(jButton5)
-                .addGap(109, 109, 109)
-                .addComponent(jButton6)
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addComponent(bemVinda)
+                .addGap(87, 87, 87)
+                .addComponent(homeBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87)
+                .addComponent(atividadesBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87)
+                .addComponent(cadastrarBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         getContentPane().add(aba, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -247,39 +332,65 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        cadastrar.setVisible(false);
-        atividades.setVisible(false);
-        home.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        home.setVisible(false);
-        cadastrar.setVisible(false);
-        atividades.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        home.setVisible(false);
-        atividades.setVisible(false);
-        cadastrar.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
-       
+        CadastroAlunos cadastroalunos = new CadastroAlunos();
+        cadastrar.removeAll();
+        cadastrar.add(cadastroalunos).setVisible(true);
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastrarMouseClicked
-
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-        // TODO add your handling code here:
-         CadastroAlunos cadastroalunos = new CadastroAlunos();
+        CadastroAtividades cadastroatividades = new CadastroAtividades();
         cadastrar.removeAll();
-        cadastrar.add(cadastroalunos).setVisible(true);
+        cadastrar.add(cadastroatividades).setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked
+    
+    private void homeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseEntered
+        homeBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_homeButMouseEntered
+
+    private void homeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseExited
+        homeBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_homeButMouseExited
+
+    private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
+        cadastrar.setVisible(false);
+        atividades.setVisible(false);
+        home.setVisible(true);
+    }//GEN-LAST:event_homeButMouseClicked
+
+    private void atividadesButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseClicked
+        cadastrar.setVisible(false);
+        atividades.setVisible(true);
+        home.setVisible(false);
+    }//GEN-LAST:event_atividadesButMouseClicked
+
+    private void atividadesButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseEntered
+       atividadesBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_atividadesButMouseEntered
+
+    private void atividadesButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseExited
+       atividadesBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_atividadesButMouseExited
+
+    private void cadastrarButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseClicked
+        cadastrar.setVisible(true);
+        atividades.setVisible(false);
+        home.setVisible(false);
+    }//GEN-LAST:event_cadastrarButMouseClicked
+
+    private void cadastrarButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseEntered
+        cadastrarBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_cadastrarButMouseEntered
+
+    private void cadastrarButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseExited
+        cadastrarBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_cadastrarButMouseExited
+
+   
 
     /**
      * @param args the command line arguments
@@ -323,12 +434,15 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel addAtividades;
     private javax.swing.JLabel addTurma1;
     private javax.swing.JPanel atividades;
+    private javax.swing.JPanel atividadesBut;
+    private javax.swing.JLabel bemVinda;
     private javax.swing.JPanel cadastrar;
+    private javax.swing.JPanel cadastrarBut;
     private javax.swing.JPanel home;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel homeBut;
+    private javax.swing.JLabel homeTxt;
+    private javax.swing.JLabel homeTxt1;
+    private javax.swing.JLabel homeTxt2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
