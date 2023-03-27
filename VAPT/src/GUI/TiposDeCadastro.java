@@ -83,8 +83,8 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
 
     private void AddAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddAlunoActionPerformed
         // TODO add your handling code here:
-        CadastrarAlunos cadastroAlunos = new CadastrarAlunos();
-        cadastroAlunos.setVisible(true);
+        CadastrarAlunos2 cadastroAlunos2 = new CadastrarAlunos2();
+        cadastroAlunos2.setVisible(true);
     }//GEN-LAST:event_AddAlunoActionPerformed
 
 
