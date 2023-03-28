@@ -46,6 +46,7 @@ public class Dashboard extends javax.swing.JFrame {
         homeTxt1 = new javax.swing.JLabel();
         cadastrarBut = new javax.swing.JPanel();
         homeTxt2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jDesktopPanel = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,7 +87,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(homeButLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(homeTxt)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, -1));
@@ -163,6 +164,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(cadastrarBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 300, -1));
 
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Bem-Vindo!");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 730));
 
         jDesktopPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -195,20 +201,10 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
-
-    }//GEN-LAST:event_homeButMouseClicked
-
-    private void homeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseEntered
-        homeBut.setBackground(new java.awt.Color(2,65,75));
-    }//GEN-LAST:event_homeButMouseEntered
-
-    private void homeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseExited
-        homeBut.setBackground(new java.awt.Color(2,31,54));
-    }//GEN-LAST:event_homeButMouseExited
-
     private void atividadesButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseClicked
-      
+      AtividadesCadastradas atividadecadastrada = new AtividadesCadastradas();
+      jDesktopPanel.removeAll();
+      jDesktopPanel.add( atividadecadastrada).setVisible(true);
     }//GEN-LAST:event_atividadesButMouseClicked
 
     private void atividadesButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseEntered
@@ -232,6 +228,18 @@ public class Dashboard extends javax.swing.JFrame {
     private void cadastrarButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseExited
         cadastrarBut.setBackground(new java.awt.Color(2,31,54));
     }//GEN-LAST:event_cadastrarButMouseExited
+
+    private void homeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseExited
+        homeBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_homeButMouseExited
+
+    private void homeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseEntered
+        homeBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_homeButMouseEntered
+
+    private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
+
+    }//GEN-LAST:event_homeButMouseClicked
 
     /**
      * @param args the command line arguments
@@ -277,6 +285,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel homeTxt1;
     private javax.swing.JLabel homeTxt2;
     private javax.swing.JDesktopPane jDesktopPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables

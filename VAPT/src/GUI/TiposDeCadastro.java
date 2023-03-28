@@ -38,10 +38,10 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         AddTurmaBut = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(217, 217, 217));
         setPreferredSize(new java.awt.Dimension(1280, 730));
 
-        AddAlunoBut.setBackground(new java.awt.Color(255, 255, 255));
+        AddAlunoBut.setBackground(new java.awt.Color(239, 131, 84));
         AddAlunoBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddAlunoButMouseClicked(evt);
@@ -54,7 +54,8 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Adicionar Aluno");
 
@@ -74,7 +75,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        AddAtividadeBut.setBackground(new java.awt.Color(255, 255, 255));
+        AddAtividadeBut.setBackground(new java.awt.Color(239, 131, 84));
         AddAtividadeBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddAtividadeButMouseClicked(evt);
@@ -87,7 +88,8 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Adicionar Atividades");
 
@@ -107,7 +109,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        AddTurmaBut.setBackground(new java.awt.Color(255, 255, 255));
+        AddTurmaBut.setBackground(new java.awt.Color(239, 131, 84));
         AddTurmaBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddTurmaButMouseClicked(evt);
@@ -120,7 +122,8 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Adicionar Turma");
 
@@ -157,9 +160,9 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addComponent(AddTurmaBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addGap(106, 106, 106)
                 .addComponent(AddAlunoBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addComponent(AddAtividadeBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(117, 117, 117))
         );
@@ -173,11 +176,11 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddAlunoButMouseClicked
 
     private void AddAlunoButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseEntered
-       AddAlunoBut.setBackground(new java.awt.Color(240,240,240));
+       AddAlunoBut.setBackground(new java.awt.Color(4, 210, 130));
     }//GEN-LAST:event_AddAlunoButMouseEntered
 
     private void AddAlunoButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseExited
-       AddAlunoBut.setBackground(new java.awt.Color(251,251,251));
+       AddAlunoBut.setBackground(new java.awt.Color(239,131,84));
     }//GEN-LAST:event_AddAlunoButMouseExited
 
     private void AddAtividadeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseClicked
@@ -186,11 +189,11 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddAtividadeButMouseClicked
 
     private void AddAtividadeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseEntered
-        AddAtividadeBut.setBackground(new java.awt.Color(240,240,240));
+        AddAtividadeBut.setBackground(new java.awt.Color(4, 210, 130));
     }//GEN-LAST:event_AddAtividadeButMouseEntered
 
     private void AddAtividadeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseExited
-        AddAtividadeBut.setBackground(new java.awt.Color(251,251,251));
+        AddAtividadeBut.setBackground(new java.awt.Color(239,131,84));
     }//GEN-LAST:event_AddAtividadeButMouseExited
 
     private void AddTurmaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseClicked
@@ -199,11 +202,11 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddTurmaButMouseClicked
 
     private void AddTurmaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseEntered
-        AddTurmaBut.setBackground(new java.awt.Color(240,240,240));
+        AddTurmaBut.setBackground(new java.awt.Color(4, 210, 130));
     }//GEN-LAST:event_AddTurmaButMouseEntered
 
     private void AddTurmaButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseExited
-        AddTurmaBut.setBackground(new java.awt.Color(251,251,251));
+        AddTurmaBut.setBackground(new java.awt.Color(239,131,84));
     }//GEN-LAST:event_AddTurmaButMouseExited
 
 
