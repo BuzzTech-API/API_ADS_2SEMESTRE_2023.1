@@ -4,6 +4,11 @@
  */
 package GUI;
 
+import java.util.ArrayList;
+
+import dao.TurmaDao;
+import modelo.Turma;
+
 /**
  *
  * @author joice
@@ -15,6 +20,7 @@ public class CadastrarAlunos2 extends javax.swing.JFrame {
      */
     public CadastrarAlunos2() {
         initComponents();
+        preecherComboBoxTurma();
     }
 
     /**
@@ -54,7 +60,11 @@ public class CadastrarAlunos2 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Turma:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -111,6 +121,10 @@ public class CadastrarAlunos2 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -156,4 +170,17 @@ public class CadastrarAlunos2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+
+    public void preecherComboBoxTurma() {
+        TurmaDao turmaDao = new TurmaDao();
+        ArrayList<Turma> lista = turmaDao.pesquisar();
+        for (Turma turma : lista) {
+            jComboBox1.addItem(turma.getNome());
+        }
+    }
+
+
+
+
 }
