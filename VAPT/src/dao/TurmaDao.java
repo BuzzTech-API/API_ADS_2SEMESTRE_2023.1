@@ -29,6 +29,7 @@ public class TurmaDao {
 
     public TurmaDao() {
         this.conexao = new Conection().getConnection();
+        this.lista = new ArrayList<>();
     }
 
     /** 
@@ -50,6 +51,29 @@ public class TurmaDao {
             
             JOptionPane.showMessageDialog(null, exception);
         }
+    }
+
+    public ArrayList<Turma> pesquisar() {
+        String sql = "SELECT * FROM turma";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                Turma objTurma = new Turma();
+                objTurma.setId_turma(rs.getInt("id_turma"));
+                objTurma.setNome(rs.getString("nome"));
+                objTurma.setNome_escola(rs.getString("nome_escola"));
+
+                this.lista.add(objTurma);
+            }
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+        return this.lista;
     }
 
 

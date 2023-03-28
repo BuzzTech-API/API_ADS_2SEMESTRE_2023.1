@@ -6,11 +6,15 @@ package GUI;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFormattedTextField;
 import javax.swing.text.MaskFormatter;
+
+import dao.TurmaDao;
+import modelo.Turma;
 
 /**
  *
@@ -31,8 +35,8 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         } catch (ParseException ex) {
             Logger.getLogger(CadastroAtividades2.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
         initComponents();
+        preecherComboBoxTurma();
     }
 
     /**
@@ -72,7 +76,11 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Tipo:");
@@ -252,6 +260,10 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_diaEntregaActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -305,4 +317,12 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+    public void preecherComboBoxTurma() {
+        TurmaDao turmaDao = new TurmaDao();
+        ArrayList<Turma> lista = turmaDao.pesquisar();
+        for (Turma turma : lista) {
+            jComboBox1.addItem(turma.getNome());
+        }
+    }
 }
