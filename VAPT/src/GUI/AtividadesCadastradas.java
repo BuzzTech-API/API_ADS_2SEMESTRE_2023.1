@@ -10,16 +10,15 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author joice
  */
-public class CadastroAtividades extends javax.swing.JInternalFrame {
+public class AtividadesCadastradas extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form CadastroAtividades
+     * Creates new form AtividadesCadastradas
      */
-    public CadastroAtividades() {
+    public AtividadesCadastradas() {
         initComponents();
-         initComponents();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
-        BasicInternalFrameUI ui=(BasicInternalFrameUI)this.getUI();
+         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
     }
 
@@ -32,15 +31,18 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setBackground(new java.awt.Color(217, 217, 217));
+        setPreferredSize(new java.awt.Dimension(1280, 730));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 958, Short.MAX_VALUE)
+            .addGap(0, 394, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
+            .addGap(0, 274, Short.MAX_VALUE)
         );
 
         pack();
