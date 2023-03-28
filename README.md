@@ -76,7 +76,7 @@ Desenvolver um **Programa Desktop em Java** que automatize o controle de ativida
 
 - Cadastro das turmas e seus respectivos alunos;
 - Registro dos instrumentos avaliativos da disciplina;
-- Cálculo da média das atividades entregues das turmas e dos alunos;
+- Cálculo da média relacionado às atividades entregues pelas turmas e alunos;
 - Interface gráfica intuitiva e fácil de visualizar o desempenho dos alunos na disciplina.
 
 
@@ -110,18 +110,18 @@ Desenvolver um **Programa Desktop em Java** que automatize o controle de ativida
 
 
 
-O framework de *Metodologia Ágil* utilizado no produto foi o **Scrum**, um método ágil adaptativo, iterativo, flexível e eficaz. Este método possui os seguintes princípios norteadores:
+O framework de Metodologia Ágil utilizado no produto foi o Scrum, um método ágil adaptativo, iterativo, flexível e eficaz. Este método possui os seguintes princípios norteadores:
 
 1. *Controle empírico*
-2. *Auto organização*
+2. *Auto-organização*
 3. *Colaboração*
 4. *Priorização da criação de valor*
 5. *Time-boxing*
 6. *Desenvolvimento iterativo*
 
-Entre as ferramentas utilizadas no Scrum, uma é a divisão do projeto em **Sprints**. Para selecionar quais seriam as entregas do nossas Sprints, primeiro definimos nosso **MVP**, priorizando as tarefas que trariam maior entrega de valor para o cliente. Então, a partir das Tarefas foi construído o **Backlog do Produto**,  o qual foi aprovado pelo cliente e dividido em 4 Backlog de Sprint.
+Entre as ferramentas utilizadas no Scrum, uma é a divisão do projeto em **Sprints**. Para selecionar quais seriam as entregas das nossas Sprints, primeiro definimos nosso **MVP**, priorizando as tarefas que trariam maior entrega de valor para o cliente. Então, a partir das Tarefas foi construído o **Backlog do Produto**,  o qual foi aprovado pelo cliente e dividido em 4 Backlog de Sprint.
 
-Para embasar a tomada de decisão e priorizar as tarefas com maior entrega de valor, utilizamos a construção de **Personas**. Através delas, tivemos mais clareza sobre o direcionamento das nossas **Histórias de Usuários**. Traçadas as Tarefas, Personas e Histórias de Usuários, utilizamos a ferramenta de Planning Poker para definir a quantidade de tempo necessária para cada Tarefa e dividimos da maneira mais otimizada entre os Desenvolvedores do time.
+Logo, para embasar a tomada de decisão e priorizar as tarefas com maior entrega de valor, utilizamos a construção de **Personas**. Pois, através delas, tivemos mais clareza sobre o direcionamento das nossas **Histórias de Usuários**. Dessa forma, traçadas as Tarefas, Personas e Histórias de Usuários, utilizamos a ferramenta de Planning Poker para definir a quantidade de tempo necessário para cada Tarefa, sendo dividido, de maneira mais otimizada, entre os Desenvolvedores do time.
 
 <br>
 
@@ -135,7 +135,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 - Cadastrar turmas;
 - Cadastrar alunos;
-- Cadastrar atividades;
+- Cadastrar atividades.
 
 
 <br>
@@ -189,7 +189,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 | Catarina, 39 anos, professora de Geografia do ensino fundamental  |
 | :----------------------------------------------------------: |
-| Catarina tem 40 alunos por turma. Atualmente, ela leciona em 4 turmas na escola estadual João Leme e 3 turmas na escola estadual Ary Barroso. Catarina não tem experiência aprofundada com computador. Ela conhece somente o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook para fazer algumas de suas atividades e esse equipamente pode ser levado em sala de aula. Para cada turma, ela costuma aplicar 2 provas e 2 trabalhos, totalizando 4 atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, além de gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
+| Catarina tem 40 alunos por turma. Atualmente, ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
 
 
 <br>
