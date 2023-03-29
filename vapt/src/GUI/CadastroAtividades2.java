@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -12,8 +13,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFormattedTextField;
 import javax.swing.text.MaskFormatter;
+import javax.xml.crypto.Data;
 
+import dao.AtividadesDao;
 import dao.TurmaDao;
+import modelo.Atividades;
 import modelo.Turma;
 
 /**
@@ -27,7 +31,8 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
      */
     
     MaskFormatter mfdata;
-    
+    private ArrayList<Turma> lista = new ArrayList<>();
+
     public CadastroAtividades2() {
         
         try {
@@ -54,14 +59,14 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        TipoAtv = new javax.swing.JTextField();
+        tipoAtv = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        DescAtv = new javax.swing.JTextArea();
+        descAtv = new javax.swing.JTextArea();
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         diaEntrega = new javax.swing.JFormattedTextField(mfdata);
 
@@ -102,10 +107,15 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        DescAtv.setColumns(20);
-        DescAtv.setRows(5);
-        jScrollPane1.setViewportView(DescAtv);
+        descAtv.setColumns(20);
+        descAtv.setRows(5);
+        jScrollPane1.setViewportView(descAtv);
 
         diaSolicitado.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -162,7 +172,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
                                 .addGap(47, 47, 47)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(169, 169, 169)
                         .addComponent(jButton1)))
@@ -178,7 +188,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(TipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -264,6 +274,36 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Atividades atividade = new Atividades();
+        int id = jComboBox1.getSelectedIndex();
+        Turma turma = this.lista.get(id);
+        atividade.setTipo(tipoAtv.getText());
+        atividade.setDescricao(descAtv.getText());
+        atividade.setTurma_id_turma(turma.getId_turma());
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            java.util.Date dataEntrega = df.parse(diaEntrega.getText());
+            java.util.Date dataSolicitacao = df.parse(diaSolicitado.getText());
+            java.sql.Date sqlDate = new java.sql.Date(dataEntrega.getTime());
+            java.sql.Date sqlDate2 = new java.sql.Date(dataSolicitacao.getTime());
+            atividade.setData_inicio(sqlDate2);
+            atividade.setData_fim(sqlDate);
+            AtividadesDao atividadeDao = new AtividadesDao();
+            atividadeDao.adicionar(atividade);
+            tipoAtv.setText("");
+            diaSolicitado.setText("");
+            diaEntrega.setText("");
+            descAtv.setText("");
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -300,8 +340,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea DescAtv;
-    private javax.swing.JTextField TipoAtv;
+    private javax.swing.JTextArea descAtv;
     private javax.swing.JFormattedTextField diaEntrega;
     private javax.swing.JFormattedTextField diaSolicitado;
     private javax.swing.JButton jButton1;
@@ -316,11 +355,12 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField tipoAtv;
     // End of variables declaration//GEN-END:variables
 
     public void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
-        ArrayList<Turma> lista = turmaDao.pesquisar();
+        lista = turmaDao.pesquisar();
         for (Turma turma : lista) {
             jComboBox1.addItem(turma.getNome());
         }
