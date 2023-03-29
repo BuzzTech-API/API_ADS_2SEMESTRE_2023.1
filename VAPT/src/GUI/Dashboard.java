@@ -216,7 +216,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_atividadesButMouseExited
 
     private void cadastrarButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseClicked
-        TiposDeCadastro tipoDeCadastro = new TiposDeCadastro();
+        TiposDeCadastro tipoDeCadastro = new TiposDeCadastro(jDesktopPanel);
         jDesktopPanel.removeAll();
         jDesktopPanel.add(tipoDeCadastro).setVisible(true);
     }//GEN-LAST:event_cadastrarButMouseClicked

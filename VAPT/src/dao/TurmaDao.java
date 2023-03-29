@@ -76,6 +76,47 @@ public class TurmaDao {
         return this.lista;
     }
 
+    public Turma pesquisarPorNomeEEscola(Turma turma) {
+        String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, turma.getNome());
+            stmt.setString(2, turma.getNome_escola());
+            rs = stmt.executeQuery();
+            if (rs.next())
+                turma.setId_turma(rs.getInt("id_turma"));
+            
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+        return turma;
+    }
+
+    public boolean jaExisteTurma(Turma turma) {
+        String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, turma.getNome());
+            stmt.setString(2, turma.getNome_escola());
+            rs = stmt.executeQuery();
+            if (rs.next())
+                return true;
+            
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+        return false;
+    }
+
+    
 
 
 }

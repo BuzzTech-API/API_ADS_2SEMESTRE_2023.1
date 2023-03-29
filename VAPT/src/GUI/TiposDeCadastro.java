@@ -15,7 +15,16 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     /**
      * Creates new form tiposDeCadastro
      */
+    javax.swing.JDesktopPane jDesktopPanel;
     public TiposDeCadastro() {
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
+        ui.setNorthPane(null);
+    }
+    
+    public TiposDeCadastro(javax.swing.JDesktopPane jDesktopPanel) {
+        this.jDesktopPanel = jDesktopPanel;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -184,8 +193,10 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddAlunoButMouseExited
 
     private void AddAtividadeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseClicked
-        CadastroAtividades2 cadastrarAtividades2 = new CadastroAtividades2();
-        cadastrarAtividades2.setVisible(true);
+        AtividadesCadastradas atividadesCadastradas = new AtividadesCadastradas();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(atividadesCadastradas).setVisible(true);
+        
     }//GEN-LAST:event_AddAtividadeButMouseClicked
 
     private void AddAtividadeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseEntered
