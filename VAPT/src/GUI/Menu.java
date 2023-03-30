@@ -341,7 +341,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastrarMouseClicked
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-        CadastroAtividades cadastroatividades = new CadastroAtividades();
+        Editar cadastroatividades = new Editar();
         cadastrar.removeAll();
         cadastrar.add(cadastroatividades).setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked

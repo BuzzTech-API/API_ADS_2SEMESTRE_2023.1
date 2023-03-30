@@ -42,11 +42,13 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         homeBut = new javax.swing.JPanel();
         homeTxt = new javax.swing.JLabel();
-        atividadesBut = new javax.swing.JPanel();
-        homeTxt1 = new javax.swing.JLabel();
-        cadastrarBut = new javax.swing.JPanel();
+        editaBut = new javax.swing.JPanel();
         homeTxt2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        buscaBut = new javax.swing.JPanel();
+        homeTxt3 = new javax.swing.JLabel();
+        cadastrarBut = new javax.swing.JPanel();
+        homeTxt4 = new javax.swing.JLabel();
         jDesktopPanel = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,43 +93,84 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, 60));
+        jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 300, 60));
 
-        atividadesBut.setBackground(new java.awt.Color(2, 31, 54));
-        atividadesBut.setToolTipText("Home");
-        atividadesBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        atividadesBut.addMouseListener(new java.awt.event.MouseAdapter() {
+        editaBut.setBackground(new java.awt.Color(2, 31, 54));
+        editaBut.setToolTipText("Home");
+        editaBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        editaBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                atividadesButMouseClicked(evt);
+                editaButMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                atividadesButMouseEntered(evt);
+                editaButMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                atividadesButMouseExited(evt);
+                editaButMouseExited(evt);
             }
         });
 
-        homeTxt1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        homeTxt1.setForeground(new java.awt.Color(255, 255, 255));
-        homeTxt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        homeTxt1.setText("Atividades");
+        homeTxt2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        homeTxt2.setForeground(new java.awt.Color(255, 255, 255));
+        homeTxt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        homeTxt2.setText("Editar");
 
-        javax.swing.GroupLayout atividadesButLayout = new javax.swing.GroupLayout(atividadesBut);
-        atividadesBut.setLayout(atividadesButLayout);
-        atividadesButLayout.setHorizontalGroup(
-            atividadesButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homeTxt1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+        javax.swing.GroupLayout editaButLayout = new javax.swing.GroupLayout(editaBut);
+        editaBut.setLayout(editaButLayout);
+        editaButLayout.setHorizontalGroup(
+            editaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(homeTxt2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
-        atividadesButLayout.setVerticalGroup(
-            atividadesButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(atividadesButLayout.createSequentialGroup()
+        editaButLayout.setVerticalGroup(
+            editaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editaButLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(homeTxt2)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        jPanel5.add(editaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 300, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Bem-Vindo!");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
+        buscaBut.setBackground(new java.awt.Color(2, 31, 54));
+        buscaBut.setToolTipText("Home");
+        buscaBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buscaBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buscaButMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buscaButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buscaButMouseExited(evt);
+            }
+        });
+
+        homeTxt3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        homeTxt3.setForeground(new java.awt.Color(255, 255, 255));
+        homeTxt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        homeTxt3.setText("Buscar");
+
+        javax.swing.GroupLayout buscaButLayout = new javax.swing.GroupLayout(buscaBut);
+        buscaBut.setLayout(buscaButLayout);
+        buscaButLayout.setHorizontalGroup(
+            buscaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(homeTxt3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+        );
+        buscaButLayout.setVerticalGroup(
+            buscaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(buscaButLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(homeTxt1)
+                .addComponent(homeTxt3)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        jPanel5.add(atividadesBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 300, -1));
+        jPanel5.add(buscaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 300, -1));
 
         cadastrarBut.setBackground(new java.awt.Color(2, 31, 54));
         cadastrarBut.setToolTipText("Home");
@@ -144,31 +187,26 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        homeTxt2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        homeTxt2.setForeground(new java.awt.Color(255, 255, 255));
-        homeTxt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        homeTxt2.setText("Cadastrar");
+        homeTxt4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        homeTxt4.setForeground(new java.awt.Color(255, 255, 255));
+        homeTxt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        homeTxt4.setText("Cadastrar");
 
         javax.swing.GroupLayout cadastrarButLayout = new javax.swing.GroupLayout(cadastrarBut);
         cadastrarBut.setLayout(cadastrarButLayout);
         cadastrarButLayout.setHorizontalGroup(
             cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homeTxt2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(homeTxt4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
         cadastrarButLayout.setVerticalGroup(
             cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarButLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(homeTxt2)
+                .addComponent(homeTxt4)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jPanel5.add(cadastrarBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 300, -1));
-
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Bem-Vindo!");
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        jPanel5.add(cadastrarBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 300, -1));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 730));
 
@@ -202,19 +240,43 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void atividadesButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseClicked
-      AtividadesCadastradas atividadecadastrada = new AtividadesCadastradas();
-      jDesktopPanel.removeAll();
-      jDesktopPanel.add( atividadecadastrada).setVisible(true);
-    }//GEN-LAST:event_atividadesButMouseClicked
+    private void editaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editaButMouseClicked
+        Editar editaBut = new Editar(jDesktopPanel);
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(editaBut).setVisible(true);
+    }//GEN-LAST:event_editaButMouseClicked
 
-    private void atividadesButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseEntered
-        atividadesBut.setBackground(new java.awt.Color(2,65,75));
-    }//GEN-LAST:event_atividadesButMouseEntered
+    private void editaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editaButMouseEntered
+        editaBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_editaButMouseEntered
 
-    private void atividadesButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atividadesButMouseExited
-        atividadesBut.setBackground(new java.awt.Color(2,31,54));
-    }//GEN-LAST:event_atividadesButMouseExited
+    private void editaButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editaButMouseExited
+        editaBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_editaButMouseExited
+
+    private void homeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseExited
+        homeBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_homeButMouseExited
+
+    private void homeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseEntered
+        homeBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_homeButMouseEntered
+
+    private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
+
+    }//GEN-LAST:event_homeButMouseClicked
+
+    private void buscaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscaButMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscaButMouseClicked
+
+    private void buscaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscaButMouseEntered
+        buscaBut.setBackground(new java.awt.Color(2,65,75));
+    }//GEN-LAST:event_buscaButMouseEntered
+
+    private void buscaButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscaButMouseExited
+        buscaBut.setBackground(new java.awt.Color(2,31,54));
+    }//GEN-LAST:event_buscaButMouseExited
 
     private void cadastrarButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseClicked
         TiposDeCadastro tipoDeCadastro = new TiposDeCadastro(jDesktopPanel);
@@ -229,18 +291,6 @@ public class Dashboard extends javax.swing.JFrame {
     private void cadastrarButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButMouseExited
         cadastrarBut.setBackground(new java.awt.Color(2,31,54));
     }//GEN-LAST:event_cadastrarButMouseExited
-
-    private void homeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseExited
-        homeBut.setBackground(new java.awt.Color(2,31,54));
-    }//GEN-LAST:event_homeButMouseExited
-
-    private void homeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseEntered
-        homeBut.setBackground(new java.awt.Color(2,65,75));
-    }//GEN-LAST:event_homeButMouseEntered
-
-    private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
-
-    }//GEN-LAST:event_homeButMouseClicked
 
     /**
      * @param args the command line arguments
@@ -279,12 +329,14 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel atividadesBut;
+    private javax.swing.JPanel buscaBut;
     private javax.swing.JPanel cadastrarBut;
+    private javax.swing.JPanel editaBut;
     private javax.swing.JPanel homeBut;
     private javax.swing.JLabel homeTxt;
-    private javax.swing.JLabel homeTxt1;
     private javax.swing.JLabel homeTxt2;
+    private javax.swing.JLabel homeTxt3;
+    private javax.swing.JLabel homeTxt4;
     private javax.swing.JDesktopPane jDesktopPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
