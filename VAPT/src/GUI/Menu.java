@@ -334,9 +334,13 @@ public class Menu extends javax.swing.JFrame {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         CadastroAlunos cadastroalunos = new CadastroAlunos();
         cadastrar.removeAll();
         cadastrar.add(cadastroalunos).setVisible(true);
+=======
+        
+>>>>>>> Stashed changes
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarMouseClicked
