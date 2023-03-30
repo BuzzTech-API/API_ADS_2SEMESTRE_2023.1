@@ -4,7 +4,9 @@
  */
 package GUI;
 
+import dao.Aluno_AtividadeDao;
 import dao.AtividadesDao;
+import dao.TurmaDao;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,6 +15,9 @@ import java.util.Date;
 import javax.swing.JFormattedTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.text.MaskFormatter;
+
+import modelo.Aluno;
+import modelo.Aluno_Atividade;
 import modelo.Atividades;
 import modelo.Turma;
 
@@ -29,7 +34,7 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
     private ArrayList<Turma> lista = new ArrayList<>();
     public CadastroAtividades() {
         initComponents();
-         initComponents();
+        preecherComboBoxTurma();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI)this.getUI();
         ui.setNorthPane(null);
@@ -253,6 +258,16 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
             atividade.setData_fim(sqlDate);
             AtividadesDao atividadeDao = new AtividadesDao();
             atividadeDao.adicionar(atividade);
+            atividade.puxarIdDoBanco();
+            ArrayList<Aluno> listaDeAlunos = turma.getAlunosDaTurma();
+            Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+            for (Aluno aluno : listaDeAlunos) {
+                Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
+                aluno_Atividade.setAluno_Ativadade_entrega(false);
+                aluno_Atividade.setAluno_id_aluno(aluno.getId_aluno());
+                aluno_Atividade.setAtividade_id_atividade(atividade.getId_atividade());
+                aluno_AtividadeDao.adicionar(aluno_Atividade);
+            }
             tipoAtv.setText("");
             diaSolicitado.setText("");
             diaEntrega.setText("");
@@ -322,4 +337,13 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
     private javax.swing.JTextField tipoAtv;
     private javax.swing.JComboBox<String> turmaSelect;
     // End of variables declaration//GEN-END:variables
+    public void preecherComboBoxTurma() {
+        TurmaDao turmaDao = new TurmaDao();
+        lista = turmaDao.pesquisar();
+        for (Turma turma : lista) {
+            turmaSelect.addItem(turma.getNome());
+        }
+    }
+
+
 }

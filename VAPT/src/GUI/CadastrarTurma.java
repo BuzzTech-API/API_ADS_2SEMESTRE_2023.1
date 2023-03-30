@@ -453,7 +453,7 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         if (!turmaDao.jaExisteTurma(turma)) {
             turmaDao.adicionar(turma);
 
-            turma = turmaDao.pesquisarPorNomeEEscola(turma);
+            turma.setId_turma(turmaDao.pesquisarPorNomeEEscola(turma.getNome(), turma.getNome_escola()));
             Dia_SemanaDao dia_SemanaDao = new Dia_SemanaDao();
             if (jCheckBox1.isSelected()) {
                 Dia_Semana dia_Semana = new Dia_Semana();

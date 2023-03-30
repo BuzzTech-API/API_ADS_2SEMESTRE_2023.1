@@ -2,6 +2,8 @@ package modelo;
 
 import java.sql.Date;
 
+import dao.AtividadesDao;
+
 public class Atividades {
     private int id_atividade;
     private String tipo;
@@ -74,6 +76,9 @@ public class Atividades {
         this.data_fim = data_fim;
     }
 
-
+    public void puxarIdDoBanco() {
+        AtividadesDao atividadesDao = new AtividadesDao();
+        this.setId_atividade(atividadesDao.pesquisarPorDadosDaAtividade(getTipo(), getDescricao(), getData_inicio(), getData_fim(),getTurma_id_turma()));
+    }
 
 }

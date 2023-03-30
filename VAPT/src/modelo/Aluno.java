@@ -4,6 +4,10 @@
  */
 package modelo;
 
+import javax.swing.JOptionPane;
+
+import dao.AlunoDao;
+
 /**
  *
  * @author Fatec
@@ -46,6 +50,13 @@ public class Aluno{
         return nome;
     }
     
+    public void getIdBanco() {
+        AlunoDao alunoDao = new AlunoDao();
+        id_aluno = alunoDao.pesquisarPorNomeETurma(nome, id_turma);
+        if (id_turma==0) {
+            JOptionPane.showMessageDialog(null, "Aluno não cadastrada");
+        }
+    }
     
      
     
