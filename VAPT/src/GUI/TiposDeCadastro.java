@@ -208,8 +208,9 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddAtividadeButMouseExited
 
     private void AddTurmaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseClicked
-        CadastrarTurma2 cadastroTurma2 = new CadastrarTurma2();
-        cadastroTurma2.setVisible(true);
+        CadastrarTurma cadastrarTurma = new CadastrarTurma();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(cadastrarTurma).setVisible(true);
     }//GEN-LAST:event_AddTurmaButMouseClicked
 
     private void AddTurmaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseEntered
