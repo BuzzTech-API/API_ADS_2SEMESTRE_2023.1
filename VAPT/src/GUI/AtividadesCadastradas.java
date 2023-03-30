@@ -130,6 +130,12 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             }
         });
 
+        try {
+            diaEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        diaEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         diaEntrega.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 diaEntregaFocusLost(evt);

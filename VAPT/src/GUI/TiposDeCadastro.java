@@ -253,8 +253,9 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddAlunoButMouseEntered
 
     private void AddAlunoButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseClicked
-        CadastrarAlunos2 cadastroAlunos2 = new CadastrarAlunos2();
-        cadastroAlunos2.setVisible(true);
+        CadastrarAlunos cadastroAlunos = new CadastrarAlunos();
+         jDesktopPanel.removeAll();
+        jDesktopPanel.add(cadastroAlunos).setVisible(true);
     }//GEN-LAST:event_AddAlunoButMouseClicked
 
 
