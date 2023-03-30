@@ -42,15 +42,19 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
 
         AddAlunoBut = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         AddAtividadeBut = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         AddTurmaBut = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(217, 217, 217));
         setPreferredSize(new java.awt.Dimension(1280, 730));
 
         AddAlunoBut.setBackground(new java.awt.Color(239, 131, 84));
+        AddAlunoBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AddAlunoBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddAlunoButMouseClicked(evt);
@@ -68,23 +72,33 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Adicionar Aluno");
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("MS UI Gothic", 1, 70)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("+");
+
         javax.swing.GroupLayout AddAlunoButLayout = new javax.swing.GroupLayout(AddAlunoBut);
         AddAlunoBut.setLayout(AddAlunoButLayout);
         AddAlunoButLayout.setHorizontalGroup(
             AddAlunoButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAlunoButLayout.createSequentialGroup()
-                .addGap(0, 2, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addComponent(jLabel5)
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AddAlunoButLayout.setVerticalGroup(
             AddAlunoButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
             .addGroup(AddAlunoButLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
 
         AddAtividadeBut.setBackground(new java.awt.Color(239, 131, 84));
+        AddAtividadeBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AddAtividadeBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddAtividadeButMouseClicked(evt);
@@ -102,23 +116,35 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Adicionar Atividades");
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("MS UI Gothic", 1, 70)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("+");
+
         javax.swing.GroupLayout AddAtividadeButLayout = new javax.swing.GroupLayout(AddAtividadeBut);
         AddAtividadeBut.setLayout(AddAtividadeButLayout);
         AddAtividadeButLayout.setHorizontalGroup(
             AddAtividadeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAtividadeButLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2)
+                .addGap(64, 64, 64))
         );
         AddAtividadeButLayout.setVerticalGroup(
             AddAtividadeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddAtividadeButLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAtividadeButLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAtividadeButLayout.createSequentialGroup()
+                .addGap(0, 7, Short.MAX_VALUE)
+                .addComponent(jLabel6))
         );
 
         AddTurmaBut.setBackground(new java.awt.Color(239, 131, 84));
+        AddTurmaBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AddTurmaBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddTurmaButMouseClicked(evt);
@@ -136,20 +162,29 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Adicionar Turma");
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("MS UI Gothic", 1, 70)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("+");
+
         javax.swing.GroupLayout AddTurmaButLayout = new javax.swing.GroupLayout(AddTurmaBut);
         AddTurmaBut.setLayout(AddTurmaButLayout);
         AddTurmaButLayout.setHorizontalGroup(
             AddTurmaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddTurmaButLayout.createSequentialGroup()
-                .addGap(0, 2, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(AddTurmaButLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel4)
+                .addGap(34, 34, 34)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AddTurmaButLayout.setVerticalGroup(
             AddTurmaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
             .addGroup(AddTurmaButLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel3)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,40 +192,27 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(415, 415, 415)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AddTurmaBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AddAtividadeBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AddAlunoBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(462, Short.MAX_VALUE))
+                .addGap(460, 460, 460)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(AddTurmaBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AddAlunoBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AddAtividadeBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(394, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addComponent(AddTurmaBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
-                .addComponent(AddAlunoBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addGap(130, 130, 130)
+                .addComponent(AddAlunoBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(130, 130, 130)
                 .addComponent(AddAtividadeBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
+                .addGap(96, 96, 96))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void AddAlunoButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseClicked
-        CadastrarAlunos2 cadastroAlunos2 = new CadastrarAlunos2();
-        cadastroAlunos2.setVisible(true);
-    }//GEN-LAST:event_AddAlunoButMouseClicked
-
-    private void AddAlunoButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseEntered
-       AddAlunoBut.setBackground(new java.awt.Color(4, 210, 130));
-    }//GEN-LAST:event_AddAlunoButMouseEntered
-
-    private void AddAlunoButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseExited
-       AddAlunoBut.setBackground(new java.awt.Color(239,131,84));
-    }//GEN-LAST:event_AddAlunoButMouseExited
 
     private void AddAtividadeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseClicked
 
@@ -222,6 +244,19 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         AddTurmaBut.setBackground(new java.awt.Color(239,131,84));
     }//GEN-LAST:event_AddTurmaButMouseExited
 
+    private void AddAlunoButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseExited
+        AddAlunoBut.setBackground(new java.awt.Color(239,131,84));
+    }//GEN-LAST:event_AddAlunoButMouseExited
+
+    private void AddAlunoButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseEntered
+        AddAlunoBut.setBackground(new java.awt.Color(4, 210, 130));
+    }//GEN-LAST:event_AddAlunoButMouseEntered
+
+    private void AddAlunoButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseClicked
+        CadastrarAlunos2 cadastroAlunos2 = new CadastrarAlunos2();
+        cadastroAlunos2.setVisible(true);
+    }//GEN-LAST:event_AddAlunoButMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddAlunoBut;
@@ -230,5 +265,8 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

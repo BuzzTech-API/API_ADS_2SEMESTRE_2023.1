@@ -50,6 +50,7 @@ public class Dashboard extends javax.swing.JFrame {
         jDesktopPanel = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("VAPT!");
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -90,7 +91,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, -1));
+        jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, 60));
 
         atividadesBut.setBackground(new java.awt.Color(2, 31, 54));
         atividadesBut.setToolTipText("Home");
