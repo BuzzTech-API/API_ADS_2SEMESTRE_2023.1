@@ -228,8 +228,7 @@ public class Editar extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddAlunoButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseClicked
-        CadastrarAlunos2 cadastroAlunos2 = new CadastrarAlunos2();
-        cadastroAlunos2.setVisible(true);
+        
     }//GEN-LAST:event_AddAlunoButMouseClicked
 
     private void AddAlunoButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseEntered
@@ -241,9 +240,7 @@ public class Editar extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddAlunoButMouseExited
 
     private void AddTurmaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseClicked
-        CadastrarTurma cadastrarTurma = new CadastrarTurma();
-        jDesktopPanel.removeAll();
-        jDesktopPanel.add(cadastrarTurma).setVisible(true);
+      
     }//GEN-LAST:event_AddTurmaButMouseClicked
 
     private void AddTurmaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseEntered
@@ -255,9 +252,7 @@ public class Editar extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AddTurmaButMouseExited
 
     private void AddAtividadeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseClicked
-        Editar cadastrarAtividades = new Editar();
-        jDesktopPanel.removeAll();
-        jDesktopPanel.add(cadastrarAtividades).setVisible(true);
+        
 
     }//GEN-LAST:event_AddAtividadeButMouseClicked
 
