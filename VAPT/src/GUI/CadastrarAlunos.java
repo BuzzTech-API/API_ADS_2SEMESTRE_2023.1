@@ -6,8 +6,14 @@ package GUI;
 
 import java.util.ArrayList;
 
+import dao.AlunoDao;
+import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+
+import modelo.Aluno;
+import modelo.Aluno_Atividade;
+import modelo.Atividades;
 import modelo.Turma;
 
 /**
@@ -155,8 +161,23 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         int id = jComboBox1.getSelectedIndex();
+        Aluno aluno = new Aluno();
         Turma turma = this.lista.get(id);
-        String nome = alunoNomeTextField.getText();
+        turma.buscarAtividades();
+        ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
+        aluno.setNome(alunoNomeTextField.getText());
+        aluno.setId_turma(turma.getId_turma());
+        AlunoDao alunoDao = new AlunoDao();
+        alunoDao.adicionar(aluno);
+        aluno.getIdBanco();
+        Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+        for (Atividades atividades : listaAtividades) {
+            Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
+            aluno_Atividade.setAluno_Ativadade_entrega(false);
+            aluno_Atividade.setAluno_id_aluno(aluno.getId_aluno());
+            aluno_Atividade.setAtividade_id_atividade(atividades.getId_atividade());
+            aluno_AtividadeDao.adicionar(aluno_Atividade);
+        }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

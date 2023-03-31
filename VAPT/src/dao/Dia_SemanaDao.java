@@ -34,7 +34,7 @@ public class Dia_SemanaDao {
             stmt.setString(4, dia_Semana.getHora_fim());
             stmt.execute();
             stmt.close();
-            JOptionPane.showMessageDialog(null,"Dia_semana Cadastrada com Sucesso!");
+            //JOptionPane.showMessageDialog(null,"Dia_semana Cadastrada com Sucesso!");
 
         } catch (SQLException exception) {
             // TODO: handle exception

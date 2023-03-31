@@ -215,9 +215,10 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddAtividadeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseClicked
-        Editar cadastrarAtividades = new Editar();
-        jDesktopPanel.removeAll();
-        jDesktopPanel.add(cadastrarAtividades).setVisible(true);
+
+        CadastroAtividades cadastroAtividades = new CadastroAtividades();
+      jDesktopPanel.removeAll();
+      jDesktopPanel.add( cadastroAtividades).setVisible(true);
         
     }//GEN-LAST:event_AddAtividadeButMouseClicked
 

@@ -1,47 +1,43 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package GUI;
 
+import dao.Aluno_AtividadeDao;
+import dao.AtividadesDao;
+import dao.TurmaDao;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFormattedTextField;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.text.MaskFormatter;
-import javax.xml.crypto.Data;
 
-import dao.AtividadesDao;
-import dao.TurmaDao;
+import modelo.Aluno;
+import modelo.Aluno_Atividade;
 import modelo.Atividades;
 import modelo.Turma;
 
 /**
  *
- * @author DELL
+ * @author joice
  */
-public class CadastroAtividades2 extends javax.swing.JFrame {
+public class CadastroAtividades extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form CadastroAtividades2
+     * Creates new form CadastroAtividades
      */
-    
     MaskFormatter mfdata;
     private ArrayList<Turma> lista = new ArrayList<>();
-
-    public CadastroAtividades2() {
-        
-        try {
-            mfdata = new MaskFormatter ("##/##/####");
-        } catch (ParseException ex) {
-            Logger.getLogger(CadastroAtividades2.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public CadastroAtividades() {
         initComponents();
         preecherComboBoxTurma();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI)this.getUI();
+        ui.setNorthPane(null);
     }
 
     /**
@@ -56,7 +52,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        turmaSelect = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         tipoAtv = new javax.swing.JTextField();
@@ -64,13 +60,11 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        butCadastrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         descAtv = new javax.swing.JTextArea();
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         diaEntrega = new javax.swing.JFormattedTextField(mfdata);
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -81,9 +75,9 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        turmaSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                turmaSelectActionPerformed(evt);
             }
         });
 
@@ -105,11 +99,11 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel8.setText("Descrição:");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton1.setText("Cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        butCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        butCadastrar.setText("Cadastrar");
+        butCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                butCadastrarActionPerformed(evt);
             }
         });
 
@@ -134,7 +128,12 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
             }
         });
 
-        diaEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        try {
+            diaEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        diaEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         diaEntrega.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 diaEntregaFocusLost(evt);
@@ -174,7 +173,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                             .addComponent(jLabel2)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(turmaSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(47, 47, 47)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -182,7 +181,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(333, 333, 333)
-                        .addComponent(jButton1)))
+                        .addComponent(butCadastrar)))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -193,7 +192,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(turmaSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -213,7 +212,7 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(butCadastrar)
                 .addGap(24, 24, 24))
         );
 
@@ -221,70 +220,30 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(256, 256, 256)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(224, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addGap(224, 224, 224))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(47, 47, 47)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void diaSolicitadoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_diaSolicitadoFocusLost
-        // impede que o valor antigo da data que o usuario digitou volte:
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        
-        try {
-            Date date = sdf.parse(diaSolicitado.getText());
-            diaSolicitado.setValue(sdf.format(date));
-        } catch (ParseException e) {
-            diaSolicitado.setFocusLostBehavior(JFormattedTextField.PERSIST);
-            diaSolicitado.setText("");
-            diaSolicitado.setValue(null);
-            
-        }
-        
-    }//GEN-LAST:event_diaSolicitadoFocusLost
-
-    private void diaEntregaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_diaEntregaFocusLost
-        // impede que o valor antigo da data que o usuario digitou volte:
-         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        
-        try {
-            Date date = sdf.parse(diaEntrega.getText());
-            diaEntrega.setValue(sdf.format(date));
-        } catch (ParseException e) {
-            diaEntrega.setFocusLostBehavior(JFormattedTextField.PERSIST);
-            diaEntrega.setText("");
-            diaEntrega.setValue(null);
-            
-        }
-    }//GEN-LAST:event_diaEntregaFocusLost
-
-    private void diaSolicitadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaSolicitadoActionPerformed
+    private void turmaSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmaSelectActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_diaSolicitadoActionPerformed
+    }//GEN-LAST:event_turmaSelectActionPerformed
 
-    private void diaEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaEntregaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_diaEntregaActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void butCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCadastrarActionPerformed
         // TODO add your handling code here:
         Atividades atividade = new Atividades();
-        int id = jComboBox1.getSelectedIndex();
+        int id = turmaSelect.getSelectedIndex();
         Turma turma = this.lista.get(id);
         atividade.setTipo(tipoAtv.getText());
         atividade.setDescricao(descAtv.getText());
@@ -299,6 +258,16 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
             atividade.setData_fim(sqlDate);
             AtividadesDao atividadeDao = new AtividadesDao();
             atividadeDao.adicionar(atividade);
+            atividade.puxarIdDoBanco();
+            ArrayList<Aluno> listaDeAlunos = turma.getAlunosDaTurma();
+            Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+            for (Aluno aluno : listaDeAlunos) {
+                Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
+                aluno_Atividade.setAluno_Ativadade_entrega(false);
+                aluno_Atividade.setAluno_id_aluno(aluno.getId_aluno());
+                aluno_Atividade.setAtividade_id_atividade(atividade.getId_atividade());
+                aluno_AtividadeDao.adicionar(aluno_Atividade);
+            }
             tipoAtv.setText("");
             diaSolicitado.setText("");
             diaEntrega.setText("");
@@ -308,50 +277,53 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
             e.printStackTrace();
         }
 
+    }//GEN-LAST:event_butCadastrarActionPerformed
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void diaSolicitadoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_diaSolicitadoFocusLost
+        // impede que o valor antigo da data que o usuario digitou volte:
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CadastroAtividades2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CadastroAtividades2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CadastroAtividades2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CadastroAtividades2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+            Date date = sdf.parse(diaSolicitado.getText());
+            diaSolicitado.setValue(sdf.format(date));
+        } catch (ParseException e) {
+            diaSolicitado.setFocusLostBehavior(JFormattedTextField.PERSIST);
+            diaSolicitado.setText("");
+            diaSolicitado.setValue(null);
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CadastroAtividades2().setVisible(true);
-            }
-        });
-    }
+        }
+
+    }//GEN-LAST:event_diaSolicitadoFocusLost
+
+    private void diaSolicitadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaSolicitadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_diaSolicitadoActionPerformed
+
+    private void diaEntregaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_diaEntregaFocusLost
+        // impede que o valor antigo da data que o usuario digitou volte:
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+            Date date = sdf.parse(diaEntrega.getText());
+            diaEntrega.setValue(sdf.format(date));
+        } catch (ParseException e) {
+            diaEntrega.setFocusLostBehavior(JFormattedTextField.PERSIST);
+            diaEntrega.setText("");
+            diaEntrega.setValue(null);
+
+        }
+    }//GEN-LAST:event_diaEntregaFocusLost
+
+    private void diaEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaEntregaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_diaEntregaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton butCadastrar;
     private javax.swing.JTextArea descAtv;
     private javax.swing.JFormattedTextField diaEntrega;
     private javax.swing.JFormattedTextField diaSolicitado;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -363,13 +335,15 @@ public class CadastroAtividades2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField tipoAtv;
+    private javax.swing.JComboBox<String> turmaSelect;
     // End of variables declaration//GEN-END:variables
-
     public void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
         lista = turmaDao.pesquisar();
         for (Turma turma : lista) {
-            jComboBox1.addItem(turma.getNome());
+            turmaSelect.addItem(turma.getNome());
         }
     }
+
+
 }
