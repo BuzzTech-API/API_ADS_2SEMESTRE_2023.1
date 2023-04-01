@@ -16,7 +16,6 @@
 <p align="center">
   <a href ="#backlog"> Backlog da Sprint </a>  | 
   <a href ="#tarefas"> Tarefas </a>  |
-  <a href ="#evolução"> Evolução do Backlog </a>  |
   <a href ="#hitoria"> Histórias de Usuários </a>  |
   <a href ="#apresentação"> Apresentação </a>
 </p>
@@ -267,14 +266,22 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 
 
+
 |          ID           |                     História de Usuário                      |
 | :-------------------: | :----------------------------------------------------------: |
-| US01<a id='us01'></a> | Natália, aluna e Andréa, professora, precisam de uma forma de identificação nominal dos computadores. |
-| US02<a id='us02'></a> | Pedro, técnico, precisa de uma identificação para diferenciar os diversos computadores semelhantes dentro da Fatec. |
-| US03<a id='us03'></a> | Como  estudante e professora, Natália e Andreia, respectivamente, deveriam ser  capazes de pedir ajuda ao técnico quando o computador não estivesse  funcionando como esperado. |
-| US04<a id='us04'></a> | Como  técnico responsável pelo bom funcionamento dos computadores, Pedro deveria  ter um acesso rápido aos relatos dos problemas técnicos dos computadores. |
-| US05<a id='us05'></a> | Pedro  precisa de um ambiente com sistema integrado para que ele receber automaticamente os chamados abertos pelos usuários. |
-| US06<a id='us06'></a> | Como usuárias, Natália e Andréa precisam de uma interface *clean* e intuitiva que seja fácil de usar e, ao mesmo tempo, não falte as informações as necessária para que Pedro identifique o problema. |
+| US01<a id='us01'></a> | Catarina, professora, precisa de uma interface gráfica ágil e prática para interagir com o programa. |
+| US02<a id='us02'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
+| US03<a id='us03'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
+| US04<a id='us04'></a> | Catarina, professora, precisa cadastrar as atividades realizadas pelos seus alunos. |
+| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no programa. |
+| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
+| US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
+| US08<a id='us08'></a> | Catarina, professora, precisa de um ambiente de armazenamento virtual seguro para acumular todas as informações cadastradas. |
+| US09<a id='us09'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US11<a id='us11'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
+| US12<a id='us12'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
+| US13<a id='us13'></a> | Catarina, professora, precisa de um software confiável e que não tenha problemas de desempenho. |
 
 <br>
 
