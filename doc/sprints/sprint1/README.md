@@ -61,7 +61,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 |                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
-|                Montagem do Wireframe                | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :white_check_mark: |
+| <a href='#wireframe'> Montagem do Wireframe </a>  | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :white_check_mark: |
 |                Diagrama de Classes UML                | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :white_check_mark: |
 |            Cadastro das turmas            | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :white_check_mark: |
 |            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :white_check_mark: |
@@ -81,52 +81,18 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ## :checkered_flag: Tarefas <a id="tarefas"></a>
 
-1. ### Identificação dos computadores<a id='identificação'></a>
+### 1. Montagem do Wireframe <a id='wireframe'></a>
 
-   Para fazer o levantamento de quantos computadores existem nos laboratórios da Fatec e como eles estão distribuídos, o time buscou informações junto ao responsável técnico que atende os chamados sobre problemas com os computadores. Segundo informado, a Fatec São José dos Campos conta com um total de **14 laboratório**, sendo que estes estão divididos em **4 layouts distintos**, como apresentado nas imagens a seguir:
+   A montagem de um wireframe é uma etapa importante no processo de desenvolvimento de um software, pois permite visualizar e planejar a interface do usuário e a disposição dos elementos na tela do software, por essa razão é parte essencial desta primeira Sprint. No caso específico de um software feito em Java para uma professora do ensino fundamental de uma escola estadual, a montagem do wireframe deve ser feita levando em conta as necessidades e expectativas do usuário final. 
+   O wireframe pode incluir diferentes telas e elementos, como menus, botões, campos de texto, tabelas, gráficos, entre outros, que serão necessários para que a professora possa visualizar como irá trabalhar suas atividades no software de forma eficiente e intuitiva. Alguns exemplos de funcionalidades que são vistas no wireframe:
 
+Cadastro de informações: permite que a professora visualize como será feito o cadastro das informações do nome da escola, turma, nome do aluno e atividades.
+Controle de desempenho: permite que a professora visualize como será feito o registro as atividades realizadas pelos alunos em diferentes turmas.
+Controle com dados estatísticos: permite que a professora tenha uma visão geral do desempenho da turma e dos alunos individualmente, permitindo identificar pontos de melhoria e planejar ações mais eficientes para o processo de ensino e aprendizagem, também permite que a professora se comunique de forma eficiente com os alunos e com a coordenação das escolas nas reuniões pedagógicas.
+   
    
 
-   | ![Laboratório com 32 computadores](img/idLabs/32comp.png)    | ![Laboratório com 24 computadores](img/idLabs/24comp.png)    |
-   | ------------------------------------------------------------ | ------------------------------------------------------------ |
-   | ![Laboratório médio com 18 computadores](img/idLabs/18comp_medio.png) | ![Laboratório menor com 18 computadores](img/idLabs/18comp_menores.png) |
-
-   | Laboratório | Quantidade | Somatório de Computadores |
-   | ----------- | ---------- | ------------------------- |
-   | Grandes     | 4          | 104                       |
-   | Méidios     | 8          | 144                       |
-   | Pequenos    | 2          | 36                        |
-
-   | Total de computadores |
-   | :-------------------- |
-   | 284                   |
-
    
-
-   | Quantidades de Laboratórios.                                 |
-   | ------------------------------------------------------------ |
-   | 14 laboratórios no total                                     |
-   | 4 laboratórios *maiores* nas salas 402 (32 Comp + 1 professor) e 401, 301, 302 (24 comp + 1  professor). |
-   | 8 laboratórios *médios* nas salas 403, 405, 406, 407, 408, 409, 411 e 412 (18 computadores + 1  professor) . |
-   | 2 laboratórios *menores* nas salas 404 e 303 (18 computadores + 1 professor), que utilizam a posição horizontal de fileiras. |
-
-   | Identificação de controle das máquinas                       |
-   | ------------------------------------------------------------ |
-   | Númeração  Sequencial. As portas são os pontos de partida, e cada sala conta com 2 bancadas por  fileria. |
-   | Controle  somente pelo número de sala do laboratório e da localização da bancada. Exemplo: Laboratório 401, máquina 01 ficaria 401-01. |
-   | Concetração  de máquinas semelhantes na mesma sala, porém não há uma padronização. |
-   | Não há  movimentação de máquinas entre as salas, somente quando um computador quebra,  assim um novo é colocado no lugar. |
-
-   | Controle  hardware                                           |
-   | ------------------------------------------------------------ |
-   | A nível de componentes internos, não há um pradrão estabelecido por laboratório, pois as máquinas novas  substituem as quebradas. |
-   | O mesmo  se dá quanto aos periféricos. Há dificuldade de compra de elemento para  realizar a manutenção devido a burocracias de licitação. |
-
-   | Dicas fornecidas pelo técnico                                |
-   | ------------------------------------------------------------ |
-   | Fornecer o status das máquinas. Exemplo: Demonstrar para o usuário no layout quais máquinas estão em manutenção. |
-   | Controlar  máquinas apenas por identificação das salas e posição das bancadas, como anteriormente descrito. |
-   | Deixar o controle de ID o mais simples possive, pois há pouca mão de obra  pra atualizar e abastecer o sistema. |
 
    <br>
 
@@ -159,89 +125,6 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 4. ### Conexão  das páginas no Flask <a id='conexão'></a>
 
    Como tarefa fundamental para atingir MVP, esta tarefa propõe-se a conectar as páginsa de abertura de chamado e de visualização de chamados utilizando o framework Flask. Feita essa conexão, os chamados abertos pelos usuários serão automaticamente enviados e preenchidos na tabela te visualizão, para que o técnico possa, assim, analisar os problemas e adotar as devidas mediadas para resolvê-lo. Neste sentido, a partir desta tarefa já é possível que o cliente teste o sistema para avaliar e identificar pontos fortes e possíveis mudanças. Em consonância com a metodologia ágil do Scrum, colocar o produto em teste logo no início aumenta as chances de, ao final do tempo de desenvolvimento, a entrega atenda as necessidades e expectativas do cliente.
-
-   
-
-   Nos testes que fizemos da aplicação, o resultado foi o seguinte:
-
-   
-
-   ![Teste do MVP](img/MVP/MVP.gif)
-
-   
-
-   ***Como executar a aplicação:***
-
-   
-
-   1. Execute o Powershell ou Terminal do Windows como <u>ADMINISTRADOR</u> 
-
-   2. Crie uma pasta para você trabalhar sua aplicação
-
-   ```
-   mkdir flask
-   ```
-
-   3. Acesse a  pasta 
-
-   ```
-   cd flask/
-   ```
-
-   4. Execute o seguinte comando para verificar se você possui o Python instalado no seu computador. Caso não possua, antes de seguir para o próximo passo, baixe o instalador no site oficial e instale na sua máquina.
-
-   ```
-   python --version
-   ```
-
-   5. Depois, crie um ambiente virtual para executar sua aplicação
-
-   ```
-   py -3 -m venv venv
-   ```
-
-   6. Agora, mude a politica de execução do seu windows para conseguir ativar o ambiente virtual
-
-   ```
-   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine
-   ```
-
-   7. Ative o ambiente virtual com o seguinte comando
-
-   ```
-   venv\Scripts\activate
-   ```
-
-   8. Coloque os arquivos da API nesse diretorio que você criou e executar o seguinte comando para instalar as bibliotecas
-
-   ```
-   pip install -r .\requirements.txt
-   ```
-
-   9. Por fim, é so executar a aplicação executando
-
-   ```
-   python app.py
-   ```
-
-   
-
-   A seguir estão os [***requirements***](src/requirements.txt) para rodar a aplicação:
-
-   
-
-   ```
-   click==8.1.3
-   Flask==2.2.2
-   gunicorn==20.1.0
-   importlib-metadata==4.12.0
-   itsdangerous==2.1.2
-   Jinja2==3.1.2
-   MarkupSafe==2.1.1
-   tinydb==4.7.0
-   Werkzeug==2.2.2
-   zipp==3.8.1
-   ```
 
    <br>
 
