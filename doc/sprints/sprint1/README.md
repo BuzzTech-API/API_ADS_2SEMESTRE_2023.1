@@ -66,10 +66,10 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 | <a href='#cadastro_turmas'> Cadastro das turmas </a> | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :white_check_mark: |
 | <a href='#cadastro_alunos'> Cadastro dos alunos </a> | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :white_check_mark: |
 | <a href='#cadastro_atividades'> Cadastro das atividades </a> | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Média    |   1    |          8h          | :white_check_mark: |
-|                Interface gráfica das turmas                | Criação no Swing da interface gráfica do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Baixa    |   1    |          2h           | :white_check_mark: |
-|            Interface gráfica dos alunos            | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :white_check_mark: |
-|         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
-|                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
+| <a href='#interface_grafica_turmas'> Interface gráfica das turmas </a> | Criação no Swing da interface gráfica do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Baixa    |   1    |          2h           | :white_check_mark: |
+| <a href='#interface_grafica_alunos'> Interface gráfica dos alunos </a> | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :white_check_mark: |
+| <a href='#interface_grafica_atividades'> Interface gráfica das atividades </a> | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
+| <a href='#diagrama_modelo_logico_conceitual'> Diagrama do Modelo Conceitual e Lógico do Banco de Dados </a> | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
 
 
 
@@ -149,7 +149,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    
 <br>
 
-### 9. Diagrama do Modelo Conceitual e Lógico do Banco de Dados <a id='cadastro_atividades'></a>
+### 9. Diagrama do Modelo Conceitual e Lógico do Banco de Dados <a id='diagrama_modelo_logico_conceitual'></a>
 
    Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
 
