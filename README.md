@@ -159,8 +159,11 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |                Descrição Sprint 2                | Desenvolver todas as atividades de acordo com as histórias de usuários. | <a href='#us08'>US08</a> |   Média    |   2    |          4h           | :construction: |
 
 
+<br>
 
+## :fire: Burndown <a id='burndown'></a>
 
+<img src="doc/img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
 
 <br>
 
