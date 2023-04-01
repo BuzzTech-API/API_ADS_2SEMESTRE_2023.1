@@ -88,9 +88,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 **Cadastro de informações:** permite que a professora visualize como será feito o cadastro das informações do nome da escola, turma, nome do aluno e atividades.
 
-**Controle de desempenho:** permite que a professora visualize como será feito o registro as atividades realizadas pelos alunos em diferentes turmas.
-
-**Controle com dados estatísticos:** permite que a professora tenha uma visão geral do desempenho da turma e dos alunos individualmente, permitindo identificar pontos de melhoria e planejar ações mais eficientes para o processo de ensino e aprendizagem, também permite que a professora se comunique de forma eficiente com os alunos e com a coordenação das escolas nas reuniões pedagógicas.
+**Controle de desempenho:** permite que a professora tenha uma visão geral do desempenho da turma e dos alunos individualmente, permitindo identificar pontos de melhoria e planejar ações mais eficientes para o processo de ensino e aprendizagem. Também permite que a professora se comunique de forma eficiente com a coordenação das escolas nas reuniões pedagógicas.
    
    
 
