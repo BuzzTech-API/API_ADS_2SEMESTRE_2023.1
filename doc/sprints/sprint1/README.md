@@ -109,7 +109,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    
    ### 	:art: Diagrama de Classes UML
 
-<img src="doc/sprints/sprint1/img/diagramaUML.jpeg" alt="Diagrama de Classes UML" style="zoom: 150%;" />
+<img src="doc/sprints/sprint1/img/diagrama_uml.jpeg" alt="Diagrama de Classes UML" style="zoom: 150%;" />
 
 <br>
 
