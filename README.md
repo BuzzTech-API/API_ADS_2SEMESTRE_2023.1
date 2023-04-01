@@ -156,7 +156,9 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |            Interface gráfica dos alunos            | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :white_check_mark: |
 |         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
 |                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
-|                Descrição Sprint 2                | Desenvolver todas as atividades de acordo com as histórias de usuários. | <a href='#us08'>US08</a> |   Média    |   2    |          4h           | :construction: |
+|   Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :construction: |
+|   Visualizar informações Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Média    |   2    |          4h           | :construction: |
+|   Visualizar informações Aluno | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Média    |   2    |          4h           | :construction: |
 
 
 <br>
