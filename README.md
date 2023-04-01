@@ -177,8 +177,8 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :round_pushpin: Roadmap<a id='roadmap'></a>
 
 
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/roadmap.png?raw=true" alt="Roadmap" style="zoom: 150%;" />
 
-![Roadmap - Backlog do Produto](doc/frontend/roadmap4.png)
 
 <br>
 
