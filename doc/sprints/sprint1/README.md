@@ -163,6 +163,16 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
    O diagrama do modelo conceitual e lógico do banco de dados é uma representação visual que mostra como as entidades, atributos e relacionamentos de um banco de dados estão organizados e interconectados. Essa ferramenta é crucial no processo de design e desenvolvimento de bancos de dados, pois permite que os desenvolvedores e usuários compreendam facilmente a estrutura e a lógica subjacentes ao sistema. Esses diagramas são ferramentas valiosas para garantir que um banco de dados seja bem estruturado, eficiente, eficaz e seguro. Também ajudam a melhorar a comunicação e a colaboração entre as partes interessadas e envolvidas no processo de desenvolvimento do banco de dados.
    
+   
+- Modelo Conceitual do Banco de Dados
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_atividade.png?raw=true" alt="Modelo Conceitual do Banco de Dados" style="zoom: 150%;" />
+
+<br>
+
+- Modelo Lógico do Banco de Dados
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_atividade.png?raw=true" alt="Modelo Lógico do Banco de Dados" style="zoom: 150%;" />
 
 <br>
 
