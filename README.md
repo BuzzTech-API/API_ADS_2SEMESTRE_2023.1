@@ -50,9 +50,9 @@
 
 ### 	:art: Wireframe do Programa
 
-
-
-
+<br>
+<br>
+<br>
 
 
 ## :medal_sports: Desafio <a id="desafio"></a>
@@ -131,7 +131,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 
 
-🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em construção :construction:
+🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Concluído :white_check_mark:
 
 🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Em construção :construction:
 
