@@ -62,7 +62,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 |                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
 | <a href='#wireframe'> Montagem do Wireframe </a>  | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :white_check_mark: |
-| <a href='#diagramaUML'> Diagrama de Classes UML </a> | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :white_check_mark: |
+| <a href='#diagrama_uml'> Diagrama de Classes UML </a> | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :white_check_mark: |
 |            Cadastro das turmas            | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :white_check_mark: |
 |            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :white_check_mark: |
 |         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Média    |   1    |          8h          | :white_check_mark: |
@@ -102,7 +102,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    
 <br>
 
-### 2. Diagrama de Classes UML <a id='diagramaUML'></a>
+### 2. Diagrama de Classes UML <a id='diagrama_uml'></a>
 
    Prototipagem e  criação da página de abertura de chamados em HTML. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas. Sendo a págna que em que os usuários identificararão o problema das máquinas, outro objetivo é criar um sistema simples para os usuários, mas que ao mesmo tempo tenha todas as informações necessárias para que o técnico identifique tanto o problema, quanto a máquina em questão. Os campos de preenchimento do formulário desta página serão:
 
