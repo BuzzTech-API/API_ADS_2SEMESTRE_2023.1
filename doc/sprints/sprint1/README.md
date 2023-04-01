@@ -104,7 +104,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 2. Diagrama de Classes UML <a id='diagrama_uml'></a>
 
-   O diagrama de classes UML é uma ferramenta visual que permite visualizar de forma clara e objetiva as classes de objetos, seus atributos e métodos da linguagem de programação Java. O software irá cadastrar turmas, alunos e atividades, o diagrama de classes é fundamental para a organização e estruturação desse sistema, já que permite definir as entidades envolvidas e as relações entre elas.
+   O diagrama de classes UML é uma ferramenta visual que permite analisar de forma clara e objetiva as classes de objetos, seus atributos e métodos da linguagem de programação Java. O software irá cadastrar turmas, alunos e atividades, enquanto o diagrama de classes será uma peça fundamental na organização e estruturação desse sistema, já que permite definir as entidades envolvidas e as relações entre elas.
    Dessa forma, o diagrama de classes UML é importante para a compreensão do sistema, permitindo que os desenvolvedores tenham uma visão geral da estrutura do programa e possam planejar a implementação de forma mais eficiente. Além disso, o diagrama de classes também facilita a comunicação entre os membros da equipe de desenvolvimento, já que permite uma representação visual das classes e das relações entre elas, facilitando a discussão e a tomada de decisões.
 
 <br>
@@ -113,36 +113,45 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 <br>
 
-3. ### Página de visualização dos chamados em HTML<a id='visualização'></a>
+### 3. Cadastro das Turmas <a id='cadastro_turmas'></a>
 
-   Prototipagem e criação da página de visualização de chamados em HTML. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas. Os usuários que fazer abertura de chamado não terão acesso à essa pagina. Por motivos gerenciais, apenas os técnicos terão acesso o link. Nela, além dos itens preenchidos pelos usuários na página de <a href='abertura'>abertura de chamados</a>, a tabela também contará com os seguintes itens para controle das OS:
-
-   - Data dos chamados;
-   - ID dos chamados;
-   - Botão de apagar o chamado;
-   - Botão para atualizar o chamado.
-
-   Para visualizar a página HTML de *visualização de chamados*, acesse o <a href=''>link :link:</a>.
-
-   <br>
-
-4. ### Conexão  das páginas no Flask <a id='conexão'></a>
-
-   Como tarefa fundamental para atingir MVP, esta tarefa propõe-se a conectar as páginsa de abertura de chamado e de visualização de chamados utilizando o framework Flask. Feita essa conexão, os chamados abertos pelos usuários serão automaticamente enviados e preenchidos na tabela te visualizão, para que o técnico possa, assim, analisar os problemas e adotar as devidas mediadas para resolvê-lo. Neste sentido, a partir desta tarefa já é possível que o cliente teste o sistema para avaliar e identificar pontos fortes e possíveis mudanças. Em consonância com a metodologia ágil do Scrum, colocar o produto em teste logo no início aumenta as chances de, ao final do tempo de desenvolvimento, a entrega atenda as necessidades e expectativas do cliente.
-
-   <br>
-
-5. ### Criação, aprovação e entrega do Wireframe<a id='wireframe'></a>
-
-   Para termos mais clareza de como deve ficar a identidade visual do produto, a criação e aprovação do Wireframe é parte essencial desta primeira Sprint. A partir dele, é possível alinhar as expectativas com o cliente quanto à criação do frontend da página ficará. Além disso, o Wireframe dará a direção para que os desenvolvedores construam páginas que tanto atendam à identidade do cliente, bem como para entender como criar um sistema web que seja intuitivo e atgradável para os usuários e técnicos que o utilizarão.  Foi desenvolvido o Wirefram das seguintes páginas:
-
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
    
+<br>
 
-   |                 Home                  |                     Abertura de Chamado                      |                   Visualização de Chamado                    |
-   | :-----------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-   | ![Home](img/wireframe/PáginaHome.png) | ![Abertura de Chamado](img/wireframe/AberturaDeChamados.png) | ![Visualização de Chamado](img/wireframe/VisualizaçãoDeChamados.png) |
+### 4. Cadastro dos Alunos <a id='cadastro_alunos'></a>
 
-   Para visualizar o *Wireframe* em PDF, acesse o [link :link:](img/wireframe/wireframe.pdf).
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   
+<br>
+
+### 5. Cadastro das Atividades <a id='cadastro_atividades'></a>
+
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   
+<br>
+
+### 6. Interface gráfica das Turmas <a id='interface_grafica_turmas'></a>
+
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   
+<br>
+   
+### 7. Interface gráfica dos Alunos <a id='interface_grafica_alunos'></a>
+
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   
+<br>
+
+### 8. Interface gráfica das Atividades <a id='interface_grafica_atividades'></a>
+
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   
+<br>
+
+### 9. Diagrama do Modelo Conceitual e Lógico do Banco de Dados <a id='cadastro_atividades'></a>
+
+   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
 
 <br>
 
@@ -164,8 +173,4 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 
 <br>
-
-## :mega: Apresentação da Sprint<a id='#apresentação'></a>
-
-Para visualizar a *Apresentação da Sprint 1* em PDF, acesse o <a href='/doc/sprints/sprint1/img/Sprint1.pdf'>link :link:</a>.
 
