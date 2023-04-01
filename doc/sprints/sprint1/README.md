@@ -1,6 +1,6 @@
 
 
-# Sprint 1 - MVP
+# Sprint 1 - Cadastros
 
 
 <p align="center">
