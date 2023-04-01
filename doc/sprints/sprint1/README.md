@@ -90,7 +90,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 	:art: Wireframe dos Cadastros
 
-<img src="doc/sprints/sprint1/img/wireframe_cadastros.jpeg" alt="Wireframe dos Cadastros" style="zoom: 150%;" />
+<img src="doc/img/wireframe_cadastros.jpeg" alt="Wireframe dos Cadastros" style="zoom: 150%;" />
 
 <br>
 
@@ -98,7 +98,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 	:art: Wireframe do Controle de Desempenho
 
-<img src="doc/sprints/sprint1/img/wireframe_desempenho.jpeg" alt="Wireframe do Controle de Desempenho" style="zoom: 150%;" />
+<img src="doc/img/wireframe_desempenho.jpeg" alt="Wireframe do Controle de Desempenho" style="zoom: 150%;" />
    
 <br>
 
@@ -109,7 +109,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    
    ### 	:art: Diagrama de Classes UML
 
-<img src="doc/sprints/sprint1/img/diagrama_uml.jpeg" alt="Diagrama de Classes UML" style="zoom: 150%;" />
+<img src="doc/img/diagrama_uml.jpeg" alt="Diagrama de Classes UML" style="zoom: 150%;" />
 
 <br>
 
