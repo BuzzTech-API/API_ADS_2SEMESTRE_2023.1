@@ -136,7 +136,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    Visualização do wireframe de cadastro das turmas.
  <br>
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/controle_desempenho.png?raw=true" alt="Wireframe do Cadastro das Turmas" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_turma.png?raw=true" alt="Wireframe do Cadastro das Turmas" style="zoom: 150%;" />
    
 <br>
    
@@ -145,7 +145,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    Visualização do wireframe de cadastro dos Alunos.
  <br>
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/controle_desempenho.png?raw=true" alt="Wireframe do Cadastro dos Alunos" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_aluno.png?raw=true" alt="Wireframe do Cadastro dos Alunos" style="zoom: 150%;" />
    
 <br>
 
@@ -154,7 +154,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    Visualização do wireframe de cadastro das atividades.
  <br>
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/controle_desempenho.png?raw=true" alt="Wireframe do Cadastro das Atividades" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_atividade.png?raw=true" alt="Wireframe do Cadastro das Atividades" style="zoom: 150%;" />
    
 <br>
 
