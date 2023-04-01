@@ -46,18 +46,11 @@
 
 <br>
 
-As escolhas de tarefa dessa primeira Sprint reflete a definição do MVP, ou seja, versão sintética, porém funcional, de um sistema web para Controle de Ordens de Serviços. Nele o usuário poderá abrir um chamado para alertar um equipamento com mau funcionamento, no qual conterá as seguintes informações:
+A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolvimento ágil de software - foi feita levando em consideração a definição do MVP *(Minimal Viable Product)*, que é uma versão mínima e funcional do programa desktop desenvolvido para que uma professora de escola estadual tenha controle das atividades dos alunos. Nele o usuário poderá inserir as seguintes informações:
 
-- Identificação do Laboratório
-- Identificação do Computador
-- Problema de Hardware ou Software
-- Descrição do Problema
-
-Este chamado será automaticamente gerado e organizado em uma tabela na qual o técnico terá acesso às informações fornecidas pelo usuário, bem como um número de identificação da Ordem de Serviço (OS) e dois botões:
-
-- Um para apagar a OS;
-- Outro para atualizar a OS.
-
+- Cadastrar turmas;
+- Cadastrar alunos;
+- Cadastrar atividades.
 
 
 <br>
