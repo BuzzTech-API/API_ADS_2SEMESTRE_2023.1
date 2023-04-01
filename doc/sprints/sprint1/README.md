@@ -181,7 +181,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ## :fire: Burndown <a id='burndown'></a>
 
-<img src="img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
+<img src="../../img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
 
 
 
