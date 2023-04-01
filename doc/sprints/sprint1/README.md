@@ -88,7 +88,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 **Cadastro de informações:** permite que a professora visualize como será feito o cadastro das informações do nome da escola, turma, nome do aluno e atividades.
 
-### 	:art: Wireframe dos Cadastros
+<br>
 
 <img src="API_ADS_2SEMESTE_2023.1/doc/img/wireframe_cadastros.jpeg" alt="Wireframe dos Cadastros" style="zoom: 150%;" />
 
@@ -96,7 +96,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 **Controle de desempenho:** permite que a professora tenha uma visão geral do desempenho da turma e dos alunos individualmente, permitindo identificar pontos de melhoria e planejar ações mais eficientes para o processo de ensino e aprendizagem. Também permite que a professora se comunique de forma eficiente com a coordenação das escolas nas reuniões pedagógicas.
 
-### 	:art: Wireframe do Controle de Desempenho
+<br>
 
 <img src="API_ADS_2SEMESTE_2023.1/doc/img/wireframe_desempenho.jpeg" alt="Wireframe do Controle de Desempenho" style="zoom: 150%;" />
    
@@ -106,13 +106,10 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
    O diagrama de classes UML é uma ferramenta visual que permite visualizar de forma clara e objetiva as classes de objetos, seus atributos e métodos da linguagem de programação Java. O software irá cadastrar turmas, alunos e atividades, o diagrama de classes é fundamental para a organização e estruturação desse sistema, já que permite definir as entidades envolvidas e as relações entre elas.
    Dessa forma, o diagrama de classes UML é importante para a compreensão do sistema, permitindo que os desenvolvedores tenham uma visão geral da estrutura do programa e possam planejar a implementação de forma mais eficiente. Além disso, o diagrama de classes também facilita a comunicação entre os membros da equipe de desenvolvimento, já que permite uma representação visual das classes e das relações entre elas, facilitando a discussão e a tomada de decisões.
-   
-   ### 	:art: Diagrama de Classes UML
+
+<br>
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/diagrama_uml.jpeg?raw=true" alt="Diagrama de Classes UML" style="zoom: 150%;" />
-
-
-
 
 <br>
 
