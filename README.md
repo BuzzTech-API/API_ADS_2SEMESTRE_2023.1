@@ -18,6 +18,7 @@
   <a href ="#mvp"> MVP </a>  |
   <a href ="#sprint"> Sprints </a>  |
   <a href ="#backlog"> Backlog do Produto </a>  | 
+  <a href ="#burndown"> Burndown </a>  | 
   <a href ="#personas"> Personas </a>  |
   <a href ="#historia"> Histórias de usuário </a>  | 
   <a href ="#equipe"> Equipe </a>  |
