@@ -42,27 +42,14 @@
 <br>
 <br>
 
-> Status do Projeto: Em Construção! :construction:
+> Status do Projeto: Concluído! :white_check_mark:
 
 <br>
 
 
 
-### :bust_in_silhouette: Cadastro das Turmas
+### 	:art: Wireframe do Programa
 
-<img src="doc/sprints/sprint4/img/idVisual.gif" alt="aprimoramento da identidade visual" style="zoom: 150%;" />
-
-
-
-### :bust_in_silhouette: Cadastro dos Alunos
-
-<img src="doc/sprints/sprint4/img/contatos.gif" alt="criação da páginad de contatos" style="zoom: 150%;" />
-
-
-
-### :pencil: Cadastro das Atividades
-
-<img src="doc/sprints/sprint4/img/status.gif" alt="modificação do status do chamado" style="zoom: 150%;" />
 
 
 
