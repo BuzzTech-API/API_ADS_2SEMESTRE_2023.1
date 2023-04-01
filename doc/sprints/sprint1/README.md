@@ -116,19 +116,19 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 3. Cadastro das Turmas <a id='cadastro_turmas'></a>
 
-   Prototipagem e criação da página que possibilita a visualização do cadastro das turmas. Para esta parte específica do programa, a necessidade do cliente abrange cadastrar o nome da escola, turma (série), qual dia da semana a professora dará aula para essa turma, qual o horário de início e fim.
+   Prototipagem e criação da página que possibilita o cadastro das turmas. Para esta parte específica do programa, a necessidade do cliente abrange cadastrar o nome da escola, da turma (série), qual dia da semana a professora dará aula para essa turma, qual o horário de início e fim.
    
 <br>
 
 ### 4. Cadastro dos Alunos <a id='cadastro_alunos'></a>
 
-   Prototipagem e criação da página que possibilita a visualização do cadastro dos alunos em suas respectivas turmas. Para esta parte específica do programa, a necessidade do cliente abrange o cadastro do nome de um aluno vinculado à uma turma previamente cadastrada.
+   Prototipagem e criação da página que possibilita o cadastro dos alunos em suas respectivas turmas. Para esta parte específica do programa, a necessidade do cliente abrange o cadastro do nome de um aluno vinculado à uma turma previamente cadastrada.
    
 <br>
 
 ### 5. Cadastro das Atividades <a id='cadastro_atividades'></a>
 
-   Prototipagem e criação da página que possibilita a visualização do cadastro das atividades avaliativas para suas respectivas turmas. Para esta parte específica do programa, a necessidade do cliente abrange o cadastro das atividades.
+   Prototipagem e criação da página que possibilita o cadastro das atividades avaliativas. Para esta parte específica do programa, a necessidade do cliente abrange cadastrar o tipo de atividade avaliativa vinculado à uma turma já cadastrada. Além disso, a página deve permitir a inclusão da descrição da atividade, bem como as datas de solicitação e entrega da mesma.
    
 <br>
 
