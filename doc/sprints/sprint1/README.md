@@ -16,6 +16,7 @@
 <p align="center">
   <a href ="#backlog"> Backlog da Sprint </a>  | 
   <a href ="#tarefas"> Tarefas </a>  |
+  <a href ="#burndown"> Burndown </a>  |
   <a href ="#hitoria"> Histórias de Usuários </a>  |
   <a href ="#apresentação"> Apresentação </a>
 </p>
@@ -164,7 +165,15 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 <br>
 
+  
 
+## :fire: Burndown <a id='burndown'></a>
+
+<img src="img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
+
+
+
+<br>
 
 
 ## :key: Histórias de Usuário<a id="historia"></a>
