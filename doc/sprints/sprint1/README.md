@@ -90,7 +90,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 <br>
 
-<img src="API_ADS_2SEMESTE_2023.1/doc/img/wireframe_cadastros.jpeg" alt="Wireframe dos Cadastros" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_informacao.png?raw=true" alt="Wireframe dos Cadastros" style="zoom: 150%;" />
 
 <br>
 
