@@ -143,7 +143,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    
 ### 7. Interface gráfica dos Alunos <a id='interface_grafica_alunos'></a>
 
-   Visualização do wireframe de cadastro dos Alunos.
+   Visualização do wireframe de cadastro dos alunos.
  <br>
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_aluno.png?raw=true" alt="Wireframe do Cadastro dos Alunos" style="zoom: 150%;" />
@@ -161,7 +161,8 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 9. Diagrama do Modelo Conceitual e Lógico do Banco de Dados <a id='diagrama_modelo_logico_conceitual'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   O diagrama do modelo conceitual e lógico do banco de dados é uma representação visual que mostra como as entidades, atributos e relacionamentos de um banco de dados estão organizados e interconectados. Essa ferramenta é crucial no processo de design e desenvolvimento de bancos de dados, pois permite que os desenvolvedores e usuários compreendam facilmente a estrutura e a lógica subjacentes ao sistema. Esses diagramas são ferramentas valiosas para garantir que um banco de dados seja bem estruturado, eficiente, eficaz e seguro. Também ajudam a melhorar a comunicação e a colaboração entre as partes interessadas e envolvidas no processo de desenvolvimento do banco de dados.
+   
 
 <br>
 
