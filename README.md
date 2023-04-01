@@ -157,8 +157,13 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
 |                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
 |   Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :construction: |
-|   Visualizar informações Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Média    |   2    |          4h           | :construction: |
-|   Visualizar informações Aluno | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Média    |   2    |          4h           | :construction: |
+|   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :construction: |
+|   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :construction: |
+|  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :construction: |
+|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :construction: |
+|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :construction: |
+|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :construction: |
+|  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :construction: |
 
 
 <br>
