@@ -115,19 +115,19 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 3. Cadastro das Turmas <a id='cadastro_turmas'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   Prototipagem e criação da página que possibilita a visualização do cadastro das turmas. Para esta parte específica do programa, a necessidade do cliente abrange cadastrar o nome da escola, turma (série), qual dia da semana a professora dará aula para essa turma, qual o horário de início e fim.
    
 <br>
 
 ### 4. Cadastro dos Alunos <a id='cadastro_alunos'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   Prototipagem e criação da página que possibilita a visualização do cadastro dos alunos em suas respectivas turmas. Para esta parte específica do programa, a necessidade do cliente abrange o cadastro do nome de um aluno vinculado à uma turma previamente cadastrada.
    
 <br>
 
 ### 5. Cadastro das Atividades <a id='cadastro_atividades'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   Prototipagem e criação da página que possibilita a visualização do cadastro das atividades avaliativas para suas respectivas turmas. Para esta parte específica do programa, a necessidade do cliente abrange o cadastro das atividades.
    
 <br>
 
