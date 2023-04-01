@@ -1,7 +1,7 @@
 
 
 
-# Sprint 3 - MVP
+# Sprint 3 - Edições
 
 
 <p align="center">
