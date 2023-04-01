@@ -104,8 +104,9 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 2. Diagrama de Classes UML <a id='diagrama_uml'></a>
 
-   Prototipagem e  criação da página de abertura de chamados em HTML. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas. Sendo a págna que em que os usuários identificararão o problema das máquinas, outro objetivo é criar um sistema simples para os usuários, mas que ao mesmo tempo tenha todas as informações necessárias para que o técnico identifique tanto o problema, quanto a máquina em questão. Os campos de preenchimento do formulário desta página serão:
-
+   O diagrama de classes UML é uma ferramenta visual que permite visualizar de forma clara e objetiva as classes de objetos, seus atributos e métodos da linguagem de programação Java. O software irá cadastrar turmas, alunos e atividades, o diagrama de classes é fundamental para a organização e estruturação desse sistema, já que permite definir as entidades envolvidas e as relações entre elas.
+   Dessa forma, o diagrama de classes UML é importante para a compreensão do sistema, permitindo que os desenvolvedores tenham uma visão geral da estrutura do programa e possam planejar a implementação de forma mais eficiente. Além disso, o diagrama de classes também facilita a comunicação entre os membros da equipe de desenvolvimento, já que permite uma representação visual das classes e das relações entre elas, facilitando a discussão e a tomada de decisões.
+   
    ### 	:art: Diagrama de Classes UML
 
 <img src="doc/sprints/sprint1/img/diagramaUML.jpeg" alt="Diagrama de Classes UML" style="zoom: 150%;" />
