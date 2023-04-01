@@ -133,19 +133,28 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
 
 ### 6. Interface gráfica das Turmas <a id='interface_grafica_turmas'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   Visualização do wireframe de cadastro das turmas.
+ <br>
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/controle_desempenho.png?raw=true" alt="Wireframe do Cadastro das Turmas" style="zoom: 150%;" />
    
 <br>
    
 ### 7. Interface gráfica dos Alunos <a id='interface_grafica_alunos'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   Visualização do wireframe de cadastro dos Alunos.
+ <br>
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/controle_desempenho.png?raw=true" alt="Wireframe do Cadastro dos Alunos" style="zoom: 150%;" />
    
 <br>
 
 ### 8. Interface gráfica das Atividades <a id='interface_grafica_atividades'></a>
 
-   Prototipagem e criação da página de visualização do cadastros das turmas. Como parte do MVP, esta tarefa terá como objetivo entregar uma página funcional e testável para possíveis problemas.
+   Visualização do wireframe de cadastro das atividades.
+ <br>
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/controle_desempenho.png?raw=true" alt="Wireframe do Cadastro das Atividades" style="zoom: 150%;" />
    
 <br>
 
