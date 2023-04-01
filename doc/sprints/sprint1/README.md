@@ -87,7 +87,9 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    O wireframe pode incluir diferentes telas e elementos, como menus, botões, campos de texto, tabelas, gráficos, entre outros, que serão necessários para que a professora possa visualizar como irá trabalhar suas atividades no software de forma eficiente e intuitiva. Alguns exemplos de funcionalidades que são vistas no wireframe:
 
 **Cadastro de informações:** permite que a professora visualize como será feito o cadastro das informações do nome da escola, turma, nome do aluno e atividades.
+
 **Controle de desempenho:** permite que a professora visualize como será feito o registro as atividades realizadas pelos alunos em diferentes turmas.
+
 **Controle com dados estatísticos:** permite que a professora tenha uma visão geral do desempenho da turma e dos alunos individualmente, permitindo identificar pontos de melhoria e planejar ações mais eficientes para o processo de ensino e aprendizagem, também permite que a professora se comunique de forma eficiente com os alunos e com a coordenação das escolas nas reuniões pedagógicas.
    
    
