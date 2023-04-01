@@ -1,7 +1,7 @@
 
 
 
-# Sprint 2 - MVP
+# Sprint 2 - Dados Estatísticos
 
 
 <p align="center">
