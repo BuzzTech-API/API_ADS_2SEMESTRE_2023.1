@@ -86,7 +86,7 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    A montagem de um wireframe é uma etapa importante no processo de desenvolvimento de um software, pois permite visualizar e planejar a interface do usuário e a disposição dos elementos na tela do software, por essa razão é parte essencial desta primeira Sprint. No caso específico de um software feito em Java para uma professora do ensino fundamental de uma escola estadual, a montagem do wireframe deve ser feita levando em conta as necessidades e expectativas do usuário final. 
    O wireframe pode incluir diferentes telas e elementos, como menus, botões, campos de texto, tabelas, gráficos, entre outros, que serão necessários para que a professora possa visualizar como irá trabalhar suas atividades no software de forma eficiente e intuitiva. Alguns exemplos de funcionalidades que são vistas no wireframe:
 
-**Cadastro de informações:** permite que a professora visualize como será feito o cadastro das informações do nome da escola, turma, nome do aluno e atividades.
+**Cadastro de informações:** permite que a professora visualize como será feito o cadastro das turma, dos alunos e atividades.
 
 <br>
 
