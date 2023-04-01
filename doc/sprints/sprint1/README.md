@@ -166,13 +166,13 @@ A escolha das tarefas dessa primeira Sprint - que é uma das etapas do desenvolv
    
 - Modelo Conceitual do Banco de Dados
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_atividade.png?raw=true" alt="Modelo Conceitual do Banco de Dados" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/VAPT%20v1%20Conceitual.jpg?raw=true" alt="Modelo Conceitual do Banco de Dados" style="zoom: 150%;" />
 
 <br>
 
 - Modelo Lógico do Banco de Dados
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/cadastro_atividade.png?raw=true" alt="Modelo Lógico do Banco de Dados" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/VAPT%20L%C3%B3gico.png?raw=true" alt="Modelo Lógico do Banco de Dados" style="zoom: 150%;" />
 
 <br>
 
