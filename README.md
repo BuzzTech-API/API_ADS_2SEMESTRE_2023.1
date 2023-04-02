@@ -19,6 +19,7 @@
   <a href ="#sprint"> Sprints </a>  |
   <a href ="#backlog"> Backlog do Produto </a>  | 
   <a href ="#burndown"> Burndown </a>  | 
+  <a href ="#roadmap"> Roadmap </a>  |
   <a href ="#personas"> Personas </a>  |
   <a href ="#historia"> Histórias de usuário </a>  | 
   <a href ="#equipe"> Equipe </a>  |
@@ -186,7 +187,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 <br>
 
-## :moyai: Personas <a id='Personas'></a>
+## :moyai: Personas <a id='personas'></a>
 
 
 
@@ -229,7 +230,6 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |  Cláudia Secco   | Product Owner | <a href="https://github.com/ClaudiaCBS"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |                                          |
 |   Alícea Rocha   | Desenvolvedor | <a href="https://github.com/alicearocha"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/al%C3%ADcea-paula-de-lima-rocha-bab682157/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Danilo Rodrigues | Desenvolvedor | <a href="https://github.com/Circerion"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/danilo-baptistella-5757aa20a"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Giuliano Bianco  | Desenvolvedor | <a href="https://github.com/giuliano-marcus-bianco"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/giuliano-marcus-bianco/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Joice de Araújo  | Desenvolvedor | <a href="https://github.com/Joice-Araujo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/joice-aparecida-581226250"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Jacqueline Bezerra | Desenvolvedor | <a href="https://github.com/jxqlnm"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/jacqueline-mariane"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Vitor Lima  | Desenvolvedor | <a href="https://github.com/lima2206"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vitor-spricigo-lima-84a377184"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
