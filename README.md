@@ -43,7 +43,7 @@
 <br>
 <br>
 
-> Status do Projeto: Concluído! :white_check_mark:
+> Status do Projeto: Em andamento! :construction:
 
 <br>
 
@@ -52,6 +52,9 @@
 ### 	:art: Wireframe do Programa
 
 <br>
+<video width="800" height="600" controls>
+  <source src="doc\img\wireframeExplicado.mp4" type="video/mp4">
+</video>
 <br>
 <br>
 
