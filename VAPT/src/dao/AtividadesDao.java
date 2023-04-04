@@ -108,6 +108,31 @@ public class AtividadesDao {
         return 0;
     }
     
+    public ArrayList<Atividades> buscarTodasAtividades() {
+        String sql = "SELECT * FROM atividade";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                Atividades objAtividades = new Atividades();
+                objAtividades.setId_atividade(rs.getInt("id_atividade"));
+                objAtividades.setTipo(rs.getString("tipo"));
+                objAtividades.setDescricao(rs.getString("descricao"));
+                objAtividades.setData_inicio(rs.getDate("data_inicio"));
+                objAtividades.setData_fim(rs.getDate("data_fim"));
+                objAtividades.setTurma_id_turma(rs.getInt("Turma_id_turma"));
+
+                this.lista.add(objAtividades);
+            }
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+        return this.lista;
+    }
 
 
 
