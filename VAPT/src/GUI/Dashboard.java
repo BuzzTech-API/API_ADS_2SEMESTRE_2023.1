@@ -42,13 +42,17 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         homeBut = new javax.swing.JPanel();
         homeTxt = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         editaBut = new javax.swing.JPanel();
         homeTxt2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         buscaBut = new javax.swing.JPanel();
         homeTxt3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         cadastrarBut = new javax.swing.JPanel();
         homeTxt4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jDesktopPanel = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -80,18 +84,27 @@ public class Dashboard extends javax.swing.JFrame {
         homeTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         homeTxt.setText("Home");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home2.png"))); // NOI18N
+
         javax.swing.GroupLayout homeButLayout = new javax.swing.GroupLayout(homeBut);
         homeBut.setLayout(homeButLayout);
         homeButLayout.setHorizontalGroup(
             homeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homeTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(homeButLayout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(homeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         homeButLayout.setVerticalGroup(
             homeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homeButLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(homeTxt)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addGroup(homeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeTxt))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 300, 60));
@@ -116,17 +129,26 @@ public class Dashboard extends javax.swing.JFrame {
         homeTxt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         homeTxt2.setText("Editar");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
+
         javax.swing.GroupLayout editaButLayout = new javax.swing.GroupLayout(editaBut);
         editaBut.setLayout(editaButLayout);
         editaButLayout.setHorizontalGroup(
             editaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homeTxt2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editaButLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeTxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         editaButLayout.setVerticalGroup(
             editaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editaButLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(homeTxt2)
+                .addGroup(editaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(homeTxt2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -157,18 +179,27 @@ public class Dashboard extends javax.swing.JFrame {
         homeTxt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         homeTxt3.setText("Buscar");
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pesquisa.png"))); // NOI18N
+
         javax.swing.GroupLayout buscaButLayout = new javax.swing.GroupLayout(buscaBut);
         buscaBut.setLayout(buscaButLayout);
         buscaButLayout.setHorizontalGroup(
             buscaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homeTxt3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(buscaButLayout.createSequentialGroup()
+                .addContainerGap(45, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(homeTxt3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
         buscaButLayout.setVerticalGroup(
             buscaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buscaButLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(homeTxt3)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGroup(buscaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeTxt3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel5.add(buscaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 300, -1));
@@ -193,18 +224,27 @@ public class Dashboard extends javax.swing.JFrame {
         homeTxt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         homeTxt4.setText("Cadastrar");
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cadastrar.png"))); // NOI18N
+
         javax.swing.GroupLayout cadastrarButLayout = new javax.swing.GroupLayout(cadastrarBut);
         cadastrarBut.setLayout(cadastrarButLayout);
         cadastrarButLayout.setHorizontalGroup(
             cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homeTxt4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarButLayout.createSequentialGroup()
+                .addContainerGap(49, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(homeTxt4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
         );
         cadastrarButLayout.setVerticalGroup(
             cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cadastrarButLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(homeTxt4)
-                .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarButLayout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addGroup(cadastrarButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeTxt4))
+                .addGap(15, 15, 15))
         );
 
         jPanel5.add(cadastrarBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 300, -1));
@@ -340,6 +380,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel homeTxt4;
     private javax.swing.JDesktopPane jDesktopPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
