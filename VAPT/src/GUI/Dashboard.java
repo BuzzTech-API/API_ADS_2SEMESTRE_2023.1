@@ -39,7 +39,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        barraLateral = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         homeBut = new javax.swing.JPanel();
         homeTxt = new javax.swing.JLabel();
         editaBut = new javax.swing.JPanel();
@@ -53,11 +53,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VAPT!");
+        setPreferredSize(new java.awt.Dimension(1280, 730));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        barraLateral.setBackground(new java.awt.Color(2, 31, 54));
-        barraLateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel5.setBackground(new java.awt.Color(2, 31, 54));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         homeBut.setBackground(new java.awt.Color(2, 31, 54));
         homeBut.setToolTipText("Home");
@@ -90,10 +91,10 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(homeButLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(homeTxt)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        barraLateral.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 300, 60));
+        jPanel5.add(homeBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 300, 60));
 
         editaBut.setBackground(new java.awt.Color(2, 31, 54));
         editaBut.setToolTipText("Home");
@@ -129,12 +130,12 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        barraLateral.add(editaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 300, -1));
+        jPanel5.add(editaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 300, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bem-Vindo!");
-        barraLateral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
         buscaBut.setBackground(new java.awt.Color(2, 31, 54));
         buscaBut.setToolTipText("Home");
@@ -170,7 +171,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        barraLateral.add(buscaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 300, -1));
+        jPanel5.add(buscaBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 300, -1));
 
         cadastrarBut.setBackground(new java.awt.Color(2, 31, 54));
         cadastrarBut.setToolTipText("Home");
@@ -206,9 +207,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        barraLateral.add(cadastrarBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 300, -1));
+        jPanel5.add(cadastrarBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 300, -1));
 
-        jPanel3.add(barraLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 730));
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 730));
 
         jDesktopPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -225,7 +226,16 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel3.add(jDesktopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, -1));
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -254,7 +264,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_homeButMouseEntered
 
     private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
-
+     
     }//GEN-LAST:event_homeButMouseClicked
 
     private void buscaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscaButMouseClicked
@@ -320,7 +330,6 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel barraLateral;
     private javax.swing.JPanel buscaBut;
     private javax.swing.JPanel cadastrarBut;
     private javax.swing.JPanel editaBut;
@@ -332,5 +341,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }
