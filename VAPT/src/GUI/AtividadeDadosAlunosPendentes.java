@@ -59,6 +59,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(217, 217, 217));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(236, 236, 236));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
