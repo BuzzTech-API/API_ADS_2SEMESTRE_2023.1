@@ -37,7 +37,6 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         setBackground(new java.awt.Color(217, 217, 217));
         setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
-        setPreferredSize(new java.awt.Dimension(410, 173));
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
