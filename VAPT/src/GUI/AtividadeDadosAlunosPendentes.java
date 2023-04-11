@@ -276,6 +276,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         nomeEscola.setBorder(null);
         nomeEscola.setMinimumSize(new java.awt.Dimension(46, 22));
         nomeEscola.setPreferredSize(new java.awt.Dimension(46, 22));
+        nomeEscola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscolaActionPerformed(evt);
+            }
+        });
         jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 300, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
@@ -303,9 +308,9 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_recebDataSolicitacao1ActionPerformed
 
-    private void porcentagemAlunosPendentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_porcentagemAlunosPendentesActionPerformed
+    private void nomeEscolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscolaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_porcentagemAlunosPendentesActionPerformed
+    }//GEN-LAST:event_nomeEscolaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
