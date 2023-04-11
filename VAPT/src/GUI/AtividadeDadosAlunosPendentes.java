@@ -55,7 +55,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jTable2 = new javax.swing.JTable();
         editAlunosPendesntes = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        porcentagemAlunosPendentes = new javax.swing.JTextField();
+        recebPorcentagemAlunosPendentes = new javax.swing.JTextField();
         ativNum = new javax.swing.JTextField();
         turma = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -159,16 +159,12 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("pendente");
 
-        porcentagemAlunosPendentes.setBackground(new java.awt.Color(236, 236, 236));
-        porcentagemAlunosPendentes.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        porcentagemAlunosPendentes.setForeground(new java.awt.Color(255, 0, 0));
-        porcentagemAlunosPendentes.setText("10%");
-        porcentagemAlunosPendentes.setBorder(null);
-        porcentagemAlunosPendentes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                porcentagemAlunosPendentesActionPerformed(evt);
-            }
-        });
+        recebPorcentagemAlunosPendentes.setBackground(new java.awt.Color(236, 236, 236));
+        recebPorcentagemAlunosPendentes.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        recebPorcentagemAlunosPendentes.setForeground(new java.awt.Color(255, 0, 0));
+        recebPorcentagemAlunosPendentes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        recebPorcentagemAlunosPendentes.setText("10%");
+        recebPorcentagemAlunosPendentes.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -206,7 +202,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                                                 .addComponent(jLabel5))
                                             .addGroup(jPanel2Layout.createSequentialGroup()
                                                 .addGap(93, 93, 93)
-                                                .addComponent(porcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(0, 0, Short.MAX_VALUE)))))))
                 .addGap(31, 31, 31))
         );
@@ -236,7 +232,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(porcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5)
                         .addGap(61, 61, 61)
@@ -331,9 +327,9 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField nomeEscola;
-    private javax.swing.JTextField porcentagemAlunosPendentes;
     private javax.swing.JFormattedTextField recebDataEntrega;
     private javax.swing.JFormattedTextField recebDataSolicitacao1;
+    private javax.swing.JTextField recebPorcentagemAlunosPendentes;
     private javax.swing.JTextField turma;
     // End of variables declaration//GEN-END:variables
 }
