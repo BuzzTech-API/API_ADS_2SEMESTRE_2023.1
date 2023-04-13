@@ -4,6 +4,10 @@
  */
 package GUI;
 
+import GUI.telasInternas.AtividadeDadosAlunosPendentes;
+import GUI.telasInternas.Editar;
+import GUI.telasInternas.TelaHome;
+import GUI.telasInternas.TiposDeCadastro;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -24,7 +28,8 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         DefaultColor= new Color(13,36,70);
         ClickColor = new Color(220,141,77);
-        
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(new TelaHome()).setVisible(true);
         
 
     }
@@ -57,7 +62,6 @@ public class Dashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VAPT!");
-        setPreferredSize(new java.awt.Dimension(1280, 730));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -257,14 +261,14 @@ public class Dashboard extends javax.swing.JFrame {
         jDesktopPanel.setLayout(jDesktopPanelLayout);
         jDesktopPanelLayout.setHorizontalGroup(
             jDesktopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
+            .addGap(0, 1100, Short.MAX_VALUE)
         );
         jDesktopPanelLayout.setVerticalGroup(
             jDesktopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 730, Short.MAX_VALUE)
         );
 
-        jPanel3.add(jDesktopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, -1));
+        jPanel3.add(jDesktopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
