@@ -5,6 +5,7 @@
 package GUI.telasInternas;
 
 import GUI.card.CardAtividadesAlunosDevendo;
+import dao.AtividadesDao;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -23,6 +24,8 @@ public class TelaHome extends javax.swing.JInternalFrame {
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         preencherCards();
+        AtividadesDao atividadesDao = new AtividadesDao();
+        Ativ
         
 
     }
@@ -42,7 +45,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(0, 0));
-        setPreferredSize(new java.awt.Dimension(971, 650));
+        setPreferredSize(new java.awt.Dimension(1018, 639));
 
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 5, 55, 40));
         jScrollPane1.setViewportView(jLayeredPane1);
@@ -51,11 +54,11 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

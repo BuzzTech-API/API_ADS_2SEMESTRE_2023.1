@@ -64,8 +64,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" pref="1190" max="-2" attributes="0"/>
-                  <EmptySpace pref="45" max="32767" attributes="0"/>
+                  <Component id="jPanel2" min="-2" pref="1107" max="-2" attributes="0"/>
+                  <EmptySpace pref="128" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -73,8 +73,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" pref="639" max="-2" attributes="0"/>
-                  <EmptySpace pref="45" max="32767" attributes="0"/>
+                  <Component id="jPanel2" min="-2" pref="593" max="-2" attributes="0"/>
+                  <EmptySpace pref="91" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -178,7 +178,7 @@
                           <Component id="porcentagemEntregueAtrasado" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="texto6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

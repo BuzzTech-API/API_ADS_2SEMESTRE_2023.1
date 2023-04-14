@@ -1,16 +1,28 @@
 
 package GUI.card;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
+import modelo.Atividades;
+
 public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
+    private Border border = BorderFactory.createMatteBorder(1, 0, 0, 0, Color.BLACK);
     
     public CardAtividadesAlunosDevendo() {
         initComponents();
         setOpaque(false);
+    }
+    
+    public CardAtividadesAlunosDevendo(Atividades atividade) {
+        initComponents();
+        setOpaque(false);
+        lbAtividade.setText("Atividade "+atividade.getId_atividade());
     }
 
     
@@ -18,71 +30,92 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        nomesArea = new javax.swing.JTextArea();
+        lbAtividade = new javax.swing.JLabel();
+        lbData = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setBackground(new java.awt.Color(217, 217, 217));
         setMaximumSize(new java.awt.Dimension(99, 268));
 
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        nomesArea.setEditable(false);
+        nomesArea.setBackground(new java.awt.Color(217, 217, 217));
+        nomesArea.setColumns(20);
+        nomesArea.setLineWrap(true);
+        nomesArea.setRows(5);
+        nomesArea.setText("Joice Araujo\nClaudia Ribeiro\nJana Silva\nTomas Souza\nCarlinho prey\nIsaque lindo\npao de batata\nsakdopapskod\naskpdoopkas\ndaskpookp\ndaskpoopk\nasdkpopok\n");
+        nomesArea.setWrapStyleWord(true);
+        nomesArea.setBorder(null);
+        nomesArea.setDisabledTextColor(new java.awt.Color(217, 217, 217));
+        jScrollPane1.setViewportView(nomesArea);
 
-        jLabel1.setText("jLabel1");
+        lbAtividade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lbAtividade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbAtividade.setText("Atividade 01");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1)
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
+        lbData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lbData.setText("Data: 12/03");
+        lbData.setIconTextGap(-5);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setPreferredSize(new java.awt.Dimension(97, 130));
-        jScrollPane1.setViewportView(jTextArea1);
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("10% pendente");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(lbAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbData)
+                .addGap(0, 24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lbAtividade)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(lbData)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
     @Override
-    protected void paintComponent(Graphics grphcs) {
-        Graphics2D g2 =(Graphics2D)grphcs;
+    protected void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setColor(Color.BLACK);
+        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15 , 15);
         g2.setColor(getBackground());
-        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
-        super.paintChildren(grphcs);
+        g2.fillRoundRect(2, 2, getWidth()-4, getHeight()-4, 15 , 15);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lbAtividade;
+    private javax.swing.JLabel lbData;
+    private javax.swing.JTextArea nomesArea;
     // End of variables declaration//GEN-END:variables
 }

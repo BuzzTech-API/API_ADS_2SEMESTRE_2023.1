@@ -4,7 +4,11 @@
  */
 package GUI;
 
+import GUI.telasInternas.TelaHome;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 
 /**
  *
@@ -18,7 +22,8 @@ public class DashboardNova extends javax.swing.JFrame {
     public DashboardNova() {
         initComponents();
         setBackground(new Color(0,0,0,0));
-    }
+        jDesktopPane1.add(new TelaHome()).setVisible(true); 
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,11 +36,43 @@ public class DashboardNova extends javax.swing.JFrame {
 
         panelBorda1 = new GUI.swing.PanelBorda();
         menu1 = new GUI.componentes.Menu();
+        panelBorda2 = new GUI.swing.PanelBorda();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         panelBorda1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jDesktopPane1.setBackground(new java.awt.Color(217, 217, 217));
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1018, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panelBorda2Layout = new javax.swing.GroupLayout(panelBorda2);
+        panelBorda2.setLayout(panelBorda2Layout);
+        panelBorda2Layout.setHorizontalGroup(
+            panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBorda2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane1)
+                .addContainerGap())
+        );
+        panelBorda2Layout.setVerticalGroup(
+            panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBorda2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane1)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout panelBorda1Layout = new javax.swing.GroupLayout(panelBorda1);
         panelBorda1.setLayout(panelBorda1Layout);
@@ -43,11 +80,13 @@ public class DashboardNova extends javax.swing.JFrame {
             panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorda1Layout.createSequentialGroup()
                 .addComponent(menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1032, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(panelBorda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBorda1Layout.setVerticalGroup(
             panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(menu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelBorda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -65,6 +104,17 @@ public class DashboardNova extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    @Override
+    public void paintComponents(Graphics grphcs) {
+        Graphics2D g2 =(Graphics2D)grphcs;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setColor(getBackground());
+        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
+        super.paintComponents(grphcs);
+    }
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -101,7 +151,9 @@ public class DashboardNova extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
     private GUI.componentes.Menu menu1;
     private GUI.swing.PanelBorda panelBorda1;
+    private GUI.swing.PanelBorda panelBorda2;
     // End of variables declaration//GEN-END:variables
 }
