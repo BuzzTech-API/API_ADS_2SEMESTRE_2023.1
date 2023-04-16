@@ -5,7 +5,17 @@
 package GUI.telasInternas;
 
 import GUI.card.CardAtividadesAlunosDevendo;
+import GUI.card.CardDeTurma;
+import GUI.swing.ScrollBarCustom;
 import dao.AtividadesDao;
+import dao.Dia_SemanaDao;
+import dao.TurmaDao;
+import modelo.Atividades;
+import modelo.Turma;
+
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Calendar;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -17,15 +27,21 @@ public class TelaHome extends javax.swing.JInternalFrame {
     /**
      * Creates new form TelaHome
      */
+
+    private Turma turma = new Turma();
+    
     public TelaHome() {
-        System.out.println(getHeight());
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-        preencherCards();
-        AtividadesDao atividadesDao = new AtividadesDao();
-        Ativ
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
+        pegarTurmaDeAgora();
+        if (turma.getId_turma()!=0) {
+            preencherTela();
+        }
         
 
     }
@@ -42,23 +58,55 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(217, 217, 217));
         setMinimumSize(new java.awt.Dimension(0, 0));
         setPreferredSize(new java.awt.Dimension(1018, 639));
 
-        jLayeredPane1.setLayout(new java.awt.GridLayout(0, 5, 55, 40));
+        jPanel2.setBackground(new java.awt.Color(217, 217, 217));
+
+        jScrollPane1.setBorder(null);
+
+        jLayeredPane1.setBackground(new java.awt.Color(217, 217, 217));
+        jLayeredPane1.setLayout(new java.awt.GridLayout(0, 4, 55, 40));
         jScrollPane1.setViewportView(jLayeredPane1);
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(239, 131, 84));
+        jLabel1.setText("Turma: ");
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
+        jLabel2.setText("Escola:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 911, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(48, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(270, 270, 270))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -75,14 +123,60 @@ public class TelaHome extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    public void pegarTurmaDeAgora() {
+        Calendar calendario = Calendar.getInstance();
+        int dia = calendario.get(Calendar.DAY_OF_WEEK);
+        int horaAgora =calendario.get(Calendar.HOUR_OF_DAY);
+        dia =2;
+        horaAgora=7;
+        Dia_SemanaDao dia_SemanaDao = new Dia_SemanaDao();
+        int turmaId = 0;
+        switch (dia) {
+            case 2:
+                turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Segunda");
+                break;
+        
+            case 3:
+                turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Terça");
+                break;
+        
+            case 4:
+                turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Quarta");
+                break;
+        
+            case 5:
+                turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Quinta");
+                break;
+        
+            case 6:
+                turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Sexta");
+                break;
+        
+            default:
+                break;
+        }
+        if (turmaId!=0) {
+            TurmaDao turmaDao = new TurmaDao();
+            turma = turmaDao.buscarPorId(turmaId);
+        }
+        turma.buscarAtividades();
+        
+        
+    }
     
-    public void preencherCards() {
-        for (int i = 0; i < 12; i++) {
-            jLayeredPane1.add(new CardAtividadesAlunosDevendo());
+    public void preencherTela() {
+        jLabel1.setText(jLabel1.getText()+turma.getNome());
+        jLabel2.setText(jLabel2.getText()+turma.getNome_escola());
+        ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
+        for (int i = 0; i < listaAtividades.size(); i++) {
+            Atividades atividade = listaAtividades.get(i);
+            jLayeredPane1.add(new CardAtividadesAlunosDevendo(atividade, i+1));
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

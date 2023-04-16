@@ -1,10 +1,12 @@
 
 package GUI.card;
 
+import GUI.swing.ScrollBarCustom;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.text.SimpleDateFormat;
 
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
@@ -17,12 +19,20 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
     public CardAtividadesAlunosDevendo() {
         initComponents();
         setOpaque(false);
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
+        
     }
     
-    public CardAtividadesAlunosDevendo(Atividades atividade) {
+    public CardAtividadesAlunosDevendo(Atividades atividade, int id) {
         initComponents();
         setOpaque(false);
-        lbAtividade.setText("Atividade "+atividade.getId_atividade());
+        lbAtividade.setText("Atividade "+id);
+        //Classe para formatar a data para o padrão brasileiro
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        lbData.setText(lbData.getText()+sdf.format(atividade.getData_fim()));
+
     }
 
     
@@ -35,67 +45,63 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         lbAtividade = new javax.swing.JLabel();
         lbData = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(217, 217, 217));
+        setBackground(new java.awt.Color(252, 252, 252));
         setMaximumSize(new java.awt.Dimension(99, 268));
 
+        jScrollPane1.setBorder(null);
+
         nomesArea.setEditable(false);
-        nomesArea.setBackground(new java.awt.Color(217, 217, 217));
+        nomesArea.setBackground(new java.awt.Color(252, 252, 252));
         nomesArea.setColumns(20);
         nomesArea.setLineWrap(true);
         nomesArea.setRows(5);
         nomesArea.setText("Joice Araujo\nClaudia Ribeiro\nJana Silva\nTomas Souza\nCarlinho prey\nIsaque lindo\npao de batata\nsakdopapskod\naskpdoopkas\ndaskpookp\ndaskpoopk\nasdkpopok\n");
         nomesArea.setWrapStyleWord(true);
         nomesArea.setBorder(null);
-        nomesArea.setDisabledTextColor(new java.awt.Color(217, 217, 217));
+        nomesArea.setDisabledTextColor(new java.awt.Color(252, 252, 252));
         jScrollPane1.setViewportView(nomesArea);
+        jScrollPane1.setBorder(border);
 
         lbAtividade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbAtividade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbAtividade.setText("Atividade 01");
+        lbAtividade.setText("Atividade ");
 
         lbData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lbData.setText("Data: 12/03");
-        lbData.setIconTextGap(-5);
+        lbData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendario.png"))); // NOI18N
+        lbData.setText("Data: ");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 51));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("10% pendente");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(lbAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbData)
-                .addGap(0, 24, Short.MAX_VALUE))
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lbData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(1, 1, 1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(2, 2, 2)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(2, 2, 2))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(lbAtividade)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(lbData)
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)))
+                .addGap(23, 23, 23)
+                .addComponent(lbData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -112,7 +118,6 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbAtividade;
     private javax.swing.JLabel lbData;
