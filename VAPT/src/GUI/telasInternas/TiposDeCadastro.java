@@ -54,7 +54,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(1280, 730));
 
         AddAlunoBut.setBackground(new java.awt.Color(239, 131, 84));
-        AddAlunoBut.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        AddAlunoBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AddAlunoBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddAlunoButMouseClicked(evt);
@@ -98,7 +98,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         );
 
         AddAtividadeBut.setBackground(new java.awt.Color(239, 131, 84));
-        AddAtividadeBut.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        AddAtividadeBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AddAtividadeBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddAtividadeButMouseClicked(evt);
@@ -144,7 +144,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         );
 
         AddTurmaBut.setBackground(new java.awt.Color(239, 131, 84));
-        AddTurmaBut.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        AddTurmaBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AddTurmaBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddTurmaButMouseClicked(evt);
