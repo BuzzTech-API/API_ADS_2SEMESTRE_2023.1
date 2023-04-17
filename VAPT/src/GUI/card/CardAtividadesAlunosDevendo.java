@@ -2,6 +2,7 @@
 package GUI.card;
 
 import GUI.swing.ScrollBarCustom;
+import GUI.telasInternas.AtividadeDadosAlunosPendentes;
 import dao.Aluno_AtividadeDao;
 
 import java.awt.Color;
@@ -14,17 +15,24 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
+import javax.swing.JDesktopPane;
 import javax.swing.border.Border;
 import javax.swing.event.MouseInputListener;
 
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
+import modelo.Turma;
 
 public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
     private Border border = BorderFactory.createMatteBorder(1, 0, 0, 0, Color.BLACK);
     private Atividades atividade = new Atividades();
+    private JDesktopPane jDesktopPane;
+    private ArrayList<Aluno_Atividade> listaAluno_Atividades = new ArrayList<>();
+    private Turma turma = new Turma();
     
+
+
     public CardAtividadesAlunosDevendo() {
         initComponents();
         nomesArea.setBorder(border);
@@ -36,22 +44,26 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         
     }
     
-    public CardAtividadesAlunosDevendo(Atividades atividade, int id) {
+    public CardAtividadesAlunosDevendo(Atividades atividade, int id, JDesktopPane jDesktopPane, Turma turma) {
         initComponents();
         jScrollPane1.setBorder(border);
         setOpaque(false);
+        this.jDesktopPane = jDesktopPane;
         ScrollBarCustom sp = new ScrollBarCustom();
         sp.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
-        this.atividade = atividade;     
+        this.atividade = atividade;    
+        this.turma = turma;
         preecherCards(id);
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                System.out.println("Isaque é lindo");
+                jDesktopPane.removeAll();
+                jDesktopPane.add(new AtividadeDadosAlunosPendentes(jDesktopPane, listaAluno_Atividades, id, turma)).setVisible(true);
             }
-        });
 
+        });
+        
     }
 
     
@@ -99,7 +111,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lbData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(1, 1, 1))
@@ -114,11 +126,11 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
                 .addGap(17, 17, 17)
                 .addComponent(lbAtividade)
                 .addGap(23, 23, 23)
-                .addComponent(lbData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addComponent(lbData)
+                .addGap(1, 1, 1)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -133,7 +145,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
         int contador=0;
         Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
-        ArrayList<Aluno_Atividade> listaAluno_Atividades = aluno_AtividadeDao.buscarAlunosDeUmaAtividade(this.atividade.getId_atividade());
+        listaAluno_Atividades = aluno_AtividadeDao.buscarAlunosDeUmaAtividade(this.atividade.getId_atividade());
         for (Aluno_Atividade aluno_Atividade : listaAluno_Atividades) {
             if (!aluno_Atividade.getAluno_Ativadade_entrega()) {
                 nomesArea.setText(nomesArea.getText()+"  "+aluno_Atividade.getAluno().getNome()+"\n");
