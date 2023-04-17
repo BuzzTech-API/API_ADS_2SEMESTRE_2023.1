@@ -30,7 +30,6 @@ public class Dashboard extends javax.swing.JFrame {
         ClickColor = new Color(220,141,77);
         jDesktopPanel.removeAll();
         jDesktopPanel.add(new TelaHome(jDesktopPanel)).setVisible(true);
-        
 
     }
 
