@@ -59,9 +59,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="GUI.componentes.Menu" name="menu1">
-        </Component>
         <Container class="GUI.swing.PanelBorda" name="panelBorda2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
+          </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -106,6 +109,11 @@
             </Container>
           </SubComponents>
         </Container>
+        <Component class="GUI.componentes.Menu" name="menu1">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.componentes.Menu(jDesktopPanel)"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

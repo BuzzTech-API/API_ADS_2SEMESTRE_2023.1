@@ -116,6 +116,30 @@ public class TurmaDao {
         return false;
     }
 
+    public Turma buscarPorId(int id) {
+        String sql = "SELECT * FROM turma where id_turma = ?";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, id);
+            rs = stmt.executeQuery();
+            if (rs.next())
+            {
+                Turma turma = new Turma();
+                turma.setId_turma(id);
+                turma.setNome(rs.getString("nome"));
+                turma.setNome_escola(rs.getString("nome_escola"));
+                return turma;
+            }else
+                return null;
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+    }
+    
     
 
 
