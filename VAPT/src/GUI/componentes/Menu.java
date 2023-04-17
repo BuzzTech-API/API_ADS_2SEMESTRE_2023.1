@@ -7,6 +7,11 @@ package GUI.componentes;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.JDesktopPane;
+
+import GUI.telasInternas.Editar;
+import GUI.telasInternas.TelaHome;
+import GUI.telasInternas.TiposDeCadastro;
 
 /**
  *
@@ -17,7 +22,15 @@ public class Menu extends javax.swing.JPanel {
     /**
      * Creates new form Menu
      */
+    
+    private JDesktopPane jDesktopPanel;
+    
     public Menu() {
+        initComponents();
+    }
+    
+    public Menu(JDesktopPane jDesktopPanel) {
+        this.jDesktopPanel = jDesktopPanel;
         initComponents();
     }
 
@@ -31,10 +44,10 @@ public class Menu extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        myButton1 = new GUI.swing.MyButton();
-        myButton2 = new GUI.swing.MyButton();
-        myButton3 = new GUI.swing.MyButton();
-        myButton5 = new GUI.swing.MyButton();
+        homeBtn = new GUI.swing.MyButton();
+        cadastrarBtn = new GUI.swing.MyButton();
+        editarBtn = new GUI.swing.MyButton();
+        buscarBtn = new GUI.swing.MyButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(2, 31, 54));
@@ -43,47 +56,52 @@ public class Menu extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bem-Vindo!");
 
-        myButton1.setForeground(new java.awt.Color(255, 255, 255));
-        myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home2.png"))); // NOI18N
-        myButton1.setText("Home");
-        myButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        myButton1.setMargin(new java.awt.Insets(2, -4, 3, 14));
-        myButton1.setRadius(15);
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
+        homeBtn.setForeground(new java.awt.Color(255, 255, 255));
+        homeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home2.png"))); // NOI18N
+        homeBtn.setText("Home");
+        homeBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        homeBtn.setMargin(new java.awt.Insets(2, -4, 3, 14));
+        homeBtn.setRadius(15);
+        homeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
+                homeBtnActionPerformed(evt);
             }
         });
 
-        myButton2.setForeground(new java.awt.Color(255, 255, 255));
-        myButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cadastrar2.png"))); // NOI18N
-        myButton2.setText("Cadastrar");
-        myButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        myButton2.setMargin(new java.awt.Insets(2, 26, 3, 14));
-        myButton2.setRadius(15);
-
-        myButton3.setForeground(new java.awt.Color(255, 255, 255));
-        myButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar2.png"))); // NOI18N
-        myButton3.setText("Editar");
-        myButton3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        myButton3.setIconTextGap(9);
-        myButton3.setMargin(new java.awt.Insets(2, 0, 3, 14));
-        myButton3.setRadius(15);
-        myButton3.addActionListener(new java.awt.event.ActionListener() {
+        cadastrarBtn.setForeground(new java.awt.Color(255, 255, 255));
+        cadastrarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cadastrar2.png"))); // NOI18N
+        cadastrarBtn.setText("Cadastrar");
+        cadastrarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        cadastrarBtn.setMargin(new java.awt.Insets(2, 26, 3, 14));
+        cadastrarBtn.setRadius(15);
+        cadastrarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton3ActionPerformed(evt);
+                cadastrarBtnActionPerformed(evt);
             }
         });
 
-        myButton5.setForeground(new java.awt.Color(255, 255, 255));
-        myButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pesquisa2.png"))); // NOI18N
-        myButton5.setText("Buscar");
-        myButton5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        myButton5.setMargin(new java.awt.Insets(2, 0, 3, 14));
-        myButton5.setRadius(15);
-        myButton5.addActionListener(new java.awt.event.ActionListener() {
+        editarBtn.setForeground(new java.awt.Color(255, 255, 255));
+        editarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar2.png"))); // NOI18N
+        editarBtn.setText("Editar");
+        editarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        editarBtn.setIconTextGap(9);
+        editarBtn.setMargin(new java.awt.Insets(2, 0, 3, 14));
+        editarBtn.setRadius(15);
+        editarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton5ActionPerformed(evt);
+                editarBtnActionPerformed(evt);
+            }
+        });
+
+        buscarBtn.setForeground(new java.awt.Color(255, 255, 255));
+        buscarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pesquisa2.png"))); // NOI18N
+        buscarBtn.setText("Buscar");
+        buscarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        buscarBtn.setMargin(new java.awt.Insets(2, 0, 3, 14));
+        buscarBtn.setRadius(15);
+        buscarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarBtnActionPerformed(evt);
             }
         });
 
@@ -93,10 +111,10 @@ public class Menu extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(myButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(myButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(myButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(myButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cadastrarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(editarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(homeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(buscarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -111,13 +129,13 @@ public class Menu extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addGap(100, 100, 100)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(homeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addComponent(myButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cadastrarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addComponent(myButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -131,26 +149,37 @@ public class Menu extends javax.swing.JPanel {
         super.paintChildren(grphcs);
     }
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_myButton1ActionPerformed
+    private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
+        TelaHome telaHome = new TelaHome();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(telaHome).setVisible(true);
+        
+    }//GEN-LAST:event_homeBtnActionPerformed
 
-    private void myButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton5ActionPerformed
+    private void buscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_myButton5ActionPerformed
+    }//GEN-LAST:event_buscarBtnActionPerformed
 
-    private void myButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_myButton3ActionPerformed
+    private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBtnActionPerformed
+        Editar editaBut = new Editar(jDesktopPanel);
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(editaBut).setVisible(true);
+    }//GEN-LAST:event_editarBtnActionPerformed
+
+    private void cadastrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarBtnActionPerformed
+        TiposDeCadastro tipoDeCadastro = new TiposDeCadastro(jDesktopPanel);
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(tipoDeCadastro).setVisible(true);
+    }//GEN-LAST:event_cadastrarBtnActionPerformed
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.swing.MyButton buscarBtn;
+    private GUI.swing.MyButton cadastrarBtn;
+    private GUI.swing.MyButton editarBtn;
+    private GUI.swing.MyButton homeBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private GUI.swing.MyButton myButton1;
-    private GUI.swing.MyButton myButton2;
-    private GUI.swing.MyButton myButton3;
-    private GUI.swing.MyButton myButton5;
     // End of variables declaration//GEN-END:variables
 }
