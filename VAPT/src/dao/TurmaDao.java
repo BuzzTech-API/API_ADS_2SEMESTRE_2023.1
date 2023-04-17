@@ -29,6 +29,7 @@ public class TurmaDao {
 
     public TurmaDao() {
         this.conexao = new Conection().getConnection();
+        this.lista = new ArrayList<>();
     }
 
     /** 
@@ -45,13 +46,150 @@ public class TurmaDao {
             stmt.close();
             JOptionPane.showMessageDialog(null,"Turma Cadastrada com Sucesso!");
 
-        } catch (SQLException exception) {
+         } catch (SQLException exception) {
             // TODO: handle exception
             
             JOptionPane.showMessageDialog(null, exception);
         }
     }
+    
+    
+    // Pegar todas as turmas
+    public ArrayList<Turma> getTurma(){
+        String sql = "SELECT * FROM Turma";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        //Classe que vai recuperar os dados do banco ***SELECT***
+        ResultSet rset = null;
+        
+        try{
+            conn = new Conection().getConnection();
+            
+            stmt = conn.prepareStatement(sql);
+            
+            rset = stmt.executeQuery();
+            
+            while (rset.next()){
+                Turma turma = new Turma();
+                
+                //Recuperar o id
+                turma.setId_turma(rset.getInt("id_turma"));
+                //Recuperar o nome
+                turma.setNome(rset.getString("nome"));
+                //Recuperar o nome da escola
+                turma.setNome_escola(rset.getString("nome_escola"));
+                
+                this.lista.add(turma);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally{
+            try{
+                if(rset!=null){
+                rset.close();
+            }
+            if(stmt!=null){
+                stmt.close();
+            }
+            if(conn!=null){
+                conn.close();
+            }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }  
+        return this.lista;
+    }
+    
+//    public ArrayList<Turma> pesquisar() {
+//        String sql = "SELECT * FROM turma";
+//        try {
+//            this.conexao = new Conection().getConnection();
+//            stmt = conexao.prepareStatement(sql);
+//            rs = stmt.executeQuery();
+//            while (rs.next()) {
+//                Turma objTurma = new Turma();
+//                objTurma.setId_turma(rs.getInt("id_turma"));
+//                objTurma.setNome(rs.getString("nome"));
+//                objTurma.setNome_escola(rs.getString("nome_escola"));
+//
+//                this.lista.add(objTurma);
+//            }
+//            
+//        } catch (SQLException exception) {
+//            // TODO: handle exception
+//            throw new RuntimeException(exception);
+//        }
+//
+//        return this.lista;
+//    }
 
+    public int pesquisarPorNomeEEscola(String nome, String nomeEscola) {
+        String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, nome);
+            stmt.setString(2, nomeEscola);
+            rs = stmt.executeQuery();
+            if (rs.next())
+                return rs.getInt("id_turma");
+            
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+        return 0;
+    }
+
+    public boolean jaExisteTurma(Turma turma) {
+        String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, turma.getNome());
+            stmt.setString(2, turma.getNome_escola());
+            rs = stmt.executeQuery();
+            if (rs.next())
+                return true;
+            
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+        return false;
+    }
+
+    public Turma buscarPorId(int id) {
+        String sql = "SELECT * FROM turma where id_turma = ?";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, id);
+            rs = stmt.executeQuery();
+            if (rs.next())
+            {
+                Turma turma = new Turma();
+                turma.setId_turma(id);
+                turma.setNome(rs.getString("nome"));
+                turma.setNome_escola(rs.getString("nome_escola"));
+                return turma;
+            }else
+                return null;
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+
+    }
+    
+    
 
 
 }

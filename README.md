@@ -18,6 +18,8 @@
   <a href ="#mvp"> MVP </a>  |
   <a href ="#sprint"> Sprints </a>  |
   <a href ="#backlog"> Backlog do Produto </a>  | 
+  <a href ="#burndown"> Burndown </a>  | 
+  <a href ="#roadmap"> Roadmap </a>  |
   <a href ="#personas"> Personas </a>  |
   <a href ="#historia"> Histórias de usuário </a>  | 
   <a href ="#equipe"> Equipe </a>  |
@@ -42,30 +44,22 @@
 <br>
 <br>
 
-> Status do Projeto: Em Construção! :construction:
+> Status do Projeto: Em andamento! :construction:
 
 <br>
 
 
 
-### :bust_in_silhouette: Cadastro das Turmas
+### 	:art: Wireframe do Programa
 
-<img src="doc/sprints/sprint4/img/idVisual.gif" alt="aprimoramento da identidade visual" style="zoom: 150%;" />
+<br>
+Vídeo com som :speaker:
 
+<br>
 
+https://user-images.githubusercontent.com/90930885/229379236-2301d570-b1f4-48e0-b01a-85aa8f1229b3.mp4
 
-### :bust_in_silhouette: Cadastro dos Alunos
-
-<img src="doc/sprints/sprint4/img/contatos.gif" alt="criação da páginad de contatos" style="zoom: 150%;" />
-
-
-
-### :pencil: Cadastro das Atividades
-
-<img src="doc/sprints/sprint4/img/status.gif" alt="modificação do status do chamado" style="zoom: 150%;" />
-
-
-
+<br>
 
 
 ## :medal_sports: Desafio <a id="desafio"></a>
@@ -76,8 +70,8 @@ Desenvolver um **Programa Desktop em Java** que automatize o controle de ativida
 
 - Cadastro das turmas e seus respectivos alunos;
 - Registro dos instrumentos avaliativos da disciplina;
-- Cálculo da média das atividades entregues das turmas e dos alunos;
-- Interface gráfica intuitiva e fácil de visualizar o desempenho dos alunos na disciplina.
+- Cálculo da média relacionado às atividades entregues pelas turmas e alunos;
+- Interface gráfica intuitiva, sendo fácil de visualizar o desempenho dos alunos na disciplina.
 
 
 
@@ -110,18 +104,18 @@ Desenvolver um **Programa Desktop em Java** que automatize o controle de ativida
 
 
 
-O framework de *Metodologia Ágil* utilizado no produto foi o **Scrum**, um método ágil adaptativo, iterativo, flexível e eficaz. Este método possui os seguintes princípios norteadores:
+O framework de Metodologia Ágil utilizado no produto foi o Scrum, um método ágil adaptativo, iterativo, flexível e eficaz. Este método possui os seguintes princípios norteadores:
 
 1. *Controle empírico*
-2. *Auto organização*
+2. *Auto-organização*
 3. *Colaboração*
 4. *Priorização da criação de valor*
 5. *Time-boxing*
 6. *Desenvolvimento iterativo*
 
-Entre as ferramentas utilizadas no Scrum, uma é a divisão do projeto em **Sprints**. Para selecionar quais seriam as entregas do nossas Sprints, primeiro definimos nosso **MVP**, priorizando as tarefas que trariam maior entrega de valor para o cliente. Então, a partir das Tarefas foi construído o **Backlog do Produto**,  o qual foi aprovado pelo cliente e dividido em 4 Backlog de Sprint.
+Entre as ferramentas utilizadas no Scrum, uma é a divisão do projeto em **Sprints**. Para selecionar quais seriam as entregas das nossas Sprints, primeiro definimos nosso **MVP**, priorizando as tarefas que trariam maior entrega de valor para o cliente. Então, a partir das Tarefas foi construído o **Backlog do Produto**,  o qual foi aprovado pelo cliente e dividido em 4 Backlog de Sprint.
 
-Para embasar a tomada de decisão e priorizar as tarefas com maior entrega de valor, utilizamos a construção de **Personas**. Através delas, tivemos mais clareza sobre o direcionamento das nossas **Histórias de Usuários**. Traçadas as Tarefas, Personas e Histórias de Usuários, utilizamos a ferramenta de Planning Poker para definir a quantidade de tempo necessária para cada Tarefa e dividimos da maneira mais otimizada entre os Desenvolvedores do time.
+Logo, para embasar a tomada de decisão e priorizar as tarefas com maior entrega de valor, utilizamos a construção de **Personas**. Pois, através delas, tivemos mais clareza sobre o direcionamento das nossas **Histórias de Usuários**. Dessa forma, traçadas as Tarefas, Personas e Histórias de Usuários, utilizamos a ferramenta de Planning Poker para definir a quantidade de tempo necessário para cada Tarefa, sendo dividido, de maneira mais otimizada, entre os Desenvolvedores do time.
 
 <br>
 
@@ -135,7 +129,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 - Cadastrar turmas;
 - Cadastrar alunos;
-- Cadastrar atividades;
+- Cadastrar atividades.
 
 
 <br>
@@ -144,7 +138,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 
 
-🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em construção :construction:
+🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Concluído :white_check_mark:
 
 🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Em construção :construction:
 
@@ -160,36 +154,48 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 |                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
-|                Montagem do Wireframe                | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :construction: |
-|                Diagrama de Classes UML                | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :construction: |
-|            Cadastro das turmas            | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :construction: |
-|            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :construction: |
-|         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Média    |   1    |          8h          | :construction: |
-|                Interface gráfica das turmas                | Criação no Swing da interface gráfica do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Baixa    |   1    |          2h           | :construction: |
-|            Interface gráfica dos alunos            | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :construction: |
-|         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :construction: |
-|                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :construction: |
+|                Montagem do Wireframe                | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :white_check_mark: |
+|                Diagrama de Classes UML                | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :white_check_mark: |
+|            Cadastro das turmas            | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :white_check_mark: |
+|            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :white_check_mark: |
+|         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Média    |   1    |          8h          | :white_check_mark: |
+|                Interface gráfica das turmas                | Criação no Swing da interface gráfica do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Baixa    |   1    |          2h           | :white_check_mark: |
+|            Interface gráfica dos alunos            | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :white_check_mark: |
+|         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
+|                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
+|   Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :construction: |
+|   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :construction: |
+|   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :construction: |
+|  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :construction: |
+|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :construction: |
+|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :construction: |
+|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :construction: |
+|  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :construction: |
 
 
+<br>
 
+## :fire: Burndown <a id='burndown'></a>
+
+<img src="doc/img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
 
 <br>
 
 ## :round_pushpin: Roadmap<a id='roadmap'></a>
 
 
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/roadmap.png?raw=true" alt="Roadmap" style="zoom: 150%;" />
 
-![Roadmap - Backlog do Produto](doc/frontend/roadmap4.png)
 
 <br>
 
-## :moyai: Personas <a id='Personas'></a>
+## :moyai: Personas <a id='personas'></a>
 
 
 
 | Catarina, 39 anos, professora de Geografia do ensino fundamental  |
 | :----------------------------------------------------------: |
-| Catarina tem 40 alunos por turma. Atualmente, ela leciona em 4 turmas na escola estadual João Leme e 3 turmas na escola estadual Ary Barroso. Catarina não tem experiência aprofundada com computador. Ela conhece somente o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook para fazer algumas de suas atividades e esse equipamente pode ser levado em sala de aula. Para cada turma, ela costuma aplicar 2 provas e 2 trabalhos, totalizando 4 atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, além de gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
+| Catarina tem 40 alunos por turma. Atualmente, ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
 
 
 <br>
@@ -208,10 +214,10 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
 | US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
 | US08<a id='us08'></a> | Catarina, professora, precisa de um ambiente de armazenamento virtual seguro para acumular todas as informações cadastradas. |
-| US09<a id='us09'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US11<a id='us11'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
-| US12<a id='us12'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
+| US09<a id='us09'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
+| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US11<a id='us11'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US12<a id='us12'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
 | US13<a id='us13'></a> | Catarina, professora, precisa de um software confiável e que não tenha problemas de desempenho. |
 
 <br>
@@ -226,7 +232,6 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |  Cláudia Secco   | Product Owner | <a href="https://github.com/ClaudiaCBS"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> |                                          |
 |   Alícea Rocha   | Desenvolvedor | <a href="https://github.com/alicearocha"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/al%C3%ADcea-paula-de-lima-rocha-bab682157/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Danilo Rodrigues | Desenvolvedor | <a href="https://github.com/Circerion"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/danilo-baptistella-5757aa20a"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Giuliano Bianco  | Desenvolvedor | <a href="https://github.com/giuliano-marcus-bianco"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/giuliano-marcus-bianco/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Joice de Araújo  | Desenvolvedor | <a href="https://github.com/Joice-Araujo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/joice-aparecida-581226250"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Jacqueline Bezerra | Desenvolvedor | <a href="https://github.com/jxqlnm"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/jacqueline-mariane"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Vitor Lima  | Desenvolvedor | <a href="https://github.com/lima2206"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vitor-spricigo-lima-84a377184"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
