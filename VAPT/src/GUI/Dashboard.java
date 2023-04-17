@@ -29,7 +29,7 @@ public class Dashboard extends javax.swing.JFrame {
         DefaultColor= new Color(13,36,70);
         ClickColor = new Color(220,141,77);
         jDesktopPanel.removeAll();
-        jDesktopPanel.add(new TelaHome()).setVisible(true);
+        jDesktopPanel.add(new TelaHome(jDesktopPanel)).setVisible(true);
         
 
     }
@@ -308,9 +308,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_homeButMouseEntered
 
     private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
-        AtividadeDadosAlunosPendentes ativDadosAlunosPendentes = new AtividadeDadosAlunosPendentes(jDesktopPanel);
-        jDesktopPanel.removeAll();
-        jDesktopPanel.add(ativDadosAlunosPendentes).setVisible(true);
+
     }//GEN-LAST:event_homeButMouseClicked
 
     private void buscaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscaButMouseClicked
