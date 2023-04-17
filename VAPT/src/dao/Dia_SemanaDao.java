@@ -53,7 +53,6 @@ public class Dia_SemanaDao {
             stmt.setString(3, dia);
             rs = stmt.executeQuery();
             if (rs.next()) {
-                System.out.println(rs.getInt("Turma_id_turma"));
                 return rs.getInt("Turma_id_turma");
 
                 

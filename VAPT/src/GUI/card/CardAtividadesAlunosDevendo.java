@@ -2,36 +2,55 @@
 package GUI.card;
 
 import GUI.swing.ScrollBarCustom;
+import dao.Aluno_AtividadeDao;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
+import javax.swing.event.MouseInputListener;
+
+import modelo.Aluno_Atividade;
 import modelo.Atividades;
 
 public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
     private Border border = BorderFactory.createMatteBorder(1, 0, 0, 0, Color.BLACK);
+    private Atividades atividade = new Atividades();
     
     public CardAtividadesAlunosDevendo() {
         initComponents();
+        nomesArea.setBorder(border);
         setOpaque(false);
         ScrollBarCustom sp = new ScrollBarCustom();
         sp.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
         
+        
     }
     
     public CardAtividadesAlunosDevendo(Atividades atividade, int id) {
         initComponents();
+        jScrollPane1.setBorder(border);
         setOpaque(false);
-        lbAtividade.setText("Atividade "+id);
-        //Classe para formatar a data para o padrão brasileiro
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        lbData.setText(lbData.getText()+sdf.format(atividade.getData_fim()));
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
+        this.atividade = atividade;     
+        preecherCards(id);
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("Isaque é lindo");
+            }
+        });
 
     }
 
@@ -47,7 +66,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(252, 252, 252));
-        setMaximumSize(new java.awt.Dimension(99, 268));
+        setMaximumSize(new java.awt.Dimension(136, 276));
 
         jScrollPane1.setBorder(null);
 
@@ -56,12 +75,10 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         nomesArea.setColumns(20);
         nomesArea.setLineWrap(true);
         nomesArea.setRows(5);
-        nomesArea.setText("Joice Araujo\nClaudia Ribeiro\nJana Silva\nTomas Souza\nCarlinho prey\nIsaque lindo\npao de batata\nsakdopapskod\naskpdoopkas\ndaskpookp\ndaskpoopk\nasdkpopok\n");
         nomesArea.setWrapStyleWord(true);
         nomesArea.setBorder(null);
         nomesArea.setDisabledTextColor(new java.awt.Color(252, 252, 252));
         jScrollPane1.setViewportView(nomesArea);
-        jScrollPane1.setBorder(border);
 
         lbAtividade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbAtividade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -105,6 +122,33 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+
+    private void preecherCards(int id) {
+        lbAtividade.setText("Atividade "+id);
+        //Classe para formatar a data para o padrão brasileiro
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        lbData.setText(lbData.getText()+sdf.format(this.atividade.getData_fim()));
+
+
+        int contador=0;
+        Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+        ArrayList<Aluno_Atividade> listaAluno_Atividades = aluno_AtividadeDao.buscarAlunosDeUmaAtividade(this.atividade.getId_atividade());
+        for (Aluno_Atividade aluno_Atividade : listaAluno_Atividades) {
+            if (!aluno_Atividade.getAluno_Ativadade_entrega()) {
+                nomesArea.setText(nomesArea.getText()+"  "+aluno_Atividade.getAluno().getNome()+"\n");
+                contador++;
+            }
+        }
+        float porcentagem = (float) contador / listaAluno_Atividades.size();
+        porcentagem *= 100;
+        String porcetagemString = String.format("%.2f ", porcentagem);
+        porcetagemString+="% pendente";
+        jLabel3.setText(porcetagemString);
+    
+    
+    }
+
 
     @Override
     protected void paintComponent(Graphics g) {

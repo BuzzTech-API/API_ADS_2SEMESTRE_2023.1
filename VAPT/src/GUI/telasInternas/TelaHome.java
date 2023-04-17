@@ -14,6 +14,7 @@ import modelo.Atividades;
 import modelo.Turma;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -30,7 +31,10 @@ public class TelaHome extends javax.swing.JInternalFrame {
 
     private Turma turma = new Turma();
     
+    private int novoGapConteiner=259;
+    private int componentPref = 259;
     public TelaHome() {
+        pegarTurmaDeAgora();
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -38,7 +42,6 @@ public class TelaHome extends javax.swing.JInternalFrame {
         ScrollBarCustom sp = new ScrollBarCustom();
         sp.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
-        pegarTurmaDeAgora();
         if (turma.getId_turma()!=0) {
             preencherTela();
         }
@@ -68,8 +71,11 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(217, 217, 217));
 
         jScrollPane1.setBorder(null);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(911, 482));
 
         jLayeredPane1.setBackground(new java.awt.Color(217, 217, 217));
+        jLayeredPane1.setName(""); // NOI18N
+        jLayeredPane1.setPreferredSize(new java.awt.Dimension(165,  482));
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 4, 55, 40));
         jScrollPane1.setViewportView(jLayeredPane1);
 
@@ -89,7 +95,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 911, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap(48, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -105,8 +111,8 @@ public class TelaHome extends javax.swing.JInternalFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, componentPref, Short.MAX_VALUE)
+                .addContainerGap(novoGapConteiner, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,7 +133,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
         Calendar calendario = Calendar.getInstance();
         int dia = calendario.get(Calendar.DAY_OF_WEEK);
         int horaAgora =calendario.get(Calendar.HOUR_OF_DAY);
-        dia =2;
+        dia =6;
         horaAgora=7;
         Dia_SemanaDao dia_SemanaDao = new Dia_SemanaDao();
         int turmaId = 0;
@@ -161,16 +167,23 @@ public class TelaHome extends javax.swing.JInternalFrame {
         }
         turma.buscarAtividades();
         
-        
+        if(turma.getAtividadesDaTurma().size()>4){
+            novoGapConteiner=30;
+            componentPref = 482;
+        }
     }
     
     public void preencherTela() {
         jLabel1.setText(jLabel1.getText()+turma.getNome());
         jLabel2.setText(jLabel2.getText()+turma.getNome_escola());
         ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
+        if(listaAtividades.size()<=4){
+            jLayeredPane1.setPreferredSize(new Dimension(WIDTH, 276));
+        }
         for (int i = 0; i < listaAtividades.size(); i++) {
             Atividades atividade = listaAtividades.get(i);
-            jLayeredPane1.add(new CardAtividadesAlunosDevendo(atividade, i+1));
+            CardAtividadesAlunosDevendo card = new CardAtividadesAlunosDevendo(atividade, i+1);
+            jLayeredPane1.add(card);
         }
     }
 
