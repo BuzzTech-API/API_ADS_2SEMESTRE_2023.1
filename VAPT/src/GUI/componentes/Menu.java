@@ -4,6 +4,7 @@
  */
 package GUI.componentes;
 
+import GUI.telasInternas.Buscar;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -157,7 +158,9 @@ public class Menu extends javax.swing.JPanel {
     }//GEN-LAST:event_homeBtnActionPerformed
 
     private void buscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBtnActionPerformed
-        // TODO add your handling code here:
+        Buscar buscaBut = new Buscar(jDesktopPanel);
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(buscaBut).setVisible(true);
     }//GEN-LAST:event_buscarBtnActionPerformed
 
     private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBtnActionPerformed
