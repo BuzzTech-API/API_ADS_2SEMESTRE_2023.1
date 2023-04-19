@@ -63,8 +63,8 @@ public class Aluno_AtividadeDao {
             stmt.setBoolean(1, aluno_Atividade.getAluno_Ativadade_entrega());
             stmt.setDate(2, aluno_Atividade.getAluno_Atividade_data_entrega());
             //Qual o id do registro
-            stmt.setInt(3, aluno_Atividade.getAluno_id_aluno());
-            stmt.setInt(4, aluno_Atividade.getAtividade_id_atividade());
+            stmt.setInt(3, aluno_Atividade.getAluno().getId_aluno());
+            stmt.setInt(4, aluno_Atividade.getAtividade().getId_atividade());
             
             //Executar a query
             stmt.execute();
@@ -83,7 +83,7 @@ public class Aluno_AtividadeDao {
         }
     }
         
-    }
+    
 
 
     public ArrayList<Aluno_Atividade> buscarAlunosDeUmaAtividade(int idAtividade) {
@@ -147,4 +147,5 @@ public class Aluno_AtividadeDao {
         return alunos;
 
     }
+}
 
