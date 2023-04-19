@@ -1,15 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package GUI;
 
-import GUI.telasInternas.AtividadeDadosAlunosPendentes;
 import GUI.telasInternas.Editar;
 import GUI.telasInternas.TelaHome;
 import GUI.telasInternas.TiposDeCadastro;
 import java.awt.Color;
-import javax.swing.JOptionPane;
+
 
 /**
  *

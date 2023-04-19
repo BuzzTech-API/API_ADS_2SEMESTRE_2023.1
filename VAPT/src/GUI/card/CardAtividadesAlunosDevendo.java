@@ -154,10 +154,14 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         }
         float porcentagem = (float) contador / listaAluno_Atividades.size();
         porcentagem *= 100;
+        if(porcentagem == 0.0){
+        jLabel3.setText("100% Entregue");
+        jLabel3.setForeground(Color.green);
+        }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="% pendente";
         jLabel3.setText(porcetagemString);
-    
+        }
     
     }
 

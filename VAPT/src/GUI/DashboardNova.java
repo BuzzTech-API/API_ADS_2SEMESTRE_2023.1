@@ -19,6 +19,7 @@ public class DashboardNova extends javax.swing.JFrame {
     public DashboardNova() {
         initComponents();
         setBackground(new Color(0,0,0,0));
+        jDesktopPane1.removeAll();
         jDesktopPane1.add(new TelaHome(jDesktopPane1)).setVisible(true); 
         menu.initWinButton(DashboardNova.this, panelBorda1);
    }
@@ -36,6 +37,7 @@ public class DashboardNova extends javax.swing.JFrame {
         menu = new GUI.componentes.Menu(jDesktopPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(217, 217, 217));
         setUndecorated(true);
 
         panelBorda1.setBackground(new java.awt.Color(255, 255, 255));

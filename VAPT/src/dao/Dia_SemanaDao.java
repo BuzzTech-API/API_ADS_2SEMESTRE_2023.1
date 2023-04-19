@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -17,11 +16,9 @@ public class Dia_SemanaDao {
     private Connection conexao;
     private PreparedStatement stmt;
     private ResultSet rs;
-    private ArrayList<Dia_Semana> lista;
 
     public Dia_SemanaDao() {
         this.conexao = new Conection().getConnection();
-        this.lista = new ArrayList<>();
     }
 
     public void adicionar(Dia_Semana dia_Semana) {

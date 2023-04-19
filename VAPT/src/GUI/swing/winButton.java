@@ -44,10 +44,12 @@ public class winButton extends javax.swing.JPanel {
                     menu.setRound(15);
                     panel.setRound(15);
                     frame.setExtendedState(JFrame.NORMAL);
+                    
                 } else {
                     menu.setRound(0);
                     panel.setRound(0);
                     frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    
                 }
             }
           });

@@ -4,6 +4,7 @@
  */
 package GUI.telasInternas;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -42,6 +43,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         ativNum.setText(ativNum.getText()+atividadeNum);
         this.turmaInfo=turma;
         this.turma.setText(this.turma.getText() + turmaInfo.getNome());
+        nomeEscola.setText(turma.getNome_escola());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        recebDataEntrega.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_inicio()));
+        recebDataSolicitacao1.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_fim()));
+        jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
     }
 
     /**
@@ -87,6 +93,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Data da Solicitação:");
 
+        recebDataEntrega.setEditable(false);
         recebDataEntrega.setBackground(new java.awt.Color(236, 236, 236));
         try {
             recebDataEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -96,6 +103,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         recebDataEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         recebDataEntrega.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        recebDataSolicitacao1.setEditable(false);
         recebDataSolicitacao1.setBackground(new java.awt.Color(236, 236, 236));
         try {
             recebDataSolicitacao1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -110,6 +118,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(236, 236, 236));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -256,6 +265,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel1.setText("Escola:");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, -1, -1));
 
+        nomeEscola.setEditable(false);
         nomeEscola.setBackground(new java.awt.Color(217, 217, 217));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         nomeEscola.setBorder(null);
