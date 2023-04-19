@@ -46,35 +46,82 @@ public class TurmaDao {
             stmt.close();
             JOptionPane.showMessageDialog(null,"Turma Cadastrada com Sucesso!");
 
-        } catch (SQLException exception) {
+         } catch (SQLException exception) {
             // TODO: handle exception
             
             JOptionPane.showMessageDialog(null, exception);
         }
     }
 
-    public ArrayList<Turma> pesquisar() {
-        String sql = "SELECT * FROM turma";
-        try {
-            this.conexao = new Conection().getConnection();
-            stmt = conexao.prepareStatement(sql);
-            rs = stmt.executeQuery();
-            while (rs.next()) {
-                Turma objTurma = new Turma();
-                objTurma.setId_turma(rs.getInt("id_turma"));
-                objTurma.setNome(rs.getString("nome"));
-                objTurma.setNome_escola(rs.getString("nome_escola"));
-
-                this.lista.add(objTurma);
-            }
+    public ArrayList<Turma> getTurma(){
+        String sql = "SELECT * FROM Turma";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        //Classe que vai recuperar os dados do banco ***SELECT***
+        ResultSet rset = null;
+        
+        try{
+            conn = new Conection().getConnection();
             
-        } catch (SQLException exception) {
-            // TODO: handle exception
-            throw new RuntimeException(exception);
-        }
-
+            stmt = conn.prepareStatement(sql);
+            
+            rset = stmt.executeQuery();
+            
+            while (rset.next()){
+                Turma turma = new Turma();
+                
+                //Recuperar o id
+                turma.setId_turma(rset.getInt("id_turma"));
+                //Recuperar o nome
+                turma.setNome(rset.getString("nome"));
+                //Recuperar o nome da escola
+                turma.setNome_escola(rset.getString("nome_escola"));
+                
+                this.lista.add(turma);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally{
+            try{
+                if(rset!=null){
+                rset.close();
+            }
+            if(stmt!=null){
+                stmt.close();
+            }
+            if(conn!=null){
+                conn.close();
+            }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }  
         return this.lista;
     }
+    
+//    public ArrayList<Turma> pesquisar() {
+//        String sql = "SELECT * FROM turma";
+//        try {
+//            this.conexao = new Conection().getConnection();
+//            stmt = conexao.prepareStatement(sql);
+//            rs = stmt.executeQuery();
+//            while (rs.next()) {
+//                Turma objTurma = new Turma();
+//                objTurma.setId_turma(rs.getInt("id_turma"));
+//                objTurma.setNome(rs.getString("nome"));
+//                objTurma.setNome_escola(rs.getString("nome_escola"));
+//
+//                this.lista.add(objTurma);
+//            }
+//            
+//        } catch (SQLException exception) {
+//            // TODO: handle exception
+//            throw new RuntimeException(exception);
+//        }
+//
+//        return this.lista;
+//    }
 
     public int pesquisarPorNomeEEscola(String nome, String nomeEscola) {
         String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";

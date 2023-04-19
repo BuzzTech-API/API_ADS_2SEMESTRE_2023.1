@@ -332,7 +332,7 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
     public void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
-        lista = turmaDao.pesquisar();
+        lista = turmaDao.getTurma();
         for (Turma turma : lista) {
             jComboBox1.addItem(turma.getNome());
         }

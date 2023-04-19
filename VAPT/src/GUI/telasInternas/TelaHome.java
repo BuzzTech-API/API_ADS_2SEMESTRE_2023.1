@@ -25,7 +25,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
         ui.setNorthPane(null);
         preencherCards();
         AtividadesDao atividadesDao = new AtividadesDao();
-        Ativ
+        
         
 
     }
