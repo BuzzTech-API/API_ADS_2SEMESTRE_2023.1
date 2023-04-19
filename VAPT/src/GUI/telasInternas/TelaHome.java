@@ -43,6 +43,8 @@ public class TelaHome extends javax.swing.JInternalFrame {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
+
+
         ScrollBarCustom sp = new ScrollBarCustom();
         sp.setUnitIncrement(20);
         sp.setForeground(new Color(4, 210, 130));

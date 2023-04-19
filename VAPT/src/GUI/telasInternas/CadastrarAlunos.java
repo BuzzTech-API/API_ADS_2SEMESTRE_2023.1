@@ -195,7 +195,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
 
     private void preecherComboBoxTurma() {
             TurmaDao turmaDao = new TurmaDao();
-            lista = turmaDao.pesquisar();
+            lista = turmaDao.getTurma();
             for (Turma turma : lista) {
                 jComboBox1.addItem(turma.getNome());
             }
