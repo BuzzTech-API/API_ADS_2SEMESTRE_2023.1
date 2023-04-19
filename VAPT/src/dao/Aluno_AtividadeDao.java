@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import conexoes.Conection;
+import java.util.List;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
@@ -86,6 +87,23 @@ public class Aluno_AtividadeDao {
         }
         return this.lista;
         
+    }
+    public List<Aluno> retornarAluno(Atividades atividade) throws SQLException{
+        String sql = "select a.* from aluno as a\n" + "inner join aluno_atividade as aa\n" + "where aa.id_aluno = a.id\n" +"and aa.id_atividade = ?";
+        stmt = conexao.prepareStatement(sql);
+        stmt.setInt(1,atividade.getId_atividade());
+        ResultSet rs = stmt.executeQuery();
+        stmt.close();
+        List<Aluno> alunos = new ArrayList();
+        while (rs.next()){
+            Aluno a  = new Aluno();
+            a.setId_aluno(rs.getInt("id_aluno"));
+            a.setId_turma(rs.getInt("id_turma"));
+            a.setNome(rs.getString("nome"));
+            alunos.add(a);
+        }
+        return alunos;
+
     }
 
 }
