@@ -37,22 +37,7 @@ public class winButton extends javax.swing.JPanel {
                 frame.setState(JFrame.ICONIFIED);
             }
           });
-          cmdRe.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (frame.getExtendedState() == JFrame.MAXIMIZED_BOTH) {
-                    menu.setRound(15);
-                    panel.setRound(15);
-                    frame.setExtendedState(JFrame.NORMAL);
-                    
-                } else {
-                    menu.setRound(0);
-                    panel.setRound(0);
-                    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-                    
-                }
-            }
-          });
+          
     }
 
 
@@ -62,7 +47,6 @@ public class winButton extends javax.swing.JPanel {
 
         cmdClose = new GUI.swing.MyButton();
         cmdMi = new GUI.swing.MyButton();
-        cmdRe = new GUI.swing.MyButton();
 
         cmdClose.setColor(new java.awt.Color(255, 0, 0));
         cmdClose.setColorClicked(new java.awt.Color(255, 0, 0));
@@ -76,12 +60,6 @@ public class winButton extends javax.swing.JPanel {
         cmdMi.setPreferredSize(new java.awt.Dimension(20, 20));
         cmdMi.setRadius(20);
 
-        cmdRe.setColor(new java.awt.Color(0, 204, 0));
-        cmdRe.setColorClicked(new java.awt.Color(51, 153, 0));
-        cmdRe.setColorOver(new java.awt.Color(51, 255, 51));
-        cmdRe.setPreferredSize(new java.awt.Dimension(20, 20));
-        cmdRe.setRadius(20);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,8 +69,6 @@ public class winButton extends javax.swing.JPanel {
                 .addComponent(cmdClose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmdMi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmdRe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3))
         );
         layout.setVerticalGroup(
@@ -100,7 +76,6 @@ public class winButton extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmdRe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmdMi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmdClose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3))
@@ -111,6 +86,5 @@ public class winButton extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.swing.MyButton cmdClose;
     private GUI.swing.MyButton cmdMi;
-    private GUI.swing.MyButton cmdRe;
     // End of variables declaration//GEN-END:variables
 }

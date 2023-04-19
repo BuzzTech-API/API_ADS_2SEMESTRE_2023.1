@@ -19,8 +19,8 @@ public class DashboardNova extends javax.swing.JFrame {
     public DashboardNova() {
         initComponents();
         setBackground(new Color(0,0,0,0));
-        jDesktopPane1.removeAll();
-        jDesktopPane1.add(new TelaHome(jDesktopPane1)).setVisible(true); 
+        // jDesktopPane1.removeAll();
+        //jDesktopPane1.add(new TelaHome(jDesktopPane1)).setVisible(true); 
         menu.initWinButton(DashboardNova.this, panelBorda1);
    }
 
