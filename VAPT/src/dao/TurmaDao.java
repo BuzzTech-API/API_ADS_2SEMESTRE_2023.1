@@ -52,7 +52,9 @@ public class TurmaDao {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
-
+    
+    
+    // Pegar todas as turmas
     public ArrayList<Turma> getTurma(){
         String sql = "SELECT * FROM Turma";
         
