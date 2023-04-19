@@ -4,8 +4,15 @@
  */
 package GUI.telasInternas;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+
+import dao.AtividadesDao;
+import dao.TurmaDao;
+import modelo.Aluno_Atividade;
+import modelo.Turma;
 /**
  *
  * @author joice
@@ -16,6 +23,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
      * Creates new form AtividadeDadosAlunosPendentes
      */
      javax.swing.JDesktopPane jDesktopPanel;
+     
+     
+    private Turma turmaInfo = new Turma();
+    
     public AtividadeDadosAlunosPendentes() {
         initComponents();
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
@@ -23,12 +34,20 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         ui.setNorthPane(null);
     }
 
-    public AtividadeDadosAlunosPendentes(JDesktopPane jDesktopPanel) {
-          this.jDesktopPanel = jDesktopPanel;
+    public AtividadeDadosAlunosPendentes(JDesktopPane jDesktopPanel , ArrayList<Aluno_Atividade> listaAluno_Atividades, int atividadeNum, Turma turma) {
+        this.jDesktopPanel = jDesktopPanel;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
+        ativNum.setText(ativNum.getText()+atividadeNum);
+        this.turmaInfo=turma;
+        this.turma.setText(this.turma.getText() + turmaInfo.getNome());
+        nomeEscola.setText(turma.getNome_escola());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        recebDataEntrega.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_inicio()));
+        recebDataSolicitacao1.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_fim()));
+        jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
     }
 
     /**
@@ -74,6 +93,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Data da Solicitação:");
 
+        recebDataEntrega.setEditable(false);
         recebDataEntrega.setBackground(new java.awt.Color(236, 236, 236));
         try {
             recebDataEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -83,6 +103,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         recebDataEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         recebDataEntrega.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        recebDataSolicitacao1.setEditable(false);
         recebDataSolicitacao1.setBackground(new java.awt.Color(236, 236, 236));
         try {
             recebDataSolicitacao1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -97,6 +118,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(236, 236, 236));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -212,10 +234,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 200, 850, 450));
 
+        ativNum.setEditable(false);
         ativNum.setBackground(new java.awt.Color(217, 217, 217));
         ativNum.setFont(new java.awt.Font("Segoe UI", 1, 46)); // NOI18N
         ativNum.setForeground(new java.awt.Color(4, 210, 130));
-        ativNum.setText("Atividade 5");
+        ativNum.setText("Atividade ");
         ativNum.setBorder(null);
         ativNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,11 +247,17 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         });
         jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
+        turma.setEditable(false);
         turma.setBackground(new java.awt.Color(217, 217, 217));
         turma.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         turma.setForeground(new java.awt.Color(239, 131, 84));
-        turma.setText("Turma 5ºA");
+        turma.setText("Turma ");
         turma.setBorder(null);
+        turma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                turmaActionPerformed(evt);
+            }
+        });
         jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(217, 217, 217));
@@ -236,9 +265,9 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel1.setText("Escola:");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, -1, -1));
 
+        nomeEscola.setEditable(false);
         nomeEscola.setBackground(new java.awt.Color(217, 217, 217));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        nomeEscola.setText("Ana Herondina");
         nomeEscola.setBorder(null);
         nomeEscola.setMinimumSize(new java.awt.Dimension(46, 22));
         nomeEscola.setPreferredSize(new java.awt.Dimension(46, 22));
@@ -278,9 +307,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeEscolaActionPerformed
 
+
+    private void turmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_turmaActionPerformed
+
     private void editAlunosPendesntesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAlunosPendesntesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_editAlunosPendesntesActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

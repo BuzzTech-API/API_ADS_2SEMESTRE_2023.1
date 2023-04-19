@@ -264,8 +264,8 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
             for (Aluno aluno : listaDeAlunos) {
                 Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
                 aluno_Atividade.setAluno_Ativadade_entrega(false);
-                aluno_Atividade.setAluno_id_aluno(aluno.getId_aluno());
-                aluno_Atividade.setAtividade_id_atividade(atividade.getId_atividade());
+                aluno_Atividade.setAluno(aluno);
+                aluno_Atividade.setAtividade(atividade);
                 aluno_AtividadeDao.adicionar(aluno_Atividade);
             }
             tipoAtv.setText("");

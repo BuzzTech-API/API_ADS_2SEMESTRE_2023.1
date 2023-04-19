@@ -20,6 +20,7 @@ public class Turma {
 
 
     public Turma() {
+        id_turma = 0;
     }
 
     public Turma(int id_turma, String nome, String nome_escola) {
