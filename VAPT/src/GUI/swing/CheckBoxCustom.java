@@ -10,19 +10,19 @@ import java.awt.image.RenderedImage;
 
 import javax.swing.JCheckBox;
 
-public class CheckBox extends JCheckBox{
+public class CheckBoxCustom extends JCheckBox{
     private int aluno_id;
     private int atividade_id;
     private final int border = 4;
 
-    public CheckBox() {
+    public CheckBoxCustom() {
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         setOpaque(false);
-        setBackground(new Color(69, 124, 235));
+        setBackground(new Color(0, 153, 0));
     }
 
 
-    public CheckBox(int aluno_id, int atividade_id) {
+    public CheckBoxCustom(int aluno_id, int atividade_id) {
         this.aluno_id = aluno_id;
         this.atividade_id = atividade_id;
     }
@@ -65,9 +65,9 @@ public class CheckBox extends JCheckBox{
             g2.setColor(Color.WHITE);
             g2.fillPolygon(px, py, px.length);
         }else{
-            g2.setColor(Color.GRAY);
+            g2.setColor(Color.black);
             g2.fillRoundRect(1, ly, 16, 16, border, border);
-            g2.setColor(Color.WHITE);
+            g2.setColor(Color.red);
             g2.fillRoundRect(2, ly+1, 14, 14, border, border);
         }
         g2.dispose();

@@ -3,25 +3,38 @@
 package GUI.componentes;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
-import GUI.swing.CheckBox;
+import GUI.swing.CheckBoxCustom;
+import dao.Aluno_AtividadeDao;
+import modelo.Aluno;
 import modelo.Aluno_Atividade;
+import modelo.Atividades;
 
 public class CheckBoxContainer extends javax.swing.JPanel {
 
     
+    private Aluno aluno;
 
-    public CheckBoxContainer(int numeroAtividade) {
+    public CheckBoxContainer(Aluno aluno) {
         initComponents();
-        jLabel1.setText(""+numeroAtividade);
+        this.aluno = aluno;
+        String texto = aluno.getNome();
+        for (int i = aluno.getNome().length(); i < 52; i++) {
+            texto+=" ";
+        }
+        jLabel1.setText(texto);
+        preencherLayeredPane();
     }
 
-    public void preencherLayeredPane(ArrayList<Aluno_Atividade> listaAluno_Atividades) {
-        
+    public void preencherLayeredPane() {
+        Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+        ArrayList<Aluno_Atividade> listaAluno_Atividades = aluno_AtividadeDao.buscarAtividadesDeUmAluno(aluno.getId_aluno());
         for (Aluno_Atividade aluno_Atividade : listaAluno_Atividades) {
-            CheckBox checkBox = new CheckBox();
+            CheckBoxCustom checkBox = new CheckBoxCustom();
             checkBox.setAluno_id(aluno_Atividade.getAluno().getId_aluno());
-            checkBox.setAtividade_id(aluno_Atividade.getAluno().getId_aluno());
+            checkBox.setAtividade_id(aluno_Atividade.getAtividade().getId_atividade());
             checkBox.setText("");
             if (aluno_Atividade.getAluno_Ativadade_entrega()) {
                 checkBox.setSelected(true);
@@ -31,10 +44,23 @@ public class CheckBoxContainer extends javax.swing.JPanel {
     }
 
     public void alterarSelecionados() {
+        Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
         for (int i = 0; i < jLayeredPane1.getComponentCount(); i++) {
-            CheckBox checkBoxContainer = (CheckBox) jLayeredPane1.getComponent(i);
-            if (checkBoxContainer.isSelected()) {
-                System.out.println("isaque é lindo");
+            CheckBoxCustom checkBox = (CheckBoxCustom) jLayeredPane1.getComponent(i);
+            if (checkBox.isSelected()) {
+                Calendar calendario = Calendar.getInstance();
+                Date utilDate = calendario.getTime();
+                java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime()); 
+                Atividades atividades = new Atividades();
+                atividades.setId_atividade(checkBox.getAtividade_id());
+                Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
+                aluno_Atividade.setAluno(aluno);
+                aluno_Atividade.setAluno_Ativadade_entrega(true);
+                aluno_Atividade.setAtividade(atividades);
+                aluno_Atividade.setAluno_Atividade_data_entrega(sqlDate);
+                
+                aluno_AtividadeDao.atualizar(aluno_Atividade);
+                
             }
         }
     }
@@ -47,27 +73,24 @@ public class CheckBoxContainer extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("1");
-
-        jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 0, 1));
+        jLayeredPane1.setLayout(new java.awt.GridLayout(1, 0, 3, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -176,7 +176,7 @@ public class Menu extends javax.swing.JPanel {
     }//GEN-LAST:event_homeBtnActionPerformed
 
     private void buscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBtnActionPerformed
-        DetalheTurma detalheTurma = new DetalheTurma(2);
+        DetalheTurma detalheTurma = new DetalheTurma(2, jDesktopPanel);
         jDesktopPanel.removeAll();
         jDesktopPanel.add(detalheTurma).setVisible(true);
     }//GEN-LAST:event_buscarBtnActionPerformed

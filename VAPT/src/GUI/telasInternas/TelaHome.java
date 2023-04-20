@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.JDesktopPane;
+import javax.swing.JScrollBar;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -36,6 +37,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
     private int novoGapConteiner=259;
     private JDesktopPane jDesktopPane;
     private int componentPref = 259;
+    
     public TelaHome(JDesktopPane jDesktopPane ){
         pegarTurmaDeAgora();
         this.jDesktopPane = jDesktopPane;
@@ -45,10 +47,11 @@ public class TelaHome extends javax.swing.JInternalFrame {
         ui.setNorthPane(null);
 
 
-        ScrollBarCustom sp = new ScrollBarCustom();
-        sp.setUnitIncrement(20);
-        sp.setForeground(new Color(4, 210, 130));
-        jScrollPane1.setVerticalScrollBar(sp);
+        ScrollBarCustom spHorizontal = new ScrollBarCustom();
+        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
+        spHorizontal.setUnitIncrement(20);
+        spHorizontal.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setHorizontalScrollBar(spHorizontal);
         if (turma.getId_turma()!=0) {
             preencherTela();
             
@@ -79,11 +82,10 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(217, 217, 217));
 
         jScrollPane1.setBorder(null);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(911, 259));
 
         jLayeredPane1.setBackground(new java.awt.Color(217, 217, 217));
         jLayeredPane1.setName(""); // NOI18N
-        jLayeredPane1.setLayout(new java.awt.GridLayout(0, 4, 55, 40));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.TRAILING, 22, 15));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -102,11 +104,11 @@ public class TelaHome extends javax.swing.JInternalFrame {
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE)
-                        .addContainerGap(56, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 912, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 522, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(270, 270, 270))))
         );
@@ -117,9 +119,9 @@ public class TelaHome extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addGap(57, 57, 57)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,7 +169,9 @@ public class TelaHome extends javax.swing.JInternalFrame {
             default:
                 break;
         }
+        turmaId=2;
         if (turmaId!=0) {
+            turmaId=2;
             TurmaDao turmaDao = new TurmaDao();
             turma = turmaDao.buscarPorId(turmaId);
         

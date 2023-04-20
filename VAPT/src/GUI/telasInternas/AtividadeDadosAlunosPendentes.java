@@ -48,6 +48,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         recebDataEntrega.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_inicio()));
         recebDataSolicitacao1.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_fim()));
         jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
+        
     }
 
     /**
@@ -160,7 +161,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(528, Short.MAX_VALUE)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -175,7 +176,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
@@ -205,9 +206,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(46, Short.MAX_VALUE))
-            .addComponent(jDesktopPane1)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +231,8 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane1))
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 200, 850, 450));

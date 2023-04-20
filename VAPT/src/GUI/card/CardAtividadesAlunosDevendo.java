@@ -87,6 +87,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         nomesArea.setColumns(20);
         nomesArea.setLineWrap(true);
         nomesArea.setRows(5);
+        nomesArea.setText("\n");
         nomesArea.setWrapStyleWord(true);
         nomesArea.setBorder(null);
         nomesArea.setDisabledTextColor(new java.awt.Color(252, 252, 252));
@@ -111,7 +112,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lbData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(1, 1, 1))
@@ -130,7 +131,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
                 .addGap(1, 1, 1)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -143,8 +144,9 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         lbData.setText(lbData.getText()+sdf.format(this.atividade.getData_fim()));
 
 
-        int contador=0;
+        
         Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+        int contador=0;
         listaAluno_Atividades = aluno_AtividadeDao.buscarAlunosDeUmaAtividade(this.atividade.getId_atividade());
         for (Aluno_Atividade aluno_Atividade : listaAluno_Atividades) {
             if (!aluno_Atividade.getAluno_Ativadade_entrega()) {
