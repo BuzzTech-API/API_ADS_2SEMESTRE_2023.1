@@ -186,7 +186,6 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         aluno.setNome(alunoNomeTextField.getText());
         aluno.setId_turma(turma.getId_turma());
-<<<<<<< Updated upstream:VAPT/src/GUI/CadastrarAlunos.java
         AlunoDao alunoDao = new AlunoDao();
         alunoDao.adicionar(aluno);
         aluno.getIdBanco();
@@ -199,11 +198,9 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             aluno_AtividadeDao.adicionar(aluno_Atividade);
         }
 
-=======
         
         PopupConfirmCadastAluno popup = new PopupConfirmCadastAluno(aluno, this, turma.getNome(), listaAtividades);
         popup.setVisible(true);
->>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/CadastrarAlunos.java
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
