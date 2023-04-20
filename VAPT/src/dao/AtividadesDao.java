@@ -1,5 +1,6 @@
 package dao;
 
+import GUI.popup.PopupCadasrSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -49,7 +50,8 @@ public class AtividadesDao {
             stmt.setInt(5, atividades.getTurma_id_turma());
             stmt.execute();
             stmt.close();
-            JOptionPane.showMessageDialog(null,"Ativididade Cadastrada com Sucesso!");
+            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            popup.setVisible(true);
 
         } catch (SQLException exception) {
             // TODO: handle exception

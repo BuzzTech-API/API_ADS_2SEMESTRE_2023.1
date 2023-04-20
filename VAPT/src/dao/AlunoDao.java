@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package dao;
+import GUI.popup.PopupCadasrSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,7 +36,8 @@ public class AlunoDao {
             stmt.setInt(2,aluno.getId_turma());
             stmt.execute();
             stmt.close();
-            JOptionPane.showMessageDialog(null,"Aluno Cadastrado com Sucesso!");
+            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            popup.setVisible(true);
 
         } catch (SQLException exception) {
             

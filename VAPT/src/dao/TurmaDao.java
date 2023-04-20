@@ -1,4 +1,5 @@
 package dao;
+import GUI.popup.PopupCadasrSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,7 +45,8 @@ public class TurmaDao {
             stmt.setString(2, turma.getNome_escola());
             stmt.execute();
             stmt.close();
-            JOptionPane.showMessageDialog(null,"Turma Cadastrada com Sucesso!");
+            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            popup.setVisible(true);
 
          } catch (SQLException exception) {
             // TODO: handle exception
