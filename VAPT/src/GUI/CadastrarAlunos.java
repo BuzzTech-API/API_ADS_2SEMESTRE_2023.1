@@ -4,11 +4,14 @@
  */
 package GUI;
 
+import GUI.popup.PopupConfirmCadastAluno;
 import java.util.ArrayList;
 
 import dao.AlunoDao;
 import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import modelo.Aluno;
@@ -34,6 +37,12 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         ui.setNorthPane(null);
     }
 
+
+    public JTextField getAlunoNomeTextField() {
+        return alunoNomeTextField;
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,15 +63,17 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1280, 730));
 
+        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setBackground(new java.awt.Color(4, 210, 130));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
-        jLabel1.setText("Cadastro de Aluno:");
+        jLabel1.setText("Cadastrar Aluno:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel2.setText("Aluno:");
+        jLabel2.setText("Nome aluno:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Turma:");
@@ -74,8 +85,12 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(239, 131, 84));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jButton1.setText("Salvar Cadastro");
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(2, 30, 54));
+        jButton1.setText("Cadastrar");
+        jButton1.setMaximumSize(new java.awt.Dimension(98, 30));
+        jButton1.setMinimumSize(new java.awt.Dimension(98, 30));
+        jButton1.setPreferredSize(new java.awt.Dimension(98, 30));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -86,55 +101,59 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton1)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(alunoNomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(11, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(alunoNomeTextField)
+                        .addGap(35, 35, 35))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 183, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(35, 35, 35)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(alunoNomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(250, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(416, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(242, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,6 +186,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         aluno.setNome(alunoNomeTextField.getText());
         aluno.setId_turma(turma.getId_turma());
+<<<<<<< Updated upstream:VAPT/src/GUI/CadastrarAlunos.java
         AlunoDao alunoDao = new AlunoDao();
         alunoDao.adicionar(aluno);
         aluno.getIdBanco();
@@ -179,6 +199,11 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             aluno_AtividadeDao.adicionar(aluno_Atividade);
         }
 
+=======
+        
+        PopupConfirmCadastAluno popup = new PopupConfirmCadastAluno(aluno, this, turma.getNome(), listaAtividades);
+        popup.setVisible(true);
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/CadastrarAlunos.java
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

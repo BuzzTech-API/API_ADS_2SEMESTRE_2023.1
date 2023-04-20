@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import GUI.popup.PopupConfirmCadastAtiv;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,6 +17,8 @@ import javax.swing.text.MaskFormatter;
 
 import dao.AtividadesDao;
 import dao.TurmaDao;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import modelo.Atividades;
 import modelo.Turma;
 
@@ -37,6 +40,39 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         preecherComboBoxTurma();
+      
+    }
+
+    public JTextArea getDescAtv() {
+        return descAtv;
+    }
+
+    public void setDescAtv(JTextArea descAtv) {
+        this.descAtv = descAtv;
+    }
+
+    public JFormattedTextField getDiaEntrega() {
+        return diaEntrega;
+    }
+
+    public void setDiaEntrega(JFormattedTextField diaEntrega) {
+        this.diaEntrega = diaEntrega;
+    }
+
+    public JFormattedTextField getDiaSolicitado() {
+        return diaSolicitado;
+    }
+
+    public void setDiaSolicitado(JFormattedTextField diaSolicitado) {
+        this.diaSolicitado = diaSolicitado;
+    }
+
+    public JTextField getTipoAtv() {
+        return tipoAtv;
+    }
+
+    public void setTipoAtv(JTextField tipoAtv) {
+        this.tipoAtv = tipoAtv;
     }
 
     /**
@@ -70,9 +106,9 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
-        jLabel1.setText("Atividades Cadastradas");
+        jLabel1.setText("Cadastrar Atividades:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
@@ -101,8 +137,13 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel8.setText("Descrição:");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(239, 131, 84));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(2, 30, 54));
         jButton1.setText("Cadastrar");
+        jButton1.setMaximumSize(new java.awt.Dimension(98, 30));
+        jButton1.setMinimumSize(new java.awt.Dimension(98, 30));
+        jButton1.setPreferredSize(new java.awt.Dimension(98, 30));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -152,47 +193,46 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addGap(29, 29, 29)
-                                        .addComponent(diaEntrega))
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(47, 47, 47)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addGap(0, 319, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(288, 288, 288))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(29, 29, 29)
+                                .addComponent(diaEntrega))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(47, 47, 47)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,12 +250,12 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(diaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
 
@@ -226,14 +266,14 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(278, 278, 278)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
@@ -259,12 +299,10 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             java.sql.Date sqlDate2 = new java.sql.Date(dataSolicitacao.getTime());
             atividade.setData_inicio(sqlDate2);
             atividade.setData_fim(sqlDate);
-            AtividadesDao atividadeDao = new AtividadesDao();
-            atividadeDao.adicionar(atividade);
-            tipoAtv.setText("");
-            diaSolicitado.setText("");
-            diaEntrega.setText("");
-            descAtv.setText("");
+            
+            PopupConfirmCadastAtiv popup = new PopupConfirmCadastAtiv(atividade, AtividadesCadastradas.this, turma.getNome());
+            popup.setVisible(true);
+            
         } catch (ParseException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
