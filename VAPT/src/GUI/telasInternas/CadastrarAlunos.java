@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package GUI;
+package GUI.telasInternas;
 
 import java.util.ArrayList;
 
@@ -174,8 +174,8 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         for (Atividades atividades : listaAtividades) {
             Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
             aluno_Atividade.setAluno_Ativadade_entrega(false);
-            aluno_Atividade.setAluno_id_aluno(aluno.getId_aluno());
-            aluno_Atividade.setAtividade_id_atividade(atividades.getId_atividade());
+            aluno_Atividade.setAluno(aluno);
+            aluno_Atividade.setAtividade(atividades);
             aluno_AtividadeDao.adicionar(aluno_Atividade);
         }
 
@@ -195,7 +195,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
 
     private void preecherComboBoxTurma() {
             TurmaDao turmaDao = new TurmaDao();
-            lista = turmaDao.pesquisar();
+            lista = turmaDao.getTurma();
             for (Turma turma : lista) {
                 jComboBox1.addItem(turma.getNome());
             }

@@ -16,7 +16,8 @@ public class Aluno{
     private int id_aluno;
     private int id_turma;
     private Turma turma;
-
+    private String nome;
+    
     public Turma getTurma() {
         return turma;
     }
@@ -24,7 +25,6 @@ public class Aluno{
     public void setTurma(Turma turma) {
         this.turma = turma;
     }
-    private String nome;
 
     public void setId_aluno(int id_aluno) {
         this.id_aluno = id_aluno;

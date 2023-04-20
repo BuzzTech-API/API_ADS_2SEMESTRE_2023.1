@@ -2,22 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package GUI;
+package GUI.telasInternas;
 
-import dao.Aluno_AtividadeDao;
-import dao.AtividadesDao;
-import dao.TurmaDao;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
 import javax.swing.JFormattedTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.text.MaskFormatter;
 
-import modelo.Aluno;
-import modelo.Aluno_Atividade;
+import dao.AtividadesDao;
+import dao.TurmaDao;
 import modelo.Atividades;
 import modelo.Turma;
 
@@ -25,19 +23,20 @@ import modelo.Turma;
  *
  * @author joice
  */
-public class CadastroAtividades extends javax.swing.JInternalFrame {
+public class AtividadesCadastradas extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form CadastroAtividades
+     * Creates new form AtividadesCadastradas
      */
-    MaskFormatter mfdata;
     private ArrayList<Turma> lista = new ArrayList<>();
-    public CadastroAtividades() {
+    MaskFormatter mfdata;
+    
+    public AtividadesCadastradas() {
         initComponents();
-        preecherComboBoxTurma();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
-        BasicInternalFrameUI ui=(BasicInternalFrameUI)this.getUI();
+         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
+        preecherComboBoxTurma();
     }
 
     /**
@@ -52,7 +51,7 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        turmaSelect = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         tipoAtv = new javax.swing.JTextField();
@@ -60,24 +59,27 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        butCadastrar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         descAtv = new javax.swing.JTextArea();
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         diaEntrega = new javax.swing.JFormattedTextField(mfdata);
 
+        setBackground(new java.awt.Color(217, 217, 217));
+        setPreferredSize(new java.awt.Dimension(1280, 730));
+
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
-        jLabel1.setText("Cadastrar Atividades");
+        jLabel1.setText("Atividades Cadastradas");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
-        turmaSelect.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                turmaSelectActionPerformed(evt);
+                jComboBox1ActionPerformed(evt);
             }
         });
 
@@ -99,11 +101,11 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel8.setText("Descrição:");
 
-        butCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        butCadastrar.setText("Cadastrar");
-        butCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butCadastrarActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -173,16 +175,17 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                             .addComponent(jLabel2)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(turmaSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(47, 47, 47)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(333, 333, 333)
-                        .addComponent(butCadastrar)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(49, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(288, 288, 288))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +195,7 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(turmaSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -210,40 +213,40 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(butCadastrar)
-                .addGap(24, 24, 24))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(15, 15, 15))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(224, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(278, 278, 278)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(224, 224, 224))
+                .addContainerGap(281, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(60, 60, 60)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void turmaSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmaSelectActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_turmaSelectActionPerformed
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void butCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCadastrarActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Atividades atividade = new Atividades();
-        int id = turmaSelect.getSelectedIndex();
+        int id = jComboBox1.getSelectedIndex();
         Turma turma = this.lista.get(id);
         atividade.setTipo(tipoAtv.getText());
         atividade.setDescricao(descAtv.getText());
@@ -258,16 +261,6 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
             atividade.setData_fim(sqlDate);
             AtividadesDao atividadeDao = new AtividadesDao();
             atividadeDao.adicionar(atividade);
-            atividade.puxarIdDoBanco();
-            ArrayList<Aluno> listaDeAlunos = turma.getAlunosDaTurma();
-            Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
-            for (Aluno aluno : listaDeAlunos) {
-                Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
-                aluno_Atividade.setAluno_Ativadade_entrega(false);
-                aluno_Atividade.setAluno_id_aluno(aluno.getId_aluno());
-                aluno_Atividade.setAtividade_id_atividade(atividade.getId_atividade());
-                aluno_AtividadeDao.adicionar(aluno_Atividade);
-            }
             tipoAtv.setText("");
             diaSolicitado.setText("");
             diaEntrega.setText("");
@@ -277,7 +270,7 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
             e.printStackTrace();
         }
 
-    }//GEN-LAST:event_butCadastrarActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void diaSolicitadoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_diaSolicitadoFocusLost
         // impede que o valor antigo da data que o usuario digitou volte:
@@ -320,10 +313,11 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butCadastrar;
     private javax.swing.JTextArea descAtv;
     private javax.swing.JFormattedTextField diaEntrega;
     private javax.swing.JFormattedTextField diaSolicitado;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -335,15 +329,13 @@ public class CadastroAtividades extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField tipoAtv;
-    private javax.swing.JComboBox<String> turmaSelect;
     // End of variables declaration//GEN-END:variables
     public void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
-        lista = turmaDao.pesquisar();
+        lista = turmaDao.getTurma();
         for (Turma turma : lista) {
-            turmaSelect.addItem(turma.getNome());
+            jComboBox1.addItem(turma.getNome());
         }
     }
-
 
 }
