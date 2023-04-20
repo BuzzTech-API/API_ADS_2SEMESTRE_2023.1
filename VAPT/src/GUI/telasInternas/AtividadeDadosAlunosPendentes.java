@@ -76,8 +76,8 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         ativNum = new javax.swing.JTextField();
         turma = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        nomeEscola = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        nomeEscola = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1280, 730));
 
@@ -139,7 +139,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         );
         recebNomesPendLayout.setVerticalGroup(
             recebNomesPendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
+            .addGap(0, 209, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -166,7 +166,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,15 +188,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 850, 450));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 850, 450));
 
         ativNum.setEditable(false);
         ativNum.setBackground(new java.awt.Color(217, 217, 217));
-        ativNum.setFont(new java.awt.Font("Segoe UI", 1, 46)); // NOI18N
+        ativNum.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         ativNum.setForeground(new java.awt.Color(4, 210, 130));
         ativNum.setText("Atividade ");
         ativNum.setBorder(null);
@@ -205,51 +205,37 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 ativNumActionPerformed(evt);
             }
         });
-        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
 
         turma.setEditable(false);
         turma.setBackground(new java.awt.Color(217, 217, 217));
-        turma.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        turma.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         turma.setForeground(new java.awt.Color(239, 131, 84));
         turma.setText("Turma ");
         turma.setBorder(null);
-        turma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                turmaActionPerformed(evt);
-            }
-        });
-        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
+        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, 40));
 
         jLabel1.setBackground(new java.awt.Color(217, 217, 217));
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel1.setText("Escola:");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
-
-        nomeEscola.setEditable(false);
-        nomeEscola.setBackground(new java.awt.Color(217, 217, 217));
-        nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        nomeEscola.setBorder(null);
-        nomeEscola.setMinimumSize(new java.awt.Dimension(46, 22));
-        nomeEscola.setPreferredSize(new java.awt.Dimension(46, 22));
-        nomeEscola.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeEscolaActionPerformed(evt);
-            }
-        });
-        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 300, 20));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, -1, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 120, 60));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, 120, 80));
+
+        nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        nomeEscola.setText("jLabel4");
+        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 90, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -263,14 +249,6 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_recebDataSolicitacao1ActionPerformed
 
-    private void nomeEscolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscolaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeEscolaActionPerformed
-
-
-    private void turmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_turmaActionPerformed
 
 
 
@@ -286,7 +264,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField nomeEscola;
+    private javax.swing.JLabel nomeEscola;
     private javax.swing.JFormattedTextField recebDataEntrega;
     private javax.swing.JFormattedTextField recebDataSolicitacao1;
     private javax.swing.JDesktopPane recebNomesPend;

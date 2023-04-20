@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JDesktopPane;
+import javax.swing.JScrollBar;
 import javax.swing.border.Border;
 import javax.swing.event.MouseInputListener;
 
@@ -38,8 +39,14 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         nomesArea.setBorder(border);
         setOpaque(false);
         ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
         sp.setForeground(new Color(4, 210, 130));
+        ScrollBarCustom spHorizontal = new ScrollBarCustom();
+        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
+        spHorizontal.setUnitIncrement(20);
+        spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
+        jScrollPane1.setHorizontalScrollBar(spHorizontal);
         
         
     }
@@ -50,8 +57,14 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         setOpaque(false);
         this.jDesktopPane = jDesktopPane;
         ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
         sp.setForeground(new Color(4, 210, 130));
+        ScrollBarCustom spHorizontal = new ScrollBarCustom();
+        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
+        spHorizontal.setUnitIncrement(20);
+        spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
+        jScrollPane1.setHorizontalScrollBar(spHorizontal);
         this.atividade = atividade;    
         this.turma = turma;
         preecherCards(id);
@@ -85,7 +98,6 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         nomesArea.setEditable(false);
         nomesArea.setBackground(new java.awt.Color(252, 252, 252));
         nomesArea.setColumns(20);
-        nomesArea.setLineWrap(true);
         nomesArea.setRows(5);
         nomesArea.setText("\n");
         nomesArea.setWrapStyleWord(true);
