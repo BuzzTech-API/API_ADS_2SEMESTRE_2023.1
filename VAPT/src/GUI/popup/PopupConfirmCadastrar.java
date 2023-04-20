@@ -5,7 +5,9 @@
 package GUI.popup;
 
 import GUI.telasInternas.CadastrarTurma;
+import dao.Dia_SemanaDao;
 import dao.TurmaDao;
+import modelo.Dia_Semana;
 import modelo.Turma;
 
 /**
@@ -31,6 +33,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         this.cadastrarTurma = cadastrarTurma;
         
         initComponents();
+        nomeTurma.setText(turma.getNome());
     }
 
     /**
@@ -58,6 +61,8 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
         jPanel1.setForeground(new java.awt.Color(79, 93, 117));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
 
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto1.setText("Tem certeza que deseja cadastrar \"");
@@ -76,7 +81,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         texto2.setText("\" ? ");
 
         botaoCadastrar.setBackground(new java.awt.Color(239, 131, 84));
-        botaoCadastrar.setForeground(new java.awt.Color(1, 30, 54));
+        botaoCadastrar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCadastrar.setText("Cadastrar");
         botaoCadastrar.setColor(new java.awt.Color(239, 131, 84));
         botaoCadastrar.setColorOver(new java.awt.Color(204, 204, 204));
@@ -92,7 +97,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         });
 
         botaoCancelar.setBackground(new java.awt.Color(255, 255, 255));
-        botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
+        botaoCancelar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCancelar.setText("Cancelar");
         botaoCancelar.setColor(new java.awt.Color(255, 255, 255));
         botaoCancelar.setColorOver(new java.awt.Color(204, 204, 204));
@@ -166,7 +171,52 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
         TurmaDao turmaDao = new TurmaDao();
-        turmaDao.adicionar(turma);
+        if (!turmaDao.jaExisteTurma(turma)) {
+            turmaDao.adicionar(turma);
+
+            turma.setId_turma(turmaDao.pesquisarPorNomeEEscola(turma.getNome(), turma.getNome_escola()));
+            Dia_SemanaDao dia_SemanaDao = new Dia_SemanaDao();
+            if (cadastrarTurma.getjCheckBox1().isSelected()) {
+                Dia_Semana dia_Semana = new Dia_Semana();
+                dia_Semana.setTurma_id_turma(turma.getId_turma());
+                dia_Semana.setDia("Segunda");
+                dia_Semana.setHora_inicio(cadastrarTurma.getSegIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getSegFim().getText());
+                dia_SemanaDao.adicionar(dia_Semana);
+            }
+            if (cadastrarTurma.getjCheckBox2().isSelected()) {
+                Dia_Semana dia_Semana = new Dia_Semana();
+                dia_Semana.setTurma_id_turma(turma.getId_turma());
+                dia_Semana.setDia("Terça");
+                dia_Semana.setHora_inicio(cadastrarTurma.getTerIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getTerFim().getText());
+                dia_SemanaDao.adicionar(dia_Semana);
+            }
+            if (cadastrarTurma.getjCheckBox3().isSelected()) {
+                Dia_Semana dia_Semana = new Dia_Semana();
+                dia_Semana.setTurma_id_turma(turma.getId_turma());
+                dia_Semana.setDia("Quarta");
+                dia_Semana.setHora_inicio(cadastrarTurma.getQuaIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getQuaFim().getText());
+                dia_SemanaDao.adicionar(dia_Semana);
+            }
+            if (cadastrarTurma.getjCheckBox4().isSelected()) {
+                Dia_Semana dia_Semana = new Dia_Semana();
+                dia_Semana.setTurma_id_turma(turma.getId_turma());
+                dia_Semana.setDia("Quinta");
+                dia_Semana.setHora_inicio(cadastrarTurma.getQuiIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getQuiFim().getText());
+                dia_SemanaDao.adicionar(dia_Semana);
+            }
+            if (cadastrarTurma.getjCheckBox5().isSelected()) {
+                Dia_Semana dia_Semana = new Dia_Semana();
+                dia_Semana.setTurma_id_turma(turma.getId_turma());
+                dia_Semana.setDia("Sexta");
+                dia_Semana.setHora_inicio(cadastrarTurma.getSexIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getSexFim().getText());
+                dia_SemanaDao.adicionar(dia_Semana);
+            }
+        } 
         cadastrarTurma.getNomeTurma().setText("");
         cadastrarTurma.getNomeDaEscola().setText("");
         cadastrarTurma.getjCheckBox1().setSelected(false);
@@ -184,6 +234,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         cadastrarTurma.getSexIni().setText("");
         cadastrarTurma.getTerFim().setText("");
         cadastrarTurma.getTerIni().setText("");
+       
         
         this.dispose();
     }//GEN-LAST:event_botaoCadastrarActionPerformed

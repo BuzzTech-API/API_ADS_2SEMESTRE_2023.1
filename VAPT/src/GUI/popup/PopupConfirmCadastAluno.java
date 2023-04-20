@@ -33,7 +33,9 @@ public class PopupConfirmCadastAluno extends javax.swing.JFrame {
         this.aluno = aluno;
         this.cadastrarAlunos = cadastrarAlunos;
         this.listaAtividades = listaAtividades;
+        
         initComponents();
+        nomeTurma.setText(nomeDaTurma);
     }
 
     /**

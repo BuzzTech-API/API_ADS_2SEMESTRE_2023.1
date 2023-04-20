@@ -186,18 +186,6 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         aluno.setNome(alunoNomeTextField.getText());
         aluno.setId_turma(turma.getId_turma());
-        AlunoDao alunoDao = new AlunoDao();
-        alunoDao.adicionar(aluno);
-        aluno.getIdBanco();
-        Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
-        for (Atividades atividades : listaAtividades) {
-            Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
-            aluno_Atividade.setAluno_Ativadade_entrega(false);
-            aluno_Atividade.setAluno(aluno);
-            aluno_Atividade.setAtividade(atividades);
-            aluno_AtividadeDao.adicionar(aluno_Atividade);
-        }
-
         
         PopupConfirmCadastAluno popup = new PopupConfirmCadastAluno(aluno, this, turma.getNome(), listaAtividades);
         popup.setVisible(true);

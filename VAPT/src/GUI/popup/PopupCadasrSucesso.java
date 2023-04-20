@@ -34,9 +34,11 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
         setBackground(new java.awt.Color(217, 217, 217));
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
         jPanel1.setForeground(new java.awt.Color(79, 93, 117));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setPreferredSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -44,11 +46,11 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
 
         iconeCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
 
-        myButton2.setBackground(new java.awt.Color(217, 217, 217));
+        myButton2.setBackground(new java.awt.Color(242, 242, 242));
         myButton2.setText("X");
         myButton2.setToolTipText("");
-        myButton2.setBorderColor(new java.awt.Color(217, 217, 217));
-        myButton2.setColor(new java.awt.Color(217, 217, 217));
+        myButton2.setBorderColor(new java.awt.Color(242, 242, 242));
+        myButton2.setColor(new java.awt.Color(242, 242, 242));
         myButton2.setColorOver(new java.awt.Color(217, 217, 217));
         myButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         myButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +86,7 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
                 .addComponent(texto1)
                 .addGap(26, 26, 26)
                 .addComponent(iconeCheck)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
