@@ -61,6 +61,8 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
         jPanel1.setForeground(new java.awt.Color(79, 83, 117));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
