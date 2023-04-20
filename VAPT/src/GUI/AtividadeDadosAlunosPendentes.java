@@ -29,6 +29,20 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
+=======
+        ativNum.setText(ativNum.getText()+atividadeNum);
+        this.turmaInfo=turma;
+        this.turma.setText(this.turma.getText() + turmaInfo.getNome());
+        nomeEscola.setText(turma.getNome_escola());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        recebDataEntrega.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_inicio()));
+        recebDataSolicitacao1.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_fim()));
+        jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
+        VisuAtivDadosAlunosPendentes nomesPendentes = new VisuAtivDadosAlunosPendentes(listaAluno_Atividades, painelNomes);
+        painelNomes.add(nomesPendentes).setVisible(true);
+        
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
     }
 
     /**
@@ -50,6 +64,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
+=======
+        painelNomes = new javax.swing.JDesktopPane();
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
         ativNum = new javax.swing.JTextField();
         turma = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -98,6 +116,22 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
+=======
+        painelNomes.setBackground(new java.awt.Color(236, 236, 236));
+
+        javax.swing.GroupLayout painelNomesLayout = new javax.swing.GroupLayout(painelNomes);
+        painelNomes.setLayout(painelNomesLayout);
+        painelNomesLayout.setHorizontalGroup(
+            painelNomesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 742, Short.MAX_VALUE)
+        );
+        painelNomesLayout.setVerticalGroup(
+            painelNomesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 264, Short.MAX_VALUE)
+        );
+
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -119,8 +153,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(46, Short.MAX_VALUE))
+=======
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(painelNomes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,10 +182,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                             .addComponent(jLabel8))
                         .addGap(18, 18, 18)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
                 .addContainerGap(270, Short.MAX_VALUE))
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(painelNomes))
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
         );
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 200, 850, 450));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 850, 450));
 
         ativNum.setBackground(new java.awt.Color(217, 217, 217));
         ativNum.setFont(new java.awt.Font("Segoe UI", 1, 46)); // NOI18N
@@ -156,19 +202,28 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 ativNumActionPerformed(evt);
             }
         });
-        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         turma.setBackground(new java.awt.Color(217, 217, 217));
         turma.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         turma.setForeground(new java.awt.Color(239, 131, 84));
         turma.setText("Turma 5ºA");
         turma.setBorder(null);
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
         jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+=======
+        turma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                turmaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
 
         jLabel1.setBackground(new java.awt.Color(217, 217, 217));
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel1.setText("Escola:");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, -1, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, -1, -1));
 
         nomeEscola.setBackground(new java.awt.Color(217, 217, 217));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
@@ -176,10 +231,19 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         nomeEscola.setBorder(null);
         nomeEscola.setMinimumSize(new java.awt.Dimension(46, 22));
         nomeEscola.setPreferredSize(new java.awt.Dimension(46, 22));
+<<<<<<< Updated upstream:VAPT/src/GUI/AtividadeDadosAlunosPendentes.java
         jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 300, 20));
+=======
+        nomeEscola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscolaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 300, 20));
+>>>>>>> Stashed changes:VAPT/src/GUI/telasInternas/AtividadeDadosAlunosPendentes.java
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 120, 60));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 90, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,6 +281,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField nomeEscola;
+    private javax.swing.JDesktopPane painelNomes;
     private javax.swing.JFormattedTextField recebDataEntrega;
     private javax.swing.JFormattedTextField recebDataSolicitacao1;
     private javax.swing.JTextField turma;
