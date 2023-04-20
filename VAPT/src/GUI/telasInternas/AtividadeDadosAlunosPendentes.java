@@ -70,9 +70,6 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        editAlunosPendesntes = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        recebPorcentagemAlunosPendentes = new javax.swing.JTextField();
         ativNum = new javax.swing.JTextField();
         turma = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -130,58 +127,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         jDesktopPane1.setBackground(new java.awt.Color(236, 236, 236));
 
-        editAlunosPendesntes.setBackground(new java.awt.Color(236, 236, 236));
-        editAlunosPendesntes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnEditar.png"))); // NOI18N
-        editAlunosPendesntes.setBorder(null);
-        editAlunosPendesntes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        editAlunosPendesntes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editAlunosPendesntesActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("pendente");
-
-        recebPorcentagemAlunosPendentes.setBackground(new java.awt.Color(236, 236, 236));
-        recebPorcentagemAlunosPendentes.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        recebPorcentagemAlunosPendentes.setForeground(new java.awt.Color(255, 0, 0));
-        recebPorcentagemAlunosPendentes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        recebPorcentagemAlunosPendentes.setText("10%");
-        recebPorcentagemAlunosPendentes.setBorder(null);
-
-        jDesktopPane1.setLayer(editAlunosPendesntes, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(recebPorcentagemAlunosPendentes, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(126, 126, 126))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(106, 106, 106))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))))
+            .addGap(0, 846, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
-                .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addGap(60, 60, 60)
-                .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 264, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -312,21 +266,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_turmaActionPerformed
 
-    private void editAlunosPendesntesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAlunosPendesntesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editAlunosPendesntesActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ativNum;
-    private javax.swing.JButton editAlunosPendesntes;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
@@ -336,7 +284,6 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeEscola;
     private javax.swing.JFormattedTextField recebDataEntrega;
     private javax.swing.JFormattedTextField recebDataSolicitacao1;
-    private javax.swing.JTextField recebPorcentagemAlunosPendentes;
     private javax.swing.JTextField turma;
     // End of variables declaration//GEN-END:variables
 }
