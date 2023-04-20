@@ -11,6 +11,7 @@ import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 
 import GUI.swing.PanelBorda;
+import GUI.telasInternas.Buscar;
 import GUI.telasInternas.DetalheTurma;
 import GUI.telasInternas.Editar;
 import GUI.telasInternas.TelaHome;
@@ -176,9 +177,9 @@ public class Menu extends javax.swing.JPanel {
     }//GEN-LAST:event_homeBtnActionPerformed
 
     private void buscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBtnActionPerformed
-        DetalheTurma detalheTurma = new DetalheTurma(2);
+        Buscar busca = new Buscar();
         jDesktopPanel.removeAll();
-        jDesktopPanel.add(detalheTurma).setVisible(true);
+        jDesktopPanel.add(busca).setVisible(true);
     }//GEN-LAST:event_buscarBtnActionPerformed
 
     private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBtnActionPerformed
