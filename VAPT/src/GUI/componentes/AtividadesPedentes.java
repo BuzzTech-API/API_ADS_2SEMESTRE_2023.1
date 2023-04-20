@@ -66,7 +66,7 @@ public class AtividadesPedentes extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 19)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(2, 31, 54));
         jLabel1.setText("Atividades Pendentes:");
 
@@ -103,7 +103,7 @@ public class AtividadesPedentes extends javax.swing.JPanel {
             jLayeredPane1.add(checkBoxContainer);
         }
         String atividadesNumeros = jLabel1.getText();
-        for (int i = atividadesNumeros.length(); i < 37; i++) {
+        for (int i = atividadesNumeros.length(); i < 27; i++) {
             atividadesNumeros+=" ";
         }
         for (int i = 1; i <= turma.getAtividadesDaTurma().size(); i++) {

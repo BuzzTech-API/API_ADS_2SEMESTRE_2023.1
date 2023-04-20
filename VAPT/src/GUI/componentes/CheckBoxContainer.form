@@ -41,10 +41,8 @@
     </Component>
     <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-        <Property name="columns" type="int" value="0"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
         <Property name="horizontalGap" type="int" value="3"/>
-        <Property name="rows" type="int" value="1"/>
       </Layout>
     </Container>
   </SubComponents>

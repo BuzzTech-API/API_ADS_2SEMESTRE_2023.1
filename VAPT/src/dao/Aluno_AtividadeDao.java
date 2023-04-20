@@ -47,7 +47,7 @@ public class Aluno_AtividadeDao {
     public void atualizar(Aluno_Atividade aluno_Atividade){
         
         String sql = "UPDATE aluno_atividade SET Aluno_Atividade_entrega = ?, Aluno_Atividade_data_entrega = ? "+
-        "WHERE Aluno_id_aluno = ?, Atividade_id_atividade = ?";
+        "WHERE Aluno_id_aluno = ? AND Atividade_id_atividade = ?";
         
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -130,9 +130,8 @@ public class Aluno_AtividadeDao {
         return this.lista;
         
     }
-
     public ArrayList<Aluno_Atividade> buscarAtividadesDeUmAluno(int idAluno) {
-        String sql = "SELECT * FROM aluno_atividade JOIN aluno ON aluno.id_aluno = aluno_atividade.Aluno_id_aluno JOIN atividade ON atividade.id_atividade = aluno_atividade.Atividade_id_atividade WHERE Atividade_id_atividade = ?";
+        String sql = "SELECT * FROM aluno_atividade JOIN aluno ON aluno.id_aluno = aluno_atividade.Aluno_id_aluno JOIN atividade ON atividade.id_atividade = aluno_atividade.Atividade_id_atividade WHERE Aluno_id_aluno = ?";
         try {
             this.conexao = new Conection().getConnection();
             stmt = conexao.prepareStatement(sql);
@@ -175,7 +174,6 @@ public class Aluno_AtividadeDao {
         return this.lista;
         
     }
-
 
     public List<Aluno> retornarAluno(Atividades atividade) throws SQLException{
         String sql = "select a.* from aluno as a\n" + "inner join aluno_atividade as aa\n" + "where aa.id_aluno = a.id\n" +"and aa.id_atividade = ?";

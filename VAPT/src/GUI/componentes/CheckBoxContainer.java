@@ -21,7 +21,7 @@ public class CheckBoxContainer extends javax.swing.JPanel {
         initComponents();
         this.aluno = aluno;
         String texto = aluno.getNome();
-        for (int i = aluno.getNome().length(); i < 52; i++) {
+        for (int i = aluno.getNome().length(); i < 42; i++) {
             texto+=" ";
         }
         jLabel1.setText(texto);
@@ -76,7 +76,7 @@ public class CheckBoxContainer extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        jLayeredPane1.setLayout(new java.awt.GridLayout(1, 0, 3, 0));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 3, 5));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
