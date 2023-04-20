@@ -4,17 +4,44 @@
  */
 package GUI.telasInternas;
 
+import GUI.swing.ScrollBarCustom;
+import dao.Aluno_AtividadeDao;
+import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JDesktopPane;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+import modelo.Aluno_Atividade;
+import modelo.Atividades;
+import modelo.Turma;
+
 /**
  *
  * @author joice
  */
 public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
+    /*peguei dos cards*/
+    private Atividades atividade = new Atividades();
+    private JDesktopPane jDesktopPane;
+    private ArrayList<Aluno_Atividade> listaAluno_Atividades = new ArrayList<>();
+    private Turma turma = new Turma();
 
     /**
      * Creates new form VisuAtivDadosAlunosPendentes
      */
-    public VisuAtivDadosAlunosPendentes() {
+    public VisuAtivDadosAlunosPendentes(ArrayList<Aluno_Atividade> listaAluno_Atividades, JDesktopPane jDesktopPane ) {
         initComponents();
+         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
+        ui.setNorthPane(null);
+        /*importado do card*/
+         this.jDesktopPane = jDesktopPane;
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
+        this.listaAluno_Atividades = listaAluno_Atividades;
+        prencherTextArea();
+        
+        /*importado do card até aqui*/
     }
 
     /**
@@ -30,9 +57,11 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         editAlunosPendesntes = new javax.swing.JButton();
         recebPorcentagemAlunosPendentes = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        aluDevArea = new javax.swing.JTextArea();
 
         setMinimumSize(new java.awt.Dimension(0, 0));
-        setPreferredSize(new java.awt.Dimension(220, 264));
+        setPreferredSize(new java.awt.Dimension(742, 264));
 
         jPanel1.setBackground(new java.awt.Color(236, 236, 236));
 
@@ -56,6 +85,15 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("pendente");
+
+        jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
+        jScrollPane1.setBorder(null);
+
+        aluDevArea.setBackground(new java.awt.Color(236, 236, 236));
+        aluDevArea.setColumns(20);
+        aluDevArea.setRows(5);
+        aluDevArea.setBorder(null);
+        jScrollPane1.setViewportView(aluDevArea);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -103,14 +141,35 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void editAlunosPendesntesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAlunosPendesntesActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_editAlunosPendesntesActionPerformed
-
+ private void prencherTextArea(){
+      int contador=0;
+        for (Aluno_Atividade aluno_Atividade : listaAluno_Atividades) {
+            if (!aluno_Atividade.getAluno_Ativadade_entrega()) {
+                aluDevArea.setText(aluDevArea.getText()+"  "+aluno_Atividade.getAluno().getNome()+"\n");
+                contador++;
+            }
+        } 
+        
+         float porcentagem = (float) contador / listaAluno_Atividades.size();
+        porcentagem *= 100;
+        if(porcentagem == 0.0){
+        recebPorcentagemAlunosPendentes.setText("100% Entregue");
+        }else{
+        String porcetagemString = String.format("%.2f ", porcentagem);
+        porcetagemString+="%";
+        recebPorcentagemAlunosPendentes.setText(porcetagemString);
+        }
+ 
+ }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea aluDevArea;
     private javax.swing.JButton editAlunosPendesntes;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField recebPorcentagemAlunosPendentes;
     // End of variables declaration//GEN-END:variables
 }
