@@ -177,7 +177,7 @@ public class Menu extends javax.swing.JPanel {
     }//GEN-LAST:event_homeBtnActionPerformed
 
     private void buscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBtnActionPerformed
-        Buscar busca = new Buscar();
+        Buscar busca = new Buscar(jDesktopPanel);
         jDesktopPanel.removeAll();
         jDesktopPanel.add(busca).setVisible(true);
     }//GEN-LAST:event_buscarBtnActionPerformed
