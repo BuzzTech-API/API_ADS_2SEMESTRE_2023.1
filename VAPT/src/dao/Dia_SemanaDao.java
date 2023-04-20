@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -17,11 +16,9 @@ public class Dia_SemanaDao {
     private Connection conexao;
     private PreparedStatement stmt;
     private ResultSet rs;
-    private ArrayList<Dia_Semana> lista;
 
     public Dia_SemanaDao() {
         this.conexao = new Conection().getConnection();
-        this.lista = new ArrayList<>();
     }
 
     public void adicionar(Dia_Semana dia_Semana) {
@@ -43,13 +40,13 @@ public class Dia_SemanaDao {
         }
     }
 
-    public int buscarTurmaDeAgora(int horaAtual, String dia) {
+    public int buscarTurmaDeAgora(String horaAtual, String dia) {
         String sql = "SELECT * FROM dia_semana WHERE hora_inicio <= ? and  hora_fim >= ? and dia = ?";
         try {
             this.conexao = new Conection().getConnection();
             stmt = conexao.prepareStatement(sql);
-            stmt.setInt(1, horaAtual);
-            stmt.setInt(2, horaAtual);
+            stmt.setString(1, horaAtual);
+            stmt.setString(2, horaAtual);
             stmt.setString(3, dia);
             rs = stmt.executeQuery();
             if (rs.next()) {

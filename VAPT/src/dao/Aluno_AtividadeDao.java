@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import conexoes.Conection;
+import java.util.List;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
@@ -42,6 +43,48 @@ public class Aluno_AtividadeDao {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
+    
+    public void atualizar(Aluno_Atividade aluno_Atividade){
+        
+        String sql = "UPDATE aluno_atividade SET Aluno_Atividade_entrega = ?, Aluno_Atividade_data_entrega = ? "+
+        "WHERE Aluno_id_aluno = ?, Atividade_id_atividade = ?";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        
+        try{
+            //Criar a conexão
+            conn = new Conection().getConnection();
+            
+            //Executar a query
+            stmt = conn.prepareStatement(sql);
+            
+            //Adicionar os valores para atualizar
+            stmt.setBoolean(1, aluno_Atividade.getAluno_Ativadade_entrega());
+            stmt.setDate(2, aluno_Atividade.getAluno_Atividade_data_entrega());
+            //Qual o id do registro
+            stmt.setInt(3, aluno_Atividade.getAluno().getId_aluno());
+            stmt.setInt(4, aluno_Atividade.getAtividade().getId_atividade());
+            
+            //Executar a query
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+        try{
+            if(stmt!=null){
+                stmt.close();
+            }if(conn!=null){
+                conn.close();
+            }
+        }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+        
+    
+
 
     public ArrayList<Aluno_Atividade> buscarAlunosDeUmaAtividade(int idAtividade) {
         String sql = "SELECT * FROM aluno_atividade JOIN aluno ON aluno.id_aluno = aluno_atividade.Aluno_id_aluno JOIN atividade ON atividade.id_atividade = aluno_atividade.Atividade_id_atividade WHERE Atividade_id_atividade = ?";
@@ -87,5 +130,22 @@ public class Aluno_AtividadeDao {
         return this.lista;
         
     }
+    public List<Aluno> retornarAluno(Atividades atividade) throws SQLException{
+        String sql = "select a.* from aluno as a\n" + "inner join aluno_atividade as aa\n" + "where aa.id_aluno = a.id\n" +"and aa.id_atividade = ?";
+        stmt = conexao.prepareStatement(sql);
+        stmt.setInt(1,atividade.getId_atividade());
+        ResultSet rs = stmt.executeQuery();
+        stmt.close();
+        List<Aluno> alunos = new ArrayList();
+        while (rs.next()){
+            Aluno a  = new Aluno();
+            a.setId_aluno(rs.getInt("id_aluno"));
+            a.setId_turma(rs.getInt("id_turma"));
+            a.setNome(rs.getString("nome"));
+            alunos.add(a);
+        }
+        return alunos;
 
+    }
 }
+

@@ -1,15 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package GUI;
 
-import GUI.telasInternas.AtividadeDadosAlunosPendentes;
 import GUI.telasInternas.Editar;
 import GUI.telasInternas.TelaHome;
 import GUI.telasInternas.TiposDeCadastro;
 import java.awt.Color;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -29,7 +25,8 @@ public class Dashboard extends javax.swing.JFrame {
         DefaultColor= new Color(13,36,70);
         ClickColor = new Color(220,141,77);
         jDesktopPanel.removeAll();
-        jDesktopPanel.add(new TelaHome()).setVisible(true);
+        jDesktopPanel.add(new TelaHome(jDesktopPanel)).setVisible(true);
+
     }
 
     /**
@@ -306,9 +303,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_homeButMouseEntered
 
     private void homeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButMouseClicked
-        AtividadeDadosAlunosPendentes ativDadosAlunosPendentes = new AtividadeDadosAlunosPendentes(jDesktopPanel);
-        jDesktopPanel.removeAll();
-        jDesktopPanel.add(ativDadosAlunosPendentes).setVisible(true);
+
     }//GEN-LAST:event_homeButMouseClicked
 
     private void buscaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscaButMouseClicked
