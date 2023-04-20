@@ -11,6 +11,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import dao.AtividadesDao;
 import dao.TurmaDao;
+import java.util.Locale;
 import modelo.Aluno_Atividade;
 import modelo.Turma;
 /**
@@ -48,6 +49,8 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         recebDataEntrega.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_inicio()));
         recebDataSolicitacao1.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_fim()));
         jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
+        VisuAtivDadosAlunosPendentes visuAluPendente = new VisuAtivDadosAlunosPendentes(listaAluno_Atividades, recebNomesPend);
+        recebNomesPend.add(visuAluPendente).setVisible(true);
     }
 
     /**
@@ -69,7 +72,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        recebNomesPend = new javax.swing.JDesktopPane();
         ativNum = new javax.swing.JTextField();
         turma = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -125,17 +128,18 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
-        jDesktopPane1.setBackground(new java.awt.Color(236, 236, 236));
+        recebNomesPend.setBackground(new java.awt.Color(236, 236, 236));
+        recebNomesPend.setPreferredSize(new java.awt.Dimension(742, 240));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
+        javax.swing.GroupLayout recebNomesPendLayout = new javax.swing.GroupLayout(recebNomesPend);
+        recebNomesPend.setLayout(recebNomesPendLayout);
+        recebNomesPendLayout.setHorizontalGroup(
+            recebNomesPendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 742, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 264, Short.MAX_VALUE)
+        recebNomesPendLayout.setVerticalGroup(
+            recebNomesPendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 240, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -159,9 +163,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(46, Short.MAX_VALUE))
-            .addComponent(jDesktopPane1)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,10 +188,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane1))
+                .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 200, 850, 450));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 850, 450));
 
         ativNum.setEditable(false);
         ativNum.setBackground(new java.awt.Color(217, 217, 217));
@@ -199,7 +205,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 ativNumActionPerformed(evt);
             }
         });
-        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         turma.setEditable(false);
         turma.setBackground(new java.awt.Color(217, 217, 217));
@@ -212,12 +218,12 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 turmaActionPerformed(evt);
             }
         });
-        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(217, 217, 217));
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel1.setText("Escola:");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, -1, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
 
         nomeEscola.setEditable(false);
         nomeEscola.setBackground(new java.awt.Color(217, 217, 217));
@@ -230,20 +236,20 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 nomeEscolaActionPerformed(evt);
             }
         });
-        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 300, 20));
+        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 300, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 120, 60));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 120, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
         );
 
         pack();
@@ -270,7 +276,6 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ativNum;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -284,6 +289,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeEscola;
     private javax.swing.JFormattedTextField recebDataEntrega;
     private javax.swing.JFormattedTextField recebDataSolicitacao1;
+    private javax.swing.JDesktopPane recebNomesPend;
     private javax.swing.JTextField turma;
     // End of variables declaration//GEN-END:variables
 }
