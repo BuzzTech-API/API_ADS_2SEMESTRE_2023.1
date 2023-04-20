@@ -5,6 +5,7 @@
 package GUI.telasInternas;
 import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+import modelo.Aluno;
 
 /**
  *
@@ -15,11 +16,15 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
     /**
      * Creates new form AtividadeDadosAluno
      */
-    public AtividadeDadosAluno() {
+    
+    private Aluno aluno;
+    public AtividadeDadosAluno(Aluno aluno) {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
+        this.aluno = aluno;
+        nomeAluno.setText(aluno.getNome());
     }
 
     /**
@@ -63,6 +68,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(1280, 730));
         jPanel2.setPreferredSize(new java.awt.Dimension(1280, 730));
 
+        nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(236, 236, 236));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
         nomeAluno.setForeground(new java.awt.Color(239, 131, 84));
@@ -79,10 +85,12 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         texto1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         texto1.setText("Escola:");
 
+        nomeEscola.setEditable(false);
         nomeEscola.setBackground(new java.awt.Color(236, 236, 236));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         nomeEscola.setText("Ana Herondina");
 
+        nomeTurma.setEditable(false);
         nomeTurma.setBackground(new java.awt.Color(236, 236, 236));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         nomeTurma.setForeground(new java.awt.Color(4, 210, 130));
@@ -94,6 +102,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         texto2.setForeground(new java.awt.Color(79, 93, 117));
         texto2.setText("Não entregou: ");
 
+        porcentagemNãoEntregue.setEditable(false);
         porcentagemNãoEntregue.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemNãoEntregue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemNãoEntregue.setForeground(new java.awt.Color(204, 0, 0));
