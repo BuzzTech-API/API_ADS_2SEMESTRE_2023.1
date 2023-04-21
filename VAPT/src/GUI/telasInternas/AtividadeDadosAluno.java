@@ -13,18 +13,20 @@ import modelo.Aluno;
  */
 public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form AtividadeDadosAluno
-     */
+    javax.swing.JDesktopPane jDesktopPanel;
     
     private Aluno aluno;
+    
     public AtividadeDadosAluno(Aluno aluno) {
+        this.jDesktopPanel = jDesktopPanel;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         this.aluno = aluno;
         nomeAluno.setText(aluno.getNome());
+        VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recebeCardsAtv, jDesktopPanel);
+        recebeCardsAtv.add(visuCard).setVisible(true);
     }
 
     /**

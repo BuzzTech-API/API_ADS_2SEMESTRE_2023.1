@@ -6,6 +6,7 @@ package GUI.telasInternas;
 
 import GUI.swing.ScrollBarCustom;
 import java.awt.Color;
+import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -14,11 +15,9 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form VisualizarAtvEntregueComAtraso
-     */
      javax.swing.JDesktopPane jDesktopPanel;
-    public VisualizarAtvEntregueComAtraso() {
+     
+    public VisualizarAtvEntregueComAtraso(JDesktopPane recebeCardsAtv, JDesktopPane jDesktopPanel1) {
         this.jDesktopPanel = jDesktopPanel;
         initComponents();
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
@@ -51,18 +50,18 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
 
         jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
-        jLayeredPane1.setLayout(new java.awt.GridLayout(1, 0));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout());
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
