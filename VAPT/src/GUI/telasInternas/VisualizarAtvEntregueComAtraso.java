@@ -52,7 +52,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
-            if(atividade_Entregue.getAluno_Ativadade_entrega()){
+            if(!atividade_Entregue.getAluno_Ativadade_entrega()){
                 CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
                 jLayeredPane1.add(cards);
             }}
