@@ -51,6 +51,9 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
         VisuAtivDadosAlunosPendentes visuAluPendente = new VisuAtivDadosAlunosPendentes(listaAluno_Atividades, recebNomesPend, jDesktopPanel);
         recebNomesPend.add(visuAluPendente).setVisible(true);
+        recebNomesPend.removeAll();
+        Teste teste = new Teste(listaAluno_Atividades);
+        recebNomesPend.add(teste).setVisible(true);
     }
 
     /**

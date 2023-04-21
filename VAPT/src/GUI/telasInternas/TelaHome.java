@@ -171,9 +171,8 @@ public class TelaHome extends javax.swing.JInternalFrame {
             default:
                 break;
         }
-        turmaId=2;
+
         if (turmaId!=0) {
-            turmaId=2;
             TurmaDao turmaDao = new TurmaDao();
             turma = turmaDao.buscarPorId(turmaId);
         
