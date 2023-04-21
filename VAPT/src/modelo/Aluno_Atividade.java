@@ -66,6 +66,10 @@ public class Aluno_Atividade {
             "}";
     }
 
+    public Aluno_Atividade get(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 
 
 }
