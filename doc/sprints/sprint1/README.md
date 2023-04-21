@@ -17,7 +17,7 @@
   <a href ="#backlog"> Backlog da Sprint </a>  | 
   <a href ="#tarefas"> Tarefas </a>  |
   <a href ="#burndown"> Burndown </a>  |
-  <a href ="#hitoria"> Histórias de Usuários </a>  |
+  <a href ="#hitoria"> Histórias de Usuários </a>  
 </p>
 
 
