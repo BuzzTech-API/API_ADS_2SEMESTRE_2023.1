@@ -3,30 +3,31 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package GUI.telasInternas;
-import javax.swing.JDesktopPane;
+
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
 
 /**
  *
- * @author Alicea
+ * @author joice
  */
-public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
+public class AlunoAtvAtrasada extends javax.swing.JInternalFrame {
 
-    javax.swing.JDesktopPane jDesktopPanel;
+     javax.swing.JDesktopPane jDesktopPanel;
     
     private Aluno aluno;
     
-    public AtividadeDadosAluno(Aluno aluno) {
+    public AlunoAtvAtrasada() {
         this.jDesktopPanel = jDesktopPanel;
         initComponents();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         this.aluno = aluno;
         nomeAluno.setText(aluno.getNome());
-        VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recebeCardsAtv, jDesktopPanel, aluno);
-        recebeCardsAtv.add(visuCard).setVisible(true);
+        VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recbAtvAtradas, jDesktopPanel, aluno);
+        recbAtvAtradas.add(visuCard).setVisible(true);
+        
     }
 
     /**
@@ -49,14 +50,8 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         porcentagemNãoEntregue = new javax.swing.JTextField();
         texto4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        recebeCardsAtv = new javax.swing.JDesktopPane();
-        texto5 = new javax.swing.JLabel();
-        porcentagemEntregueAtrasado = new javax.swing.JTextField();
-        texto6 = new javax.swing.JLabel();
+        recbAtvAtradas = new javax.swing.JDesktopPane();
 
-        setBackground(new java.awt.Color(217, 217, 217));
-        setMaximumSize(new java.awt.Dimension(1280, 730));
-        setMinimumSize(new java.awt.Dimension(1280, 730));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));
@@ -68,7 +63,6 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 1, true));
         jPanel2.setMaximumSize(new java.awt.Dimension(1280, 730));
         jPanel2.setMinimumSize(new java.awt.Dimension(1280, 730));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1280, 730));
 
         nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(236, 236, 236));
@@ -110,7 +104,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         texto2.setBackground(new java.awt.Color(236, 236, 236));
         texto2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         texto2.setForeground(new java.awt.Color(79, 93, 117));
-        texto2.setText("Não Entregou:");
+        texto2.setText("Atrasou:");
 
         porcentagemNãoEntregue.setEditable(false);
         porcentagemNãoEntregue.setBackground(new java.awt.Color(236, 236, 236));
@@ -135,32 +129,16 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
             }
         });
 
-        javax.swing.GroupLayout recebeCardsAtvLayout = new javax.swing.GroupLayout(recebeCardsAtv);
-        recebeCardsAtv.setLayout(recebeCardsAtvLayout);
-        recebeCardsAtvLayout.setHorizontalGroup(
-            recebeCardsAtvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout recbAtvAtradasLayout = new javax.swing.GroupLayout(recbAtvAtradas);
+        recbAtvAtradas.setLayout(recbAtvAtradasLayout);
+        recbAtvAtradasLayout.setHorizontalGroup(
+            recbAtvAtradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 753, Short.MAX_VALUE)
         );
-        recebeCardsAtvLayout.setVerticalGroup(
-            recebeCardsAtvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        recbAtvAtradasLayout.setVerticalGroup(
+            recbAtvAtradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 215, Short.MAX_VALUE)
         );
-
-        texto5.setBackground(new java.awt.Color(236, 236, 236));
-        texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        texto5.setForeground(new java.awt.Color(79, 93, 117));
-        texto5.setText("Entregou: ");
-
-        porcentagemEntregueAtrasado.setEditable(false);
-        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
-        porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemEntregueAtrasado.setText("10%");
-
-        texto6.setBackground(new java.awt.Color(236, 236, 236));
-        texto6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        texto6.setForeground(new java.awt.Color(79, 93, 117));
-        texto6.setText("atrasadas");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -190,15 +168,10 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                                         .addComponent(porcentagemNãoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(texto4))
-                                    .addComponent(recebeCardsAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(texto5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(texto6)
-                                        .addGap(348, 348, 348)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                    .addComponent(recbAtvAtradas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(657, 657, 657)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -219,14 +192,9 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                     .addComponent(porcentagemNãoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(recebeCardsAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(recbAtvAtradas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(texto6)
-                        .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(texto5)))
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -265,13 +233,13 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeAlunoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void nomeEscolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscolaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeEscolaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -282,13 +250,10 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeAluno;
     private javax.swing.JTextField nomeEscola;
     private javax.swing.JTextField nomeTurma;
-    private javax.swing.JTextField porcentagemEntregueAtrasado;
     private javax.swing.JTextField porcentagemNãoEntregue;
-    private javax.swing.JDesktopPane recebeCardsAtv;
+    private javax.swing.JDesktopPane recbAtvAtradas;
     private javax.swing.JLabel texto1;
     private javax.swing.JLabel texto2;
     private javax.swing.JLabel texto4;
-    private javax.swing.JLabel texto5;
-    private javax.swing.JLabel texto6;
     // End of variables declaration//GEN-END:variables
 }
