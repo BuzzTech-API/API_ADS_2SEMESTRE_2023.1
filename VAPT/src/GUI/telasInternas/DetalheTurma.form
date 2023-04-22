@@ -160,7 +160,7 @@
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Component id="panelBorda2" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   </Group>
@@ -190,7 +190,7 @@
               <SubComponents>
                 <Component class="GUI.componentes.AtividadesPedentes" name="atividadesPedentes1">
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.componentes.AtividadesPedentes(id)"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.componentes.AtividadesPedentes(id, jDesktopPane)"/>
                   </AuxValues>
                 </Component>
               </SubComponents>

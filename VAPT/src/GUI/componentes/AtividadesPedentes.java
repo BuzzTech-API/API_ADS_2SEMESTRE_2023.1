@@ -7,9 +7,13 @@ package GUI.componentes;
 import java.util.ArrayList;
 
 import GUI.swing.CheckBoxCustom;
+import GUI.telasInternas.AtividadeDadosAluno;
 import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
 import modelo.Aluno_Atividade;
 import modelo.Aluno;
@@ -39,9 +43,10 @@ public class AtividadesPedentes extends javax.swing.JPanel {
         setOpaque(false);
         
     }
-
+    JDesktopPane jDesktopPane;
+    
     private ArrayList<Aluno> listaAluno;
-    public AtividadesPedentes(int id) {
+    public AtividadesPedentes(int id, JDesktopPane jDesktopPane) {
         this.id = id;
         TurmaDao turmaDao = new TurmaDao();
         Turma turma = turmaDao.buscarPorId(id);
@@ -50,7 +55,7 @@ public class AtividadesPedentes extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
         preencherPanel();
-        
+        this.jDesktopPane=jDesktopPane;
         
         
         
@@ -100,10 +105,18 @@ public class AtividadesPedentes extends javax.swing.JPanel {
         ArrayList<Aluno> listaAluno = turma.getAlunosDaTurma();
         for (Aluno aluno : listaAluno) {
             CheckBoxContainer checkBoxContainer = new CheckBoxContainer(aluno);
+            checkBoxContainer.getjLabel1().addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    jDesktopPane.removeAll();
+                    jDesktopPane.add(new AtividadeDadosAluno(aluno)).setVisible(true);
+                }
+                
+            });
             jLayeredPane1.add(checkBoxContainer);
         }
         String atividadesNumeros = jLabel1.getText();
-        for (int i = atividadesNumeros.length(); i < 27; i++) {
+        for (int i = atividadesNumeros.length(); i < 36; i++) {
             atividadesNumeros+=" ";
         }
         for (int i = 1; i <= turma.getAtividadesDaTurma().size(); i++) {

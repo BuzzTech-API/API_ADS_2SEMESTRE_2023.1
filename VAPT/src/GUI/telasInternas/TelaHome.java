@@ -147,6 +147,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
         String horaAgora = sdf.format(calendario.getTime());
         Dia_SemanaDao dia_SemanaDao = new Dia_SemanaDao();
         int turmaId = 0;
+        
         switch (dia) {
             case 2:
                 turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Segunda");

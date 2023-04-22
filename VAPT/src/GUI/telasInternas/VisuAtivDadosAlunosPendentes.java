@@ -158,7 +158,9 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void editAlunosPendesntesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAlunosPendesntesActionPerformed
-        
+        AtribuirAtividadeEntregue teste = new AtribuirAtividadeEntregue(listaAluno_Atividades, atividade, jDesktopPane, jDesktopPanePrincipal);
+        jDesktopPane.removeAll();
+        jDesktopPane.add(teste).setVisible(true);
     }//GEN-LAST:event_editAlunosPendesntesActionPerformed
  private void prencherTextArea(){
       int contador=0;

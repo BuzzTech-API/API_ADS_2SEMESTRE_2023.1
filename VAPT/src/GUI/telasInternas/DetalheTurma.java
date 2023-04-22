@@ -81,7 +81,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         panelBordaArredondadaComLinha1 = new GUI.swing.PanelBordaArredondadaComLinha();
         jScrollPane1 = new javax.swing.JScrollPane();
-        atividadesPedentes1 = new GUI.componentes.AtividadesPedentes(id);
+        atividadesPedentes1 = new GUI.componentes.AtividadesPedentes(id, jDesktopPane);
         panelBorda2 = new GUI.swing.PanelBorda();
         atividadesEntreguesComAtraso1 = new GUI.componentes.AtividadesEntreguesComAtraso(jDesktopPane , id);
         jPanel1 = new javax.swing.JPanel();
@@ -174,7 +174,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
                     .addComponent(panelBorda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
         );
