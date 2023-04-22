@@ -10,6 +10,7 @@ import dao.Aluno_AtividadeDao;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JDesktopPane;
+import javax.swing.JScrollBar;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
@@ -30,10 +31,11 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-        ScrollBarCustom sp = new ScrollBarCustom();
-        sp.setUnitIncrement(20);
-        sp.setForeground(new Color(4, 210, 130));
-        jScrollPane1.setVerticalScrollBar(sp);
+        ScrollBarCustom spHorizontal = new ScrollBarCustom();
+        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
+        spHorizontal.setUnitIncrement(20);
+        spHorizontal.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setHorizontalScrollBar(spHorizontal);
         this.aluno = aluno;
         preencherAtv1entregue();
         
@@ -80,7 +82,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
 
         jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout());
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         jButton1.setBackground(new java.awt.Color(239, 131, 84));
