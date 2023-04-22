@@ -16,7 +16,7 @@ import modelo.Aluno_Atividade;
  *
  * @author Lima
  */
-public class Teste extends javax.swing.JInternalFrame {
+public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
 
     private ArrayList<Aluno_Atividade> aluno;
     
@@ -28,11 +28,11 @@ public class Teste extends javax.swing.JInternalFrame {
             }
         }
     }
-    public Teste(ArrayList<Aluno_Atividade> a) {
+    public AtribuirAtividadeEntregue(ArrayList<Aluno_Atividade> a) {
         initComponents();
         this.aluno = a;
         preencherlinhas();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(-10,0,-10,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         ScrollBarCustom sp = new ScrollBarCustom();
@@ -57,13 +57,19 @@ public class Teste extends javax.swing.JInternalFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         myButton1 = new GUI.swing.MyButton();
 
-        jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 5, 0));
+        jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
         jScrollPane1.setViewportView(jLayeredPane1);
 
-        myButton1.setText("myButton1");
-        myButton1.setColor(new java.awt.Color(255, 204, 51));
-        myButton1.setColorClicked(new java.awt.Color(255, 153, 0));
-        myButton1.setColorOver(new java.awt.Color(255, 204, 51));
+        myButton1.setBackground(new java.awt.Color(255, 129, 76));
+        myButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        myButton1.setText("Salvar");
+        myButton1.setToolTipText("");
+        myButton1.setAlignmentY(0.0F);
+        myButton1.setColor(new java.awt.Color(255, 129, 76));
+        myButton1.setColorClicked(new java.awt.Color(255, 158, 71));
+        myButton1.setColorOver(new java.awt.Color(255, 147, 80));
+        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myButton1.setRadius(15);
         myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 myButton1ActionPerformed(evt);
@@ -76,20 +82,20 @@ public class Teste extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 116, Short.MAX_VALUE)
-                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -97,7 +103,7 @@ public class Teste extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-
+            
         for (int i = 0; i < jLayeredPane1.getComponentCount(); i++) {
             CheckBoxContainer checkBoxContainer = (CheckBoxContainer) jLayeredPane1.getComponent(i);
             checkBoxContainer.alterarSelecionados();
@@ -110,4 +116,5 @@ public class Teste extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private GUI.swing.MyButton myButton1;
     // End of variables declaration//GEN-END:variables
+
 }
