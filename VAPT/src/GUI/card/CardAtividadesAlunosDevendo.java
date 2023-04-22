@@ -72,7 +72,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 jDesktopPane.removeAll();
-                jDesktopPane.add(new AtividadeDadosAlunosPendentes(jDesktopPane, listaAluno_Atividades, id, turma)).setVisible(true);
+                jDesktopPane.add(new AtividadeDadosAlunosPendentes(jDesktopPane, atividade, id, turma)).setVisible(true);
             }
 
         });

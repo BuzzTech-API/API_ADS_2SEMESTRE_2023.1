@@ -13,6 +13,7 @@ import dao.AtividadesDao;
 import dao.TurmaDao;
 import java.util.Locale;
 import modelo.Aluno_Atividade;
+import modelo.Atividades;
 import modelo.Turma;
 /**
  *
@@ -35,7 +36,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         ui.setNorthPane(null);
     }
 
-    public AtividadeDadosAlunosPendentes(JDesktopPane jDesktopPanel , ArrayList<Aluno_Atividade> listaAluno_Atividades, int atividadeNum, Turma turma) {
+    public AtividadeDadosAlunosPendentes(JDesktopPane jDesktopPanel , Atividades atividade, int atividadeNum, Turma turma) {
         this.jDesktopPanel = jDesktopPanel;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
@@ -46,10 +47,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         this.turma.setText(this.turma.getText() + turmaInfo.getNome());
         nomeEscola.setText(turma.getNome_escola());
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        recebDataEntrega.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_inicio()));
-        recebDataSolicitacao1.setText(sdf.format(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getData_fim()));
-        jTextArea1.setText(listaAluno_Atividades.get(atividadeNum-1).getAtividade().getDescricao());
-        VisuAtivDadosAlunosPendentes visuAluPendente = new VisuAtivDadosAlunosPendentes(listaAluno_Atividades, recebNomesPend, jDesktopPanel);
+        recebDataSolicitacao1.setText(sdf.format(atividade.getData_inicio()));
+        recebDataEntrega.setText(sdf.format(atividade.getData_fim()));
+        jTextArea1.setText(atividade.getDescricao());
+        VisuAtivDadosAlunosPendentes visuAluPendente = new VisuAtivDadosAlunosPendentes(atividade, recebNomesPend, jDesktopPanel);
         recebNomesPend.add(visuAluPendente).setVisible(true);
     }
 

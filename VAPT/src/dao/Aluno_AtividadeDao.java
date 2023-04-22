@@ -175,6 +175,55 @@ public class Aluno_AtividadeDao {
         
     }
 
+
+    public ArrayList<Aluno_Atividade> buscarAtividadesEntreguesAtrasadasDeUmAluno(int idAluno) {
+        String sql = "SELECT * FROM aluno_atividade INNER JOIN atividade ON atividade.id_atividade = aluno_atividade.Atividade_id_atividade JOIN aluno ON aluno.id_aluno = aluno_atividade.Aluno_id_aluno  WHERE Aluno_id_aluno = ? and atividade.data_fim < aluno_atividade.Aluno_Atividade_data_entrega;";
+        try {
+            this.conexao = new Conection().getConnection();
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, idAluno);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                // Cria um objeto Aluno_Atividade para ser inserido na lista que será retornada
+                Aluno_Atividade objAluno_Atividade = new Aluno_Atividade();
+
+
+                // Cria um objeto aluno para colocar as informações do aluno que faz a atividade
+                Aluno objAluno = new Aluno();
+                objAluno.setId_aluno(rs.getInt("aluno.id_aluno"));
+                objAluno.setNome(rs.getString("aluno.nome"));
+                objAluno.setId_turma(rs.getInt("aluno.Turma_id_turma"));
+                objAluno_Atividade.setAluno(objAluno);
+
+                
+                // Cria um objeto atividade para colocar as informações da atividade que aluno faz
+                Atividades objAtividades = new Atividades();
+                objAtividades.setId_atividade(rs.getInt("atividade.id_atividade"));
+                objAtividades.setTipo(rs.getString("atividade.tipo"));
+                objAtividades.setDescricao(rs.getString("atividade.descricao"));
+                objAtividades.setData_inicio(rs.getDate("atividade.data_inicio"));
+                objAtividades.setData_fim(rs.getDate("atividade.data_fim"));
+                objAtividades.setTurma_id_turma(rs.getInt("atividade.Turma_id_turma"));
+                objAluno_Atividade.setAtividade(objAtividades);
+
+                // inseri no aluno_atividade se o aluno entregou a atividade e se entregou quando
+                objAluno_Atividade.setAluno_Ativadade_entrega(rs.getBoolean("Aluno_Atividade_entrega"));
+                objAluno_Atividade.setAluno_Atividade_data_entrega(rs.getDate("Aluno_Atividade_data_entrega"));
+                this.lista.add(objAluno_Atividade);
+            }
+            
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+        return this.lista;
+        
+    }
+    
+
+
+
     public List<Aluno> retornarAluno(Atividades atividade) throws SQLException{
         String sql = "select a.* from aluno as a\n" + "inner join aluno_atividade as aa\n" + "where aa.id_aluno = a.id\n" +"and aa.id_atividade = ?";
         stmt = conexao.prepareStatement(sql);

@@ -34,7 +34,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
     /**
      * Creates new form VisuAtivDadosAlunosPendentes
      */
-    public VisuAtivDadosAlunosPendentes(ArrayList<Aluno_Atividade> listaAluno_Atividades, JDesktopPane jDesktopPane , JDesktopPane jDesktopPanePrincipal ) {
+    public VisuAtivDadosAlunosPendentes(Atividades atividade, JDesktopPane jDesktopPane , JDesktopPane jDesktopPanePrincipal ) {
         initComponents();
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -50,8 +50,10 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
         jScrollPane1.setHorizontalScrollBar(spHorizontal);
+        this.atividade = atividade;
         this.jDesktopPanePrincipal = jDesktopPanePrincipal;
-        this.listaAluno_Atividades = listaAluno_Atividades;
+        
+        this.listaAluno_Atividades = new Aluno_AtividadeDao().buscarAlunosDeUmaAtividade(atividade.getId_atividade()) ;
         prencherTextArea();
         
         /*importado do card até aqui*/
