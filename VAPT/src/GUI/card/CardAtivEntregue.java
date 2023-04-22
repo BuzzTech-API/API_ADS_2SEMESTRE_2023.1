@@ -7,6 +7,9 @@ package GUI.card;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.text.SimpleDateFormat;
+import modelo.Aluno_Atividade;
+import modelo.Atividades;
 
 /**
  *
@@ -14,12 +17,16 @@ import java.awt.RenderingHints;
  */
 public class CardAtivEntregue extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CardAtivEntregue
-     */
-    public CardAtivEntregue() {
+    private Aluno_Atividade aluno_atividade = new Aluno_Atividade();
+    private int id;
+    
+    
+    public CardAtivEntregue(Aluno_Atividade alunoAtv, int numero_atv) {
         initComponents();
         setOpaque(false);
+        this.aluno_atividade = alunoAtv; 
+        preecherCards(numero_atv);
+        
     }
 
     /**
@@ -29,6 +36,15 @@ public class CardAtivEntregue extends javax.swing.JPanel {
      */
     @SuppressWarnings("unchecked")
     
+    private void preecherCards(int id){
+        atvNum.setText("Atividade "+id);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        dataDEntrega.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));
+        //dataQEntrega1.setText(sdf.format(this.aluno_atividade.getAluno_Atividade_data_entrega()));
+    
+    
+    }
+    
      @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 =(Graphics2D)grphcs;
@@ -36,26 +52,29 @@ public class CardAtivEntregue extends javax.swing.JPanel {
         g2.setColor(getBackground());
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
         super.paintChildren(grphcs);
+        
+   
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        atvNum = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        dataDaEntrega = new javax.swing.JFormattedTextField();
-        dataQEntregou = new javax.swing.JFormattedTextField();
+        dataDEntrega = new javax.swing.JLabel();
+        dataQEntrega1 = new javax.swing.JLabel();
+        checkBoxCustom1 = new GUI.swing.CheckBoxCustom();
 
         setBackground(new java.awt.Color(252, 252, 252));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(new java.awt.Dimension(100, 208));
-        setPreferredSize(new java.awt.Dimension(140, 260));
+        setMinimumSize(new java.awt.Dimension(0, 0));
+        setPreferredSize(new java.awt.Dimension(153, 190));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(73, 93, 117));
-        jLabel1.setText("Atividade 04");
+        atvNum.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        atvNum.setForeground(new java.awt.Color(73, 93, 117));
+        atvNum.setText("Atividade ");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
         jLabel2.setText("Data da Entrega:");
@@ -67,92 +86,73 @@ public class CardAtivEntregue extends javax.swing.JPanel {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
-        dataDaEntrega.setBackground(new java.awt.Color(252, 252, 252));
-        dataDaEntrega.setBorder(null);
-        try {
-            dataDaEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        dataDaEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dataDaEntrega.setText("18/05/2023");
-        dataDaEntrega.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
+        dataDEntrega.setBackground(new java.awt.Color(252, 252, 252));
+        dataDEntrega.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        dataDEntrega.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        dataQEntregou.setBackground(new java.awt.Color(252, 252, 252));
-        dataQEntregou.setBorder(null);
-        try {
-            dataQEntregou.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        dataQEntregou.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dataQEntregou.setText("18/05/2023");
-        dataQEntregou.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
-        dataQEntregou.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataQEntregouActionPerformed(evt);
-            }
-        });
+        dataQEntrega1.setBackground(new java.awt.Color(252, 252, 252));
+        dataQEntrega1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        dataQEntrega1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dataDEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(6, 6, 6)
+                                    .addComponent(jLabel3)
+                                    .addGap(10, 10, 10)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dataQEntregou, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dataDaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                                .addComponent(atvNum)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 13, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)))
-                .addGap(46, 46, 46))
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dataQEntrega1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(atvNum)
+                    .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataDaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                    .addComponent(dataDEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataQEntregou, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(dataQEntrega1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void dataQEntregouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataQEntregouActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dataQEntregouActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField dataDaEntrega;
-    private javax.swing.JFormattedTextField dataQEntregou;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel atvNum;
+    private GUI.swing.CheckBoxCustom checkBoxCustom1;
+    private javax.swing.JLabel dataDEntrega;
+    private javax.swing.JLabel dataQEntrega1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
