@@ -13,18 +13,20 @@ import modelo.Aluno;
  */
 public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form AtividadeDadosAluno
-     */
+    javax.swing.JDesktopPane jDesktopPanel;
     
     private Aluno aluno;
+    
     public AtividadeDadosAluno(Aluno aluno) {
+        this.jDesktopPanel = jDesktopPanel;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         this.aluno = aluno;
         nomeAluno.setText(aluno.getNome());
+        VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recebeCardsAtv, jDesktopPanel, aluno);
+        recebeCardsAtv.add(visuCard).setVisible(true);
     }
 
     /**
@@ -43,13 +45,6 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         texto1 = new javax.swing.JLabel();
         nomeEscola = new javax.swing.JTextField();
         nomeTurma = new javax.swing.JTextField();
-        texto2 = new javax.swing.JLabel();
-        porcentagemNãoEntregue = new javax.swing.JTextField();
-        texto4 = new javax.swing.JLabel();
-        texto5 = new javax.swing.JLabel();
-        porcentagemEntregueAtrasado = new javax.swing.JTextField();
-        texto6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         recebeCardsAtv = new javax.swing.JDesktopPane();
 
         setBackground(new java.awt.Color(217, 217, 217));
@@ -73,6 +68,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
         nomeAluno.setForeground(new java.awt.Color(239, 131, 84));
         nomeAluno.setText("Emília Luisa Garcia");
+        nomeAluno.setBorder(null);
         nomeAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeAlunoActionPerformed(evt);
@@ -89,6 +85,12 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         nomeEscola.setBackground(new java.awt.Color(236, 236, 236));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         nomeEscola.setText("Ana Herondina");
+        nomeEscola.setBorder(null);
+        nomeEscola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscolaActionPerformed(evt);
+            }
+        });
 
         nomeTurma.setEditable(false);
         nomeTurma.setBackground(new java.awt.Color(236, 236, 236));
@@ -96,59 +98,17 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         nomeTurma.setForeground(new java.awt.Color(4, 210, 130));
         nomeTurma.setText("6º A");
         nomeTurma.setToolTipText("");
-
-        texto2.setBackground(new java.awt.Color(236, 236, 236));
-        texto2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        texto2.setForeground(new java.awt.Color(79, 93, 117));
-        texto2.setText("Não entregou: ");
-
-        porcentagemNãoEntregue.setEditable(false);
-        porcentagemNãoEntregue.setBackground(new java.awt.Color(236, 236, 236));
-        porcentagemNãoEntregue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        porcentagemNãoEntregue.setForeground(new java.awt.Color(204, 0, 0));
-        porcentagemNãoEntregue.setText("80% ");
-
-        texto4.setBackground(new java.awt.Color(236, 236, 236));
-        texto4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        texto4.setForeground(new java.awt.Color(79, 93, 117));
-        texto4.setText("das atividades");
-
-        texto5.setBackground(new java.awt.Color(236, 236, 236));
-        texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        texto5.setForeground(new java.awt.Color(79, 93, 117));
-        texto5.setText("Entregou: ");
-
-        porcentagemEntregueAtrasado.setEditable(false);
-        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
-        porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemEntregueAtrasado.setText("10%");
-
-        texto6.setBackground(new java.awt.Color(236, 236, 236));
-        texto6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        texto6.setForeground(new java.awt.Color(79, 93, 117));
-        texto6.setText("atrasadas");
-
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
-        jButton1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jButton1.setText("Salvar");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        nomeTurma.setBorder(null);
 
         javax.swing.GroupLayout recebeCardsAtvLayout = new javax.swing.GroupLayout(recebeCardsAtv);
         recebeCardsAtv.setLayout(recebeCardsAtvLayout);
         recebeCardsAtvLayout.setHorizontalGroup(
             recebeCardsAtvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 753, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
         );
         recebeCardsAtvLayout.setVerticalGroup(
             recebeCardsAtvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 215, Short.MAX_VALUE)
+            .addGap(0, 307, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -160,35 +120,19 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(iconeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(texto1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(texto1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(nomeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(426, 426, 426)
                         .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(texto2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(porcentagemNãoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(texto4))
-                                    .addComponent(recebeCardsAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(texto5)
-                        .addGap(18, 18, 18)
-                        .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(texto6)
-                        .addGap(330, 330, 330)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(1, 1, 1)
+                                .addComponent(recebeCardsAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -200,22 +144,11 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(iconeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(texto1)
+                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(nomeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(13, 13, 13)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(texto2)
-                    .addComponent(porcentagemNãoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(texto4))
+                        .addComponent(texto1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(recebeCardsAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(texto6)
-                    .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(texto5)
-                    .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -254,26 +187,19 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeAlunoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void nomeEscolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscolaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_nomeEscolaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel iconeEscola;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nomeAluno;
     private javax.swing.JTextField nomeEscola;
     private javax.swing.JTextField nomeTurma;
-    private javax.swing.JTextField porcentagemEntregueAtrasado;
-    private javax.swing.JTextField porcentagemNãoEntregue;
     private javax.swing.JDesktopPane recebeCardsAtv;
     private javax.swing.JLabel texto1;
-    private javax.swing.JLabel texto2;
-    private javax.swing.JLabel texto4;
-    private javax.swing.JLabel texto5;
-    private javax.swing.JLabel texto6;
     // End of variables declaration//GEN-END:variables
 }

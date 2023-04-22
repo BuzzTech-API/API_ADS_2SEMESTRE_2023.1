@@ -1,6 +1,5 @@
 
 
-
 # Sprint 2 - Dados Estatísticos
 
 
@@ -17,9 +16,9 @@
 <p align="center">
   <a href ="#backlog"> Backlog da Sprint </a>  | 
   <a href ="#tarefas"> Tarefas </a>  |
-  <a href ="#evolução"> Evolução do Backlog </a>  |
-  <a href ="#hitoria"> Histórias de Usuários </a>  |
-  <a href ="#apresentação"> Apresentação </a>
+  <a href ="#burndown"> Burndown </a>  |
+  <a href ="#historia"> Histórias de Usuários </a>  
+
 </p>
 
 
@@ -43,6 +42,89 @@
 <br>
 <br>
 
-> Status do Projeto: Em Construção! :construction:
+> Status da Sprint: Concluída :heavy_check_mark:
 
 <br>
+
+A escolha das tarefas dessa segunda Sprint foi levado em consideração alguns fatores importantes. Primeiro, analisamos as necessidades do cliente e os requisitos do projeto, em especial, a importância da parte que mostra os dados estatísticos da atividades dos alunos.
+
+Essa parte do projeto é de alto valor, pois é essencial para a professora acompanhar o desempenho dos alunos e identificar possíveis dificuldades de aprendizado. Além disso, a visualização dos dados estatísticos permite uma melhor organização da sala de aula, tornando mais fácil identificar quais alunos precisam de atenção especial e incentivar a entrega de atividades dentro do prazo.
+
+Com base nessas informações, escolhemos as seguintes tarefas para a segunda sprint do projeto:
+
+* Implementação do modo de visualização dos dados estatísticos das atividades dos alunos;
+* Implementação da funcionalidade de registro de atividades entregues, incluindo informações sobre o prazo de entrega e atrasos;
+* Implementação da funcionalidade de contabilização de atividades entregues, com informações sobre a quantidade de atividades entregues e faltantes;
+* Implementação da funcionalidade de visualização dos dados da sala de aula, incluindo informações sobre a quantidade de alunos que entregaram as atividades dentro e fora do prazo.
+
+
+Essas tarefas foram escolhidas para garantir que a parte mais importante do projeto seja implementada de forma eficiente e eficaz, atendendo às necessidades do cliente e tornando o processo de ensino-aprendizagem mais organizado e produtivo. Com a implementação dessas tarefas, esperamos fornecer uma ferramenta útil para a professora e ajudar no acompanhamento do desempenho dos alunos.
+
+
+<br>
+
+##  :date: Backlog da Sprint<a id="backlog"></a>
+
+
+
+
+|                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
+|      Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :white_check_mark: |
+|   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :white_check_mark: |
+|   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :white_check_mark: |
+|  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :white_check_mark: |
+
+
+<br>
+
+
+
+
+## :checkered_flag: Tarefas <a id="tarefas"></a>
+
+### 1. Visualização dos Dados Estatísticos das Atividades dos Alunos </a>
+
+   Desenvolver as telas que apresentam os dados estatísticos.
+
+
+<br>
+
+
+### 2. Funcionalidade de Registro de Atividades Entregues </a>
+
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+
+<br>
+
+
+### 3. Funcionalidade de Contabilização de Atividades Entregues </a>
+
+   Contabiliza as atividades entregues com informações sobre a quantidade de atividades que ainda estão faltando.
+   
+<br>
+
+### 4. Funcionalidade de Visualização dos Dados de uma Turma </a>
+
+   Inclui informações sobre a quantidade de alunos que entregaram as atividades dentro e fora do prazo.
+   
+   
+<br>
+
+
+
+## :key: Histórias de Usuário<a id="historia"></a>
+
+
+
+
+|          ID           |                     História de Usuário                      |
+| :-------------------: | :----------------------------------------------------------: |
+| US09<a id='us09'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
+| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US11<a id='us11'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
+| US12<a id='us12'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
+
+
+<br>
+

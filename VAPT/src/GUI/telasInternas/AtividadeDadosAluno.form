@@ -111,41 +111,22 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Component id="iconeEscola" min="-2" pref="87" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="texto1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="texto1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="nomeEscola" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="426" max="-2" attributes="0"/>
                               <Component id="nomeTurma" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nomeAluno" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="texto2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="porcentagemNãoEntregue" min="-2" pref="52" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="texto4" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="recebeCardsAtv" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                      <Component id="recebeCardsAtv" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="nomeAluno" min="-2" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                              <Component id="texto5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="porcentagemEntregueAtrasado" min="-2" pref="49" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="texto6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="330" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="170" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -161,26 +142,13 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="iconeEscola" min="-2" pref="46" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="texto1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="nomeEscola" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="nomeTurma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="nomeEscola" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="texto1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="texto2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="porcentagemNãoEntregue" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="texto4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="recebeCardsAtv" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="texto6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="porcentagemEntregueAtrasado" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="texto5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -200,6 +168,9 @@
                   <Color blue="54" green="83" red="ef" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Em&#xed;lia Luisa Garcia"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeAlunoActionPerformed"/>
@@ -233,7 +204,13 @@
                   <Font name="Century Gothic" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ana Herondina"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeEscolaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="nomeTurma">
               <Properties>
@@ -249,125 +226,22 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="6&#xba; A"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="texto2">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ec" green="ec" red="ec" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="75" green="5d" red="4f" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="N&#xe3;o entregou: "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="porcentagemN&#xe3;oEntregue">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ec" green="ec" red="ec" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="cc" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="80% "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="texto4">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ec" green="ec" red="ec" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="75" green="5d" red="4f" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="das atividades"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="texto5">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ec" green="ec" red="ec" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="75" green="5d" red="4f" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Entregou: "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="porcentagemEntregueAtrasado">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ec" green="ec" red="ec" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="75" green="5d" red="4f" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="10%"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="texto6">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ec" green="ec" red="ec" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="75" green="5d" red="4f" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="atrasadas"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="54" green="83" red="ef" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Historic" size="18" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Salvar"/>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
+                  <Border info="null"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-              </Events>
             </Component>
             <Container class="javax.swing.JDesktopPane" name="recebeCardsAtv">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="753" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="770" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="307" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
