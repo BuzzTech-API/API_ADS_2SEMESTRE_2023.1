@@ -8,6 +8,7 @@ import java.util.Date;
 
 import GUI.swing.CheckBoxCustom;
 import dao.Aluno_AtividadeDao;
+import javax.swing.JLabel;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
@@ -84,6 +85,10 @@ public class CheckBoxContainer extends javax.swing.JPanel {
                 
             }
         }
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
     }
 
 

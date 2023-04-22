@@ -7,10 +7,14 @@ package GUI.telasInternas;
 import GUI.componentes.CheckBoxContainer;
 import GUI.swing.ScrollBarCustom;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JDesktopPane;
 import javax.swing.JLayeredPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno_Atividade;
+import modelo.Atividades;
 
 /**
  *
@@ -28,8 +32,22 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
             }
         }
     }
-    public AtribuirAtividadeEntregue(ArrayList<Aluno_Atividade> a) {
+    
+    public AtribuirAtividadeEntregue(ArrayList<Aluno_Atividade> a, Atividades atividade, JDesktopPane jDesktopPane , JDesktopPane jDesktopPanePrincipal ) {
         initComponents();
+        setOpaque(false);
+        setBackground(new Color(236,236,236));
+        myButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for (int i = 0; i < jLayeredPane1.getComponentCount(); i++) {
+                CheckBoxContainer checkBoxContainer = (CheckBoxContainer) jLayeredPane1.getComponent(i);
+                checkBoxContainer.alterarSelecionados();
+                }
+                jDesktopPane.removeAll();
+                jDesktopPane.add(new VisuAtivDadosAlunosPendentes(atividade, jDesktopPane, jDesktopPanePrincipal)).setVisible(true);
+            }
+        });
         this.aluno = a;
         preencherlinhas();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(-10,0,-10,0));
@@ -57,6 +75,9 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         myButton1 = new GUI.swing.MyButton();
 
+        setBackground(new java.awt.Color(236, 236, 236));
+
+        jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
         jScrollPane1.setViewportView(jLayeredPane1);
 
@@ -81,24 +102,21 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)))
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -106,10 +124,7 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
             
-        for (int i = 0; i < jLayeredPane1.getComponentCount(); i++) {
-            CheckBoxContainer checkBoxContainer = (CheckBoxContainer) jLayeredPane1.getComponent(i);
-            checkBoxContainer.alterarSelecionados();
-        }
+        
     }//GEN-LAST:event_myButton1ActionPerformed
 
 

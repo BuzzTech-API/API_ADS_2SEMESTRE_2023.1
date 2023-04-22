@@ -34,48 +34,38 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
     }
     
     public DetalheTurma(int id, JDesktopPane jDesktopPane) {
+        
+        
+        //Atribui os valores internos da classe os valores que estão recebendo do construtor
         this.jDesktopPane = jDesktopPane;
-        initComponents();
         this.id = id;
+
+        
+        // Inicia os componentes
+        initComponents();
+
+
+        // Remove a borda do JInternalFrame
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui =(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-        ScrollBarCustom sp = new ScrollBarCustom();
-        sp.setUnitIncrement(20);
-        sp.setForeground(new Color(4, 210, 130));
-        ScrollBarCustom spHorizontal = new ScrollBarCustom();
-        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
-        spHorizontal.setUnitIncrement(20);
-        spHorizontal.setForeground(new Color(4, 210, 130));
-        jScrollPane1.setVerticalScrollBar(sp);
-        jScrollPane1.setHorizontalScrollBar(spHorizontal);
+
+        
+        //Método para colocar as scrollbars personalizadas
+        arrumarScrollBar();
+
+        // Puxa as informações da turma do banco e coloca nas label
         TurmaDao turmaDao = new TurmaDao();
         Turma turma = turmaDao.buscarPorId(id);
         jLabel1.setText(jLabel1.getText()+ turma.getNome());
         jLabel2.setText(jLabel2.getText() + turma.getNome_escola());
         
+        preencherIcones();
+       
+
+
         
-        ImageIcon icon = new ImageIcon(getClass().getResource("/img/Vector.png"));
-        Image img = icon.getImage();
-        Image imgScale = img.getScaledInstance( 25, 30, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon = new ImageIcon(imgScale);
         
-        
-        icon = new ImageIcon(getClass().getResource("/img/Ellipse 5.png"));
-        img = icon.getImage();
-        imgScale = img.getScaledInstance(122, 87, Image.SCALE_SMOOTH);
-        scaledIcon = new ImageIcon(imgScale);
-        JLabel iconLabel = new JLabel(scaledIcon);
-        iconLabel.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
-        jLayeredPane1.add(iconLabel, JLayeredPane.DEFAULT_LAYER);
-        JLabel textLabel = new JLabel("3% não fez");
-        textLabel.setFont(new Font("Arial", 1 ,14));
-        textLabel.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
-        textLabel.setForeground(Color.RED);
-        textLabel.setHorizontalAlignment(JLabel.CENTER);
-        jLayeredPane1.add(textLabel, JLayeredPane.PALETTE_LAYER);
-        iconLabel.setLocation(0, 0);
-        textLabel.setLocation(0, 0);
         
     }
 
@@ -91,8 +81,9 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         panelBordaArredondadaComLinha1 = new GUI.swing.PanelBordaArredondadaComLinha();
         jScrollPane1 = new javax.swing.JScrollPane();
-        atividadesPedentes1 = new GUI.componentes.AtividadesPedentes(2);
+        atividadesPedentes1 = new GUI.componentes.AtividadesPedentes(id, jDesktopPane);
         panelBorda2 = new GUI.swing.PanelBorda();
+        atividadesEntreguesComAtraso1 = new GUI.componentes.AtividadesEntreguesComAtraso(jDesktopPane , id);
         jPanel1 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         myButton2 = new GUI.swing.MyButton();
@@ -135,11 +126,16 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         panelBorda2.setLayout(panelBorda2Layout);
         panelBorda2Layout.setHorizontalGroup(
             panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorda2Layout.createSequentialGroup()
+                .addComponent(atividadesEntreguesComAtraso1, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         panelBorda2Layout.setVerticalGroup(
             panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 168, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorda2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(atividadesEntreguesComAtraso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
@@ -158,16 +154,15 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelBordaArredondadaComLinha1Layout = new javax.swing.GroupLayout(panelBordaArredondadaComLinha1);
@@ -176,19 +171,19 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelBorda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(panelBorda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -197,8 +192,10 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         );
 
         myButton2.setBackground(new java.awt.Color(239, 131, 84));
+        myButton2.setBorder(null);
         myButton2.setForeground(new java.awt.Color(2, 30, 54));
         myButton2.setText("Salvar");
+        myButton2.setBorderColor(new java.awt.Color(0, 0, 0));
         myButton2.setColor(new java.awt.Color(239, 131, 84));
         myButton2.setColorClicked(new java.awt.Color(239, 131, 83));
         myButton2.setColorOver(new java.awt.Color(255, 139, 89));
@@ -264,6 +261,61 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+
+    public void preencherIcones() {
+
+
+        // Redimensiona o tamanho do icone que aparece no botão
+        ImageIcon icon = new ImageIcon(getClass().getResource("/img/Vector.png"));
+        Image img = icon.getImage();
+        Image imgScale = img.getScaledInstance( 20, 25, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(imgScale);
+        myButton1.setIcon(scaledIcon);
+         
+        
+        // Cria um JLabel com o icone da ellipse redimensionada e adiciona no layered pane com nível baíxo
+        icon = new ImageIcon(getClass().getResource("/img/Ellipse 5.png"));
+        img = icon.getImage();
+        imgScale = img.getScaledInstance(122, 87, Image.SCALE_SMOOTH);
+        scaledIcon = new ImageIcon(imgScale);
+        JLabel iconLabel = new JLabel(scaledIcon);
+        iconLabel.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
+        jLayeredPane1.add(iconLabel, JLayeredPane.DEFAULT_LAYER);
+        iconLabel.setLocation(0, 0);
+
+        
+        // Cria um JLabel com o Texto que vai ficar dentro da ellipse e insere no layered pane com um nível mais alto
+        JLabel textLabel = new JLabel("3% não fez");
+        textLabel.setFont(new Font("Arial", 1 ,14));
+        textLabel.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
+        textLabel.setForeground(Color.RED);
+        textLabel.setHorizontalAlignment(JLabel.CENTER);
+        jLayeredPane1.add(textLabel, JLayeredPane.PALETTE_LAYER);
+        textLabel.setLocation(0, 0);
+        
+    }
+
+
+    public void arrumarScrollBar() {
+
+
+        //Cria a scrollbar customizada vertical
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
+        
+
+        //Cria a scrollbar customizada horizontal
+        ScrollBarCustom spHorizontal = new ScrollBarCustom();
+        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
+        spHorizontal.setUnitIncrement(20);
+        spHorizontal.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setHorizontalScrollBar(spHorizontal);
+
+    }
+
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
         // TODO add your handling code here:
         TelaHome telaHome = new TelaHome(jDesktopPane);
@@ -278,12 +330,14 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
             CheckBoxContainer checkBoxContainer = (CheckBoxContainer) panelAtividadesPendentes.getComponent(i);
             checkBoxContainer.alterarSelecionados();
         }
-        
+        jDesktopPane.removeAll();
+        jDesktopPane.add(new DetalheTurma(id , jDesktopPane)).setVisible(true);
         
     }//GEN-LAST:event_myButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.componentes.AtividadesEntreguesComAtraso atividadesEntreguesComAtraso1;
     private GUI.componentes.AtividadesPedentes atividadesPedentes1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
