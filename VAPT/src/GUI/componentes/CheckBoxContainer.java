@@ -27,6 +27,17 @@ public class CheckBoxContainer extends javax.swing.JPanel {
         jLabel1.setText(texto);
         preencherLayeredPane();
     }
+    public CheckBoxContainer(Aluno aluno, int id_Atividade) {
+        initComponents();
+        this.aluno = aluno;
+        String texto = aluno.getNome();
+        for (int i = aluno.getNome().length(); i < 42; i++) {
+            texto+=" ";
+        }
+        jLabel1.setText(texto);
+        
+        preencherLayeredPane(id_Atividade);
+    }    
 
     public void preencherLayeredPane() {
         Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
@@ -41,6 +52,16 @@ public class CheckBoxContainer extends javax.swing.JPanel {
             }
             jLayeredPane1.add(checkBox);
         }
+    }
+    public void preencherLayeredPane(int id_Atividade) {
+        
+            CheckBoxCustom checkBox = new CheckBoxCustom();
+            checkBox.setAluno_id(aluno.getId_aluno());
+            checkBox.setAtividade_id(id_Atividade);
+            checkBox.setText("");
+            
+            jLayeredPane1.add(checkBox);
+        
     }
 
     public void alterarSelecionados() {
