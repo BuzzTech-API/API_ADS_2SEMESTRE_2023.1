@@ -61,10 +61,11 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jLayeredPane1);
 
         myButton1.setBackground(new java.awt.Color(255, 129, 76));
-        myButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        myButton1.setBorder(null);
         myButton1.setText("Salvar");
         myButton1.setToolTipText("");
         myButton1.setAlignmentY(0.0F);
+        myButton1.setBorderColor(new java.awt.Color(0, 0, 0));
         myButton1.setColor(new java.awt.Color(255, 129, 76));
         myButton1.setColorClicked(new java.awt.Color(255, 158, 71));
         myButton1.setColorOver(new java.awt.Color(255, 147, 80));
@@ -93,9 +94,10 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)))
                 .addContainerGap())
         );
 
