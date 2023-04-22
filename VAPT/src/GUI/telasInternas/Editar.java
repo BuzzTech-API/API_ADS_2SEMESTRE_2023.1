@@ -54,226 +54,117 @@ public class Editar extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        AddAlunoBut = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        AddTurmaBut = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        AddAtividadeBut = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        editarTurma = new GUI.swing.MyButton();
+        editarAtividade = new GUI.swing.MyButton();
+        editarAluno = new GUI.swing.MyButton();
 
-        AddAlunoBut.setBackground(new java.awt.Color(239, 131, 84));
-        AddAlunoBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AddAlunoBut.setPreferredSize(new java.awt.Dimension(397, 78));
-        AddAlunoBut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AddAlunoButMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                AddAlunoButMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                AddAlunoButMouseExited(evt);
-            }
-        });
+        setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Editar Aluno");
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("MS UI Gothic", 1, 70)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("+");
-
-        javax.swing.GroupLayout AddAlunoButLayout = new javax.swing.GroupLayout(AddAlunoBut);
-        AddAlunoBut.setLayout(AddAlunoButLayout);
-        AddAlunoButLayout.setHorizontalGroup(
-            AddAlunoButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAlunoButLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel5)
-                .addGap(65, 65, 65)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        AddAlunoButLayout.setVerticalGroup(
-            AddAlunoButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAlunoButLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(24, 24, 24))
-        );
-
-        AddTurmaBut.setBackground(new java.awt.Color(239, 131, 84));
-        AddTurmaBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AddTurmaBut.setPreferredSize(new java.awt.Dimension(397, 78));
-        AddTurmaBut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AddTurmaButMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                AddTurmaButMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                AddTurmaButMouseExited(evt);
+        editarTurma.setBackground(new java.awt.Color(239, 131, 84));
+        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarTurma.setForeground(new java.awt.Color(255, 255, 255));
+        editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        editarTurma.setText("Editar Turma");
+        editarTurma.setBorderPainted(false);
+        editarTurma.setColor(new java.awt.Color(239, 131, 84));
+        editarTurma.setColorClicked(new java.awt.Color(4, 210, 130));
+        editarTurma.setColorOver(new java.awt.Color(4, 210, 130));
+        editarTurma.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        editarTurma.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        editarTurma.setIconTextGap(28);
+        editarTurma.setPreferredSize(new java.awt.Dimension(397, 78));
+        editarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarTurmaActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Editar Turma");
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("MS UI Gothic", 1, 70)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("+");
-
-        javax.swing.GroupLayout AddTurmaButLayout = new javax.swing.GroupLayout(AddTurmaBut);
-        AddTurmaBut.setLayout(AddTurmaButLayout);
-        AddTurmaButLayout.setHorizontalGroup(
-            AddTurmaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddTurmaButLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel4)
-                .addGap(62, 62, 62)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        AddTurmaButLayout.setVerticalGroup(
-            AddTurmaButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(AddTurmaButLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel3)
-                .addGap(23, 23, 23))
-        );
-
-        AddAtividadeBut.setBackground(new java.awt.Color(239, 131, 84));
-        AddAtividadeBut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AddAtividadeBut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AddAtividadeButMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                AddAtividadeButMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                AddAtividadeButMouseExited(evt);
+        editarAtividade.setBackground(new java.awt.Color(239, 131, 84));
+        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarAtividade.setForeground(new java.awt.Color(255, 255, 255));
+        editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        editarAtividade.setText("Editar Atividade");
+        editarAtividade.setBorderPainted(false);
+        editarAtividade.setColor(new java.awt.Color(239, 131, 84));
+        editarAtividade.setColorClicked(new java.awt.Color(4, 210, 130));
+        editarAtividade.setColorOver(new java.awt.Color(4, 210, 130));
+        editarAtividade.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        editarAtividade.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        editarAtividade.setIconTextGap(28);
+        editarAtividade.setPreferredSize(new java.awt.Dimension(397, 78));
+        editarAtividade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarAtividadeActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Editar Atividades");
-
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("MS UI Gothic", 1, 70)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("+");
-
-        javax.swing.GroupLayout AddAtividadeButLayout = new javax.swing.GroupLayout(AddAtividadeBut);
-        AddAtividadeBut.setLayout(AddAtividadeButLayout);
-        AddAtividadeButLayout.setHorizontalGroup(
-            AddAtividadeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAtividadeButLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel6)
-                .addGap(48, 48, 48)
-                .addComponent(jLabel2)
-                .addContainerGap(87, Short.MAX_VALUE))
-        );
-        AddAtividadeButLayout.setVerticalGroup(
-            AddAtividadeButLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAtividadeButLayout.createSequentialGroup()
-                .addGap(0, 7, Short.MAX_VALUE)
-                .addComponent(jLabel6))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddAtividadeButLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(22, 22, 22))
-        );
+        editarAluno.setBackground(new java.awt.Color(239, 131, 84));
+        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarAluno.setForeground(new java.awt.Color(255, 255, 255));
+        editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        editarAluno.setText("Editar Aluno");
+        editarAluno.setBorderPainted(false);
+        editarAluno.setColor(new java.awt.Color(239, 131, 84));
+        editarAluno.setColorClicked(new java.awt.Color(4, 210, 130));
+        editarAluno.setColorOver(new java.awt.Color(4, 210, 130));
+        editarAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        editarAluno.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        editarAluno.setIconTextGap(28);
+        editarAluno.setPreferredSize(new java.awt.Dimension(397, 78));
+        editarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarAlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(436, 436, 436)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AddTurmaBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(AddAlunoBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(AddAtividadeBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(435, Short.MAX_VALUE))
+                .addGap(310, 310, 310)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(291, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {editarAluno, editarAtividade, editarTurma});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(AddTurmaBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(130, 130, 130)
-                .addComponent(AddAlunoBut, 80, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(130, 130, 130)
-                .addComponent(AddAtividadeBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96))
+                .addGap(90, 90, 90)
+                .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {editarAluno, editarAtividade, editarTurma});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AddAlunoButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseClicked
-        
-    }//GEN-LAST:event_AddAlunoButMouseClicked
+    private void editarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarTurmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editarTurmaActionPerformed
 
-    private void AddAlunoButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseEntered
-        AddAlunoBut.setBackground(new java.awt.Color(4, 210, 130));
-    }//GEN-LAST:event_AddAlunoButMouseEntered
+    private void editarAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarAtividadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editarAtividadeActionPerformed
 
-    private void AddAlunoButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAlunoButMouseExited
-        AddAlunoBut.setBackground(new java.awt.Color(239,131,84));
-    }//GEN-LAST:event_AddAlunoButMouseExited
-
-    private void AddTurmaButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseClicked
-      
-    }//GEN-LAST:event_AddTurmaButMouseClicked
-
-    private void AddTurmaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseEntered
-        AddTurmaBut.setBackground(new java.awt.Color(4, 210, 130));
-    }//GEN-LAST:event_AddTurmaButMouseEntered
-
-    private void AddTurmaButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddTurmaButMouseExited
-        AddTurmaBut.setBackground(new java.awt.Color(239,131,84));
-    }//GEN-LAST:event_AddTurmaButMouseExited
-
-    private void AddAtividadeButMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseClicked
-        
-
-    }//GEN-LAST:event_AddAtividadeButMouseClicked
-
-    private void AddAtividadeButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseEntered
-        AddAtividadeBut.setBackground(new java.awt.Color(4, 210, 130));
-    }//GEN-LAST:event_AddAtividadeButMouseEntered
-
-    private void AddAtividadeButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddAtividadeButMouseExited
-        AddAtividadeBut.setBackground(new java.awt.Color(239,131,84));
-    }//GEN-LAST:event_AddAtividadeButMouseExited
+    private void editarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editarAlunoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AddAlunoBut;
-    private javax.swing.JPanel AddAtividadeBut;
-    private javax.swing.JPanel AddTurmaBut;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private GUI.swing.MyButton editarAluno;
+    private GUI.swing.MyButton editarAtividade;
+    private GUI.swing.MyButton editarTurma;
     // End of variables declaration//GEN-END:variables
 }
