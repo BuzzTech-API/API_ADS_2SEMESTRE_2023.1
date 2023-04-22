@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import conexoes.Conection;
+import java.util.Date;
 import java.util.List;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
@@ -240,6 +241,20 @@ public class Aluno_AtividadeDao {
         }
         return alunos;
 
+    }   
+    public void realizarEntrega (int id_atividade, int id_aluno) throws SQLException{
+        String sql = "update aluno_atividadeAluno_Atividade_entregaAluno_Atividade_entrega\n" + "set Aluno_Atividade_entrega = 1,\n" + "Aluno_atividade_data_entrega = ?\n" + "where Aluno_id_aluno = ?\n" + "and Atividade_id_atividade = ?";
+        stmt = conexao.prepareStatement(sql);
+        Date date = new Date();
+        stmt.setDate(1, new java.sql.Date(date.getTime()));
+        stmt.setInt(2, id_aluno);
+        stmt.setInt(3, id_atividade);
+        stmt.execute();
+        stmt.close();
+        
     }
+    
+    
+       
 }
 
