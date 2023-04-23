@@ -56,8 +56,8 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     private void preecherCardaNEntregue(int id){
         AtvNomeNum.setText("Atividade "+id);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        dataQEntregou.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));
+        /*SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        dataQEntregou.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));*/
        
 
     }
@@ -77,7 +77,7 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
         dataEntrega = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        descrAtv = new javax.swing.JTextArea();
         checkBoxCustom1 = new GUI.swing.CheckBoxCustom();
 
         setBackground(new java.awt.Color(252, 252, 252));
@@ -86,62 +86,21 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
         AtvNomeNum.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         AtvNomeNum.setForeground(new java.awt.Color(73, 93, 117));
         AtvNomeNum.setText("Atividade 04");
+        add(AtvNomeNum);
 
         dataEntrega.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
         dataEntrega.setText("Data da Entrega:");
+        add(dataEntrega);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
+        add(jLabel5);
 
         descrAtv.setColumns(20);
         descrAtv.setRows(5);
         jScrollPane2.setViewportView(descrAtv);
 
-        dataEntrega.setBackground(new java.awt.Color(252, 252, 252));
-        dataEntrega.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        dataEntrega.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(dataEntrega)
-                        .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap(9, Short.MAX_VALUE)
-                        .addComponent(AtvNomeNum)
-                        .addGap(18, 18, 18)
-                        .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(70, 70, 70))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dataQEntregou)
-                .addGap(76, 76, 76))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(AtvNomeNum)
-                    .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dataEntrega)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataQEntregou, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
+        add(jScrollPane2);
+        add(checkBoxCustom1);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -149,7 +108,7 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     private javax.swing.JLabel AtvNomeNum;
     private GUI.swing.CheckBoxCustom checkBoxCustom1;
     private javax.swing.JLabel dataEntrega;
-    private javax.swing.JFormattedTextField dataQEntregou;
+    private javax.swing.JTextArea descrAtv;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
