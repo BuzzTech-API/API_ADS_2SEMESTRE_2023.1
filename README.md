@@ -177,7 +177,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 ## :fire: Burndown <a id='burndown'></a>
 
-<img src="doc/img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
+<img src="doc/img/burndown2.png" alt="Burndown" style="zoom: 150%;" />
 
 <br>
 
