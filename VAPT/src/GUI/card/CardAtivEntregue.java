@@ -40,7 +40,8 @@ public class CardAtivEntregue extends javax.swing.JPanel {
         atvNum.setText("Atividade "+id);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         dataDEntrega.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));
-        //dataQEntrega1.setText(sdf.format(this.aluno_atividade.getAluno_Atividade_data_entrega()));
+        dataQEntrega1.setText(sdf.format(this.aluno_atividade.getAluno_Atividade_data_entrega()));
+        
     
     
     }
