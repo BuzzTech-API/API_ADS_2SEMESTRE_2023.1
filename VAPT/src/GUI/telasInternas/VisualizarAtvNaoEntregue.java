@@ -6,7 +6,7 @@ package GUI.telasInternas;
 
 
 
-import GUI.card.CardAtvNaoEntregue;
+
 import GUI.card.CardAtviNaoEntregue;
 import GUI.swing.ScrollBarCustom;
 import dao.Aluno_AtividadeDao;

@@ -28,8 +28,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
       private JDesktopPane recebeCardsAtv;
       private Aluno aluno;
      javax.swing.JDesktopPane jDesktopPanel;
-     private Color borderColor;
-     private int radius=0;
+    
      
     public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1,JDesktopPane recebeCardsAtv,Aluno aluno) {
         this.jDesktopPanel = jDesktopPanel1;
@@ -71,17 +70,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
             
         }
      
-     @Override
-    protected void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setColor(borderColor);
-        g2.fillRoundRect(0, 0, getWidth(), getHeight(), radius , radius);
-        g2.setColor(getBackground());
-        g2.fillRoundRect(2, 2, getWidth()-4, getHeight()-4, radius , radius);
-
-        super.paintComponent(g);
-    }
+     
+   
     
     
     
@@ -173,9 +163,9 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salvaEntregueAtrasada)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(salvaEntregueAtrasada))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -200,7 +190,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_salvaEntregueAtrasadaActionPerformed
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        VisualizarAtvNaoEntregue visuEntreg = new VisualizarAtvNaoEntregue( jDesktopPanel, recebeCardsAtv, aluno);
+        VisualizarAtvNaoEntregue visuEntreg = new VisualizarAtvNaoEntregue( recebeCardsAtv,jDesktopPanel, aluno);
         recebeCardsAtv.removeAll();
         recebeCardsAtv.add(visuEntreg).setVisible(true);
     }//GEN-LAST:event_myButton1ActionPerformed
