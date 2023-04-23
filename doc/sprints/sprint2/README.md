@@ -54,13 +54,12 @@ Com base nessas informações, escolhemos as seguintes tarefas para a segunda sp
 
 * Implementação do modo de visualização dos dados estatísticos das atividades dos alunos;
 * Implementação da funcionalidade de registro de atividades entregues, incluindo informações sobre o prazo de entrega e atrasos;
-* Implementação da funcionalidade de contabilização de atividades entregues, com informações sobre a quantidade de atividades entregues e faltantes;
-* Implementação da funcionalidade de visualização dos dados da sala de aula, incluindo informações sobre a quantidade de alunos que entregaram as atividades dentro e fora do prazo.
 
 
 Essas tarefas foram escolhidas para garantir que a parte mais importante do projeto seja implementada de forma eficiente e eficaz, atendendo às necessidades do cliente e tornando o processo de ensino-aprendizagem mais organizado e produtivo. Com a implementação dessas tarefas, esperamos fornecer uma ferramenta útil para a professora e ajudar no acompanhamento do desempenho dos alunos.
 
 
+<br>
 <br>
 
 ##  :date: Backlog da Sprint<a id="backlog"></a>
@@ -77,7 +76,7 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
 
 
 <br>
-
+<br>
 
 
 
@@ -85,31 +84,91 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
 
 ### 1. Visualização dos Dados Estatísticos das Atividades dos Alunos </a>
 
-   Desenvolver as telas que apresentam os dados estatísticos.
+   A funcionalidade de maior valor para a professora consistia em visualizar os alunos que ainda não entregaram as atividades avaliativas, bem como os alunos que entregaram as atividades com atraso.
+
+Diante desse requisito, a equipe avaliou as possibilidades de implementação e decidiu que a melhor abordagem seria desenvolver uma visualização dos dados estatísticos das atividades dos alunos, que permitiria à professora acessar as informações de forma clara e concisa.
+
+Ao abrir o programa, a professora irá ver quais atividades ainda tem aluno devendo entrega. A visualização da turma será apresentada de acordo com o dia da semana e hora que foram previamente cadastrados no programa.
+
+Na imagem podemos ver um exemplo de como seria essa visualização dos dados estatísticos no programa para uma determinada turma.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telahome.png" alt="Dados Estatístico na Tela Home" style="zoom: 150%;" />
+
+Ao clicar em qualquer atividade, outra tela se abre apresentando de forma mais detalhada a descrição da atividade solicitada, a porcentagem dos alunos que estão devendo. 
+
+Na tela a seguir existem duas ações possíveis:
+
+* A primeira ação é clicar no botão em formato de lápis,
+* A segunda ação é clicar no nome do aluno. 
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_naoEntregou.png" alt="Dados Estatístico dos alunos que ainda estão Devendo entregar Atividades" style="zoom: 150%;" />
+
+1ª ação: Quando clicamos no botão lápis, uma nova tela irá aparecer para que a professora marque nas respectivas checkbox quais alunos entregaram as atividades que ainda estavam pendentes ou as que foram entregues com atraso.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox.png" alt="Marcando os alunos que entregaram Atividades" style="zoom: 150%;" />
+
+Depois de marcar os alunos que entregaram as atividades, é possível salvar as alterações realizadas. Ao clicar no botão de salvar, as informações serão registradas no sistema e estarão disponíveis para consulta posteriormente. Além disso, a professora poderá gerar relatórios e estatísticas com base nos dados registrados, o que contribuirá para uma análise mais completa e aprimoramento do processo de ensino.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
+
+Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
+
+2ª ação: Quando clicamos no nome do aluno, uma nova tela irá aparecer indicando quais atividades que ainda não foram entregues e qual a porcentagem de atividades não entregues pelo aluno selecionado. Nessa tela, é possível marcar as caixas de seleção (checkbox) correspondentes às atividades que foram entregues e, em seguida, salvar as alterações realizadas no botão salvar. Além disso, na mesma tela, há um botão indicando a próxima página. Ao clicar nesse botão, serão exibidas as atividades que foram entregues fora do prazo.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_nomeAluno.png" alt="Atividades que o Aluno Ainda Não Entregou" style="zoom: 150%;" />
+
+Nessa tela é possível visualizar a porcentagem de atividades avaliativas entregues fora do prazo pelo aluno. Qualquer alteração pode ser salva ao clicar no botão salvar.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado.png" alt="Atividades que o Aluno Entregou Atrasado" style="zoom: 150%;" />
+
+Após clicar no botão salvar, será exibida a confirmação ou o cancelamento das alterações realizadas.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
+
+Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
 
 <br>
-
+<br>
 
 ### 2. Funcionalidade de Registro de Atividades Entregues </a>
 
    Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas.png" alt="Buscar Turmas" style="zoom: 150%;" />
+
+<br>
+
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes.png" alt="Registro das Atividades" style="zoom: 150%;" />
+
+
+<br>
+
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes_salvar.png" alt="Registro das Atividades Salvas" style="zoom: 150%;" />
+
+<br>
+
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
 <br>
 
 
-### 3. Funcionalidade de Contabilização de Atividades Entregues </a>
+## :fire: Burndown <a id='burndown'></a>
 
-   Contabiliza as atividades entregues com informações sobre a quantidade de atividades que ainda estão faltando.
-   
+<img src="doc/img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
+
 <br>
 
-### 4. Funcionalidade de Visualização dos Dados de uma Turma </a>
-
-   Inclui informações sobre a quantidade de alunos que entregaram as atividades dentro e fora do prazo.
-   
-   
-<br>
 
 
 
