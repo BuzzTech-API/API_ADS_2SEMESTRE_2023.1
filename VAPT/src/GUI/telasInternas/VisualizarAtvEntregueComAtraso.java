@@ -28,6 +28,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
       private JDesktopPane recebeCardsAtv;
       private Aluno aluno;
      javax.swing.JDesktopPane jDesktopPanel;
+      private ArrayList<Aluno_Atividade> listaAlunoAtividade = new ArrayList<>();
      
     
      
@@ -46,6 +47,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         this.aluno = aluno;
         preencherAtv1entregue();
         
+        /*this.listaAlunoAtividade*/
+        
     }
 
     
@@ -60,7 +63,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
      public void preencherAtv1entregue() {
         Aluno_AtividadeDao atvAluno = new Aluno_AtividadeDao();
          ArrayList<Aluno_Atividade> listaAlunoAtividade = atvAluno.buscarAtividadesDeUmAluno(aluno.getId_aluno());
-        
+        int contador=0;
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
             if(atividade_Entregue.getAluno_Ativadade_entrega()){
@@ -68,14 +71,26 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 jLayeredPane1.add(cards);
                 
                 
+            contador++;
             }}
            
-            
+        float porcentagem = (float) contador / listaAlunoAtividade.size();
+        porcentagem *= 100;
+        if(porcentagem == 0.0){
+        porcentagemEntregueAtrasado.setText("100%");
+        }else{
+        String porcetagemString = String.format("%.2f ", porcentagem);
+        porcetagemString+="%";
+        porcentagemEntregueAtrasado.setText(porcetagemString);}
+        
+        
+        
         }
      
-     
+       
         
-    
+        
+         
     
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -104,6 +119,11 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
+        porcentagemEntregueAtrasado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                porcentagemEntregueAtrasadoActionPerformed(evt);
+            }
+        });
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
         texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -149,8 +169,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -196,6 +216,10 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         recebeCardsAtv.removeAll();
         recebeCardsAtv.add(visuEntreg).setVisible(true);
     }//GEN-LAST:event_myButton1ActionPerformed
+
+    private void porcentagemEntregueAtrasadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_porcentagemEntregueAtrasadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_porcentagemEntregueAtrasadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
