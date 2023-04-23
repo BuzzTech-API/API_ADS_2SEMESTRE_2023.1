@@ -89,15 +89,20 @@ Diante desse requisito, a equipe avaliou as possibilidades de implementação e 
 
 Ao abrir o programa, a professora irá ver quais atividades ainda tem aluno devendo entrega. A visualização da turma será apresentada de acordo com o dia da semana e hora que foram previamente cadastrados no programa.
 
-Na imagem podemos ver um exemplo de como seria essa visualização dos dados estatísticos no programa.
+Na imagem podemos ver um exemplo de como seria essa visualização dos dados estatísticos no programa para uma determinada turma.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telahome.png" alt="Dados Estatístico na Tela Home" style="zoom: 150%;" />
 
-Ao clicar em qualquer atividade, outra tela se abre apresentando de forma mais detalhada a descrição da atividade solicitada, a porcentagem dos alunos que estão devendo.
+Ao clicar em qualquer atividade, outra tela se abre apresentando de forma mais detalhada a descrição da atividade solicitada, a porcentagem dos alunos que estão devendo. 
+
+Na tela a seguir existem duas ações possíveis:
+
+* A primeira ação é clicar no botão em formato de lápis,
+* A segunda ação é clicar no nome do aluno. 
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem.png" alt="Dados Estatístico dos alunos que ainda estão Devendo entregar Atividades" style="zoom: 150%;" />
 
-Nesta tela existem duas ações possíveis. A primeira ação é clicar no botão em formato de lápis. Ao fazer isso, uma nova tela irá aparecer para que a professora marque as caixas no estilo checkbox, indicando quais alunos entregaram as atividades que ainda estavam pendentes ou as que foram entregues com atraso.
+1ª ação: Quando clicamos no botão lápis, uma nova tela irá aparecer para que a professora marque nas respectivas checkbox quais alunos entregaram as atividades que ainda estavam pendentes ou as que foram entregues com atraso.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox.png" alt="Marcando os alunos que entregaram Atividades" style="zoom: 150%;" />
 
@@ -109,7 +114,17 @@ Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
+2ª ação: Quando clicamos no nome do aluno, uma nova tela irá aparecer indicando quais atividades que ainda não foram entregues. É possivel marca as atividades que foram entregues e depois apertar o botão para salvar essas alterações. Também existe outro botão indicando ver a próxima página que exibe quais atividades foram entregues atrasadas.
 
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_nomeAluno.png" alt="Atividades que o Aluno Ainda Não Entregou" style="zoom: 150%;" />
+
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado.png" alt="Atividades que o Aluno Entregou Atrasado" style="zoom: 150%;" />
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
 <br>
 
