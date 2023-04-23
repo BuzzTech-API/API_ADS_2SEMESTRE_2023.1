@@ -191,7 +191,55 @@ public class TurmaDao {
 
     }
     
+    public ArrayList<Turma> buscarPorNome(String nome){
+        String sql = "SELECT * FROM turma WHERE nome LIKE \"%"+nome+"%\"";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        //Classe que vai recuperar os dados do banco ***SELECT***
+        ResultSet rset = null;
+        
+        try{
+            conn = new Conection().getConnection();
+            
+            stmt = conn.prepareStatement(sql);
+
+
+            
+            rset = stmt.executeQuery();
+            
+            while (rset.next()){
+                Turma turma = new Turma();
+                
+                //Recuperar o id
+                turma.setId_turma(rset.getInt("id_turma"));
+                //Recuperar o nome
+                turma.setNome(rset.getString("nome"));
+                //Recuperar o nome da escola
+                turma.setNome_escola(rset.getString("nome_escola"));
+                
+                this.lista.add(turma);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally{
+            try{
+                if(rset!=null){
+                rset.close();
+            }
+            if(stmt!=null){
+                stmt.close();
+            }
+            if(conn!=null){
+                conn.close();
+            }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
     
+        return this.lista;
+    }
 
 
 }

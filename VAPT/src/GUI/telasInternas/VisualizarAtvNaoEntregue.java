@@ -27,11 +27,11 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     private JDesktopPane jDesktopPane;
     private JDesktopPane recebeCardsAtv;
     private Aluno aluno;
-    javax.swing.JDesktopPane jDesktopPanel;
+    javax.swing.JDesktopPane jDesktopPanePrincipal;
 
     
     public VisualizarAtvNaoEntregue(JDesktopPane recebeCardsAtv, JDesktopPane jDesktopPanel1,Aluno aluno ) {
-        this.jDesktopPanel = jDesktopPanel1;
+        this.jDesktopPane = jDesktopPanel1;
         this.recebeCardsAtv = recebeCardsAtv;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));

@@ -6,8 +6,10 @@ package GUI.telasInternas;
 
 import GUI.componentes.CheckBoxContainer;
 import GUI.swing.ScrollBarCustom;
+import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
 
@@ -27,6 +29,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
 
     private int id;
     private JDesktopPane jDesktopPane;
+    private Turma turma = new Turma();
     
     public DetalheTurma() {
         initComponents();
@@ -56,7 +59,8 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
 
         // Puxa as informações da turma do banco e coloca nas label
         TurmaDao turmaDao = new TurmaDao();
-        Turma turma = turmaDao.buscarPorId(id);
+        turma = turmaDao.buscarPorId(id);
+        turma.buscarAtividades();
         jLabel1.setText(jLabel1.getText()+ turma.getNome());
         jLabel2.setText(jLabel2.getText() + turma.getNome_escola());
         
@@ -86,6 +90,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         atividadesEntreguesComAtraso1 = new GUI.componentes.AtividadesEntreguesComAtraso(jDesktopPane , id);
         jPanel1 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jLayeredPane2 = new javax.swing.JLayeredPane();
         myButton2 = new GUI.swing.MyButton();
 
         setPreferredSize(new java.awt.Dimension(1018, 639));
@@ -142,27 +147,43 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 155, Short.MAX_VALUE)
+            .addGap(0, 161, Short.MAX_VALUE)
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 95, Short.MAX_VALUE)
+            .addGap(0, 126, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
+        jLayeredPane2.setLayout(jLayeredPane2Layout);
+        jLayeredPane2Layout.setHorizontalGroup(
+            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jLayeredPane2Layout.setVerticalGroup(
+            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 126, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLayeredPane2)
+                    .addComponent(jLayeredPane1))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout panelBordaArredondadaComLinha1Layout = new javax.swing.GroupLayout(panelBordaArredondadaComLinha1);
@@ -265,7 +286,8 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
 
     public void preencherIcones() {
 
-
+        Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+        
         // Redimensiona o tamanho do icone que aparece no botão
         ImageIcon icon = new ImageIcon(getClass().getResource("/img/Vector.png"));
         Image img = icon.getImage();
@@ -277,22 +299,57 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         // Cria um JLabel com o icone da ellipse redimensionada e adiciona no layered pane com nível baíxo
         icon = new ImageIcon(getClass().getResource("/img/Ellipse 5.png"));
         img = icon.getImage();
-        imgScale = img.getScaledInstance(122, 87, Image.SCALE_SMOOTH);
+        imgScale = img.getScaledInstance(161, 126, Image.SCALE_SMOOTH);
         scaledIcon = new ImageIcon(imgScale);
         JLabel iconLabel = new JLabel(scaledIcon);
         iconLabel.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
-        jLayeredPane1.add(iconLabel, JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.add(iconLabel, JLayeredPane.DEFAULT_LAYER);
         iconLabel.setLocation(0, 0);
-
         
+        String porcetagem = aluno_AtividadeDao.pegarPorcentagemDeNaoEntreguesDaTurma(id);
         // Cria um JLabel com o Texto que vai ficar dentro da ellipse e insere no layered pane com um nível mais alto
-        JLabel textLabel = new JLabel("3% não fez");
+        JLabel textLabel = new JLabel();
+
+        if(porcetagem == null){
+             textLabel.setText("0% Não fez");
+        }else{
+             textLabel.setText(porcetagem+" Não fez");
+        }
         textLabel.setFont(new Font("Arial", 1 ,14));
         textLabel.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
         textLabel.setForeground(Color.RED);
         textLabel.setHorizontalAlignment(JLabel.CENTER);
-        jLayeredPane1.add(textLabel, JLayeredPane.PALETTE_LAYER);
+        jLayeredPane2.add(textLabel, JLayeredPane.PALETTE_LAYER);
         textLabel.setLocation(0, 0);
+        
+        
+        // Cria um JLabel com o icone da ellipse redimensionada e adiciona no layered pane com nível baíxo
+        icon = new ImageIcon(getClass().getResource("/img/Ellipse6.png"));
+        img = icon.getImage();
+        imgScale = img.getScaledInstance(161, 126, Image.SCALE_SMOOTH);
+        scaledIcon = new ImageIcon(imgScale);
+        JLabel iconLabel1 = new JLabel(scaledIcon);
+        iconLabel1.setBounds(0, 0, iconLabel1.getIcon().getIconWidth(), iconLabel1.getIcon().getIconHeight());
+        jLayeredPane1.add(iconLabel1, JLayeredPane.DEFAULT_LAYER);
+        iconLabel1.setLocation(0, 0);
+
+        porcetagem = aluno_AtividadeDao.pegarPorcentagemDeEntreguesDaTurma(id);
+        // Cria um JLabel com o Texto que vai ficar dentro da ellipse e insere no layered pane com um nível mais alto
+        JLabel textLabel1 = new JLabel();
+        if(porcetagem == null){
+             textLabel1.setText("0% Atrasou");
+        }else{
+             textLabel1.setText(porcetagem+" Atrasou");
+        }
+        
+        textLabel1.setFont(new Font("Arial", 1 ,14));
+        textLabel1.setBounds(0, 0, iconLabel.getIcon().getIconWidth(), iconLabel.getIcon().getIconHeight());
+        textLabel1.setForeground(new Color(79, 93, 117));
+        textLabel1.setSize(new Dimension(161, 126));
+        textLabel1.setVerticalAlignment(JLabel.CENTER);
+        textLabel1.setHorizontalAlignment(JLabel.CENTER);
+        jLayeredPane1.add(textLabel1, JLayeredPane.PALETTE_LAYER);
+        textLabel1.setLocation(0, 0);
         
     }
 
@@ -318,9 +375,9 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
         // TODO add your handling code here:
-        TelaHome telaHome = new TelaHome(jDesktopPane);
+        Buscar buscar = new Buscar(jDesktopPane);
         jDesktopPane.removeAll();
-        jDesktopPane.add(telaHome).setVisible(true);
+        jDesktopPane.add(buscar).setVisible(true);
     }//GEN-LAST:event_myButton1ActionPerformed
 
     private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
@@ -342,6 +399,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private GUI.swing.MyButton myButton1;
