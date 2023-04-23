@@ -54,8 +54,6 @@ Com base nessas informações, escolhemos as seguintes tarefas para a segunda sp
 
 * Implementação do modo de visualização dos dados estatísticos das atividades dos alunos;
 * Implementação da funcionalidade de registro de atividades entregues, incluindo informações sobre o prazo de entrega e atrasos;
-* Implementação da funcionalidade de contabilização de atividades entregues, com informações sobre a quantidade de atividades entregues e faltantes;
-* Implementação da funcionalidade de visualização dos dados da sala de aula, incluindo informações sobre a quantidade de alunos que entregaram as atividades dentro e fora do prazo.
 
 
 Essas tarefas foram escolhidas para garantir que a parte mais importante do projeto seja implementada de forma eficiente e eficaz, atendendo às necessidades do cliente e tornando o processo de ensino-aprendizagem mais organizado e produtivo. Com a implementação dessas tarefas, esperamos fornecer uma ferramenta útil para a professora e ajudar no acompanhamento do desempenho dos alunos.
@@ -85,7 +83,13 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
 
 ### 1. Visualização dos Dados Estatísticos das Atividades dos Alunos </a>
 
-   Desenvolver as telas que apresentam os dados estatísticos.
+   A funcionalidade de maior valor para a professora consistia em visualizar os alunos que ainda não entregaram as atividades avaliativas, bem como os alunos que entregaram as atividades com atraso.
+
+Diante desse requisito, a equipe avaliou as possibilidades de implementação e decidiu que a melhor abordagem seria desenvolver uma visualização dos dados estatísticos das atividades dos alunos, que permitiria à professora acessar as informações de forma clara e concisa.
+
+Na.
+
+<img src="doc/img/dadosestatisticos_telahome.png" alt="Dados Estatístico na Tela Home" style="zoom: 150%;" />
 
 
 <br>
@@ -110,6 +114,15 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
    
    
 <br>
+
+
+
+## :fire: Burndown <a id='burndown'></a>
+
+<img src="doc/img/burndown1.png" alt="Burndown" style="zoom: 150%;" />
+
+<br>
+
 
 
 
