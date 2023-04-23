@@ -46,7 +46,7 @@
 
 <br>
 
-A escolha das tarefas dessa segunda Sprint foi levado em consideração alguns fatores importantes. Primeiro, analisamos as necessidades do cliente e os requisitos do projeto, em especial, a importância da parte que mostra os dados estatísticos da atividades dos alunos.
+A escolha das tarefas dessa segunda Sprint levou em consideração alguns fatores importantes. Primeiro, analisamos as necessidades do cliente e os requisitos do projeto, em especial, a importância da parte que mostra os dados estatísticos da atividades dos alunos.
 
 Essa parte do projeto é de alto valor, pois é essencial para a professora acompanhar o desempenho dos alunos e identificar possíveis dificuldades de aprendizado. Além disso, a visualização dos dados estatísticos permite uma melhor organização da sala de aula, tornando mais fácil identificar quais alunos precisam de atenção especial e incentivar a entrega de atividades dentro do prazo.
 

@@ -55,10 +55,11 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     
     private void preecherCardaNEntregue(int id){
         AtvNomeNum.setText("Atividade "+id);
+
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         dataQEntregou.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));
        
-    
+
     }
     
     @Override
@@ -75,7 +76,6 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
         AtvNomeNum = new javax.swing.JLabel();
         dataEntrega = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        dataQEntregou = new javax.swing.JFormattedTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         checkBoxCustom1 = new GUI.swing.CheckBoxCustom();
@@ -92,25 +92,13 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
-        dataQEntregou.setBackground(new java.awt.Color(252, 252, 252));
-        dataQEntregou.setBorder(null);
-        try {
-            dataQEntregou.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        dataQEntregou.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dataQEntregou.setText("18/05/2023");
-        dataQEntregou.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
-        dataQEntregou.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataQEntregouActionPerformed(evt);
-            }
-        });
+        descrAtv.setColumns(20);
+        descrAtv.setRows(5);
+        jScrollPane2.setViewportView(descrAtv);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        dataEntrega.setBackground(new java.awt.Color(252, 252, 252));
+        dataEntrega.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        dataEntrega.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -156,10 +144,6 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void dataQEntregouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataQEntregouActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dataQEntregouActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AtvNomeNum;
@@ -168,6 +152,5 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     private javax.swing.JFormattedTextField dataQEntregou;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

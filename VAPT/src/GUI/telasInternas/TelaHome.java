@@ -147,6 +147,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
         String horaAgora = sdf.format(calendario.getTime());
         Dia_SemanaDao dia_SemanaDao = new Dia_SemanaDao();
         int turmaId = 0;
+        
         switch (dia) {
             case 2:
                 turmaId=dia_SemanaDao.buscarTurmaDeAgora(horaAgora, "Segunda");
@@ -171,9 +172,9 @@ public class TelaHome extends javax.swing.JInternalFrame {
             default:
                 break;
         }
-        turmaId=2;
+        
         if (turmaId!=0) {
-            turmaId=2;
+            
             TurmaDao turmaDao = new TurmaDao();
             turma = turmaDao.buscarPorId(turmaId);
         
@@ -190,9 +191,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jLabel1.setText(jLabel1.getText()+turma.getNome());
         jLabel2.setText(jLabel2.getText()+turma.getNome_escola());
         ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
-        if(listaAtividades.size()<=4){
-            jLayeredPane1.setPreferredSize(new Dimension(WIDTH, 276));
-        }
+        
         for (int i = 0; i < listaAtividades.size(); i++) {
             Atividades atividade = listaAtividades.get(i);
             CardAtividadesAlunosDevendo card = new CardAtividadesAlunosDevendo(atividade, i+1, jDesktopPane, turma);
