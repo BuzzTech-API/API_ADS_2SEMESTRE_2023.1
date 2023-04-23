@@ -27,6 +27,8 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         nomeAluno.setText(aluno.getNome());
         VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recebeCardsAtv, jDesktopPanel, aluno);
         recebeCardsAtv.add(visuCard).setVisible(true);
+        VisualizarAtvNaoEntregue visuCard2 = new VisualizarAtvNaoEntregue( recebeCardsAtv, jDesktopPanel, aluno);
+        recebeCardsAtv.add(visuCard2).setVisible(true);
     }
 
     /**

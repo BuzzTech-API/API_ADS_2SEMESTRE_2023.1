@@ -4,9 +4,13 @@
  */
 package GUI.card;
 
+import GUI.swing.ScrollBarCustom;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.JScrollBar;
+import modelo.Aluno_Atividade;
 import java.text.SimpleDateFormat;
 
 /**
@@ -14,13 +18,33 @@ import java.text.SimpleDateFormat;
  * @author Fatec
  */
 public class CardAtvNaoEntregue extends javax.swing.JPanel {
-
     
-    public CardAtvNaoEntregue() {
-        initComponents();
-         setOpaque(false);
+    private Aluno_Atividade aluno_atividade = new Aluno_Atividade();
+    private int id;
 
+    /**
+     * Creates new form CardAtvNaoEntregue
+     */
+    public CardAtvNaoEntregue(Aluno_Atividade atvNaoEntregue, int id) {
+        initComponents();
+        setOpaque(false);
+
+        this.aluno_atividade = atvNaoEntregue;
+        preecherCardaNEntregue(id);
+        
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
+        sp.setForeground(new Color(4, 210, 130));
+        ScrollBarCustom spHorizontal = new ScrollBarCustom();
+        spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
+        spHorizontal.setUnitIncrement(20);
+        spHorizontal.setForeground(new Color(4, 210, 130));
+        jScrollPane2.setVerticalScrollBar(sp);
+        jScrollPane2.setHorizontalScrollBar(spHorizontal);
+        
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,11 +55,11 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     
     private void preecherCardaNEntregue(int id){
         AtvNomeNum.setText("Atividade "+id);
-        /*SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        dataEntrega.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));*/
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        dataQEntregou.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));
        
-    
-    
+
     }
     
     @Override
@@ -50,22 +74,21 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     private void initComponents() {
 
         AtvNomeNum = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        dataEntrega = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        descrAtv = new javax.swing.JTextArea();
-        dataEntrega = new javax.swing.JLabel();
+        jTextArea2 = new javax.swing.JTextArea();
         checkBoxCustom1 = new GUI.swing.CheckBoxCustom();
 
         setBackground(new java.awt.Color(252, 252, 252));
-        setPreferredSize(new java.awt.Dimension(153, 200));
+        setPreferredSize(new java.awt.Dimension(170, 180));
 
         AtvNomeNum.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         AtvNomeNum.setForeground(new java.awt.Color(73, 93, 117));
         AtvNomeNum.setText("Atividade 04");
 
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
-        jLabel2.setText("Data da Entrega:");
+        dataEntrega.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
+        dataEntrega.setText("Data da Entrega:");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
@@ -81,44 +104,43 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(dataEntrega)
+                        .addGap(29, 29, 29))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addContainerGap(9, Short.MAX_VALUE)
                         .addComponent(AtvNomeNum)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(70, 70, 70))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
+                .addComponent(dataQEntregou)
+                .addGap(76, 76, 76))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(AtvNomeNum)
                     .addComponent(checkBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dataEntrega)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(41, 41, 41))
+                    .addComponent(dataQEntregou, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -127,8 +149,7 @@ public class CardAtvNaoEntregue extends javax.swing.JPanel {
     private javax.swing.JLabel AtvNomeNum;
     private GUI.swing.CheckBoxCustom checkBoxCustom1;
     private javax.swing.JLabel dataEntrega;
-    private javax.swing.JTextArea descrAtv;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JFormattedTextField dataQEntregou;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
