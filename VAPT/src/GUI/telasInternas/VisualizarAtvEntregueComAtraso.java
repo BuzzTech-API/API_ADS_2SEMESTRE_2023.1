@@ -28,6 +28,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
       private JDesktopPane recebeCardsAtv;
       private Aluno aluno;
      javax.swing.JDesktopPane jDesktopPanel;
+     
     
      
     public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1,JDesktopPane recebeCardsAtv,Aluno aluno) {
@@ -62,16 +63,18 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
-            if(!atividade_Entregue.getAluno_Ativadade_entrega()){
+            if(atividade_Entregue.getAluno_Ativadade_entrega()){
                 CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
                 jLayeredPane1.add(cards);
+                
+                
             }}
            
             
         }
      
      
-   
+        
     
     
     
@@ -101,7 +104,6 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemEntregueAtrasado.setText("10%");
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
         texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
