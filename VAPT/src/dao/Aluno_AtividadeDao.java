@@ -14,6 +14,7 @@ import java.util.List;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
+import modelo.Turma;
 
 public class Aluno_AtividadeDao {
     
@@ -30,6 +31,7 @@ public class Aluno_AtividadeDao {
     public void adicionar(Aluno_Atividade aluno_Atividade) {
         String sql = "INSERT INTO aluno_atividade (Aluno_id_aluno, Atividade_id_atividade, Aluno_Atividade_entrega, Aluno_Atividade_data_entrega) VALUES (?, ?, ?, ?)";
         try {
+            conexao = new Conection().getConnection();
             stmt = conexao.prepareStatement(sql);
             stmt.setInt(1, aluno_Atividade.getAluno().getId_aluno());
             stmt.setInt(2,aluno_Atividade.getAtividade().getId_atividade());
@@ -37,6 +39,7 @@ public class Aluno_AtividadeDao {
             stmt.setDate(4,aluno_Atividade.getAluno_Atividade_data_entrega());
             stmt.execute();
             stmt.close();
+            conexao.close();
             //JOptionPane.showMessageDialog(null,"Aluno_Atividade Cadastrado com Sucesso!");
 
         } catch (SQLException exception) {
@@ -69,6 +72,7 @@ public class Aluno_AtividadeDao {
             
             //Executar a query
             stmt.execute();
+            
         }catch(Exception e){
             e.printStackTrace();
         }finally{
@@ -78,13 +82,89 @@ public class Aluno_AtividadeDao {
             }if(conn!=null){
                 conn.close();
             }
-        }catch(Exception e){
+        }catch(SQLException e){
                 e.printStackTrace();
             }
         }
     }
         
-    
+    public String pegarPorcentagemDeNaoEntreguesDaTurma(int id_turma) {
+        String sql = "SELECT CONCAT(FORMAT(COUNT(DISTINCT Aluno_id_aluno) / COUNT(*) * 100, 2) , '%') AS porcentagem_entregas FROM aluno_atividade WHERE (Aluno_Atividade_entrega = false or Aluno_Atividade_entrega = null) and Atividade_id_atividade in(SELECT atividade.id_atividade FROM atividade where Turma_id_turma = ? );";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        
+        try{
+            //Criar a conexão
+            conn = new Conection().getConnection();
+            
+            stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, id_turma);
+            
+            //Executar a query
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getString("porcentagem_entregas");
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }finally{
+        try{
+            if(stmt!=null){
+                stmt.close();
+            }if(conn!=null){
+                conn.close();
+            }
+        }catch(SQLException e){
+                e.printStackTrace();
+            }
+        }
+        
+
+        return "";
+    }
+    public String pegarPorcentagemDeEntreguesDaTurma(int idTurma) {
+        String sql = "SELECT CONCAT(FORMAT(COUNT(DISTINCT Aluno_id_aluno) / COUNT(*) * 100, 2) , '%') AS porcentagem_entregas "+ 
+        "FROM aluno_atividade inner join atividade on atividade.id_atividade = Atividade_id_atividade WHERE "+
+        "Aluno_Atividade_entrega = true and "+
+        "atividade.data_fim < aluno_atividade.Aluno_Atividade_data_entrega and "+
+        "Atividade_id_atividade IN(SELECT id_atividade FROM atividade WHERE Turma_id_turma = ?)";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        
+        try{
+            //Criar a conexão
+            conn = new Conection().getConnection();
+            
+            //Executar a query
+            stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, idTurma);
+            
+            
+            //Executar a query
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getString("porcentagem_entregas");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+        try{
+            if(stmt!=null){
+                stmt.close();
+            }if(conn!=null){
+                conn.close();
+            }
+        }catch(SQLException e){
+                e.printStackTrace();
+            }
+        }
+        String retorno ="";
+
+        return retorno;
+    }
+
 
 
     public ArrayList<Aluno_Atividade> buscarAlunosDeUmaAtividade(int idAtividade) {
@@ -127,10 +207,22 @@ public class Aluno_AtividadeDao {
         } catch (SQLException exception) {
             // TODO: handle exception
             throw new RuntimeException(exception);
+        }finally{
+        try{
+            if(stmt!=null){
+                stmt.close();
+            }if(conexao!=null){
+                conexao.close();
+            }
+        }catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         return this.lista;
         
     }
+
+
     public ArrayList<Aluno_Atividade> buscarAtividadesDeUmAluno(int idAluno) {
         String sql = "SELECT * FROM aluno_atividade JOIN aluno ON aluno.id_aluno = aluno_atividade.Aluno_id_aluno JOIN atividade ON atividade.id_atividade = aluno_atividade.Atividade_id_atividade WHERE Aluno_id_aluno = ?";
         try {
@@ -171,6 +263,16 @@ public class Aluno_AtividadeDao {
         } catch (SQLException exception) {
             // TODO: handle exception
             throw new RuntimeException(exception);
+        }finally{
+            try{
+                if(stmt!=null){
+                    stmt.close();
+                }if(conexao!=null){
+                    conexao.close();
+                }
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
         }
         return this.lista;
         
@@ -217,6 +319,16 @@ public class Aluno_AtividadeDao {
         } catch (SQLException exception) {
             // TODO: handle exception
             throw new RuntimeException(exception);
+        }finally{
+            try{
+                if(stmt!=null){
+                    stmt.close();
+                }if(conexao!=null){
+                    conexao.close();
+                }
+            }catch(SQLException e){
+                    e.printStackTrace();
+                }
         }
         return this.lista;
         
@@ -243,7 +355,7 @@ public class Aluno_AtividadeDao {
 
     }   
     public void realizarEntrega (int id_atividade, int id_aluno) throws SQLException{
-        String sql = "update aluno_atividadeAluno_Atividade_entregaAluno_Atividade_entrega\n" + "set Aluno_Atividade_entrega = 1,\n" + "Aluno_atividade_data_entrega = ?\n" + "where Aluno_id_aluno = ?\n" + "and Atividade_id_atividade = ?";
+        String sql = "update aluno_atividade Aluno_Atividade_entregaAluno_Atividade_entrega\n" + "set Aluno_Atividade_entrega = 1,\n" + "Aluno_atividade_data_entrega = ?\n" + "where Aluno_id_aluno = ?\n" + "and Atividade_id_atividade = ?";
         stmt = conexao.prepareStatement(sql);
         Date date = new Date();
         stmt.setDate(1, new java.sql.Date(date.getTime()));
