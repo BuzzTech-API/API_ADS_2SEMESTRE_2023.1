@@ -171,7 +171,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 jlabel.setBackground(new Color(236,236,236));
                 jlabel.setHorizontalAlignment(JLabel.LEFT);
                 jlabel.setText(aluno_Atividade.getAluno().getNome());
-                for (int i = jlabel.getText().length(); i < 50; i++) {
+                for (int i = jlabel.getText().length(); i < 60; i++) {
                     jlabel.setText(jlabel.getText()+" ");
                 }
                 jlabel.addMouseListener(new MouseAdapter() {

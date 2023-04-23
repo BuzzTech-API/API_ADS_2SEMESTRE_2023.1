@@ -71,12 +71,16 @@ public class Turma {
     }
 
     public void buscarAtividades() {
-        atribuirIdDoBanco();
-        if (id_turma!=0) {
+        if (this.id_turma==0) {
+            atribuirIdDoBanco();
+            
+        }
+        if (this.id_turma!=0) {
             AtividadesDao atividadesDao = new AtividadesDao();
             this.atividadesDaTurma = atividadesDao.buscarTodasAtividadesDaTurma(this.id_turma);
             
         }
+        
 
     }
 

@@ -4,6 +4,7 @@
  */
 package GUI.card;
 
+import modelo.Turma;
 
 /**
  *
@@ -17,6 +18,13 @@ public class CardDeTurma extends javax.swing.JPanel {
     public CardDeTurma() {
         initComponents();
         setOpaque(false);
+    }
+
+    public CardDeTurma(Turma turma) {
+        initComponents();
+        setOpaque(false);
+        jLabel1.setText("Turma "+turma.getNome());
+        jLabel3.setText(turma.getNome_escola());
     }
 
     /**
@@ -33,11 +41,12 @@ public class CardDeTurma extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(146, 144));
+        setPreferredSize(new java.awt.Dimension(219, 156));
 
         panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(252, 252, 252));
+        panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(219, 156));
 
-        jLabel1.setFont(new java.awt.Font("Eras Bold ITC", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(239, 131, 84));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Turma 7º D");
@@ -55,9 +64,9 @@ public class CardDeTurma extends javax.swing.JPanel {
         panelBordaArredondadaComLinha1.setLayout(panelBordaArredondadaComLinha1Layout);
         panelBordaArredondadaComLinha1Layout.setHorizontalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,14 +77,14 @@ public class CardDeTurma extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGap(40, 40, 40))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

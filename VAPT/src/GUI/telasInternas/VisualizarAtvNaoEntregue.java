@@ -6,7 +6,8 @@ package GUI.telasInternas;
 
 
 
-import GUI.card.CardAtvNaoEntregue;
+
+import GUI.card.CardAtviNaoEntregue;
 import GUI.swing.ScrollBarCustom;
 import dao.Aluno_AtividadeDao;
 import java.awt.Color;
@@ -24,12 +25,14 @@ import modelo.Aluno_Atividade;
 public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     private Aluno_Atividade aluno_atividade = new Aluno_Atividade();
     private JDesktopPane jDesktopPane;
+    private JDesktopPane recebeCardsAtv;
     private Aluno aluno;
-    javax.swing.JDesktopPane jDesktopPanel;
+    javax.swing.JDesktopPane jDesktopPanePrincipal;
 
     
-    public VisualizarAtvNaoEntregue(JDesktopPane recebeCardsAtv, JDesktopPane jDesktopPanel1,Aluno aluno) {
-        this.jDesktopPanel = jDesktopPanel;
+    public VisualizarAtvNaoEntregue(JDesktopPane recebeCardsAtv, JDesktopPane jDesktopPanel1,Aluno aluno ) {
+        this.jDesktopPane = jDesktopPanel1;
+        this.recebeCardsAtv = recebeCardsAtv;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -57,27 +60,25 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     public void preencherAtvNaoEntregue() {
         Aluno_AtividadeDao atvAluno = new Aluno_AtividadeDao();
          ArrayList<Aluno_Atividade> listaAlunoAtividade = atvAluno.buscarAtividadesDeUmAluno(aluno.getId_aluno());
-        
+        int contador = 0;
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
             if(atividade_Entregue.getAluno_Ativadade_entrega() == false){
-                CardAtvNaoEntregue cards = new CardAtvNaoEntregue(atividade_Entregue, i+1); 
+                CardAtviNaoEntregue cards = new CardAtviNaoEntregue(atividade_Entregue, i+1); 
                 jLayeredPane2.add(cards);
+                
+                contador++;
             }
         }
         
-        /*for (int i = 0; i < listaAlunoAtividade.size(); i++) {
-            Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
-            if(!atividade_Entregue.getAluno_Ativadade_entrega()){
-                CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
-                jLayeredPane1.add(cards);
-            
-            }else{
-                CardAtvNaoEntregue cards = new CardAtvNaoEntregue(atividade_Entregue, i+1); 
-                jLayeredPane2.add(cards);
-            }
-        }*/
-           
+        float porcentagem = (float) contador / listaAlunoAtividade.size();
+        porcentagem *= 100;
+        if(porcentagem == 0.0){
+        porcentagemNaoEntregue.setText("100%");
+        }else{
+        String porcetagemString = String.format("%.2f ", porcentagem);
+        porcetagemString+="%";
+        porcentagemNaoEntregue.setText(porcetagemString);}
             
         }
     
@@ -92,6 +93,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         porcentagemNaoEntregue = new javax.swing.JTextField();
         texto5 = new javax.swing.JLabel();
         texto6 = new javax.swing.JLabel();
+        chamaAtvAtrasada = new GUI.swing.MyButton();
 
         setPreferredSize(new java.awt.Dimension(770, 307));
 
@@ -118,7 +120,6 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         porcentagemNaoEntregue.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemNaoEntregue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemNaoEntregue.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemNaoEntregue.setText("10%");
         porcentagemNaoEntregue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 porcentagemNaoEntregueActionPerformed(evt);
@@ -135,6 +136,14 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         texto6.setForeground(new java.awt.Color(79, 93, 117));
         texto6.setText("das atividades ");
 
+        chamaAtvAtrasada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/setaBaixo.png"))); // NOI18N
+        chamaAtvAtrasada.setColor(new java.awt.Color(204, 204, 204));
+        chamaAtvAtrasada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chamaAtvAtrasadaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -142,14 +151,16 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(207, 207, 207)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -164,7 +175,9 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addContainerGap())
         );
 
@@ -183,15 +196,22 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void porcentagemNaoEntregueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_porcentagemNaoEntregueActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_porcentagemNaoEntregueActionPerformed
 
+    private void chamaAtvAtrasadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chamaAtvAtrasadaActionPerformed
+        VisualizarAtvEntregueComAtraso visuAtvAtraso = new VisualizarAtvEntregueComAtraso( jDesktopPane, recebeCardsAtv, aluno);
+        recebeCardsAtv.removeAll();
+        recebeCardsAtv.add(visuAtvAtraso).setVisible(true);
+    }//GEN-LAST:event_chamaAtvAtrasadaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.swing.MyButton chamaAtvAtrasada;
     private javax.swing.JButton jButton1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JPanel jPanel1;
