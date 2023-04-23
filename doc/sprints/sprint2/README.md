@@ -60,6 +60,7 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
 
 
 <br>
+<br>
 
 ##  :date: Backlog da Sprint<a id="backlog"></a>
 
@@ -75,7 +76,7 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
 
 
 <br>
-
+<br>
 
 
 
@@ -130,29 +131,36 @@ Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
-<br>
 
+<br>
+<br>
 
 ### 2. Funcionalidade de Registro de Atividades Entregues </a>
 
    Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas.png" alt="Buscar Turmas" style="zoom: 150%;" />
 
 <br>
 
-
-### 3. Funcionalidade de Contabilização de Atividades Entregues </a>
-
-   Contabiliza as atividades entregues com informações sobre a quantidade de atividades que ainda estão faltando.
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
    
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes.png" alt="Registro das Atividades" style="zoom: 150%;" />
+
+
 <br>
 
-### 4. Funcionalidade de Visualização dos Dados de uma Turma </a>
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes_salvar.png" alt="Registro das Atividades Salvas" style="zoom: 150%;" />
 
-   Inclui informações sobre a quantidade de alunos que entregaram as atividades dentro e fora do prazo.
-   
-   
 <br>
 
+   Permite o registro das atividades e informa sobre o prazo de entrega e atrasos...
+   
+   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
+
+<br>
 
 
 ## :fire: Burndown <a id='burndown'></a>
