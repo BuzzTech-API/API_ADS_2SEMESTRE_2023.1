@@ -100,7 +100,7 @@ Na tela a seguir existem duas ações possíveis:
 * A primeira ação é clicar no botão em formato de lápis,
 * A segunda ação é clicar no nome do aluno. 
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem.png" alt="Dados Estatístico dos alunos que ainda estão Devendo entregar Atividades" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_naoEntregou.png" alt="Dados Estatístico dos alunos que ainda estão Devendo entregar Atividades" style="zoom: 150%;" />
 
 1ª ação: Quando clicamos no botão lápis, uma nova tela irá aparecer para que a professora marque nas respectivas checkbox quais alunos entregaram as atividades que ainda estavam pendentes ou as que foram entregues com atraso.
 
@@ -114,15 +114,19 @@ Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
-2ª ação: Quando clicamos no nome do aluno, uma nova tela irá aparecer indicando quais atividades que ainda não foram entregues. É possivel marca as atividades que foram entregues e depois apertar o botão para salvar essas alterações. Também existe outro botão indicando ver a próxima página que exibe quais atividades foram entregues atrasadas.
-
+2ª ação: Quando clicamos no nome do aluno, uma nova tela irá aparecer indicando quais atividades que ainda não foram entregues e qual a porcentagem de atividades não entregues pelo aluno selecionado. Nessa tela, é possível marcar as caixas de seleção (checkbox) correspondentes às atividades que foram entregues e, em seguida, salvar as alterações realizadas no botão salvar. Além disso, na mesma tela, há um botão indicando a próxima página. Ao clicar nesse botão, serão exibidas as atividades que foram entregues fora do prazo.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_nomeAluno.png" alt="Atividades que o Aluno Ainda Não Entregou" style="zoom: 150%;" />
 
+Nessa tela é possível visualizar a porcentagem de atividades avaliativas entregues fora do prazo pelo aluno. Qualquer alteração pode ser salva ao clicar no botão salvar.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado.png" alt="Atividades que o Aluno Entregou Atrasado" style="zoom: 150%;" />
 
+Após clicar no botão salvar, será exibida a confirmação ou o cancelamento das alterações realizadas.
+
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
+
+Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
 
