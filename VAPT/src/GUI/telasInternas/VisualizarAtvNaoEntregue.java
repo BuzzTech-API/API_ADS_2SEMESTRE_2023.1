@@ -204,7 +204,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_porcentagemNaoEntregueActionPerformed
 
     private void chamaAtvAtrasadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chamaAtvAtrasadaActionPerformed
-        VisualizarAtvEntregueComAtraso visuAtvAtraso = new VisualizarAtvEntregueComAtraso( jDesktopPanel, recebeCardsAtv, aluno);
+        VisualizarAtvEntregueComAtraso visuAtvAtraso = new VisualizarAtvEntregueComAtraso( jDesktopPane, recebeCardsAtv, aluno);
         recebeCardsAtv.removeAll();
         recebeCardsAtv.add(visuAtvAtraso).setVisible(true);
     }//GEN-LAST:event_chamaAtvAtrasadaActionPerformed
