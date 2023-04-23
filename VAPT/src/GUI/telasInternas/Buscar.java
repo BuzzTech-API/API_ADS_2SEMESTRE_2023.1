@@ -159,6 +159,7 @@ public class Buscar extends javax.swing.JInternalFrame {
         TurmaDao turmaDao = new TurmaDao();
         jLayeredPane1.removeAll();
         jLayeredPane1.revalidate();
+        jLayeredPane1.repaint();
         if (buscarAluno.equals("")) {
             preencherPane();
         } else {
@@ -171,6 +172,7 @@ public class Buscar extends javax.swing.JInternalFrame {
         TurmaDao turmaDao = new TurmaDao();
         jLayeredPane1.removeAll();
         jLayeredPane1.revalidate();
+        jLayeredPane1.repaint();
         if (buscarAluno.equals("")) {
             preencherPane();
         } else {
