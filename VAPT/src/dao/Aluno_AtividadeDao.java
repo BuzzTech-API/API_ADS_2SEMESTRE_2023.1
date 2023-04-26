@@ -89,7 +89,7 @@ public class Aluno_AtividadeDao {
     }
         
     public String pegarPorcentagemDeNaoEntreguesDaTurma(int id_turma) {
-        String sql = "SELECT CONCAT(FORMAT(COUNT(DISTINCT Aluno_id_aluno) / COUNT(*) * 100, 2) , '%') AS porcentagem_entregas FROM aluno_atividade WHERE (Aluno_Atividade_entrega = false or Aluno_Atividade_entrega = null) and Atividade_id_atividade in(SELECT atividade.id_atividade FROM atividade where Turma_id_turma = ? );";
+        String sql = "SELECT concat(Format(avg(CASE WHEN aluno_atividade.Atividade_id_atividade IN (SELECT id_atividade FROM atividade WHERE Turma_id_turma= ?) THEN aluno_atividade.Aluno_Atividade_entrega = false ELSE NULL END)*100 ,2),'%')  AS nao_entregou FROM aluno_atividade;";
         
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -104,7 +104,7 @@ public class Aluno_AtividadeDao {
             //Executar a query
             rs = stmt.executeQuery();
             if (rs.next()) {
-                return rs.getString("porcentagem_entregas");
+                return rs.getString("nao_entregou");
             }
         }catch(SQLException e){
             e.printStackTrace();
@@ -124,11 +124,7 @@ public class Aluno_AtividadeDao {
         return "";
     }
     public String pegarPorcentagemDeEntreguesDaTurma(int idTurma) {
-        String sql = "SELECT CONCAT(FORMAT(COUNT(DISTINCT Aluno_id_aluno) / COUNT(*) * 100, 2) , '%') AS porcentagem_entregas "+ 
-        "FROM aluno_atividade inner join atividade on atividade.id_atividade = Atividade_id_atividade WHERE "+
-        "Aluno_Atividade_entrega = true and "+
-        "atividade.data_fim < aluno_atividade.Aluno_Atividade_data_entrega and "+
-        "Atividade_id_atividade IN(SELECT id_atividade FROM atividade WHERE Turma_id_turma = ?)";
+        String sql = "SELECT concat(Format(avg(CASE WHEN aluno_atividade.Atividade_id_atividade IN (SELECT id_atividade FROM atividade WHERE Turma_id_turma= ?) THEN atividade.data_fim < aluno_atividade.Aluno_Atividade_data_entrega ELSE NULL END)*100 ,2),'%') AS entregue_atrasados FROM aluno_atividade INNER JOIN atividade ON atividade.id_atividade = Atividade_id_atividade";
         
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -145,7 +141,7 @@ public class Aluno_AtividadeDao {
             //Executar a query
             rs = stmt.executeQuery();
             if (rs.next()) {
-                return rs.getString("porcentagem_entregas");
+                return rs.getString("entregue_atrasados");
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -366,6 +362,84 @@ public class Aluno_AtividadeDao {
         
     }
     
+    public void deletarAluno(int idAluno) {
+        String sql= "DELETE FROM aluno_atividade WHERE Aluno_id_aluno = ?";
+        conexao = new Conection().getConnection();
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, idAluno);
+            stmt.execute();
+            stmt.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+            try{
+                if(stmt!=null){
+                    stmt.close();
+                }if(conexao!=null){
+                    conexao.close();
+                }
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
+        }
+        
+    }
+
+    public void deletarAtividade(int idAtividade) {
+        String sql= "DELETE FROM aluno_atividade WHERE Atividade_id_atividade = ?";
+        conexao = new Conection().getConnection();
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, idAtividade);
+            stmt.execute();
+            stmt.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+            try{
+                if(stmt!=null){
+                    stmt.close();
+                }if(conexao!=null){
+                    conexao.close();
+                }
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
+        }
+        
+    }
+
+    public void deletarTurma(int idTurma) {
+        String sql= "DELETE FROM aluno_atividade WHERE Aluno_id_aluno IN(SELECT id_aluno FROM aluno WHERE Turma_id_turma = ?) OR Atividade_id_atividade IN(SELECT id_atividade FROM atividade WHERE Turma_id_turma = ?)";
+        conexao = new Conection().getConnection();
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, idTurma);
+            stmt.setInt(2, idTurma);
+            stmt.execute();
+            stmt.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+            try{
+                if(stmt!=null){
+                    stmt.close();
+                }if(conexao!=null){
+                    conexao.close();
+                }
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
+        }
+        
+    }
     
        
 }
