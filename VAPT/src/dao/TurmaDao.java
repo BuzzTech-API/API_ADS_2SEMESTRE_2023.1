@@ -23,15 +23,36 @@ import modelo.Turma;
 
 public class TurmaDao {
 
+
+
+
+
     private Connection conexao;
     private PreparedStatement stmt;
     private ResultSet rs;
     private ArrayList<Turma> lista;
 
+
+
+
+
+
+
+
+
     public TurmaDao() {
         this.conexao = new Conection().getConnection();
         this.lista = new ArrayList<>();
     }
+
+
+
+
+
+
+
+
+
 
     /** 
      * 
@@ -56,6 +77,22 @@ public class TurmaDao {
     }
     
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Pegar todas as turmas
     public ArrayList<Turma> getTurma(){
         String sql = "SELECT * FROM Turma";
@@ -104,6 +141,22 @@ public class TurmaDao {
         return this.lista;
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    public ArrayList<Turma> pesquisar() {
 //        String sql = "SELECT * FROM turma";
 //        try {
@@ -127,6 +180,21 @@ public class TurmaDao {
 //        return this.lista;
 //    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public int pesquisarPorNomeEEscola(String nome, String nomeEscola) {
         String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";
         try {
@@ -147,6 +215,19 @@ public class TurmaDao {
         return 0;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     public boolean jaExisteTurma(Turma turma) {
         String sql = "SELECT * FROM turma where binary nome = ? and binary nome_escola = ?";
         try {
@@ -166,6 +247,23 @@ public class TurmaDao {
 
         return false;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public Turma buscarPorId(int id) {
         String sql = "SELECT * FROM turma where id_turma = ?";
@@ -190,6 +288,24 @@ public class TurmaDao {
         }
 
     }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     public ArrayList<Turma> buscarPorNome(String nome){
         String sql = "SELECT * FROM turma WHERE nome LIKE \"%"+nome+"%\"";

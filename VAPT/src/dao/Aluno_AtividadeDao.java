@@ -14,7 +14,7 @@ import java.util.List;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
-import modelo.Turma;
+
 
 public class Aluno_AtividadeDao {
     
@@ -24,10 +24,28 @@ public class Aluno_AtividadeDao {
     private ArrayList<Aluno_Atividade> lista;
   
 
+
+
+
+
+
+
     public Aluno_AtividadeDao() {
         this.conexao = new Conection().getConnection();
         this.lista = new ArrayList<>();
     }
+
+
+
+
+
+
+
+
+
+
+
+
     public void adicionar(Aluno_Atividade aluno_Atividade) {
         String sql = "INSERT INTO aluno_atividade (Aluno_id_aluno, Atividade_id_atividade, Aluno_Atividade_entrega, Aluno_Atividade_data_entrega) VALUES (?, ?, ?, ?)";
         try {
@@ -48,6 +66,21 @@ public class Aluno_AtividadeDao {
         }
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void atualizar(Aluno_Atividade aluno_Atividade){
         
         String sql = "UPDATE aluno_atividade SET Aluno_Atividade_entrega = ?, Aluno_Atividade_data_entrega = ? "+
@@ -88,6 +121,19 @@ public class Aluno_AtividadeDao {
         }
     }
         
+
+
+
+
+
+
+
+
+
+
+
+
+
     public String pegarPorcentagemDeNaoEntreguesDaTurma(int id_turma) {
         String sql = "SELECT concat(Format(avg(CASE WHEN aluno_atividade.Atividade_id_atividade IN (SELECT id_atividade FROM atividade WHERE Turma_id_turma= ?) THEN aluno_atividade.Aluno_Atividade_entrega = false ELSE NULL END)*100 ,2),'%')  AS nao_entregou FROM aluno_atividade;";
         
@@ -123,6 +169,23 @@ public class Aluno_AtividadeDao {
 
         return "";
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public String pegarPorcentagemDeEntreguesDaTurma(int idTurma) {
         String sql = "SELECT concat(Format(avg(CASE WHEN aluno_atividade.Atividade_id_atividade IN (SELECT id_atividade FROM atividade WHERE Turma_id_turma= ?) THEN atividade.data_fim < aluno_atividade.Aluno_Atividade_data_entrega ELSE NULL END)*100 ,2),'%') AS entregue_atrasados FROM aluno_atividade INNER JOIN atividade ON atividade.id_atividade = Atividade_id_atividade";
         
@@ -160,6 +223,22 @@ public class Aluno_AtividadeDao {
 
         return retorno;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,6 +298,20 @@ public class Aluno_AtividadeDao {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public ArrayList<Aluno_Atividade> buscarAtividadesDeUmAluno(int idAluno) {
         String sql = "SELECT * FROM aluno_atividade JOIN aluno ON aluno.id_aluno = aluno_atividade.Aluno_id_aluno JOIN atividade ON atividade.id_atividade = aluno_atividade.Atividade_id_atividade WHERE Aluno_id_aluno = ?";
         try {
@@ -273,6 +366,15 @@ public class Aluno_AtividadeDao {
         return this.lista;
         
     }
+
+
+
+
+
+
+
+
+
 
 
     public ArrayList<Aluno_Atividade> buscarAtividadesEntreguesAtrasadasDeUmAluno(int idAluno) {
@@ -333,13 +435,18 @@ public class Aluno_AtividadeDao {
 
 
 
+
+
+
+
+
     public List<Aluno> retornarAluno(Atividades atividade) throws SQLException{
         String sql = "select a.* from aluno as a\n" + "inner join aluno_atividade as aa\n" + "where aa.id_aluno = a.id\n" +"and aa.id_atividade = ?";
         stmt = conexao.prepareStatement(sql);
         stmt.setInt(1,atividade.getId_atividade());
         ResultSet rs = stmt.executeQuery();
         stmt.close();
-        List<Aluno> alunos = new ArrayList();
+        List<Aluno> alunos = new ArrayList<>();
         while (rs.next()){
             Aluno a  = new Aluno();
             a.setId_aluno(rs.getInt("id_aluno"));
@@ -350,6 +457,14 @@ public class Aluno_AtividadeDao {
         return alunos;
 
     }   
+
+
+
+
+
+
+
+
     public void realizarEntrega (int id_atividade, int id_aluno) throws SQLException{
         String sql = "update aluno_atividade Aluno_Atividade_entregaAluno_Atividade_entrega\n" + "set Aluno_Atividade_entrega = 1,\n" + "Aluno_atividade_data_entrega = ?\n" + "where Aluno_id_aluno = ?\n" + "and Atividade_id_atividade = ?";
         stmt = conexao.prepareStatement(sql);
@@ -361,6 +476,15 @@ public class Aluno_AtividadeDao {
         stmt.close();
         
     }
+
+
+
+
+
+
+
+
+
     
     public void deletarAluno(int idAluno) {
         String sql= "DELETE FROM aluno_atividade WHERE Aluno_id_aluno = ?";
@@ -388,6 +512,17 @@ public class Aluno_AtividadeDao {
         
     }
 
+
+
+
+
+
+
+
+
+
+
+
     public void deletarAtividade(int idAtividade) {
         String sql= "DELETE FROM aluno_atividade WHERE Atividade_id_atividade = ?";
         conexao = new Conection().getConnection();
@@ -414,6 +549,15 @@ public class Aluno_AtividadeDao {
         
     }
 
+
+
+
+
+
+
+
+
+
     public void deletarTurma(int idTurma) {
         String sql= "DELETE FROM aluno_atividade WHERE Aluno_id_aluno IN(SELECT id_aluno FROM aluno WHERE Turma_id_turma = ?) OR Atividade_id_atividade IN(SELECT id_atividade FROM atividade WHERE Turma_id_turma = ?)";
         conexao = new Conection().getConnection();
@@ -437,10 +581,10 @@ public class Aluno_AtividadeDao {
             }catch(SQLException e){
                     e.printStackTrace();
             }
+
         }
         
-    }
-    
-       
+    }  
+
 }
 

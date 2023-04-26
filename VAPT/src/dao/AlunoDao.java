@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package dao;
 import GUI.popup.PopupCadasrSucesso;
 import java.sql.Connection;
@@ -19,15 +16,46 @@ import modelo.Aluno;
  * @author Fatec
  */
 public class AlunoDao {
+
+
+
+
+
+
     private Connection conexao;
     private PreparedStatement stmt;
     private ResultSet rs;
     private ArrayList<Aluno> lista;
 
+
+
+
+
+
+
+
+
     public AlunoDao() {
         this.conexao = new Conection().getConnection();
         this.lista = new ArrayList<>();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void adicionar(Aluno aluno) {
         String sql = "INSERT INTO aluno (nome, Turma_id_turma) VALUES (?, ?);";
         try {
@@ -44,7 +72,22 @@ public class AlunoDao {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
-           
+       
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public int pesquisarPorNomeETurma(String nome, int id_turma) {
         String sql = "SELECT * FROM aluno where nome = ? and Turma_id_turma = ?";
         try {
@@ -64,6 +107,22 @@ public class AlunoDao {
 
         return 0;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public ArrayList<Aluno> buscarTodasAlunoDaTurma(int id) {
         String sql = "SELECT * FROM aluno where Turma_id_turma = ?";
@@ -89,6 +148,29 @@ public class AlunoDao {
         return this.lista;
     }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void deletarAluno(int idAluno) {
 
         
@@ -145,11 +227,29 @@ public class AlunoDao {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void deletarAlunoTurma(int idTurma) {
 
-        
-        // Cria uma instâcia temporaria de Aluno_AtividadeDao para deletar todas as tuplas dessa tabela que esse aluno é referenciado
-        
+                
 
 
         // Cria a string que sera executado no banco de dados
