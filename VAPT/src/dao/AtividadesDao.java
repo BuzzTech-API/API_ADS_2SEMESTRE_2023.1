@@ -30,10 +30,29 @@ public class AtividadesDao {
     private ResultSet rs;
     private ArrayList<Atividades> lista;
 
+
+
+
+
+
+
+
+
     public AtividadesDao() {
         this.conexao = new Conection().getConnection();
         lista = new ArrayList<>();
     }
+
+    
+
+
+
+
+
+
+
+
+
 
     /** 
      * 
@@ -60,6 +79,25 @@ public class AtividadesDao {
         }
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public ArrayList<Atividades> buscarTodasAtividadesDaTurma(int id) {
         String sql = "SELECT * FROM atividade where Turma_id_turma = ?";
         try {
@@ -87,6 +125,21 @@ public class AtividadesDao {
         return this.lista;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public int pesquisarPorDadosDaAtividade(String tipo, String descricao, java.sql.Date data_inicio, java.sql.Date data_fim, int turma_id_turma) {
         String sql = "SELECT * FROM atividade WHERE tipo = ? AND descricao = ? AND data_inicio = ? AND data_fim = ? AND Turma_id_turma = ?";
         try {
@@ -109,6 +162,19 @@ public class AtividadesDao {
 
         return 0;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     public ArrayList<Atividades> buscarTodasAtividades() {
         String sql = "SELECT * FROM atividade";
@@ -135,6 +201,23 @@ public class AtividadesDao {
 
         return this.lista;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void deletarAtividade(int idAtividade) {
 
@@ -190,6 +273,19 @@ public class AtividadesDao {
         }
         
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
