@@ -136,6 +136,116 @@ public class AtividadesDao {
         return this.lista;
     }
 
+    public void deletarAtividade(int idAtividade) {
 
+        
+        // Cria uma instâcia temporaria de Aluno_AtividadeDao para deletar todas as tuplas dessa tabela que esse atividade é referenciado
+        new Aluno_AtividadeDao().deletarAtividade(idAtividade);
+
+
+        // Cria a string que sera executado no banco de dados
+        String sql= "DELETE FROM atividade WHERE id_atividade = ?";
+
+
+        // Conecta com o banco de dados
+        conexao = new Conection().getConnection();
+        try {
+
+
+            // Prepara o Statement que vai ser executada
+            stmt = conexao.prepareStatement(sql);
+
+
+            // Informa que aonde está o ponto de interrogação é para substituir pelo idAtividade
+            stmt.setInt(1, idAtividade);
+
+
+            // Executa e fecha o Statement
+            stmt.execute();
+            stmt.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+
+            try{
+
+
+                // Verifica se o Statement está fechado se não tiver ele o fecha
+                if(stmt!=null){
+                    stmt.close();
+                }
+
+
+                // Verifica se a conexão foi fechada se não tiver sido fecha a conexão
+                if(conexao!=null){
+                    conexao.close();
+                }
+
+
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
+        }
+        
+    }
+
+
+
+    public void deletarAtividadeTurma(int idTurma) {
+
+        
+        // Cria uma instâcia temporaria de Aluno_AtividadeDao para deletar todas as tuplas dessa tabela que esse aluno é referenciado
+        
+
+
+        // Cria a string que sera executado no banco de dados
+        String sql= "DELETE FROM atividade WHERE Turma_id_turma = ?";
+
+
+        // Conecta com o banco de dados
+        conexao = new Conection().getConnection();
+        try {
+
+
+            // Prepara o Statement que vai ser executada
+            stmt = conexao.prepareStatement(sql);
+
+
+            // Informa que aonde está o ponto de interrogação é para substituir pelo idTurma
+            stmt.setInt(1, idTurma);
+
+
+            // Executa e fecha o Statement
+            stmt.execute();
+            stmt.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+
+            try{
+
+
+                // Verifica se o Statement está fechado se não tiver ele o fecha
+                if(stmt!=null){
+                    stmt.close();
+                }
+
+
+                // Verifica se a conexão foi fechada se não tiver sido fecha a conexão
+                if(conexao!=null){
+                    conexao.close();
+                }
+
+
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
+        }
+        
+    }
 
 }
