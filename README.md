@@ -18,7 +18,6 @@
   <a href ="#mvp"> MVP </a>  |
   <a href ="#sprint"> Sprints </a>  |
   <a href ="#backlog"> Backlog do Produto </a>  | 
-  <a href ="#burndown"> Burndown </a>  | 
   <a href ="#roadmap"> Roadmap </a>  |
   <a href ="#personas"> Personas </a>  |
   <a href ="#historia"> Histórias de usuário </a>  | 
@@ -175,11 +174,6 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 <br>
 
-## :fire: Burndown <a id='burndown'></a>
-
-<img src="doc/img/burndown2.png" alt="Burndown" style="zoom: 150%;" />
-
-<br>
 
 ## :round_pushpin: Roadmap<a id='roadmap'></a>
 
