@@ -3,9 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package GUI.telasInternas;
+import dao.TurmaDao;
 import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
+import modelo.Turma;
 
 /**
  *
@@ -25,6 +27,9 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         ui.setNorthPane(null);
         this.aluno = aluno;
         nomeAluno.setText(aluno.getNome());
+        Turma turma = new TurmaDao().buscarPorId(aluno.getId_turma());
+        nomeTurma.setText("Turma "+turma.getNome());
+        nomeEscola.setText(turma.getNome_escola());
         VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recebeCardsAtv, jDesktopPanel, aluno);
         recebeCardsAtv.add(visuCard).setVisible(true);
         VisualizarAtvNaoEntregue visuCard2 = new VisualizarAtvNaoEntregue( recebeCardsAtv, jDesktopPanel, aluno);

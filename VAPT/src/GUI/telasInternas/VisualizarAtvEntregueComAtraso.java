@@ -77,7 +77,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         float porcentagem = (float) contador / listaAlunoAtividade.size();
         porcentagem *= 100;
         if(porcentagem == 0.0){
-        porcentagemEntregueAtrasado.setText("100%");
+        porcentagemEntregueAtrasado.setText("0%");
         }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
@@ -209,6 +209,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
 
     private void salvaEntregueAtrasadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvaEntregueAtrasadaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_salvaEntregueAtrasadaActionPerformed
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed

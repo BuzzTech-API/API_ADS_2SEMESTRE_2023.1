@@ -83,6 +83,15 @@ public class CheckBoxContainer extends javax.swing.JPanel {
                 
                 aluno_AtividadeDao.atualizar(aluno_Atividade);
                 
+            }else{
+                Atividades atividades = new Atividades();
+                atividades.setId_atividade(checkBox.getAtividade_id());
+                Aluno_Atividade aluno_Atividade = new Aluno_Atividade();
+                aluno_Atividade.setAluno(aluno);
+                aluno_Atividade.setAluno_Ativadade_entrega(false);
+                aluno_Atividade.setAtividade(atividades);
+                aluno_Atividade.setAluno_Atividade_data_entrega(null);
+                aluno_AtividadeDao.atualizar(aluno_Atividade);
             }
         }
     }

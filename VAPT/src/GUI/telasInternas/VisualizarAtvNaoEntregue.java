@@ -74,7 +74,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         float porcentagem = (float) contador / listaAlunoAtividade.size();
         porcentagem *= 100;
         if(porcentagem == 0.0){
-        porcentagemNaoEntregue.setText("100%");
+        porcentagemNaoEntregue.setText("0%");
         }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
@@ -120,6 +120,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         porcentagemNaoEntregue.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemNaoEntregue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemNaoEntregue.setForeground(new java.awt.Color(79, 93, 117));
+        porcentagemNaoEntregue.setText("10%");
         porcentagemNaoEntregue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 porcentagemNaoEntregueActionPerformed(evt);
@@ -159,8 +160,8 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );

@@ -4,6 +4,7 @@
  */
 package GUI.card;
 
+import GUI.swing.CheckBoxCustom;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -19,6 +20,10 @@ public class CardAtivEntregue extends javax.swing.JPanel {
 
     private Aluno_Atividade aluno_atividade = new Aluno_Atividade();
     private int id;
+
+    public CheckBoxCustom getCheckBoxCustom1() {
+        return checkBoxCustom1;
+    }
     
     
     public CardAtivEntregue(Aluno_Atividade alunoAtv, int numero_atv) {
@@ -41,7 +46,8 @@ public class CardAtivEntregue extends javax.swing.JPanel {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         dataDEntrega.setText(sdf.format(this.aluno_atividade.getAtividade().getData_fim()));
         dataQEntrega1.setText(sdf.format(this.aluno_atividade.getAluno_Atividade_data_entrega()));
-        
+        if(aluno_atividade.isAluno_Ativadade_entrega())
+            checkBoxCustom1.setSelected(true);
     
     
     }
