@@ -358,4 +358,60 @@ public class TurmaDao {
     }
 
 
+    public void deletarTurma(int idTurma) {
+
+        new Aluno_AtividadeDao().deletarTurma(idTurma);
+        new AlunoDao().deletarAlunoTurma(idTurma);
+        new AtividadesDao().deletarAtividadeTurma(idTurma);
+        new Dia_SemanaDao().deletarDia_semanaTurma(idTurma);        
+
+
+        // Cria a string que sera executado no banco de dados
+        String sql= "DELETE FROM turma WHERE id_turma = ?";
+
+
+        // Conecta com o banco de dados
+        conexao = new Conection().getConnection();
+        try {
+
+
+            // Prepara o Statement que vai ser executada
+            stmt = conexao.prepareStatement(sql);
+
+
+            // Informa que aonde está o ponto de interrogação é para substituir pelo idTurma
+            stmt.setInt(1, idTurma);
+
+
+            // Executa e fecha o Statement
+            stmt.execute();
+            stmt.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+
+            try{
+
+
+                // Verifica se o Statement está fechado se não tiver ele o fecha
+                if(stmt!=null){
+                    stmt.close();
+                }
+
+
+                // Verifica se a conexão foi fechada se não tiver sido fecha a conexão
+                if(conexao!=null){
+                    conexao.close();
+                }
+
+
+            }catch(SQLException e){
+                    e.printStackTrace();
+            }
+        }
+        
+    }
+
 }
