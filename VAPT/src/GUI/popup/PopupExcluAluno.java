@@ -34,7 +34,7 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         texto3 = new javax.swing.JLabel();
         botaoCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);

@@ -154,7 +154,10 @@ public class Editar extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_editarTurmaActionPerformed
 
     private void editarAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarAtividadeActionPerformed
-        // TODO add your handling code here:
+        BuscaAtivEdicao buscaAtivEdicao = new BuscaAtivEdicao(jDesktopPanel);
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add( buscaAtivEdicao).setVisible(true);
+
     }//GEN-LAST:event_editarAtividadeActionPerformed
 
     private void editarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarAlunoActionPerformed

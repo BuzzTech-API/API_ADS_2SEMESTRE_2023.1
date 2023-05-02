@@ -75,11 +75,8 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setResizable(true);
         setPreferredSize(new java.awt.Dimension(1018, 639));
-
-        jPanel2.setBackground(new java.awt.Color(217, 217, 217));
 
         jScrollPane1.setBorder(null);
 
@@ -87,7 +84,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jLayeredPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(114, 133, 165), 1, true));
         jLayeredPane1.setName(""); // NOI18N
         jLayeredPane1.setOpaque(true);
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 22, 15));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(3, 22, 15));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -190,7 +187,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
     
     public void preencherTela() {
         jLabel1.setText(jLabel1.getText()+turma.getNome());
-        jLabel2.setText(jLabel2.getText()+turma.getNome_escola());
+        jLabel2.setText(jLabel2.getText()+" "+ turma.getNome_escola());
         ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         
         for (int i = 0; i < listaAtividades.size(); i++) {

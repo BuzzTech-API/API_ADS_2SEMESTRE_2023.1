@@ -30,7 +30,7 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
 
         myButton1.setText("myButton1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setUndecorated(true);
 

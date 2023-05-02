@@ -34,7 +34,7 @@ public class PopupAltTurma extends javax.swing.JFrame {
         botaoSalvar = new javax.swing.JButton();
         botaoCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));

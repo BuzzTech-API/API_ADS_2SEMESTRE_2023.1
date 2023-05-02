@@ -31,7 +31,7 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
         iconeCheck = new javax.swing.JLabel();
         iconeClose = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));

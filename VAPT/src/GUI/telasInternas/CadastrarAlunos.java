@@ -207,7 +207,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             TurmaDao turmaDao = new TurmaDao();
             lista = turmaDao.getTurma();
             for (Turma turma : lista) {
-                jComboBox1.addItem(turma.getNome());
+                jComboBox1.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
             }
         }
     }

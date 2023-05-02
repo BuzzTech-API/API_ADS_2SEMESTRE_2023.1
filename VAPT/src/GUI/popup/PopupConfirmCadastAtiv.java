@@ -55,7 +55,7 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         botaoCadastrar = new GUI.swing.MyButton();
         texto4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setUndecorated(true);
 
@@ -92,6 +92,7 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         });
 
         botaoCadastrar.setBackground(new java.awt.Color(239, 131, 84));
+        botaoCadastrar.setBorder(null);
         botaoCadastrar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCadastrar.setText("Cadastrar");
         botaoCadastrar.setColor(new java.awt.Color(239, 131, 84));
