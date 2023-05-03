@@ -40,8 +40,11 @@ public class CardDeTurma extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        ativNum = new javax.swing.JTextField();
+        ativNum1 = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(219, 156));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(252, 252, 252));
         panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(219, 156));
@@ -50,6 +53,7 @@ public class CardDeTurma extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(239, 131, 84));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Turma 7º D");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -59,43 +63,82 @@ public class CardDeTurma extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("EEF João Macedo");
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        ativNum.setEditable(false);
+        ativNum.setBackground(new java.awt.Color(252, 252, 252));
+        ativNum.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        ativNum.setForeground(new java.awt.Color(4, 210, 130));
+        ativNum.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ativNum.setText("Editar");
+        ativNum.setBorder(null);
+        ativNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ativNumActionPerformed(evt);
+            }
+        });
+
+        ativNum1.setEditable(false);
+        ativNum1.setBackground(new java.awt.Color(252, 252, 252));
+        ativNum1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        ativNum1.setForeground(new java.awt.Color(51, 51, 51));
+        ativNum1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ativNum1.setText("Excluir");
+        ativNum1.setToolTipText("");
+        ativNum1.setBorder(null);
+        ativNum1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ativNum1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelBordaArredondadaComLinha1Layout = new javax.swing.GroupLayout(panelBordaArredondadaComLinha1);
         panelBordaArredondadaComLinha1.setLayout(panelBordaArredondadaComLinha1Layout);
         panelBordaArredondadaComLinha1Layout.setHorizontalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 4, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBordaArredondadaComLinha1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ativNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(ativNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(40, 40, 40))
+                .addGap(18, 18, 18)
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ativNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ativNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
-        );
+        add(panelBordaArredondadaComLinha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 225));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ativNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ativNumActionPerformed
+
+    private void ativNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativNum1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ativNum1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ativNum;
+    private javax.swing.JTextField ativNum1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
