@@ -13,6 +13,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.awt.Cursor;
 
 import javax.swing.BorderFactory;
 import javax.swing.JDesktopPane;
@@ -92,6 +93,11 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 252, 252));
         setMaximumSize(new java.awt.Dimension(136, 276));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
 
         jScrollPane1.setBorder(null);
 
@@ -103,6 +109,11 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         nomesArea.setWrapStyleWord(true);
         nomesArea.setBorder(null);
         nomesArea.setDisabledTextColor(new java.awt.Color(252, 252, 252));
+        nomesArea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nomesAreaMouseEntered(evt);
+            }
+        });
         jScrollPane1.setViewportView(nomesArea);
 
         lbAtividade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -147,6 +158,15 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        JPanel.setBackground(new Color(0,0,0));
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_formMouseEntered
+
+    private void nomesAreaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nomesAreaMouseEntered
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_nomesAreaMouseEntered
 
 
     private void preecherCards(int id) {

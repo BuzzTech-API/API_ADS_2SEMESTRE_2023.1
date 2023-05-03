@@ -5,6 +5,7 @@
 package GUI.swing;
 
 import GUI.componentes.Menu;
+import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -48,17 +49,33 @@ public class winButton extends javax.swing.JPanel {
         cmdClose = new GUI.swing.MyButton();
         cmdMi = new GUI.swing.MyButton();
 
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
+
         cmdClose.setColor(new java.awt.Color(255, 0, 0));
         cmdClose.setColorClicked(new java.awt.Color(255, 0, 0));
         cmdClose.setColorOver(new java.awt.Color(255, 51, 51));
         cmdClose.setPreferredSize(new java.awt.Dimension(20, 20));
         cmdClose.setRadius(20);
+        cmdClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cmdCloseMouseEntered(evt);
+            }
+        });
 
         cmdMi.setColor(new java.awt.Color(255, 204, 0));
         cmdMi.setColorClicked(new java.awt.Color(255, 255, 51));
         cmdMi.setColorOver(new java.awt.Color(255, 255, 0));
         cmdMi.setPreferredSize(new java.awt.Dimension(20, 20));
         cmdMi.setRadius(20);
+        cmdMi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cmdMiMouseEntered(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -81,6 +98,18 @@ public class winButton extends javax.swing.JPanel {
                 .addGap(3, 3, 3))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdCloseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdCloseMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_cmdCloseMouseEntered
+
+    private void cmdMiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdMiMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_cmdMiMouseEntered
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_formMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

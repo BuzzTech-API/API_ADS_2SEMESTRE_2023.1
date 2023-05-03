@@ -7,8 +7,10 @@ package GUI.componentes;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.Cursor;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
+
 
 import GUI.swing.PanelBorda;
 import GUI.telasInternas.Buscar;
@@ -60,6 +62,11 @@ public class Menu extends javax.swing.JPanel {
         winButton = new GUI.swing.winButton();
 
         setBackground(new java.awt.Color(2, 31, 54));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -71,6 +78,11 @@ public class Menu extends javax.swing.JPanel {
         homeBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         homeBtn.setMargin(new java.awt.Insets(2, -4, 3, 14));
         homeBtn.setRadius(15);
+        homeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                homeBtnMouseEntered(evt);
+            }
+        });
         homeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 homeBtnActionPerformed(evt);
@@ -83,6 +95,11 @@ public class Menu extends javax.swing.JPanel {
         cadastrarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         cadastrarBtn.setMargin(new java.awt.Insets(2, 26, 3, 14));
         cadastrarBtn.setRadius(15);
+        cadastrarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cadastrarBtnMouseEntered(evt);
+            }
+        });
         cadastrarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarBtnActionPerformed(evt);
@@ -96,6 +113,11 @@ public class Menu extends javax.swing.JPanel {
         editarBtn.setIconTextGap(9);
         editarBtn.setMargin(new java.awt.Insets(2, 0, 3, 14));
         editarBtn.setRadius(15);
+        editarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                editarBtnMouseEntered(evt);
+            }
+        });
         editarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarBtnActionPerformed(evt);
@@ -108,6 +130,11 @@ public class Menu extends javax.swing.JPanel {
         buscarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         buscarBtn.setMargin(new java.awt.Insets(2, 0, 3, 14));
         buscarBtn.setRadius(15);
+        buscarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buscarBtnMouseEntered(evt);
+            }
+        });
         buscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarBtnActionPerformed(evt);
@@ -115,6 +142,8 @@ public class Menu extends javax.swing.JPanel {
         });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo1.png"))); // NOI18N
+
+        winButton.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -193,6 +222,26 @@ public class Menu extends javax.swing.JPanel {
         jDesktopPanel.removeAll();
         jDesktopPanel.add(tipoDeCadastro).setVisible(true);
     }//GEN-LAST:event_cadastrarBtnActionPerformed
+
+    private void homeBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeBtnMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_homeBtnMouseEntered
+
+    private void buscarBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarBtnMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_buscarBtnMouseEntered
+
+    private void cadastrarBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarBtnMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_cadastrarBtnMouseEntered
+
+    private void editarBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarBtnMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_editarBtnMouseEntered
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_formMouseEntered
 
 
 
