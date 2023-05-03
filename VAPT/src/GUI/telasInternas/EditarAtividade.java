@@ -5,7 +5,7 @@
 package GUI.telasInternas;
 
 import GUI.popup.PopupConfirmCadastAtiv;
-import dao.TurmaDao;
+
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -14,8 +14,11 @@ import java.util.ArrayList;
 import javax.swing.JFormattedTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.text.MaskFormatter;
+
 import modelo.Atividades;
 import modelo.Turma;
+
+import dao.TurmaDao;
 
 
 public class EditarAtividade extends javax.swing.JInternalFrame {
@@ -27,34 +30,39 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     MaskFormatter mfdata;
 
     
-    public EditarAtividade() {
+    public EditarAtividade(Atividades atividades) {
+        this.atividades = atividades;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         
-        
-        this.atividades = atividades;
         this.turma = turma;
         editarAtiv();
+        preecherComboBoxTurma();
+        
     }
 
    
     @SuppressWarnings("unchecked")
     
     
-    private void editarAtiv(){
-    
-        tipoAtv.setText(this.atividades.getTipo());
-       /* turmas.setText(this.turma.getNome());*/
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        DSolicitado.setText(sdf.format(this.atividades.getData_inicio()));
-        DEntregue.setText(sdf.format(this.atividades.getData_fim()));
+    public void editarAtiv(){
         
+       
+        
+        tipoAtv.setText(this.atividades.getTipo());
         descAtv.setText(this.atividades.getDescricao());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+             DSolicitado.setText(sdf.format(this.atividades.getData_inicio()));
+             DEntregue.setText(sdf.format(this.atividades.getData_fim()));
+        } catch (Exception e) {
+        }
+       
+        
     
-    
-    
+   
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -114,7 +122,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jButton1.setBackground(new java.awt.Color(239, 131, 84));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(2, 30, 54));
-        jButton1.setText("Cadastrar");
+        jButton1.setText("Salvar");
         jButton1.setMaximumSize(new java.awt.Dimension(98, 30));
         jButton1.setMinimumSize(new java.awt.Dimension(98, 30));
         jButton1.setPreferredSize(new java.awt.Dimension(98, 30));
@@ -156,15 +164,19 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel6)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(DSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(turmas, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
+                                        .addComponent(turmas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel3))
                                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,12 +184,9 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(DEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(DSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(110, 110, 110)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -262,13 +271,16 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> turmas;
     // End of variables declaration//GEN-END:variables
 
- public void preecherComboBoxTurma() {
+  private void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
         lista = turmaDao.getTurma();
         for (Turma turma : lista) {
-            turmas.addItem(turma.getNome());
+            turmas.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
         }
+        turmas.setSelectedIndex(atividades.getTurma_id_turma() -1);
     }
+
+
 }
 
    
