@@ -10,17 +10,17 @@ import modelo.Turma;
  *
  * @author Fatec
  */
-public class CardDeTurma extends javax.swing.JPanel {
+public class CardEditarTurma extends javax.swing.JPanel {
 
     /**
      * Creates new form CardDeTurma
      */
-    public CardDeTurma() {
+    public CardEditarTurma() {
         initComponents();
         setOpaque(false);
     }
 
-    public CardDeTurma(Turma turma) {
+    public CardEditarTurma(Turma turma) {
         initComponents();
         setOpaque(false);
         jLabel1.setText("Turma "+turma.getNome());
@@ -46,7 +46,7 @@ public class CardDeTurma extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(219, 156));
 
         panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(252, 252, 252));
-        panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(219, 156));
+        panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(219, 232));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(239, 131, 84));
@@ -66,12 +66,14 @@ public class CardDeTurma extends javax.swing.JPanel {
         myButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         myButton1.setForeground(new java.awt.Color(51, 51, 51));
         myButton1.setText("Excluir");
+        myButton1.setColor(new java.awt.Color(252, 252, 252));
         myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         myButton2.setBackground(new java.awt.Color(252, 252, 252));
         myButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         myButton2.setForeground(new java.awt.Color(4, 210, 130));
         myButton2.setText("Editar");
+        myButton2.setColor(new java.awt.Color(252, 252, 252));
         myButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout panelBordaArredondadaComLinha1Layout = new javax.swing.GroupLayout(panelBordaArredondadaComLinha1);
@@ -85,11 +87,11 @@ public class CardDeTurma extends javax.swing.JPanel {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(32, 32, 32)
                 .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addGap(32, 32, 32))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +106,7 @@ public class CardDeTurma extends javax.swing.JPanel {
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addGap(51, 51, 51))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -115,9 +117,7 @@ public class CardDeTurma extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

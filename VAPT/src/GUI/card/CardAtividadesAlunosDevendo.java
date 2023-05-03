@@ -97,6 +97,9 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 formMouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                formMouseExited(evt);
+            }
         });
 
         jScrollPane1.setBorder(null);
@@ -160,13 +163,18 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
-        JPanel.setBackground(new Color(0,0,0));
+        this.setBackground(new Color(230,230,230));
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_formMouseEntered
 
     private void nomesAreaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nomesAreaMouseEntered
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
     }//GEN-LAST:event_nomesAreaMouseEntered
+
+    private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
+        // TODO add your handling code here:
+        this.setBackground(new Color(252,252,252));
+    }//GEN-LAST:event_formMouseExited
 
 
     private void preecherCards(int id) {
