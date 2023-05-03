@@ -5,6 +5,7 @@
 package GUI.card;
 
 import GUI.swing.ScrollBarCustom;
+import GUI.telasInternas.EditarAtividade;
 import GUI.telasInternas.VisualizarCardsAtividade;
 import dao.AtividadesDao;
 
@@ -12,6 +13,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 
 import javax.swing.JDesktopPane;
@@ -26,16 +28,17 @@ import modelo.Aluno_Atividade;
  */
 public class CardEditAtiv extends javax.swing.JPanel {
 
-    private Atividades atividades = new Atividades();
+    private Atividades atividades;
     private int id;
     private VisualizarCardsAtividade visualizarCardsAtividade;
     
     public CardEditAtiv(Atividades atividades, int id, VisualizarCardsAtividade visualizarCardsAtividade) {
         this.visualizarCardsAtividade = visualizarCardsAtividade;
+        this.atividades = atividades;
         initComponents();
         setOpaque(false);
 
-        this.atividades = atividades;
+        
         preecherCardaNEntregue(id);
         
         ScrollBarCustom sp = new ScrollBarCustom();
@@ -47,6 +50,9 @@ public class CardEditAtiv extends javax.swing.JPanel {
         spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane2.setVerticalScrollBar(sp);
         jScrollPane2.setHorizontalScrollBar(spHorizontal);
+        
+        
+       
     }
 
     /**
@@ -193,9 +199,9 @@ public class CardEditAtiv extends javax.swing.JPanel {
     private void editarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarButtonActionPerformed
         if (visualizarCardsAtividade.getJDesktopPane() !=null) {
             JDesktopPane desktopPane =  visualizarCardsAtividade.getJDesktopPane();
-            //EditarAtividade editarAtividade = new EditarAtividade(atividades);
-            //desktopPane.removeAll();
-            //desktopPane.add(editarAtividade).setVisible(true);
+            EditarAtividade editarAtividade = new EditarAtividade(this.atividades);
+            desktopPane.removeAll();
+            desktopPane.add(editarAtividade).setVisible(true);
         }
     }//GEN-LAST:event_editarButtonActionPerformed
         
