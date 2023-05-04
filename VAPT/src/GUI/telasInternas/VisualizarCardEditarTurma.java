@@ -8,9 +8,8 @@ import javax.swing.JDesktopPane;
 import javax.swing.JLayeredPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
-import GUI.card.CardEditAtiv;
+import GUI.card.CardEditarTurma;
 import GUI.swing.ScrollBarCustom;
-import dao.AtividadesDao;
 import dao.TurmaDao;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -18,16 +17,14 @@ import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import modelo.Atividades;
 
 import modelo.Turma;
 
+public class VisualizarCardEditarTurma extends javax.swing.JInternalFrame {
 
-public class VisualizarCardsAtividade extends javax.swing.JInternalFrame {
-    
     private JDesktopPane jDesktopPane;
     
-    public VisualizarCardsAtividade(JDesktopPane jDesktopPane, int idTurma) {
+    public VisualizarCardEditarTurma(JDesktopPane jDesktopPane) {
         this.jDesktopPane = jDesktopPane;
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -35,25 +32,25 @@ public class VisualizarCardsAtividade extends javax.swing.JInternalFrame {
         
         initComponents();
         
-        
         //Cria a scrollbar customizada vertical
         ScrollBarCustom sp = new ScrollBarCustom();
         sp.setUnitIncrement(20);
         sp.setForeground(new Color(4, 210, 130));
         jScrollPane1.setVerticalScrollBar(sp);
         
-        preencherPane(idTurma);
+        preencherPane();
+        
     }
 
-    public void preencherPane(int idTurma) {
+        public void preencherPane() {
         jLayeredPane1.removeAll();
-        AtividadesDao atividadesDao = new AtividadesDao();
+        TurmaDao turmaDao = new TurmaDao();
         int contador = 0;
-        ArrayList<Atividades> listaAtividades = atividadesDao.buscarTodasAtividadesDaTurma(idTurma);
-        for (int i = 0; i < listaAtividades.size() ; i++)
+        ArrayList<Turma> listaTurma = turmaDao.getTurma();
+        for (int i = 0; i < listaTurma.size() ; i++)
         {
-            CardEditAtiv cardEditAtiv = new CardEditAtiv(listaAtividades.get(i), i+1, this);
-            jLayeredPane1.add(cardEditAtiv);
+            CardEditarTurma cardEditarTurma = new CardEditarTurma(listaTurma.get(i));
+            jLayeredPane1.add(cardEditarTurma);
             contador++;
         }
         
@@ -66,7 +63,6 @@ public class VisualizarCardsAtividade extends javax.swing.JInternalFrame {
         return jDesktopPane;
     }
     
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -74,31 +70,27 @@ public class VisualizarCardsAtividade extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
+        setMaximumSize(new java.awt.Dimension(1018, 638));
+        setMinimumSize(new java.awt.Dimension(1018, 638));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
         jScrollPane1.setBorder(null);
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setMaximumSize(new java.awt.Dimension(1018, 638));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(1018, 638));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jLayeredPane1.setMinimumSize(new java.awt.Dimension(923, 481));
-        jLayeredPane1.setPreferredSize(new java.awt.Dimension(981, 0));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 15, 15));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(20, 27, 75));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 994, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
