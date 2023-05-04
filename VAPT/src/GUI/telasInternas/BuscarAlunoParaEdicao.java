@@ -4,6 +4,8 @@
  */
 package GUI.telasInternas;
 
+import javax.swing.JDesktopPane;
+
 /**
  *
  * @author Lima
@@ -13,7 +15,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
     /**
      * Creates new form BuscarAlunoParaEdicao
      */
-    public BuscarAlunoParaEdicao() {
+    public BuscarAlunoParaEdicao(JDesktopPane jDesktopPane) {
         initComponents();
     }
 
