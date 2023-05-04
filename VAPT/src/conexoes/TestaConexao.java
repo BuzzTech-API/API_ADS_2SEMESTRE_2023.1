@@ -21,6 +21,8 @@ public class TestaConexao {
         Connection conexao = new Conection().getConnection();
         System.out.println("Conexão Aberta");
 
+        TurmaDao turmadao = new TurmaDao();
+        turmadao.deletarTurma(5);
         // Não apagar essa parte abaixo
         String dataString = "23/03/2023"; 
         String dataString1 = "23/05/2023"; 

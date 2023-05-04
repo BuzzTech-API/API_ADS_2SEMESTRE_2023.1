@@ -50,10 +50,11 @@ public class Buscar extends javax.swing.JInternalFrame {
     }
 
     public void preencherPane() {
+        jLayeredPane1.removeAll();
         TurmaDao turmaDao = new TurmaDao();
         int contador = 0;
         for (Turma turma : turmaDao.getTurma()) {
-            CardDeTurma cardDeTurma = new CardDeTurma(turma);
+            CardDeTurma cardDeTurma = new CardDeTurma(turma,this);
             cardDeTurma.addMouseListener(new  MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -66,13 +67,16 @@ public class Buscar extends javax.swing.JInternalFrame {
             contador++;
         }
         
-        jLayeredPane1.setPreferredSize(new Dimension(1006, 200*contador/4));
+        jLayeredPane1.setPreferredSize(new Dimension(1006, 291*contador/4));
+        jLayeredPane1.revalidate();
+        jLayeredPane1.repaint();  
     }
     
     public void preencherPane(ArrayList<Turma> listaTurma) {
+        jLayeredPane1.removeAll();
         int contador = 0;
         for (Turma turma : listaTurma) {
-            CardDeTurma cardDeTurma = new CardDeTurma(turma);
+            CardDeTurma cardDeTurma = new CardDeTurma(turma, this);
             cardDeTurma.addMouseListener(new  MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -86,6 +90,8 @@ public class Buscar extends javax.swing.JInternalFrame {
         }
         
         jLayeredPane1.setPreferredSize(new Dimension(1006, 200*contador/4));
+        jLayeredPane1.revalidate();
+        jLayeredPane1.repaint(); 
     }
     
     @SuppressWarnings("unchecked")
@@ -173,7 +179,7 @@ public class Buscar extends javax.swing.JInternalFrame {
         TurmaDao turmaDao = new TurmaDao();
         jLayeredPane1.removeAll();
         jLayeredPane1.revalidate();
-        jLayeredPane1.repaint();
+        jLayeredPane1.repaint(); 
         if (buscarAluno.equals("")) {
             preencherPane();
         } else {
