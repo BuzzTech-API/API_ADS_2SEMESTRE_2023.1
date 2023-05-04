@@ -4,7 +4,7 @@
  */
 package GUI.telasInternas;
 
-import GUI.popup.PopupConfirmCadastAtiv;
+import GUI.popup.PopupAltAtividade;
 
 import java.sql.Date;
 import java.text.DateFormat;
@@ -20,49 +20,45 @@ import modelo.Turma;
 
 import dao.TurmaDao;
 
-
 public class EditarAtividade extends javax.swing.JInternalFrame {
-    
-    
-      private Atividades atividades = new Atividades();
-      private Turma turma = new Turma();
-     private ArrayList<Turma> lista = new ArrayList<>();
-    MaskFormatter mfdata;
 
-    
-    public EditarAtividade(Atividades atividades) {
-        this.atividades = atividades;
+    private Atividades atividade;
+    private Turma turma = new Turma();
+    private ArrayList<Turma> lista = new ArrayList<>();
+    MaskFormatter mfdata;
+    private int id;
+
+    public EditarAtividade(Atividades atividade, int id) {
+        this.atividade = atividade;
+        this.id = id;
         initComponents();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
-        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-        
+
         this.turma = turma;
         editarAtiv();
         preecherComboBoxTurma();
         
-    }
+        
 
-   
+    }
+    
+    
+
     @SuppressWarnings("unchecked")
-    
-    
-    public void editarAtiv(){
-        
-       
-        
-        tipoAtv.setText(this.atividades.getTipo());
-        descAtv.setText(this.atividades.getDescricao());
+
+    public void editarAtiv() {
+
+        tipoAtv.setText(this.atividade.getTipo());
+        descAtv.setText(this.atividade.getDescricao());
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
-             DSolicitado.setText(sdf.format(this.atividades.getData_inicio()));
-             DEntregue.setText(sdf.format(this.atividades.getData_fim()));
+            diaSolicitado.setText(sdf.format(this.atividade.getData_inicio()));
+            diaEntregue.setText(sdf.format(this.atividade.getData_fim()));
         } catch (Exception e) {
         }
-       
-        
-    
-   
+
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -81,8 +77,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         descAtv = new javax.swing.JTextArea();
-        DEntregue = new javax.swing.JFormattedTextField();
-        DSolicitado = new javax.swing.JFormattedTextField();
+        diaEntregue = new javax.swing.JFormattedTextField();
+        diaSolicitado = new javax.swing.JFormattedTextField();
 
         setBackground(new java.awt.Color(217, 217, 217));
 
@@ -137,18 +133,18 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(descAtv);
 
         try {
-            DEntregue.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            diaEntregue.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        DEntregue.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        diaEntregue.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         try {
-            DSolicitado.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            diaSolicitado.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        DSolicitado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        diaSolicitado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -168,7 +164,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                             .addComponent(jLabel6)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(DSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -183,7 +179,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(DEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(diaEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(110, 110, 110)))))
@@ -205,13 +201,13 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(DSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(DEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(diaEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -242,20 +238,43 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void turmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmasActionPerformed
-       
-        
+
+
     }//GEN-LAST:event_turmasActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        int id = turmas.getSelectedIndex();
+        Turma turma = this.lista.get(id);
+        atividade.setTipo(tipoAtv.getText());
+        atividade.setDescricao(descAtv.getText());
+        atividade.setTurma_id_turma(turma.getId_turma());
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            java.util.Date dataEntrega = df.parse(diaEntregue.getText());
+            java.util.Date dataSolicitacao = df.parse(diaSolicitado.getText());
+            java.sql.Date sqlDate = new java.sql.Date(dataEntrega.getTime());
+            java.sql.Date sqlDate2 = new java.sql.Date(dataSolicitacao.getTime());
+            atividade.setData_inicio(sqlDate2);
+            atividade.setData_fim(sqlDate);
+
+            PopupAltAtividade popup = new PopupAltAtividade(atividade," "+id);
+            popup.setVisible(true);
+
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
         // TODO add your handling code here:
-     
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField DEntregue;
-    private javax.swing.JFormattedTextField DSolicitado;
     private javax.swing.JTextArea descAtv;
+    private javax.swing.JFormattedTextField diaEntregue;
+    private javax.swing.JFormattedTextField diaSolicitado;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -271,16 +290,13 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> turmas;
     // End of variables declaration//GEN-END:variables
 
-  private void preecherComboBoxTurma() {
+    private void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
         lista = turmaDao.getTurma();
         for (Turma turma : lista) {
-            turmas.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+            turmas.addItem("Turma: " + turma.getNome() + " - Escola: " + turma.getNome_escola());
         }
-        turmas.setSelectedIndex(atividades.getTurma_id_turma() -1);
+        turmas.setSelectedIndex(atividade.getTurma_id_turma() - 1);
     }
 
-
 }
-
-   

@@ -33,14 +33,14 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
      */
     private ArrayList<Turma> lista = new ArrayList<>();
     MaskFormatter mfdata;
-    
+
     public AtividadesCadastradas() {
         initComponents();
-         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
-        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         preecherComboBoxTurma();
-      
+
     }
 
     public JTextArea getDescAtv() {
@@ -300,10 +300,10 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             java.sql.Date sqlDate2 = new java.sql.Date(dataSolicitacao.getTime());
             atividade.setData_inicio(sqlDate2);
             atividade.setData_fim(sqlDate);
-            
+
             PopupConfirmCadastAtiv popup = new PopupConfirmCadastAtiv(atividade, AtividadesCadastradas.this, turma.getNome());
             popup.setVisible(true);
-            
+
         } catch (ParseException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -373,7 +373,7 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         TurmaDao turmaDao = new TurmaDao();
         lista = turmaDao.getTurma();
         for (Turma turma : lista) {
-            jComboBox1.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+            jComboBox1.addItem("Turma: " + turma.getNome() + " - Escola: " + turma.getNome_escola());
         }
     }
 

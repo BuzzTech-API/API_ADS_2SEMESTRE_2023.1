@@ -199,7 +199,7 @@ public class CardEditAtiv extends javax.swing.JPanel {
     private void editarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarButtonActionPerformed
         if (visualizarCardsAtividade.getJDesktopPane() !=null) {
             JDesktopPane desktopPane =  visualizarCardsAtividade.getJDesktopPane();
-            EditarAtividade editarAtividade = new EditarAtividade(this.atividades);
+            EditarAtividade editarAtividade = new EditarAtividade(this.atividades, id);
             desktopPane.removeAll();
             desktopPane.add(editarAtividade).setVisible(true);
         }

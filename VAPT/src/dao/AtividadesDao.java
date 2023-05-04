@@ -85,15 +85,16 @@ public class AtividadesDao {
 "`descricao` = ?,\n" +
 "`data_inicio` = ?,\n" +
 "`data_fim` = ?,\n" +
-"WHERE `id_atividade` = ? AND `Turma_id_turma` = ?;";
+"`Turma_id_turma` = ?, " +
+"WHERE `id_atividade` = ? ;";
         try {
             stmt = conexao.prepareStatement(sql);
             stmt.setString(1, atividades.getTipo());
             stmt.setString(2, atividades.getDescricao());
             stmt.setDate(3, atividades.getData_inicio());
             stmt.setDate(4, atividades.getData_fim());
-            stmt.setInt(5,atividades.getId_atividade());
-            stmt.setInt(6, atividades.getTurma_id_turma());
+            stmt.setInt(6,atividades.getId_atividade());
+            stmt.setInt(5, atividades.getTurma_id_turma());
             stmt.execute();
             stmt.close();
             PopupCadasrSucesso popup = new PopupCadasrSucesso();
