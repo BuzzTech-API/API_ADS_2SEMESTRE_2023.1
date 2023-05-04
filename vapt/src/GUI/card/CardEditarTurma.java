@@ -4,6 +4,7 @@
  */
 package GUI.card;
 
+import dao.TurmaDao;
 import modelo.Turma;
 
 /**
@@ -12,15 +13,15 @@ import modelo.Turma;
  */
 public class CardEditarTurma extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CardDeTurma
-     */
+    private Turma turma;
+       
     public CardEditarTurma() {
         initComponents();
         setOpaque(false);
     }
 
     public CardEditarTurma(Turma turma) {
+        this.turma = turma;
         initComponents();
         setOpaque(false);
         jLabel1.setText("Turma "+turma.getNome());
@@ -43,9 +44,10 @@ public class CardEditarTurma extends javax.swing.JPanel {
         myButton1 = new GUI.swing.MyButton();
         myButton2 = new GUI.swing.MyButton();
 
-        setPreferredSize(new java.awt.Dimension(219, 156));
+        setPreferredSize(new java.awt.Dimension(219, 232));
 
         panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(252, 252, 252));
+        panelBordaArredondadaComLinha1.setMinimumSize(new java.awt.Dimension(219, 232));
         panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(219, 232));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -68,6 +70,11 @@ public class CardEditarTurma extends javax.swing.JPanel {
         myButton1.setText("Excluir");
         myButton1.setColor(new java.awt.Color(252, 252, 252));
         myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myButton1ActionPerformed(evt);
+            }
+        });
 
         myButton2.setBackground(new java.awt.Color(252, 252, 252));
         myButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -81,17 +88,17 @@ public class CardEditarTurma extends javax.swing.JPanel {
         panelBordaArredondadaComLinha1Layout.setHorizontalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
+                    .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,6 +127,11 @@ public class CardEditarTurma extends javax.swing.JPanel {
             .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+        TurmaDao turmadao = new TurmaDao();
+        turmadao.deletarTurma(turma.getId_turma());  
+    }//GEN-LAST:event_myButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

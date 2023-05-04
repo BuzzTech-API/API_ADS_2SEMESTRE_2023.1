@@ -4,6 +4,8 @@
  */
 package GUI.card;
 
+import GUI.telasInternas.Buscar;
+import dao.TurmaDao;
 import modelo.Turma;
 
 /**
@@ -11,16 +13,19 @@ import modelo.Turma;
  * @author Fatec
  */
 public class CardDeTurma extends javax.swing.JPanel {
+    
+    private Buscar buscar;
 
-    /**
-     * Creates new form CardDeTurma
-     */
+    private Turma turma;
+    
     public CardDeTurma() {
         initComponents();
         setOpaque(false);
     }
 
-    public CardDeTurma(Turma turma) {
+    public CardDeTurma(Turma turma, Buscar buscar) {
+        this.buscar = buscar;
+        this.turma = turma;
         initComponents();
         setOpaque(false);
         jLabel1.setText("Turma "+turma.getNome());
@@ -40,12 +45,15 @@ public class CardDeTurma extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        myButton1 = new GUI.swing.MyButton();
+        myButton2 = new GUI.swing.MyButton();
 
-        setPreferredSize(new java.awt.Dimension(219, 156));
+        setPreferredSize(new java.awt.Dimension(220, 240));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(252, 252, 252));
-        panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(219, 156));
+        panelBordaArredondadaComLinha1.setMinimumSize(new java.awt.Dimension(220, 191));
+        panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(220, 191));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(239, 131, 84));
@@ -63,6 +71,25 @@ public class CardDeTurma extends javax.swing.JPanel {
         jLabel3.setText("EEF João Macedo");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        myButton1.setBackground(new java.awt.Color(252, 252, 252));
+        myButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        myButton1.setForeground(new java.awt.Color(51, 51, 51));
+        myButton1.setText("Excluir");
+        myButton1.setColor(new java.awt.Color(252, 252, 252));
+        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myButton1ActionPerformed(evt);
+            }
+        });
+
+        myButton2.setBackground(new java.awt.Color(252, 252, 252));
+        myButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        myButton2.setForeground(new java.awt.Color(4, 210, 130));
+        myButton2.setText("Editar");
+        myButton2.setColor(new java.awt.Color(252, 252, 252));
+        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
         javax.swing.GroupLayout panelBordaArredondadaComLinha1Layout = new javax.swing.GroupLayout(panelBordaArredondadaComLinha1);
         panelBordaArredondadaComLinha1.setLayout(panelBordaArredondadaComLinha1Layout);
         panelBordaArredondadaComLinha1Layout.setHorizontalGroup(
@@ -72,7 +99,13 @@ public class CardDeTurma extends javax.swing.JPanel {
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 5, Short.MAX_VALUE))
+            .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,17 +116,30 @@ public class CardDeTurma extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(81, 81, 81))
+                .addGap(18, 18, 18)
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        add(panelBordaArredondadaComLinha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 190));
+        add(panelBordaArredondadaComLinha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 240));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+        TurmaDao turmadao = new TurmaDao();
+        turmadao.deletarTurma(turma.getId_turma());
+        buscar.preencherPane();
+        
+    }//GEN-LAST:event_myButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private GUI.swing.MyButton myButton1;
+    private GUI.swing.MyButton myButton2;
     private GUI.swing.PanelBordaArredondadaComLinha panelBordaArredondadaComLinha1;
     // End of variables declaration//GEN-END:variables
 }
