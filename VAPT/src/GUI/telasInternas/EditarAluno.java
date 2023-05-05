@@ -4,10 +4,13 @@
  */
 package GUI.telasInternas;
 
+import GUI.popup.PopupAltAluno;
+import GUI.popup.PopupConfirmCadastAluno;
 import dao.TurmaDao;
 import java.util.ArrayList;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
+import modelo.Atividades;
 import modelo.Turma;
 
 
@@ -56,7 +59,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
         jLabel1.setBackground(new java.awt.Color(4, 210, 130));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
-        jLabel1.setText("Cadastrar Aluno:");
+        jLabel1.setText("Alterar Aluno:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Nome aluno:");
@@ -189,7 +192,24 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_excluirAluActionPerformed
 
     private void salvarAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarAluActionPerformed
-        // TODO add your handling code here:
+         int id = turmaAlu.getSelectedIndex();
+        Aluno aluno = new Aluno();
+        Turma turma = this.lista.get(id);
+        turma.buscarAtividades();
+        ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
+        aluno.setNome(alunoNome.getText());
+        aluno.setId_turma(turma.getId_turma());
+        
+        PopupAltAluno popup = new PopupAltAluno(aluno);
+        popup.setVisible(true);
+                
+                
+                
+                
+                
+                
+                
+                
     }//GEN-LAST:event_salvarAluActionPerformed
 
 
