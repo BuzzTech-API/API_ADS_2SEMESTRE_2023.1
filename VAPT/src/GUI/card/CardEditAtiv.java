@@ -4,6 +4,7 @@
  */
 package GUI.card;
 
+import GUI.popup.PopupExcluAtividade;
 import GUI.swing.ScrollBarCustom;
 import GUI.telasInternas.EditarAtividade;
 import GUI.telasInternas.VisualizarCardsAtividade;
@@ -192,8 +193,8 @@ public class CardEditAtiv extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void excluirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirButtonActionPerformed
-        new AtividadesDao().deletarAtividade(atividades.getId_atividade());
-        visualizarCardsAtividade.preencherPane(atividades.getTurma_id_turma());
+        PopupExcluAtividade popup = new PopupExcluAtividade(atividades, visualizarCardsAtividade);
+        popup.setVisible(true);
     }//GEN-LAST:event_excluirButtonActionPerformed
 
     private void editarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarButtonActionPerformed
