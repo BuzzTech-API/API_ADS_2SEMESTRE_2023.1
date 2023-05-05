@@ -4,17 +4,29 @@
  */
 package GUI.popup;
 
+import dao.AlunoDao;
+import dao.AtividadesDao;
+import modelo.Aluno;
+
+
 /**
  *
  * @author Alicea
  */
 public class PopupAltAluno extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopupAltAluno
-     */
-    public PopupAltAluno() {
+    private Aluno aluno;
+    
+    public PopupAltAluno(Aluno aluno) {
+        this.aluno = aluno;
         initComponents();
+       
+    }
+    
+    public PopupAltAluno() {
+        
+        initComponents();
+        
     }
 
     /**
@@ -64,6 +76,11 @@ public class PopupAltAluno extends javax.swing.JFrame {
         botaoSalvar.setMaximumSize(new java.awt.Dimension(95, 27));
         botaoSalvar.setMinimumSize(new java.awt.Dimension(95, 27));
         botaoSalvar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSalvarActionPerformed(evt);
+            }
+        });
 
         botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
@@ -129,6 +146,12 @@ public class PopupAltAluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
+       //  AlunoDao alunoDao = new AlunoDao();
+       // alunoDao.alterar(aluno);
+       // this.dispose();
+    }//GEN-LAST:event_botaoSalvarActionPerformed
 
     /**
      * @param args the command line arguments

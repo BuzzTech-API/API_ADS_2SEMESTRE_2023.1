@@ -148,8 +148,6 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         AtividadesDao atividadesDao = new AtividadesDao();
         atividadesDao.alterar(atividade);
         this.dispose();
-
-
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
     /**
