@@ -80,13 +80,13 @@ public class AtividadesDao {
     }
     public void alterar (Atividades atividades) {
         String sql = "UPDATE `vapt`.`atividade`\n" +
-"SET\n" +
-"`tipo` = ?,\n" +
-"`descricao` = ?,\n" +
-"`data_inicio` = ?,\n" +
-"`data_fim` = ?,\n" +
-"`Turma_id_turma` = ?, " +
-"WHERE `id_atividade` = ? ;";
+        "SET\n" +
+        "`tipo` = ?,\n" +
+        "`descricao` = ?,\n" +
+        "`data_inicio` = ?,\n" +
+        "`data_fim` = ?,\n" +
+        "`Turma_id_turma` = ? " + // removido o espaço extra antes do "WHERE"
+        "WHERE `id_atividade` = ? ;";
         try {
             stmt = conexao.prepareStatement(sql);
             stmt.setString(1, atividades.getTipo());
