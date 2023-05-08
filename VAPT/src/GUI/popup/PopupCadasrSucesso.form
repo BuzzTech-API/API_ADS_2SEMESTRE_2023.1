@@ -122,6 +122,9 @@
               <Image iconType="3" name="/img/check.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="iconeCheckMouseClicked"/>
+          </Events>
         </Component>
         <Component class="GUI.swing.MyButton" name="myButton2">
           <Properties>

@@ -45,6 +45,11 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
         texto1.setText("Dado cadastrado com sucesso!");
 
         iconeCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
+        iconeCheck.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconeCheckMouseClicked(evt);
+            }
+        });
 
         myButton2.setBackground(new java.awt.Color(242, 242, 242));
         myButton2.setText("X");
@@ -107,6 +112,10 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
     private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
         this.dispose();
     }//GEN-LAST:event_myButton2ActionPerformed
+
+    private void iconeCheckMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconeCheckMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_iconeCheckMouseClicked
 
     /**
      * @param args the command line arguments
