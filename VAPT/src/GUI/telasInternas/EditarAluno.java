@@ -19,6 +19,7 @@ import modelo.Turma;
 public class EditarAluno extends javax.swing.JInternalFrame {
     
     private Aluno aluno = new Aluno();
+    private EditarAluno editarAluno;
     private ArrayList<Turma> lista = new ArrayList<>();
 
     public EditarAluno() {
@@ -190,7 +191,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_turmaAluActionPerformed
 
     private void excluirAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirAluActionPerformed
-        PopupExcluAluno popup = new PopupExcluAluno();
+        PopupExcluAluno popup = new PopupExcluAluno(aluno,  editarAluno);
         popup.setVisible(true);
     }//GEN-LAST:event_excluirAluActionPerformed
 

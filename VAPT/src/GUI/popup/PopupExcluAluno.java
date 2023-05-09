@@ -16,11 +16,23 @@ public class PopupExcluAluno extends javax.swing.JFrame {
 
     private Aluno aluno;
     private EditarAluno editarAluno;
-    public PopupExcluAluno() {
+   
+    
+    
+    
+     public PopupExcluAluno() {
+       
+        initComponents();
+    }
+    
+    
+    public PopupExcluAluno(Aluno aluno, EditarAluno editarAluno) {
         this.aluno = aluno;
         this.editarAluno = editarAluno;
         initComponents();
     }
+    
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
