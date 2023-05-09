@@ -4,16 +4,21 @@
  */
 package GUI.popup;
 
+import GUI.telasInternas.EditarAluno;
+import dao.AlunoDao;
+import modelo.Aluno;
+
 /**
  *
  * @author Alicea
  */
 public class PopupExcluAluno extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopupExcluAluno
-     */
+    private Aluno aluno;
+    private EditarAluno editarAluno;
     public PopupExcluAluno() {
+        this.aluno = aluno;
+        this.editarAluno = editarAluno;
         initComponents();
     }
 
@@ -134,7 +139,10 @@ public class PopupExcluAluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
-        // TODO add your handling code here:
+         new AlunoDao().deletarAluno(aluno.getId_aluno());
+         editarAluno.preencherPane(aluno.getNome());
+        
+         this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
 
     /**

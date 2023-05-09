@@ -6,6 +6,8 @@ package GUI.telasInternas;
 
 import GUI.popup.PopupAltAluno;
 import GUI.popup.PopupConfirmCadastAluno;
+import GUI.popup.PopupExcluAluno;
+
 import dao.TurmaDao;
 import java.util.ArrayList;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -188,7 +190,8 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_turmaAluActionPerformed
 
     private void excluirAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirAluActionPerformed
-       
+        PopupExcluAluno popup = new PopupExcluAluno();
+        popup.setVisible(true);
     }//GEN-LAST:event_excluirAluActionPerformed
 
     private void salvarAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarAluActionPerformed
@@ -232,6 +235,10 @@ public class EditarAluno extends javax.swing.JInternalFrame {
                 turmaAlu.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
             }
         }
+
+    public void preencherPane(String nome) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     }
 
 
