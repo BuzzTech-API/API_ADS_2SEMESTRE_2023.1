@@ -112,18 +112,16 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
 
         jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 30, 5));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 30, 5));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         porcentagemEntregueAtrasado.setEditable(false);
         porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemEntregueAtrasado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                porcentagemEntregueAtrasadoActionPerformed(evt);
-            }
-        });
+        porcentagemEntregueAtrasado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        porcentagemEntregueAtrasado.setText("10%");
+        porcentagemEntregueAtrasado.setBorder(null);
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
         texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -139,7 +137,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         salvaEntregueAtrasada.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         salvaEntregueAtrasada.setText("Salvar");
         salvaEntregueAtrasada.setToolTipText("");
-        salvaEntregueAtrasada.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        salvaEntregueAtrasada.setBorder(new javax.swing.border.SoftBevelBorder(0));
         salvaEntregueAtrasada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salvaEntregueAtrasadaActionPerformed(evt);
@@ -169,8 +167,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -183,7 +181,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                     .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)

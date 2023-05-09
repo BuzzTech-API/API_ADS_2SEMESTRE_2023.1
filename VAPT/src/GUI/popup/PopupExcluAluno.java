@@ -153,7 +153,6 @@ public class PopupExcluAluno extends javax.swing.JFrame {
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
          new AlunoDao().deletarAluno(aluno.getId_aluno());
          editarAluno.preencherPane(aluno.getNome());
-        
          this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
 
