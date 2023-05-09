@@ -4,6 +4,7 @@
  */
 package GUI.telasInternas;
 
+import GUI.card.CardDeTurma;
 import javax.swing.JDesktopPane;
 import javax.swing.JLayeredPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -49,8 +50,8 @@ public class VisualizarCardEditarTurma extends javax.swing.JInternalFrame {
         ArrayList<Turma> listaTurma = turmaDao.getTurma();
         for (int i = 0; i < listaTurma.size() ; i++)
         {
-            CardEditarTurma cardEditarTurma = new CardEditarTurma(listaTurma.get(i));
-            jLayeredPane1.add(cardEditarTurma);
+            CardDeTurma cardDeTurma = new CardDeTurma(listaTurma.get(i), this);
+            jLayeredPane1.add(cardDeTurma);
             contador++;
         }
         
