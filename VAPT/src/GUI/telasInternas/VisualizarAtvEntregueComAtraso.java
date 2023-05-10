@@ -68,11 +68,14 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
             if(atividade_Entregue.getAluno_Ativadade_entrega()){
-                CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
-                jLayeredPane1.add(cards);
-                
-                
-            contador++;
+                java.util.Date data = atividade_Entregue.getAtividade().getData_fim();
+                java.util.Date data2 = atividade_Entregue.getAluno_Atividade_data_entrega();
+                if (data2.compareTo(data)>0) {
+                    CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
+                    jLayeredPane1.add(cards);
+                    contador++;
+                }
+            
             }}
            
         float porcentagem = (float) contador / listaAlunoAtividade.size();
@@ -82,9 +85,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
-        porcentagemEntregueAtrasado.setText(porcetagemString);
-        }
-        jLayeredPane1.revalidate();
+        porcentagemEntregueAtrasado.setText(porcetagemString);}
         jLayeredPane1.repaint();
         
         
