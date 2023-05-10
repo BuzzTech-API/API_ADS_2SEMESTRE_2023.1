@@ -1,4 +1,4 @@
-
+Revisado por Lindinha
 
 # Sprint 2 - Dados Estatísticos
 
