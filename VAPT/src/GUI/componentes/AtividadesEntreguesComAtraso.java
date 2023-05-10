@@ -135,7 +135,7 @@ public class AtividadesEntreguesComAtraso extends javax.swing.JPanel {
                 jlabel.addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        AtividadeDadosAluno atividadeDadosAluno = new AtividadeDadosAluno(aluno);
+                        AtividadeDadosAluno atividadeDadosAluno = new AtividadeDadosAluno(aluno, jDesktopPane);
                         jDesktopPane.removeAll();
                         jDesktopPane.add(atividadeDadosAluno).setVisible(true);
                     }

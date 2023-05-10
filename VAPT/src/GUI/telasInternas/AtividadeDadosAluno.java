@@ -19,20 +19,20 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
     
     private Aluno aluno;
     
-    public AtividadeDadosAluno(Aluno aluno) {
+    public AtividadeDadosAluno(Aluno aluno, JDesktopPane jDesktopPanel) {
         this.jDesktopPanel = jDesktopPanel;
+        this.aluno = aluno;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-        this.aluno = aluno;
+        
         nomeAluno.setText(aluno.getNome());
         Turma turma = new TurmaDao().buscarPorId(aluno.getId_turma());
         nomeTurma.setText("Turma "+turma.getNome());
         nomeEscola.setText(turma.getNome_escola());
-        VisualizarAtvEntregueComAtraso visuCard = new VisualizarAtvEntregueComAtraso( recebeCardsAtv, jDesktopPanel, aluno);
-        recebeCardsAtv.add(visuCard).setVisible(true);
-        VisualizarAtvNaoEntregue visuCard2 = new VisualizarAtvNaoEntregue( recebeCardsAtv, jDesktopPanel, aluno);
+        
+        VisualizarAtvNaoEntregue visuCard2 = new VisualizarAtvNaoEntregue(  jDesktopPanel, recebeCardsAtv, aluno);
         recebeCardsAtv.add(visuCard2).setVisible(true);
     }
 

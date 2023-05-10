@@ -32,7 +32,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
      
     
      
-    public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1,JDesktopPane recebeCardsAtv,Aluno aluno) {
+    public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1, JDesktopPane recebeCardsAtv,Aluno aluno) {
         this.jDesktopPanel = jDesktopPanel1;
         this.recebeCardsAtv = recebeCardsAtv;
         initComponents();
@@ -61,6 +61,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     
      public void preencherAtv1entregue() {
+        jLayeredPane1.removeAll();
         Aluno_AtividadeDao atvAluno = new Aluno_AtividadeDao();
          ArrayList<Aluno_Atividade> listaAlunoAtividade = atvAluno.buscarAtividadesDeUmAluno(aluno.getId_aluno());
         int contador=0;
@@ -81,8 +82,10 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
-        porcentagemEntregueAtrasado.setText(porcetagemString);}
-        
+        porcentagemEntregueAtrasado.setText(porcetagemString);
+        }
+        jLayeredPane1.revalidate();
+        jLayeredPane1.repaint();
         
         
         }
@@ -208,12 +211,19 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void salvaEntregueAtrasadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvaEntregueAtrasadaActionPerformed
-        // TODO add your handling code here:
-        
+     for (int i = 0; i < jLayeredPane1.getComponentCount(); i++) {
+                CardAtivEntregue checkBoxContainer = (CardAtivEntregue) jLayeredPane1.getComponent(i);
+                checkBoxContainer.atualizCards();
+                }
+                preencherAtv1entregue();
+                
+                
+                
+      
     }//GEN-LAST:event_salvaEntregueAtrasadaActionPerformed
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        VisualizarAtvNaoEntregue visuEntreg = new VisualizarAtvNaoEntregue( recebeCardsAtv,jDesktopPanel, aluno);
+        VisualizarAtvNaoEntregue visuEntreg = new VisualizarAtvNaoEntregue( jDesktopPanel, recebeCardsAtv, aluno);
         recebeCardsAtv.removeAll();
         recebeCardsAtv.add(visuEntreg).setVisible(true);
     }//GEN-LAST:event_myButton1ActionPerformed

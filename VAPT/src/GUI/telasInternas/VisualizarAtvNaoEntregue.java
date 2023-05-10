@@ -8,6 +8,7 @@ package GUI.telasInternas;
 
 
 import GUI.card.CardAtviNaoEntregue;
+import GUI.componentes.CheckBoxContainer;
 import GUI.swing.ScrollBarCustom;
 import dao.Aluno_AtividadeDao;
 import java.awt.Color;
@@ -17,6 +18,7 @@ import javax.swing.JScrollBar;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
+import modelo.Atividades;
 
 /**
  *
@@ -27,12 +29,14 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     private JDesktopPane jDesktopPane;
     private JDesktopPane recebeCardsAtv;
     private Aluno aluno;
+    private Atividades atividades;
     javax.swing.JDesktopPane jDesktopPanePrincipal;
 
     
-    public VisualizarAtvNaoEntregue(JDesktopPane recebeCardsAtv, JDesktopPane jDesktopPanel1,Aluno aluno ) {
+    public VisualizarAtvNaoEntregue( JDesktopPane jDesktopPanel1, JDesktopPane recebeCardsAtv, Aluno aluno) {
         this.jDesktopPane = jDesktopPanel1;
         this.recebeCardsAtv = recebeCardsAtv;
+        this.aluno = aluno;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -42,7 +46,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         spHorizontal.setUnitIncrement(20);
         spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane1.setHorizontalScrollBar(spHorizontal);
-        this.aluno = aluno;
+      
         preencherAtvNaoEntregue();
         
         
@@ -58,6 +62,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     
     
     public void preencherAtvNaoEntregue() {
+        jLayeredPane2.removeAll();
         Aluno_AtividadeDao atvAluno = new Aluno_AtividadeDao();
          ArrayList<Aluno_Atividade> listaAlunoAtividade = atvAluno.buscarAtividadesDeUmAluno(aluno.getId_aluno());
         int contador = 0;
@@ -69,7 +74,9 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                 
                 contador++;
             }
+
         }
+        
         
         float porcentagem = (float) contador / listaAlunoAtividade.size();
         porcentagem *= 100;
@@ -78,8 +85,10 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
-        porcentagemNaoEntregue.setText(porcetagemString);}
-            
+        porcentagemNaoEntregue.setText(porcetagemString);
+        }
+        jLayeredPane2.revalidate();
+        jLayeredPane2.repaint();    
         }
     
     
@@ -197,7 +206,15 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+     for (int i = 0; i < jLayeredPane2.getComponentCount(); i++) {
+                CardAtviNaoEntregue checkBoxContainer = (CardAtviNaoEntregue) jLayeredPane2.getComponent(i);
+                checkBoxContainer.atualizCards();
+    }
+    preencherAtvNaoEntregue();
+                
+                
+                
+                
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void porcentagemNaoEntregueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_porcentagemNaoEntregueActionPerformed
