@@ -69,10 +69,12 @@ Essas tarefas foram escolhidas para garantir que a parte mais importante do proj
 
 |                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
-|      Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :white_check_mark: |
-|   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :white_check_mark: |
+|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :white_check_mark: |
+|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :white_check_mark: |
+|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :white_check_mark: |
+
+
+
 
 
 <br>
