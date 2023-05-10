@@ -141,7 +141,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Concluído :white_check_mark:
 
-🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Em construção :construction:
+🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Concluído :white_check_mark:
 
 🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Em construção :construction:
 
@@ -166,9 +166,9 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :white_check_mark: |
 |   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :white_check_mark: |
 |  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :construction: |
-|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :construction: |
-|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :construction: |
+|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :white_check_mark: |
+|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :white_check_mark: |
+|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :white_check_mark: |
 |  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :construction: |
 
 
