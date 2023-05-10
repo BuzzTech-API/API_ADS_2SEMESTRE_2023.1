@@ -6,6 +6,7 @@ package GUI.telasInternas;
 
 import GUI.card.CardAtivEntregue;
 import GUI.swing.ScrollBarCustom;
+import GUI.telasInternas.VisualizarAtvNaoEntregue;
 import dao.Aluno_AtividadeDao;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -68,11 +69,14 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
             if(atividade_Entregue.getAluno_Ativadade_entrega()){
-                CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
-                jLayeredPane1.add(cards);
-                
-                
-            contador++;
+                java.util.Date data = atividade_Entregue.getAtividade().getData_fim();
+                java.util.Date data2 = atividade_Entregue.getAluno_Atividade_data_entrega();
+                if (data2.compareTo(data)>0) {
+                    CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
+                    jLayeredPane1.add(cards);
+                    contador++;
+                }
+            
             }}
            
         float porcentagem = (float) contador / listaAlunoAtividade.size();
@@ -82,9 +86,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         }else{
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
-        porcentagemEntregueAtrasado.setText(porcetagemString);
-        }
-        jLayeredPane1.revalidate();
+        porcentagemEntregueAtrasado.setText(porcetagemString);}
         jLayeredPane1.repaint();
         
         
@@ -122,11 +124,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemEntregueAtrasado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                porcentagemEntregueAtrasadoActionPerformed(evt);
-            }
-        });
+        porcentagemEntregueAtrasado.setText("10%");
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
         texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -172,8 +170,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
