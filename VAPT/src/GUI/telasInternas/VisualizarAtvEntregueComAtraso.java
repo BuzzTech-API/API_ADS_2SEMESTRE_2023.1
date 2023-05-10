@@ -35,6 +35,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
     public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1, JDesktopPane recebeCardsAtv,Aluno aluno) {
         this.jDesktopPanel = jDesktopPanel1;
         this.recebeCardsAtv = recebeCardsAtv;
+        this.aluno = aluno;
+        
         initComponents();
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -44,7 +46,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         spHorizontal.setUnitIncrement(20);
         spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane1.setHorizontalScrollBar(spHorizontal);
-        this.aluno = aluno;
+       
         preencherAtv1entregue();
         
         /*this.listaAlunoAtividade*/
