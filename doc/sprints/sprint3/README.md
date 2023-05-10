@@ -212,10 +212,9 @@ Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando
 
 |          ID           |                     História de Usuário                      |
 | :-------------------: | :----------------------------------------------------------: |
-| US09<a id='us09'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
-| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US11<a id='us11'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US12<a id='us12'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
+| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no programa. |
+| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
+| US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
 
 
 <br>
