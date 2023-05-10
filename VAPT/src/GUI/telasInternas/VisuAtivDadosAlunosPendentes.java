@@ -162,7 +162,8 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jDesktopPane.removeAll();
         jDesktopPane.add(teste).setVisible(true);
     }//GEN-LAST:event_editAlunosPendesntesActionPerformed
- private void prencherTextArea(){
+ 
+    private void prencherTextArea(){
       int contador=0;
         for (Aluno_Atividade aluno_Atividade : listaAluno_Atividades) {
             if (!aluno_Atividade.getAluno_Ativadade_entrega()) {
@@ -177,7 +178,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 jlabel.addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        AtividadeDadosAluno atividadeDadosAluno = new AtividadeDadosAluno(aluno_Atividade.getAluno());
+                        AtividadeDadosAluno atividadeDadosAluno = new AtividadeDadosAluno(aluno_Atividade.getAluno(), jDesktopPanePrincipal);
                         jDesktopPanePrincipal.removeAll();
                         jDesktopPanePrincipal.add(atividadeDadosAluno).setVisible(true);
                     }

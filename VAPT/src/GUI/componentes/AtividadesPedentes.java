@@ -109,7 +109,7 @@ public class AtividadesPedentes extends javax.swing.JPanel {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     jDesktopPane.removeAll();
-                    jDesktopPane.add(new AtividadeDadosAluno(aluno)).setVisible(true);
+                    jDesktopPane.add(new AtividadeDadosAluno(aluno, jDesktopPane)).setVisible(true);
                 }
                 
             });
