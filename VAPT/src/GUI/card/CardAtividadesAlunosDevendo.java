@@ -119,17 +119,18 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(nomesArea);
 
-        lbAtividade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lbAtividade.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbAtividade.setForeground(new java.awt.Color(79, 93, 117));
         lbAtividade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbAtividade.setText("Atividade ");
 
-        lbData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lbData.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         lbData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendario.png"))); // NOI18N
         lbData.setText("Data: ");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("10% pendente");
 
@@ -138,7 +139,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lbData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(1, 1, 1))
@@ -157,7 +158,7 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
                 .addGap(1, 1, 1)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
