@@ -6,8 +6,11 @@ package GUI.card;
 
 import GUI.popup.PopupExcluTurma;
 import GUI.telasInternas.Buscar;
+import GUI.telasInternas.EditarAtividade;
+import GUI.telasInternas.EditarTurma;
 import GUI.telasInternas.VisualizarCardEditarTurma;
 import dao.TurmaDao;
+import javax.swing.JDesktopPane;
 import modelo.Turma;
 
 /**
@@ -168,6 +171,22 @@ public class CardDeTurma extends javax.swing.JPanel {
         
 
     }//GEN-LAST:event_myButton1ActionPerformed
+
+    private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
+        // TODO add your handling code here:
+        if (buscar == null) {
+            JDesktopPane desktopPane =  visualizarCardEditarTurma.getJDesktopPane();
+            EditarTurma editarturma = new EditarTurma(turma);
+            desktopPane.removeAll();
+            desktopPane.add(editarturma).setVisible(true);
+        } 
+        else {
+            JDesktopPane desktopPane =  buscar.getJDesktopPane();
+            EditarTurma editarturma = new EditarTurma(turma);
+            desktopPane.removeAll();
+            desktopPane.add(editarturma).setVisible(true);
+        }
+    }//GEN-LAST:event_myButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

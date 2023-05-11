@@ -191,30 +191,20 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_turmaAluActionPerformed
 
     private void excluirAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirAluActionPerformed
-        PopupExcluAluno popup = new PopupExcluAluno(aluno,  this );
+        PopupExcluAluno popup = new PopupExcluAluno(aluno,  this);
         popup.setVisible(true);
-        
     }//GEN-LAST:event_excluirAluActionPerformed
 
     private void salvarAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarAluActionPerformed
-         int id = turmaAlu.getSelectedIndex();
-        Aluno aluno = new Aluno();
+        int id = turmaAlu.getSelectedIndex();
+        
         Turma turma = this.lista.get(id);
         turma.buscarAtividades();
-        ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         aluno.setNome(alunoNome.getText());
         aluno.setId_turma(turma.getId_turma());
         
         PopupAltAluno popup = new PopupAltAluno(aluno);
-        popup.setVisible(true);
-                
-                
-                
-                
-                
-                
-                
-                
+        popup.setVisible(true);                        
     }//GEN-LAST:event_salvarAluActionPerformed
 
 
@@ -234,11 +224,17 @@ public class EditarAluno extends javax.swing.JInternalFrame {
             TurmaDao turmaDao = new TurmaDao();
             lista = turmaDao.getTurma();
             for (Turma turma : lista) {
+                
                 turmaAlu.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+                if (turma.getId_turma() == aluno.getId_turma()) {
+                    turmaAlu.setSelectedItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+                }
             }
         }
 
-}
+   
+    }
+
 
 
 
