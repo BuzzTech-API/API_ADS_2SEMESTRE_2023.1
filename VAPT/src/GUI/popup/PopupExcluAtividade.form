@@ -127,6 +127,9 @@
             <Property name="text" type="java.lang.String" value="Atividade 01"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeAtividadeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="texto2">
           <Properties>
