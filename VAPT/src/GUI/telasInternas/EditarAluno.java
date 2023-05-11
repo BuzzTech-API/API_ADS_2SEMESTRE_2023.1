@@ -220,7 +220,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> turmaAlu;
     // End of variables declaration//GEN-END:variables
 
-     private void preecherComboBoxTurma() {
+     public void preecherComboBoxTurma() {
             TurmaDao turmaDao = new TurmaDao();
             lista = turmaDao.getTurma();
             for (Turma turma : lista) {
@@ -228,9 +228,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
             }
         }
 
-    public void preencherPane(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
     }
 
 
