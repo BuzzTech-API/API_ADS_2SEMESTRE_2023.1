@@ -50,10 +50,15 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ec" green="ec" red="ec" type="rgb"/>
             </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                <EtchetBorder/>
+              </Border>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="80" y="150" width="880" height="480"/>
+              <AbsoluteConstraints x="80" y="140" width="880" height="480"/>
             </Constraint>
           </Constraints>
 
@@ -215,11 +220,6 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ec" green="ec" red="ec" type="rgb"/>
                 </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[742, 240]"/>
                 </Property>
@@ -235,12 +235,12 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="738" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="742" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="236" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="240" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -254,7 +254,7 @@
               <Color blue="d9" green="d9" red="d9" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="34" style="1"/>
+              <Font name="Segoe UI" size="30" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="d2" red="4" type="rgb"/>
@@ -269,7 +269,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="80" y="70" width="-1" height="-1"/>
+              <AbsoluteConstraints x="80" y="60" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -280,7 +280,7 @@
               <Color blue="d9" green="d9" red="d9" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="24" style="1"/>
+              <Font name="Segoe UI" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="54" green="83" red="ef" type="rgb"/>
@@ -295,7 +295,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="80" y="110" width="-1" height="40"/>
+              <AbsoluteConstraints x="80" y="100" width="-1" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -311,7 +311,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="560" y="120" width="-1" height="20"/>
+              <AbsoluteConstraints x="560" y="110" width="-1" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -323,7 +323,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="470" y="80" width="120" height="80"/>
+              <AbsoluteConstraints x="470" y="70" width="120" height="80"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -336,7 +336,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="620" y="120" width="-1" height="-1"/>
+              <AbsoluteConstraints x="620" y="110" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

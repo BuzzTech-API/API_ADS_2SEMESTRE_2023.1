@@ -89,6 +89,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(236, 236, 236));
+        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel2.setText("Data da Entrega:");
@@ -133,7 +134,6 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
         recebNomesPend.setBackground(new java.awt.Color(236, 236, 236));
-        recebNomesPend.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         recebNomesPend.setMaximumSize(new java.awt.Dimension(742, 240));
         recebNomesPend.setMinimumSize(new java.awt.Dimension(742, 240));
         recebNomesPend.setOpaque(false);
@@ -143,11 +143,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         recebNomesPend.setLayout(recebNomesPendLayout);
         recebNomesPendLayout.setHorizontalGroup(
             recebNomesPendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 738, Short.MAX_VALUE)
+            .addGap(0, 742, Short.MAX_VALUE)
         );
         recebNomesPendLayout.setVerticalGroup(
             recebNomesPendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 236, Short.MAX_VALUE)
+            .addGap(0, 240, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -203,11 +203,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 880, 480));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 880, 480));
 
         ativNum.setEditable(false);
         ativNum.setBackground(new java.awt.Color(217, 217, 217));
-        ativNum.setFont(new java.awt.Font("Arial", 1, 34)); // NOI18N
+        ativNum.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         ativNum.setForeground(new java.awt.Color(4, 210, 130));
         ativNum.setText("Atividade ");
         ativNum.setBorder(null);
@@ -216,11 +216,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 ativNumActionPerformed(evt);
             }
         });
-        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
 
         turma.setEditable(false);
         turma.setBackground(new java.awt.Color(217, 217, 217));
-        turma.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        turma.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         turma.setForeground(new java.awt.Color(239, 131, 84));
         turma.setText("Turma: ");
         turma.setBorder(null);
@@ -229,19 +229,19 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 turmaActionPerformed(evt);
             }
         });
-        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, 40));
+        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, 40));
 
         jLabel1.setBackground(new java.awt.Color(217, 217, 217));
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel1.setText("Escola:");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, -1, 20));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, -1, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 120, 80));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 120, 80));
 
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         nomeEscola.setText("jLabel4");
-        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, -1, -1));
+        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
