@@ -22,7 +22,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     private EditarAluno editarAluno;
     private ArrayList<Turma> lista = new ArrayList<>();
 
-    public EditarAluno(Aluno aluno) {
+    public EditarAluno() {
        
         this.aluno = aluno;
         

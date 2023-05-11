@@ -30,11 +30,9 @@ public class CardAtivEntregue extends javax.swing.JPanel {
     
     
     public CardAtivEntregue(Aluno_Atividade alunoAtv, int numero_atv) {
-        
-        this.aluno_atividade = alunoAtv; 
         initComponents();
         setOpaque(false);
-       
+        this.aluno_atividade = alunoAtv; 
         preecherCards(numero_atv);
         
     }

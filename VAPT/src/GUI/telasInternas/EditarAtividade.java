@@ -31,13 +31,12 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     public EditarAtividade(Atividades atividade, int id) {
         this.atividade = atividade;
         this.id = id;
-        this.turma = turma;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
 
-        
+        this.turma = turma;
         editarAtiv();
         preecherComboBoxTurma();
         
