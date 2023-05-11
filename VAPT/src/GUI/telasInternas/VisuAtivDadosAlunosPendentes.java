@@ -75,14 +75,14 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
-        setBackground(new java.awt.Color(236, 236, 236));
+        setBackground(new java.awt.Color(245, 245, 245));
         setMaximumSize(new java.awt.Dimension(742, 240));
         setMinimumSize(new java.awt.Dimension(742, 240));
         setPreferredSize(new java.awt.Dimension(742, 240));
 
-        jPanel1.setBackground(new java.awt.Color(236, 236, 236));
+        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
-        editAlunosPendesntes.setBackground(new java.awt.Color(236, 236, 236));
+        editAlunosPendesntes.setBackground(new java.awt.Color(245, 245, 245));
         editAlunosPendesntes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnEditar.png"))); // NOI18N
         editAlunosPendesntes.setBorder(null);
         editAlunosPendesntes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -92,7 +92,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
             }
         });
 
-        recebPorcentagemAlunosPendentes.setBackground(new java.awt.Color(236, 236, 236));
+        recebPorcentagemAlunosPendentes.setBackground(new java.awt.Color(245, 245, 245));
         recebPorcentagemAlunosPendentes.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         recebPorcentagemAlunosPendentes.setForeground(new java.awt.Color(255, 0, 0));
         recebPorcentagemAlunosPendentes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -135,10 +135,9 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
         jScrollPane1.setOpaque(false);
 
-        jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
+        jLayeredPane1.setBackground(new java.awt.Color(245, 245, 245));
         jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(455, 256));

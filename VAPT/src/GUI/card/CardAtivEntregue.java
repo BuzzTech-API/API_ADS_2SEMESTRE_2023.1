@@ -93,6 +93,7 @@ public class CardAtivEntregue extends javax.swing.JPanel {
         checkBoxCustom1 = new GUI.swing.CheckBoxCustom();
 
         setBackground(new java.awt.Color(252, 252, 252));
+        setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(170, 190));
         setMinimumSize(new java.awt.Dimension(170, 190));
@@ -170,7 +171,7 @@ public class CardAtivEntregue extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dataQEntrega1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

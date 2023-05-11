@@ -112,27 +112,29 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         salvaEntregueAtrasada = new javax.swing.JButton();
         myButton1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(236, 236, 236));
+        setBackground(new java.awt.Color(245, 245, 245));
         setBorder(null);
+        setOpaque(true);
         setPreferredSize(new java.awt.Dimension(770, 307));
 
-        jPanel1.setBackground(new java.awt.Color(236, 236, 236));
+        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
         jPanel1.setMaximumSize(new java.awt.Dimension(770, 339));
         jPanel1.setMinimumSize(new java.awt.Dimension(770, 339));
         jPanel1.setPreferredSize(new java.awt.Dimension(770, 339));
 
-        jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
         jScrollPane1.setBorder(null);
 
-        jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
+        jLayeredPane1.setBackground(new java.awt.Color(245, 245, 245));
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         porcentagemEntregueAtrasado.setEditable(false);
-        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
+        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(245, 245, 245));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
+        porcentagemEntregueAtrasado.setOpaque(true);
+        porcentagemEntregueAtrasado.setSelectionColor(new java.awt.Color(204, 204, 204));
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
         texto5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -179,7 +181,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))

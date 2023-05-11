@@ -53,29 +53,27 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         recebeCardsAtv = new javax.swing.JDesktopPane();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setMaximumSize(new java.awt.Dimension(1280, 730));
         setMinimumSize(new java.awt.Dimension(1280, 730));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jPanel1.setBackground(new java.awt.Color(236, 236, 236));
         jPanel1.setMaximumSize(new java.awt.Dimension(1280, 730));
         jPanel1.setMinimumSize(new java.awt.Dimension(1280, 730));
         jPanel1.setPreferredSize(new java.awt.Dimension(1276, 694));
 
-        jPanel2.setBackground(new java.awt.Color(236, 236, 236));
+        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 1, true));
         jPanel2.setMaximumSize(new java.awt.Dimension(1280, 730));
         jPanel2.setMinimumSize(new java.awt.Dimension(1280, 730));
-        jPanel2.setOpaque(false);
         jPanel2.setPreferredSize(new java.awt.Dimension(1280, 730));
 
         nomeAluno.setEditable(false);
-        nomeAluno.setBackground(new java.awt.Color(236, 236, 236));
+        nomeAluno.setBackground(new java.awt.Color(245, 245, 245));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
         nomeAluno.setForeground(new java.awt.Color(239, 131, 84));
         nomeAluno.setText("Emília Luisa Garcia");
         nomeAluno.setBorder(null);
+        nomeAluno.setOpaque(true);
         nomeAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeAlunoActionPerformed(evt);
@@ -83,7 +81,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         });
 
         nomeEscola.setEditable(false);
-        nomeEscola.setBackground(new java.awt.Color(236, 236, 236));
+        nomeEscola.setBackground(new java.awt.Color(245, 245, 245));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         nomeEscola.setText("Ana Herondina");
         nomeEscola.setBorder(null);
@@ -94,7 +92,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         });
 
         nomeTurma.setEditable(false);
-        nomeTurma.setBackground(new java.awt.Color(236, 236, 236));
+        nomeTurma.setBackground(new java.awt.Color(245, 245, 245));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         nomeTurma.setForeground(new java.awt.Color(4, 210, 130));
         nomeTurma.setText("6º A");
@@ -106,10 +104,9 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
             }
         });
 
-        recebeCardsAtv.setBackground(new java.awt.Color(236, 236, 236));
+        recebeCardsAtv.setBackground(new java.awt.Color(245, 245, 245));
         recebeCardsAtv.setMaximumSize(new java.awt.Dimension(770, 339));
         recebeCardsAtv.setMinimumSize(new java.awt.Dimension(770, 339));
-        recebeCardsAtv.setOpaque(false);
 
         javax.swing.GroupLayout recebeCardsAtvLayout = new javax.swing.GroupLayout(recebeCardsAtv);
         recebeCardsAtv.setLayout(recebeCardsAtvLayout);
