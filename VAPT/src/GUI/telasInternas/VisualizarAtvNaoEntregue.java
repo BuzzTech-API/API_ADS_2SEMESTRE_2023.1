@@ -113,10 +113,11 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(236, 236, 236));
 
         jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
+        jScrollPane1.setBorder(null);
 
         jLayeredPane2.setBackground(new java.awt.Color(236, 236, 236));
         jLayeredPane2.setOpaque(true);
-        jLayeredPane2.setLayout(new java.awt.FlowLayout(0, 33, 5));
+        jLayeredPane2.setLayout(new java.awt.FlowLayout(0, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane2);
 
         jButton1.setBackground(new java.awt.Color(239, 131, 84));
@@ -134,7 +135,6 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         porcentagemNaoEntregue.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemNaoEntregue.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemNaoEntregue.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemNaoEntregue.setText("10%");
         porcentagemNaoEntregue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 porcentagemNaoEntregueActionPerformed(evt);
@@ -175,7 +175,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
