@@ -91,8 +91,9 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         lbData = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 252, 252));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(136, 276));
+        setOpaque(false);
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 formMouseEntered(evt);
@@ -102,14 +103,18 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
+        jScrollPane1.setOpaque(false);
 
         nomesArea.setEditable(false);
         nomesArea.setBackground(new java.awt.Color(252, 252, 252));
         nomesArea.setColumns(20);
+        nomesArea.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nomesArea.setRows(5);
         nomesArea.setText("\n");
         nomesArea.setWrapStyleWord(true);
+        nomesArea.setAlignmentY(1.0F);
         nomesArea.setBorder(null);
         nomesArea.setDisabledTextColor(new java.awt.Color(252, 252, 252));
         nomesArea.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -139,14 +144,14 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lbData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(1, 1, 1))
             .addGroup(layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(2, 2, 2))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
