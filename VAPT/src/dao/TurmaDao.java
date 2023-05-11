@@ -76,7 +76,9 @@ public class TurmaDao {
         }
     }
     public void alterar (Turma turma) {
-        String sql = "`nome` = ?,\n" +
+        String sql = "UPDATE `vapt`.`turma`\n" +
+        "SET\n" +
+        "`nome` = ?,\n" +
         "`nome_escola` = ?\n" +
         "WHERE `id_turma` = ?;\n";
         try {
