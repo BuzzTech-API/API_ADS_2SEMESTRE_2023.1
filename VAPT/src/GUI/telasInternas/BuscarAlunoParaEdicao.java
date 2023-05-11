@@ -191,6 +191,10 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+        
+        
+        aluno= listaAluno.get(jComboBox2.getSelectedIndex());
+        
         if (aluno != null && turma!= null){
             EditarAluno editarAluno = new EditarAluno(aluno);
             jDesktopPanel.removeAll();
