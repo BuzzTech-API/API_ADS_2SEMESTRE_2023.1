@@ -195,6 +195,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
             EditarAluno editarAluno = new EditarAluno(aluno);
             jDesktopPanel.removeAll();
             jDesktopPanel.add(editarAluno).setVisible(true);
+            
         }
         
        
