@@ -78,20 +78,20 @@ public class TelaHome extends javax.swing.JInternalFrame {
         setResizable(true);
         setPreferredSize(new java.awt.Dimension(1018, 639));
 
+        jScrollPane1.setBackground(new java.awt.Color(242, 242, 242));
         jScrollPane1.setBorder(null);
+        jScrollPane1.setOpaque(false);
 
         jLayeredPane1.setBackground(new java.awt.Color(242, 242, 242));
-        jLayeredPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(114, 133, 165), 1, true));
         jLayeredPane1.setName(""); // NOI18N
-        jLayeredPane1.setOpaque(true);
         jLayeredPane1.setLayout(new java.awt.FlowLayout(3, 22, 15));
         jScrollPane1.setViewportView(jLayeredPane1);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(239, 131, 84));
         jLabel1.setText("Turma: ");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
         jLabel2.setText("Escola:");
 
@@ -120,7 +120,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
                     .addComponent(jLabel2))
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
