@@ -24,13 +24,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
      * Creates new form BuscarAlunoParaEdicao
      */
     private ArrayList<Turma> lista;
-    private ArrayList<Aluno> listaAluno;
-    private Aluno aluno;
-    private Turma turma;
-    javax.swing.JDesktopPane jDesktopPanel;
-    
-    public BuscarAlunoParaEdicao(JDesktopPane jDesktopPanel) {
-        this.jDesktopPanel = jDesktopPanel;
+    public BuscarAlunoParaEdicao(JDesktopPane jDesktopPane) {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
@@ -48,10 +42,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
         jComboBox2.removeAllItems();
         int idTurma = turma.getId_turma();
         AlunoDao alunoDao = new AlunoDao();
-        listaAluno = alunoDao.buscarTodasAlunoDaTurma(idTurma);
-        if (!listaAluno.isEmpty()){
-            this.aluno = listaAluno.get(0);
-        }
+        ArrayList<Aluno> listaAluno = alunoDao.buscarTodasAlunoDaTurma(idTurma);
         for (int i = 0; i < listaAluno.size(); i++) {
             Aluno aluno = listaAluno.get(i);
             jComboBox2.addItem("Aluno: "+ aluno.getNome()); 
@@ -61,9 +52,6 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
     private void preecherComboBoxTurma() {
         TurmaDao turmaDao = new TurmaDao();
         lista = turmaDao.getTurma();
-        if (!lista.isEmpty()){
-            this.turma = lista.get(0);  
-        }
         for (Turma turma : lista) {
             jComboBox1.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
         }   
@@ -80,7 +68,6 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.black));
         jPanel1.setMaximumSize(new java.awt.Dimension(545, 232));
@@ -116,15 +103,11 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
             }
         });
 
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel2.setText("Turma:");
 
-        jLabel3.setText("Por turma:");
-
-        jLabel4.setText("Por nome:");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setText("Aluno:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -140,16 +123,15 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
                         .addGap(34, 34, 34)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(91, 91, 91)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox2, 0, 312, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,8 +141,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -191,28 +172,16 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        if (aluno != null && turma!= null){
-            EditarAluno editarAluno = new EditarAluno(aluno);
-            jDesktopPanel.removeAll();
-            jDesktopPanel.add(editarAluno).setVisible(true);
-        }
-        
-       
+        // TODO add your handling code here:
     }//GEN-LAST:event_myButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         int id = jComboBox1.getSelectedIndex();
-        this.turma = this.lista.get(id);
+        Turma turma = this.lista.get(id);
         prencherComboBox2(turma);
         
         
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-        int id = jComboBox1.getSelectedIndex();
-        this.aluno = this.listaAluno.get(id);
-    }//GEN-LAST:event_jComboBox2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -221,7 +190,6 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private GUI.swing.MyButton myButton1;
     // End of variables declaration//GEN-END:variables
