@@ -67,6 +67,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
+        nomeEscola = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        turma = new javax.swing.JTextField();
+        ativNum = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -77,45 +82,83 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         recebNomesPend = new javax.swing.JDesktopPane();
-        ativNum = new javax.swing.JTextField();
-        turma = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        nomeEscola = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1280, 730));
 
-        jPanel3.setBackground(new java.awt.Color(217, 217, 217));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(236, 236, 236));
+        nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        nomeEscola.setText("jLabel4");
+        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 120, 80));
+
+        jLabel1.setBackground(new java.awt.Color(217, 217, 217));
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel1.setText("Escola:");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, -1, 20));
+
+        turma.setEditable(false);
+        turma.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        turma.setForeground(new java.awt.Color(239, 131, 84));
+        turma.setText("Turma: ");
+        turma.setBorder(null);
+        turma.setSelectedTextColor(new java.awt.Color(242, 242, 242));
+        turma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                turmaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, 40));
+
+        ativNum.setBackground(new java.awt.Color(242, 242, 242));
+        ativNum.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        ativNum.setForeground(new java.awt.Color(4, 210, 130));
+        ativNum.setText("Atividade ");
+        ativNum.setBorder(null);
+        ativNum.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        ativNum.setSelectedTextColor(new java.awt.Color(242, 242, 242));
+        ativNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ativNumActionPerformed(evt);
+            }
+        });
+        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel2.setText("Data da Entrega:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel3.setText("Data da Solicitação:");
 
         recebDataEntrega.setEditable(false);
-        recebDataEntrega.setBackground(new java.awt.Color(236, 236, 236));
+        recebDataEntrega.setBackground(new java.awt.Color(245, 245, 245));
         try {
             recebDataEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         recebDataEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        recebDataEntrega.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        recebDataEntrega.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        recebDataEntrega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recebDataEntregaActionPerformed(evt);
+            }
+        });
 
         recebDataSolicitacao1.setEditable(false);
-        recebDataSolicitacao1.setBackground(new java.awt.Color(236, 236, 236));
+        recebDataSolicitacao1.setBackground(new java.awt.Color(245, 245, 245));
         try {
             recebDataSolicitacao1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         recebDataSolicitacao1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        recebDataSolicitacao1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        recebDataSolicitacao1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         recebDataSolicitacao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recebDataSolicitacao1ActionPerformed(evt);
@@ -123,8 +166,9 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         });
 
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(236, 236, 236));
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -132,8 +176,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
-        recebNomesPend.setBackground(new java.awt.Color(236, 236, 236));
-        recebNomesPend.setPreferredSize(new java.awt.Dimension(742, 240));
+        recebNomesPend.setBackground(new java.awt.Color(245, 245, 245));
+        recebNomesPend.setMaximumSize(new java.awt.Dimension(742, 240));
+        recebNomesPend.setMinimumSize(new java.awt.Dimension(742, 240));
+        recebNomesPend.setOpaque(false);
 
         javax.swing.GroupLayout recebNomesPendLayout = new javax.swing.GroupLayout(recebNomesPend);
         recebNomesPend.setLayout(recebNomesPendLayout);
@@ -143,7 +189,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         );
         recebNomesPendLayout.setVerticalGroup(
             recebNomesPendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 209, Short.MAX_VALUE)
+            .addGap(0, 240, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -151,85 +197,56 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(recebDataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(44, 44, 44)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(recebDataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel3)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(58, 58, 58)
+                            .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(46, 46, 46))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(recebDataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(9, 9, 9))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGap(21, 21, 21)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel10))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel8))
-                        .addGap(18, 18, 18)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(recebDataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(9, 9, 9)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 850, 450));
-
-        ativNum.setEditable(false);
-        ativNum.setBackground(new java.awt.Color(217, 217, 217));
-        ativNum.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        ativNum.setForeground(new java.awt.Color(4, 210, 130));
-        ativNum.setText("Atividade ");
-        ativNum.setBorder(null);
-        ativNum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ativNumActionPerformed(evt);
-            }
-        });
-        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
-
-        turma.setEditable(false);
-        turma.setBackground(new java.awt.Color(217, 217, 217));
-        turma.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        turma.setForeground(new java.awt.Color(239, 131, 84));
-        turma.setText("Turma ");
-        turma.setBorder(null);
-        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, 40));
-
-        jLabel1.setBackground(new java.awt.Color(217, 217, 217));
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel1.setText("Escola:");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, -1, 20));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, 120, 80));
-
-        nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        nomeEscola.setText("jLabel4");
-        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 90, -1, -1));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 880, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -252,6 +269,14 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private void recebDataSolicitacao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recebDataSolicitacao1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_recebDataSolicitacao1ActionPerformed
+
+    private void turmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_turmaActionPerformed
+
+    private void recebDataEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recebDataEntregaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_recebDataEntregaActionPerformed
 
 
 

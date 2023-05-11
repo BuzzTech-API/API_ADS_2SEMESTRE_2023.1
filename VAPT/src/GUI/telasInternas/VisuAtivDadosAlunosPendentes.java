@@ -75,12 +75,14 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
-        setMinimumSize(new java.awt.Dimension(0, 0));
+        setBackground(new java.awt.Color(245, 245, 245));
+        setMaximumSize(new java.awt.Dimension(742, 240));
+        setMinimumSize(new java.awt.Dimension(742, 240));
         setPreferredSize(new java.awt.Dimension(742, 240));
 
-        jPanel1.setBackground(new java.awt.Color(236, 236, 236));
+        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
-        editAlunosPendesntes.setBackground(new java.awt.Color(236, 236, 236));
+        editAlunosPendesntes.setBackground(new java.awt.Color(245, 245, 245));
         editAlunosPendesntes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnEditar.png"))); // NOI18N
         editAlunosPendesntes.setBorder(null);
         editAlunosPendesntes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -90,14 +92,19 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
             }
         });
 
-        recebPorcentagemAlunosPendentes.setBackground(new java.awt.Color(236, 236, 236));
-        recebPorcentagemAlunosPendentes.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        recebPorcentagemAlunosPendentes.setBackground(new java.awt.Color(245, 245, 245));
+        recebPorcentagemAlunosPendentes.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         recebPorcentagemAlunosPendentes.setForeground(new java.awt.Color(255, 0, 0));
         recebPorcentagemAlunosPendentes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         recebPorcentagemAlunosPendentes.setText("10%");
         recebPorcentagemAlunosPendentes.setBorder(null);
+        recebPorcentagemAlunosPendentes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recebPorcentagemAlunosPendentesActionPerformed(evt);
+            }
+        });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("pendente");
 
@@ -106,34 +113,35 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(117, Short.MAX_VALUE)
+                .addContainerGap(127, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23))
+                        .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel5))
-                        .addGap(48, 48, 48))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(66, Short.MAX_VALUE)
                 .addComponent(recebPorcentagemAlunosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addGap(32, 32, 32)
-                .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(42, 42, 42)
+                .addComponent(editAlunosPendesntes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
+        jScrollPane1.setOpaque(false);
+
+        jLayeredPane1.setBackground(new java.awt.Color(245, 245, 245));
+        jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLayeredPane1.setOpaque(true);
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(455, 256));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(0));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -147,11 +155,8 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -162,6 +167,10 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jDesktopPane.removeAll();
         jDesktopPane.add(teste).setVisible(true);
     }//GEN-LAST:event_editAlunosPendesntesActionPerformed
+
+    private void recebPorcentagemAlunosPendentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recebPorcentagemAlunosPendentesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_recebPorcentagemAlunosPendentesActionPerformed
  
     private void prencherTextArea(){
       int contador=0;
