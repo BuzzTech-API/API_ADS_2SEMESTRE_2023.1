@@ -29,7 +29,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         
         nomeAluno.setText(aluno.getNome());
         Turma turma = new TurmaDao().buscarPorId(aluno.getId_turma());
-        nomeTurma.setText("Turma "+turma.getNome());
+        nomeTurma.setText("Turma: "+turma.getNome());
         nomeEscola.setText(turma.getNome_escola());
         
         VisualizarAtvNaoEntregue visuCard2 = new VisualizarAtvNaoEntregue(  jDesktopPanel, recebeCardsAtv, aluno);
@@ -48,18 +48,17 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         nomeAluno = new javax.swing.JTextField();
-        iconeEscola = new javax.swing.JLabel();
-        texto1 = new javax.swing.JLabel();
         nomeEscola = new javax.swing.JTextField();
         nomeTurma = new javax.swing.JTextField();
         recebeCardsAtv = new javax.swing.JDesktopPane();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(217, 217, 217));
         setMaximumSize(new java.awt.Dimension(1280, 730));
         setMinimumSize(new java.awt.Dimension(1280, 730));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+        jPanel1.setBackground(new java.awt.Color(236, 236, 236));
         jPanel1.setMaximumSize(new java.awt.Dimension(1280, 730));
         jPanel1.setMinimumSize(new java.awt.Dimension(1280, 730));
         jPanel1.setPreferredSize(new java.awt.Dimension(1276, 694));
@@ -68,11 +67,12 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 1, true));
         jPanel2.setMaximumSize(new java.awt.Dimension(1280, 730));
         jPanel2.setMinimumSize(new java.awt.Dimension(1280, 730));
+        jPanel2.setOpaque(false);
         jPanel2.setPreferredSize(new java.awt.Dimension(1280, 730));
 
         nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(236, 236, 236));
-        nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
+        nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
         nomeAluno.setForeground(new java.awt.Color(239, 131, 84));
         nomeAluno.setText("Emília Luisa Garcia");
         nomeAluno.setBorder(null);
@@ -81,12 +81,6 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                 nomeAlunoActionPerformed(evt);
             }
         });
-
-        iconeEscola.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-
-        texto1.setBackground(new java.awt.Color(236, 236, 236));
-        texto1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        texto1.setText("Escola:");
 
         nomeEscola.setEditable(false);
         nomeEscola.setBackground(new java.awt.Color(236, 236, 236));
@@ -106,6 +100,16 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         nomeTurma.setText("6º A");
         nomeTurma.setToolTipText("");
         nomeTurma.setBorder(null);
+        nomeTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTurmaActionPerformed(evt);
+            }
+        });
+
+        recebeCardsAtv.setBackground(new java.awt.Color(236, 236, 236));
+        recebeCardsAtv.setMaximumSize(new java.awt.Dimension(770, 339));
+        recebeCardsAtv.setMinimumSize(new java.awt.Dimension(770, 339));
+        recebeCardsAtv.setOpaque(false);
 
         javax.swing.GroupLayout recebeCardsAtvLayout = new javax.swing.GroupLayout(recebeCardsAtv);
         recebeCardsAtv.setLayout(recebeCardsAtvLayout);
@@ -115,8 +119,12 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         );
         recebeCardsAtvLayout.setVerticalGroup(
             recebeCardsAtvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 307, Short.MAX_VALUE)
+            .addGap(0, 339, Short.MAX_VALUE)
         );
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
+        jLabel2.setText("Escola:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -125,13 +133,11 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(iconeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68)
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(texto1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(nomeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(426, 426, 426)
+                        .addGap(438, 438, 438)
                         .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(70, 70, 70)
@@ -148,13 +154,11 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                 .addGap(45, 45, 45)
                 .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iconeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nomeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(texto1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(nomeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(recebeCardsAtv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -198,15 +202,18 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeEscolaActionPerformed
 
+    private void nomeTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTurmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTurmaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel iconeEscola;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nomeAluno;
     private javax.swing.JTextField nomeEscola;
     private javax.swing.JTextField nomeTurma;
     private javax.swing.JDesktopPane recebeCardsAtv;
-    private javax.swing.JLabel texto1;
     // End of variables declaration//GEN-END:variables
 }

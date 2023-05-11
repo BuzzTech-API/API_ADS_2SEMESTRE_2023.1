@@ -104,21 +104,26 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         texto6 = new javax.swing.JLabel();
         chamaAtvAtrasada = new GUI.swing.MyButton();
 
-        setPreferredSize(new java.awt.Dimension(770, 307));
+        setBackground(new java.awt.Color(236, 236, 236));
+        setBorder(null);
+        setMaximumSize(new java.awt.Dimension(770, 339));
+        setMinimumSize(new java.awt.Dimension(770, 339));
+        setPreferredSize(new java.awt.Dimension(770, 339));
 
         jPanel1.setBackground(new java.awt.Color(236, 236, 236));
 
         jScrollPane1.setBackground(new java.awt.Color(236, 236, 236));
 
         jLayeredPane2.setBackground(new java.awt.Color(236, 236, 236));
-        jLayeredPane2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 33, 5));
+        jLayeredPane2.setOpaque(true);
+        jLayeredPane2.setLayout(new java.awt.FlowLayout(0, 33, 5));
         jScrollPane1.setViewportView(jLayeredPane2);
 
         jButton1.setBackground(new java.awt.Color(239, 131, 84));
         jButton1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         jButton1.setText("Salvar");
         jButton1.setToolTipText("");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(0));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -127,7 +132,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
 
         porcentagemNaoEntregue.setEditable(false);
         porcentagemNaoEntregue.setBackground(new java.awt.Color(236, 236, 236));
-        porcentagemNaoEntregue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        porcentagemNaoEntregue.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemNaoEntregue.setForeground(new java.awt.Color(79, 93, 117));
         porcentagemNaoEntregue.setText("10%");
         porcentagemNaoEntregue.addActionListener(new java.awt.event.ActionListener() {
@@ -137,17 +142,18 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         });
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
-        texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        texto5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         texto5.setForeground(new java.awt.Color(79, 93, 117));
         texto5.setText("Não Entregou:");
 
         texto6.setBackground(new java.awt.Color(236, 236, 236));
-        texto6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        texto6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         texto6.setForeground(new java.awt.Color(79, 93, 117));
         texto6.setText("das atividades ");
 
         chamaAtvAtrasada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/setaBaixo.png"))); // NOI18N
         chamaAtvAtrasada.setColor(new java.awt.Color(204, 204, 204));
+        chamaAtvAtrasada.setRadius(50);
         chamaAtvAtrasada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chamaAtvAtrasadaActionPerformed(evt);
@@ -158,7 +164,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -169,7 +175,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -183,7 +189,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                     .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
