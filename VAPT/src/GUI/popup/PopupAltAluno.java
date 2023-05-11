@@ -20,6 +20,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
     public PopupAltAluno(Aluno aluno) {
         this.aluno = aluno;
         initComponents();
+        nomeAluno.setText(this.aluno.getNome());
        
     }
     
@@ -49,6 +50,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setMinimumSize(new java.awt.Dimension(410, 173));
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
@@ -63,7 +65,6 @@ public class PopupAltAluno extends javax.swing.JFrame {
 
         nomeAluno.setBackground(new java.awt.Color(217, 217, 217));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nomeAluno.setText("João Miguel");
 
         texto3.setBackground(new java.awt.Color(217, 217, 217));
         texto3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -145,6 +146,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
