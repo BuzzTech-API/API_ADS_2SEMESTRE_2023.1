@@ -22,7 +22,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     private EditarAluno editarAluno;
     private ArrayList<Turma> lista = new ArrayList<>();
 
-    public EditarAluno() {
+    public EditarAluno(Aluno aluno) {
        
         this.aluno = aluno;
         
@@ -196,24 +196,15 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_excluirAluActionPerformed
 
     private void salvarAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarAluActionPerformed
-         int id = turmaAlu.getSelectedIndex();
-        Aluno aluno = new Aluno();
+        int id = turmaAlu.getSelectedIndex();
+        
         Turma turma = this.lista.get(id);
         turma.buscarAtividades();
-        ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         aluno.setNome(alunoNome.getText());
         aluno.setId_turma(turma.getId_turma());
         
         PopupAltAluno popup = new PopupAltAluno(aluno);
-        popup.setVisible(true);
-                
-                
-                
-                
-                
-                
-                
-                
+        popup.setVisible(true);                        
     }//GEN-LAST:event_salvarAluActionPerformed
 
 
