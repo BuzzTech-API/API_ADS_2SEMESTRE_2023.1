@@ -76,8 +76,12 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         myButton1 = new GUI.swing.MyButton();
 
         setBackground(new java.awt.Color(236, 236, 236));
+        setMaximumSize(new java.awt.Dimension(742, 240));
+        setMinimumSize(new java.awt.Dimension(742, 240));
+        setPreferredSize(new java.awt.Dimension(742, 240));
 
         jLayeredPane1.setBackground(new java.awt.Color(236, 236, 236));
+        jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
         jScrollPane1.setViewportView(jLayeredPane1);
 
