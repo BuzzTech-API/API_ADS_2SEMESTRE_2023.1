@@ -31,10 +31,11 @@ public class CardAtviNaoEntregue extends javax.swing.JPanel {
     
     
     public CardAtviNaoEntregue(Aluno_Atividade atvNaoEntregue, int id) {
+        this.aluno_atividade = atvNaoEntregue;
         initComponents();
         setOpaque(false);
 
-        this.aluno_atividade = atvNaoEntregue;
+        
         preecherCardaNEntregue(id);
         
         ScrollBarCustom sp = new ScrollBarCustom();
