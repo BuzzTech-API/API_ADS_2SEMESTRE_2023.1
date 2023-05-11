@@ -20,17 +20,22 @@ public class PopupExcluAluno extends javax.swing.JFrame {
     
     
     
-     public PopupExcluAluno() {
+     public PopupExcluAluno(Aluno aluno, EditarAluno editarAluno) {
+        this.aluno = aluno;
+        this.editarAluno = editarAluno;
+        initComponents();
+        nomeAluno.setText(this.aluno.getNome());
+    }
+    
+    
+    
+    public PopupExcluAluno() {
        
         initComponents();
     }
     
     
-    public PopupExcluAluno(Aluno aluno, EditarAluno editarAluno) {
-        this.aluno = aluno;
-        this.editarAluno = editarAluno;
-        initComponents();
-    }
+   
     
    
 
@@ -65,7 +70,6 @@ public class PopupExcluAluno extends javax.swing.JFrame {
 
         nomeAluno.setBackground(new java.awt.Color(217, 217, 217));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nomeAluno.setText("João Miguel");
 
         texto2.setBackground(new java.awt.Color(217, 217, 217));
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -94,6 +98,11 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         botaoCancelar.setMaximumSize(new java.awt.Dimension(95, 27));
         botaoCancelar.setMinimumSize(new java.awt.Dimension(95, 27));
         botaoCancelar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -148,13 +157,18 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
          new AlunoDao().deletarAluno(aluno.getId_aluno());
-         editarAluno.preencherPane(aluno.getNome());
+         editarAluno.preecherComboBoxTurma();
          this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
+
+    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
+         this.dispose();
+    }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**
      * @param args the command line arguments

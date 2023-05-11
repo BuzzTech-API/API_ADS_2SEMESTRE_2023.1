@@ -22,7 +22,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     private EditarAluno editarAluno;
     private ArrayList<Turma> lista = new ArrayList<>();
 
-    public EditarAluno() {
+    public EditarAluno(Aluno aluno) {
        
         this.aluno = aluno;
         
@@ -191,29 +191,20 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_turmaAluActionPerformed
 
     private void excluirAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirAluActionPerformed
-        PopupExcluAluno popup = new PopupExcluAluno(aluno,  editarAluno);
+        PopupExcluAluno popup = new PopupExcluAluno(aluno,  this);
         popup.setVisible(true);
     }//GEN-LAST:event_excluirAluActionPerformed
 
     private void salvarAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarAluActionPerformed
-         int id = turmaAlu.getSelectedIndex();
-        Aluno aluno = new Aluno();
+        int id = turmaAlu.getSelectedIndex();
+        
         Turma turma = this.lista.get(id);
         turma.buscarAtividades();
-        ArrayList<Atividades> listaAtividades = turma.getAtividadesDaTurma();
         aluno.setNome(alunoNome.getText());
         aluno.setId_turma(turma.getId_turma());
         
         PopupAltAluno popup = new PopupAltAluno(aluno);
-        popup.setVisible(true);
-                
-                
-                
-                
-                
-                
-                
-                
+        popup.setVisible(true);                        
     }//GEN-LAST:event_salvarAluActionPerformed
 
 
@@ -229,17 +220,19 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> turmaAlu;
     // End of variables declaration//GEN-END:variables
 
-     private void preecherComboBoxTurma() {
+     public void preecherComboBoxTurma() {
             TurmaDao turmaDao = new TurmaDao();
             lista = turmaDao.getTurma();
             for (Turma turma : lista) {
+                
                 turmaAlu.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+                if (turma.getId_turma() == aluno.getId_turma()) {
+                    turmaAlu.setSelectedItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+                }
             }
         }
 
-    public void preencherPane(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
     }
 
 

@@ -300,5 +300,27 @@ public class AlunoDao {
         
     }
 
+    public void alterar(Aluno aluno) {
+        String sql = "update aluno set" +
+                "`nome` = ?,\n" +
+                "`Turma_id_turma` = ?\n" +
+        "WHERE `id_aluno` = ?;\n";
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, aluno.getNome());
+            stmt.setInt(2, aluno.getId_turma());
+            stmt.setInt(3, aluno.getId_aluno());
+            stmt.execute();
+            stmt.close();
+            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            popup.setVisible(true);
+
+         } catch (SQLException exception) {
+            // TODO: handle exception
+            
+            JOptionPane.showMessageDialog(null, exception);
+        }
+    }
+
 
 }
