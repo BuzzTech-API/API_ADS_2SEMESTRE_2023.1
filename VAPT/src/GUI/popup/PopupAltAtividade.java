@@ -87,6 +87,11 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
         botaoCancelar.setText("Cancelar");
+        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -149,6 +154,10 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         atividadesDao.alterar(atividade);
         this.dispose();
     }//GEN-LAST:event_botaoSalvarActionPerformed
+
+    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
+         this.dispose();
+    }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**
      * @param args the command line arguments

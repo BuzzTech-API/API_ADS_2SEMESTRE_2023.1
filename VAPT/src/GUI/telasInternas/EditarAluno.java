@@ -191,7 +191,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_turmaAluActionPerformed
 
     private void excluirAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirAluActionPerformed
-        PopupExcluAluno popup = new PopupExcluAluno(aluno,  editarAluno);
+        PopupExcluAluno popup = new PopupExcluAluno(aluno,  this);
         popup.setVisible(true);
     }//GEN-LAST:event_excluirAluActionPerformed
 
@@ -224,7 +224,11 @@ public class EditarAluno extends javax.swing.JInternalFrame {
             TurmaDao turmaDao = new TurmaDao();
             lista = turmaDao.getTurma();
             for (Turma turma : lista) {
+                
                 turmaAlu.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+                if (turma.getId_turma() == aluno.getId_turma()) {
+                    turmaAlu.setSelectedItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+                }
             }
         }
 

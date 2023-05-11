@@ -20,18 +20,22 @@ public class PopupExcluAluno extends javax.swing.JFrame {
     
     
     
-     public PopupExcluAluno() {
-       
-        initComponents();
-    }
-    
-    
-    public PopupExcluAluno(Aluno aluno, EditarAluno editarAluno) {
+     public PopupExcluAluno(Aluno aluno, EditarAluno editarAluno) {
         this.aluno = aluno;
         this.editarAluno = editarAluno;
         initComponents();
         nomeAluno.setText(this.aluno.getNome());
     }
+    
+    
+    
+    public PopupExcluAluno() {
+       
+        initComponents();
+    }
+    
+    
+   
     
    
 
@@ -94,6 +98,11 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         botaoCancelar.setMaximumSize(new java.awt.Dimension(95, 27));
         botaoCancelar.setMinimumSize(new java.awt.Dimension(95, 27));
         botaoCancelar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -156,6 +165,10 @@ public class PopupExcluAluno extends javax.swing.JFrame {
          editarAluno.preecherComboBoxTurma();
          this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
+
+    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
+         this.dispose();
+    }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**
      * @param args the command line arguments
