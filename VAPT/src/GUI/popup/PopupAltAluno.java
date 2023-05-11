@@ -150,9 +150,9 @@ public class PopupAltAluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
-       // AlunoDao alunoDao = new AlunoDao();
-        //alunoDao.alterar(aluno);
-        //this.dispose();
+       //  AlunoDao alunoDao = new AlunoDao();
+       // alunoDao.alterar(aluno);
+       // this.dispose();
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
     /**

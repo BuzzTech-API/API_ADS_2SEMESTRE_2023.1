@@ -56,11 +56,6 @@ public class PopupExcluAtividade extends javax.swing.JFrame {
         nomeAtividade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeAtividade.setText("Atividade 01");
         nomeAtividade.setOpaque(true);
-        nomeAtividade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeAtividadeActionPerformed(evt);
-            }
-        });
 
         texto2.setBackground(new java.awt.Color(217, 217, 217));
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -149,10 +144,6 @@ public class PopupExcluAtividade extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
-
-    private void nomeAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeAtividadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeAtividadeActionPerformed
 
     /**
      * @param args the command line arguments

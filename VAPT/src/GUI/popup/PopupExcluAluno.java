@@ -30,11 +30,9 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         this.aluno = aluno;
         this.editarAluno = editarAluno;
         initComponents();
-        nomeAluno.setText(this.aluno.getNome());
-        
     }
     
-     
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -67,12 +65,7 @@ public class PopupExcluAluno extends javax.swing.JFrame {
 
         nomeAluno.setBackground(new java.awt.Color(217, 217, 217));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nomeAluno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        nomeAluno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeAlunoActionPerformed(evt);
-            }
-        });
+        nomeAluno.setText("João Miguel");
 
         texto2.setBackground(new java.awt.Color(217, 217, 217));
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -115,7 +108,7 @@ public class PopupExcluAluno extends javax.swing.JFrame {
                         .addGap(151, 151, 151)
                         .addComponent(texto2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(texto3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -155,18 +148,13 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
          new AlunoDao().deletarAluno(aluno.getId_aluno());
-        editarAluno.preecherComboBoxTurma();
+         editarAluno.preencherPane(aluno.getNome());
          this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
-
-    private void nomeAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeAlunoActionPerformed
-        
-    }//GEN-LAST:event_nomeAlunoActionPerformed
 
     /**
      * @param args the command line arguments

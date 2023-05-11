@@ -191,9 +191,8 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_turmaAluActionPerformed
 
     private void excluirAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirAluActionPerformed
-        PopupExcluAluno popup = new PopupExcluAluno(aluno,  this );
+        PopupExcluAluno popup = new PopupExcluAluno(aluno,  editarAluno);
         popup.setVisible(true);
-        
     }//GEN-LAST:event_excluirAluActionPerformed
 
     private void salvarAluActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarAluActionPerformed
@@ -230,7 +229,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> turmaAlu;
     // End of variables declaration//GEN-END:variables
 
-     public void preecherComboBoxTurma() {
+     private void preecherComboBoxTurma() {
             TurmaDao turmaDao = new TurmaDao();
             lista = turmaDao.getTurma();
             for (Turma turma : lista) {
@@ -238,7 +237,11 @@ public class EditarAluno extends javax.swing.JInternalFrame {
             }
         }
 
-}
+    public void preencherPane(String nome) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    }
+
 
 
 
