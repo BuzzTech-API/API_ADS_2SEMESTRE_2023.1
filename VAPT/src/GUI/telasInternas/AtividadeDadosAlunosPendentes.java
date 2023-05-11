@@ -112,6 +112,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         });
         jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, 40));
 
+        ativNum.setBackground(new java.awt.Color(242, 242, 242));
         ativNum.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         ativNum.setForeground(new java.awt.Color(4, 210, 130));
         ativNum.setText("Atividade ");
@@ -143,6 +144,11 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         }
         recebDataEntrega.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         recebDataEntrega.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        recebDataEntrega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recebDataEntregaActionPerformed(evt);
+            }
+        });
 
         recebDataSolicitacao1.setEditable(false);
         recebDataSolicitacao1.setBackground(new java.awt.Color(245, 245, 245));
@@ -160,7 +166,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         });
 
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(245, 245, 245));
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jTextArea1.setRows(5);
@@ -205,7 +211,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jLabel3)
-                            .addGap(18, 18, 18)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(58, 58, 58)
@@ -216,23 +222,24 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(9, 9, 9))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGap(21, 21, 21)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel10))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(recebDataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(recebDataSolicitacao1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(8, 8, 8))
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(recebDataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(9, 9, 9)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(recebNomesPend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -266,6 +273,10 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private void turmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turmaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_turmaActionPerformed
+
+    private void recebDataEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recebDataEntregaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_recebDataEntregaActionPerformed
 
 
 
