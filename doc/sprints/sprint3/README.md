@@ -46,17 +46,15 @@
 
 <br>
 
-A escolha das tarefas dessa segunda Sprint levou em consideração alguns fatores importantes. Primeiro, analisamos as necessidades do cliente e os requisitos do projeto, em especial, a importância da parte que mostra os dados estatísticos das atividades dos alunos.
+Na terceira Sprint do projeto, o foco principal foi o desenvolvimento das funcionalidades de edição e exclusão das turmas, alunos e atividades escolares. Com essas funcionalidades, a professora poderá gerenciar de forma mais eficiente e precisa as informações cadastradas anteriormente, podendo corrigir erros ou remover dados desnecessários.
 
-Essa parte do projeto é de alto valor, pois é essencial para a professora acompanhar o desempenho dos alunos e identificar possíveis dificuldades de aprendizado. Além disso, a visualização dos dados estatísticos permite uma melhor organização da sala de aula, tornando mais fácil identificar quais alunos precisam de atenção especial e incentivar a entrega de atividades dentro do prazo.
+Para a edição das turmas, será necessário implementar uma funcionalidade que permita à professora alterar o nome da turma, o ano escolar e a quantidade de alunos inscritos. Já para a exclusão de turmas, será necessário criar um processo de confirmação antes que a turma seja deletada, a fim de evitar a exclusão acidental.
 
-Com base nessas informações, escolhemos as seguintes tarefas para a segunda sprint do projeto:
+Quanto aos alunos, a funcionalidade de edição permitirá à professora alterar o nome do aluno, a data de nascimento, o número da matrícula e a turma em que ele está matriculado. A exclusão de alunos exigirá também um processo de confirmação para evitar exclusões acidentais.
 
-* Implementação do modo de visualização dos dados estatísticos das atividades dos alunos;
-* Implementação da funcionalidade de registro de atividades entregues, incluindo informações sobre o prazo de entrega e atrasos;
+Por fim, as funções de edição e exclusão de atividades escolares permitirão que a professora altere ou exclua atividades já cadastradas. Isso inclui a possibilidade de alterar o nome da atividade, a data em que ela foi atribuída aos alunos, a data de entrega e a pontuação correspondente. A exclusão de atividades também exigirá um processo de confirmação antes que a atividade seja deletada.
 
-
-Essas tarefas foram escolhidas para garantir que a parte mais importante do projeto seja implementada de forma eficiente e eficaz, atendendo às necessidades do cliente e tornando o processo de ensino-aprendizagem mais organizado e produtivo. Com a implementação dessas tarefas, esperamos fornecer uma ferramenta útil para a professora e ajudar no acompanhamento do desempenho dos alunos.
+Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora terá uma ferramenta mais completa e eficiente para gerenciar as informações escolares de seus alunos, permitindo que ela se concentre no ensino e no acompanhamento do progresso de seus alunos..
 
 
 <br>
