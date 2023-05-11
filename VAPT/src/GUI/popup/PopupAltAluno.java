@@ -4,17 +4,29 @@
  */
 package GUI.popup;
 
+import dao.AlunoDao;
+import dao.AtividadesDao;
+import modelo.Aluno;
+
+
 /**
  *
  * @author Alicea
  */
 public class PopupAltAluno extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopupAltAluno
-     */
-    public PopupAltAluno() {
+    private Aluno aluno;
+    
+    public PopupAltAluno(Aluno aluno) {
+        this.aluno = aluno;
         initComponents();
+       
+    }
+    
+    public PopupAltAluno() {
+        
+        initComponents();
+        
     }
 
     /**
@@ -34,7 +46,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
         botaoSalvar = new javax.swing.JButton();
         botaoCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setMinimumSize(new java.awt.Dimension(410, 173));
 
@@ -64,6 +76,11 @@ public class PopupAltAluno extends javax.swing.JFrame {
         botaoSalvar.setMaximumSize(new java.awt.Dimension(95, 27));
         botaoSalvar.setMinimumSize(new java.awt.Dimension(95, 27));
         botaoSalvar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSalvarActionPerformed(evt);
+            }
+        });
 
         botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
@@ -109,9 +126,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
                     .addComponent(texto3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2))
+                    .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -131,6 +146,12 @@ public class PopupAltAluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
+       //  AlunoDao alunoDao = new AlunoDao();
+       // alunoDao.alterar(aluno);
+       // this.dispose();
+    }//GEN-LAST:event_botaoSalvarActionPerformed
 
     /**
      * @param args the command line arguments

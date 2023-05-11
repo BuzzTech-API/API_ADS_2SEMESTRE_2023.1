@@ -6,6 +6,7 @@ package GUI.telasInternas;
 
 import GUI.card.CardAtivEntregue;
 import GUI.swing.ScrollBarCustom;
+import GUI.telasInternas.VisualizarAtvNaoEntregue;
 import dao.Aluno_AtividadeDao;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -32,9 +33,11 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
      
     
      
-    public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1,JDesktopPane recebeCardsAtv,Aluno aluno) {
+    public VisualizarAtvEntregueComAtraso( JDesktopPane jDesktopPanel1, JDesktopPane recebeCardsAtv,Aluno aluno) {
         this.jDesktopPanel = jDesktopPanel1;
         this.recebeCardsAtv = recebeCardsAtv;
+        this.aluno = aluno;
+        
         initComponents();
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
@@ -44,7 +47,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         spHorizontal.setUnitIncrement(20);
         spHorizontal.setForeground(new Color(4, 210, 130));
         jScrollPane1.setHorizontalScrollBar(spHorizontal);
-        this.aluno = aluno;
+       
         preencherAtv1entregue();
         
         /*this.listaAlunoAtividade*/
@@ -61,17 +64,21 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     
      public void preencherAtv1entregue() {
+        jLayeredPane1.removeAll();
         Aluno_AtividadeDao atvAluno = new Aluno_AtividadeDao();
          ArrayList<Aluno_Atividade> listaAlunoAtividade = atvAluno.buscarAtividadesDeUmAluno(aluno.getId_aluno());
         int contador=0;
         for (int i = 0; i < listaAlunoAtividade.size(); i++) {
             Aluno_Atividade atividade_Entregue = listaAlunoAtividade.get(i);
             if(atividade_Entregue.getAluno_Ativadade_entrega()){
-                CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
-                jLayeredPane1.add(cards);
-                
-                
-            contador++;
+                java.util.Date data = atividade_Entregue.getAtividade().getData_fim();
+                java.util.Date data2 = atividade_Entregue.getAluno_Atividade_data_entrega();
+                if (data2.compareTo(data)>0) {
+                    CardAtivEntregue cards = new CardAtivEntregue(atividade_Entregue, i+1); 
+                    jLayeredPane1.add(cards);
+                    contador++;
+                }
+            
             }}
            
         float porcentagem = (float) contador / listaAlunoAtividade.size();
@@ -82,7 +89,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         String porcetagemString = String.format("%.2f ", porcentagem);
         porcetagemString+="%";
         porcentagemEntregueAtrasado.setText(porcetagemString);}
-        
+        jLayeredPane1.repaint();
         
         
         }
@@ -119,11 +126,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         porcentagemEntregueAtrasado.setBackground(new java.awt.Color(236, 236, 236));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
-        porcentagemEntregueAtrasado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                porcentagemEntregueAtrasadoActionPerformed(evt);
-            }
-        });
+        porcentagemEntregueAtrasado.setText("10%");
 
         texto5.setBackground(new java.awt.Color(236, 236, 236));
         texto5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -169,8 +172,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(texto5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -208,12 +211,19 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void salvaEntregueAtrasadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvaEntregueAtrasadaActionPerformed
-        // TODO add your handling code here:
-        
+     for (int i = 0; i < jLayeredPane1.getComponentCount(); i++) {
+                CardAtivEntregue checkBoxContainer = (CardAtivEntregue) jLayeredPane1.getComponent(i);
+                checkBoxContainer.atualizCards();
+                }
+                preencherAtv1entregue();
+                
+                
+                
+      
     }//GEN-LAST:event_salvaEntregueAtrasadaActionPerformed
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        VisualizarAtvNaoEntregue visuEntreg = new VisualizarAtvNaoEntregue( recebeCardsAtv,jDesktopPanel, aluno);
+        VisualizarAtvNaoEntregue visuEntreg = new VisualizarAtvNaoEntregue( jDesktopPanel, recebeCardsAtv, aluno);
         recebeCardsAtv.removeAll();
         recebeCardsAtv.add(visuEntreg).setVisible(true);
     }//GEN-LAST:event_myButton1ActionPerformed

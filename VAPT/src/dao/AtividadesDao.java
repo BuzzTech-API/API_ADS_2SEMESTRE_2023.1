@@ -78,7 +78,34 @@ public class AtividadesDao {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
-    
+    public void alterar (Atividades atividades) {
+        String sql = "UPDATE `vapt`.`atividade`\n" +
+        "SET\n" +
+        "`tipo` = ?,\n" +
+        "`descricao` = ?,\n" +
+        "`data_inicio` = ?,\n" +
+        "`data_fim` = ?,\n" +
+        "`Turma_id_turma` = ? " + // removido o espaço extra antes do "WHERE"
+        "WHERE `id_atividade` = ? ;";
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, atividades.getTipo());
+            stmt.setString(2, atividades.getDescricao());
+            stmt.setDate(3, atividades.getData_inicio());
+            stmt.setDate(4, atividades.getData_fim());
+            stmt.setInt(6,atividades.getId_atividade());
+            stmt.setInt(5, atividades.getTurma_id_turma());
+            stmt.execute();
+            stmt.close();
+            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            popup.setVisible(true);
+
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            
+            JOptionPane.showMessageDialog(null, exception);
+        }
+    }
 
 
 

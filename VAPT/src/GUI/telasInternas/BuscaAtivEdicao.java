@@ -4,17 +4,38 @@
  */
 package GUI.telasInternas;
 
+import dao.TurmaDao;
+import java.util.ArrayList;
+import javax.swing.JDesktopPane;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+import modelo.Turma;
+
 /**
  *
  * @author Fatec
  */
 public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
+    private ArrayList<Turma> lista = new ArrayList<>();
+    private JDesktopPane jDesktopPane;
 
     /**
      * Creates new form BuscaAtivEdicao
      */
     public BuscaAtivEdicao() {
         initComponents();
+        preecherComboBoxTurma();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
+        ui.setNorthPane(null);
+    }
+    
+    public BuscaAtivEdicao(JDesktopPane jDesktopPane) {
+        this.jDesktopPane = jDesktopPane;
+        initComponents();
+        preecherComboBoxTurma();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI ui=(BasicInternalFrameUI) this.getUI();
+        ui.setNorthPane(null);
     }
 
     /**
@@ -74,7 +95,11 @@ public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
         jLabel2.setText("Turma:");
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -146,8 +171,16 @@ public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        // TODO add your handling code here:
+        int id = jComboBox1.getSelectedIndex();
+        Turma turma = this.lista.get(id);
+        VisualizarCardsAtividade visualizarCardsAtividade = new VisualizarCardsAtividade(jDesktopPane, turma.getId_turma());
+        jDesktopPane.removeAll();
+        jDesktopPane.add(visualizarCardsAtividade).setVisible(true);
     }//GEN-LAST:event_myButton1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -158,4 +191,12 @@ public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private GUI.swing.MyButton myButton1;
     // End of variables declaration//GEN-END:variables
+
+    private void preecherComboBoxTurma() {
+        TurmaDao turmaDao = new TurmaDao();
+        lista = turmaDao.getTurma();
+        for (Turma turma : lista) {
+            jComboBox1.addItem("Turma: "+ turma.getNome() + " - Escola: " + turma.getNome_escola());
+        }
+    }
 }

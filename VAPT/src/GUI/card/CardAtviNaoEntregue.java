@@ -5,15 +5,19 @@
 package GUI.card;
 
 import GUI.swing.ScrollBarCustom;
+import dao.Aluno_AtividadeDao;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.JDesktopPane;
 import javax.swing.JScrollBar;
 import modelo.Aluno;
 import modelo.Aluno_Atividade;
+import modelo.Atividades;
 
 
 /**
@@ -27,10 +31,11 @@ public class CardAtviNaoEntregue extends javax.swing.JPanel {
     
     
     public CardAtviNaoEntregue(Aluno_Atividade atvNaoEntregue, int id) {
+        this.aluno_atividade = atvNaoEntregue;
         initComponents();
         setOpaque(false);
 
-        this.aluno_atividade = atvNaoEntregue;
+        
         preecherCardaNEntregue(id);
         
         ScrollBarCustom sp = new ScrollBarCustom();
@@ -163,7 +168,18 @@ public class CardAtviNaoEntregue extends javax.swing.JPanel {
             super.paintChildren(grphcs);
     }  
    
-         
+     public void atualizCards(){
+      if (checkBoxCustom1.isSelected()) {
+                Calendar calendario = Calendar.getInstance();
+                Date utilDate = calendario.getTime();
+                java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime()); 
+                aluno_atividade.setAluno_Ativadade_entrega(true);
+                aluno_atividade.setAluno_Atividade_data_entrega(sqlDate);
+                Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+                aluno_AtividadeDao.atualizar(aluno_atividade);
+                
+      }
+     }    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel atvNum1;

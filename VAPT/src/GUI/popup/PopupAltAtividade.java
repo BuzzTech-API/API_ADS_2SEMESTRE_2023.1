@@ -3,17 +3,31 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI.popup;
+
+import GUI.telasInternas.AtividadesCadastradas;
+import dao.AtividadesDao;
+import dao.TurmaDao;
+import modelo.Atividades;
+import modelo.Turma;
+
 /**
  *
  * @author Alicea
  */
 public class PopupAltAtividade extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopupAltAtividade
-     */
-    public PopupAltAtividade() {
+    private Atividades atividade;
+
+    public PopupAltAtividade(Atividades atividade, String nomeDaTurma) {
+        this.atividade = atividade;
         initComponents();
+        nomeAtividade.setText(nomeDaTurma);
+    }
+
+    public PopupAltAtividade() {
+
+        initComponents();
+
     }
 
     /**
@@ -33,9 +47,10 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         botaoSalvar = new javax.swing.JButton();
         botaoCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setMinimumSize(new java.awt.Dimension(410, 173));
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 91, 117), 2, true));
@@ -63,6 +78,11 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         botaoSalvar.setMaximumSize(new java.awt.Dimension(95, 27));
         botaoSalvar.setMinimumSize(new java.awt.Dimension(95, 27));
         botaoSalvar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSalvarActionPerformed(evt);
+            }
+        });
 
         botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
@@ -121,7 +141,14 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
+        AtividadesDao atividadesDao = new AtividadesDao();
+        atividadesDao.alterar(atividade);
+        this.dispose();
+    }//GEN-LAST:event_botaoSalvarActionPerformed
 
     /**
      * @param args the command line arguments

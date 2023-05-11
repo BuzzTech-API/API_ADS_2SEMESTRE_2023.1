@@ -75,6 +75,26 @@ public class TurmaDao {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
+    public void alterar (Turma turma) {
+        String sql = "`nome` = ?,\n" +
+        "`nome_escola` = ?\n" +
+        "WHERE `id_turma` = ?;\n";
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, turma.getNome());
+            stmt.setString(2, turma.getNome_escola());
+            stmt.setInt(3, turma.getId_turma());
+            stmt.execute();
+            stmt.close();
+            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            popup.setVisible(true);
+
+         } catch (SQLException exception) {
+            // TODO: handle exception
+            
+            JOptionPane.showMessageDialog(null, exception);
+        }
+    }
     
     
 

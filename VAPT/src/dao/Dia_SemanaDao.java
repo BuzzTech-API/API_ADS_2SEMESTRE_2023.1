@@ -51,6 +51,31 @@ public class Dia_SemanaDao {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
+    public void alterar (Dia_Semana dia_Semana) {
+        String sql = "UPDATE `vapt`.`dia_semana`\n" +
+    "SET\n" +
+    "`Turma_id_turma` = ?,\n" +
+    "`dia` = ?,\n" +
+    "`hora_inicio` =?,\n" +
+    "`hora_fim` = ?\n" +
+    "WHERE `id_dia` = ?;";
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, dia_Semana.getTurma_id_turma());
+            stmt.setString(2, dia_Semana.getDia());
+            stmt.setString(3, dia_Semana.getHora_inicio());
+            stmt.setString(4, dia_Semana.getHora_fim());
+            stmt.setInt(5, dia_Semana.getId_dia());
+            stmt.execute();
+            stmt.close();
+            //JOptionPane.showMessageDialog(null,"Dia_semana Cadastrada com Sucesso!");
+
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            
+            JOptionPane.showMessageDialog(null, exception);
+        }
+    }
 
 
 

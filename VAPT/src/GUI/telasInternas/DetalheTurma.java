@@ -62,7 +62,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         turma = turmaDao.buscarPorId(id);
         turma.buscarAtividades();
         jLabel1.setText(jLabel1.getText()+ turma.getNome());
-        jLabel2.setText(jLabel2.getText() + turma.getNome_escola());
+        jLabel2.setText(jLabel2.getText() + " " + turma.getNome_escola());
         
         preencherIcones();
        
@@ -216,12 +216,11 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         myButton2.setBorder(null);
         myButton2.setForeground(new java.awt.Color(2, 30, 54));
         myButton2.setText("Salvar");
-        myButton2.setBorderColor(new java.awt.Color(0, 0, 0));
         myButton2.setColor(new java.awt.Color(239, 131, 84));
-        myButton2.setColorClicked(new java.awt.Color(239, 131, 83));
+        myButton2.setColorClicked(new java.awt.Color(204, 204, 204));
         myButton2.setColorOver(new java.awt.Color(255, 139, 89));
-        myButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        myButton2.setRadius(20);
+        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        myButton2.setRadius(8);
         myButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 myButton2ActionPerformed(evt);

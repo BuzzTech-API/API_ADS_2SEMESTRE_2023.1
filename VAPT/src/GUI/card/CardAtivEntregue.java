@@ -5,10 +5,13 @@
 package GUI.card;
 
 import GUI.swing.CheckBoxCustom;
+import dao.Aluno_AtividadeDao;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
 
@@ -27,9 +30,11 @@ public class CardAtivEntregue extends javax.swing.JPanel {
     
     
     public CardAtivEntregue(Aluno_Atividade alunoAtv, int numero_atv) {
+        
+        this.aluno_atividade = alunoAtv; 
         initComponents();
         setOpaque(false);
-        this.aluno_atividade = alunoAtv; 
+       
         preecherCards(numero_atv);
         
     }
@@ -51,6 +56,19 @@ public class CardAtivEntregue extends javax.swing.JPanel {
     
     
     }
+    
+    public void atualizCards(){
+      if (!checkBoxCustom1.isSelected()) {
+                Calendar calendario = Calendar.getInstance();
+                Date utilDate = calendario.getTime();
+                java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime()); 
+                aluno_atividade.setAluno_Ativadade_entrega(false);
+                aluno_atividade.setAluno_Atividade_data_entrega(sqlDate);
+                Aluno_AtividadeDao aluno_AtividadeDao = new Aluno_AtividadeDao();
+                aluno_AtividadeDao.atualizar(aluno_atividade);
+                
+      }
+     }
     
      @Override
     protected void paintComponent(Graphics grphcs) {

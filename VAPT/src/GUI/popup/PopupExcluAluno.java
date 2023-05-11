@@ -4,18 +4,35 @@
  */
 package GUI.popup;
 
+import GUI.telasInternas.EditarAluno;
+import dao.AlunoDao;
+import modelo.Aluno;
+
 /**
  *
  * @author Alicea
  */
 public class PopupExcluAluno extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopupExcluAluno
-     */
-    public PopupExcluAluno() {
+    private Aluno aluno;
+    private EditarAluno editarAluno;
+   
+    
+    
+    
+     public PopupExcluAluno() {
+       
         initComponents();
     }
+    
+    
+    public PopupExcluAluno(Aluno aluno, EditarAluno editarAluno) {
+        this.aluno = aluno;
+        this.editarAluno = editarAluno;
+        initComponents();
+    }
+    
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,7 +51,7 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         texto3 = new javax.swing.JLabel();
         botaoCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
@@ -134,7 +151,9 @@ public class PopupExcluAluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
-        // TODO add your handling code here:
+         new AlunoDao().deletarAluno(aluno.getId_aluno());
+         editarAluno.preencherPane(aluno.getNome());
+         this.dispose();
     }//GEN-LAST:event_botaoExcluirActionPerformed
 
     /**
