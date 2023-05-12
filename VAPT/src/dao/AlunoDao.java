@@ -1,5 +1,6 @@
 
 package dao;
+import GUI.popup.PopupAltSucesso;
 import GUI.popup.PopupCadasrSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -312,7 +313,7 @@ public class AlunoDao {
             stmt.setInt(3, aluno.getId_aluno());
             stmt.execute();
             stmt.close();
-            PopupCadasrSucesso popup = new PopupCadasrSucesso();
+            PopupAltSucesso popup = new PopupAltSucesso();
             popup.setVisible(true);
 
          } catch (SQLException exception) {

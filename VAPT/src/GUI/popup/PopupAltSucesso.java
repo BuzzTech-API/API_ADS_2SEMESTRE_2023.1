@@ -4,6 +4,8 @@
  */
 package GUI.popup;
 
+import java.awt.Cursor;
+
 /**
  *
  * @author Alicea
@@ -28,13 +30,13 @@ public class PopupAltSucesso extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         texto1 = new javax.swing.JLabel();
-        iconeCheck = new javax.swing.JLabel();
-        iconeClose = new javax.swing.JLabel();
+        myButton2 = new GUI.swing.MyButton();
+        myButton3 = new GUI.swing.MyButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
         jPanel1.setForeground(new java.awt.Color(79, 93, 117));
 
@@ -42,37 +44,72 @@ public class PopupAltSucesso extends javax.swing.JFrame {
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         texto1.setText("Dado alterado com sucesso!");
 
-        iconeCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
+        myButton2.setBackground(new java.awt.Color(242, 242, 242));
+        myButton2.setText("X");
+        myButton2.setToolTipText("");
+        myButton2.setBorderColor(new java.awt.Color(242, 242, 242));
+        myButton2.setColor(new java.awt.Color(242, 242, 242));
+        myButton2.setColorOver(new java.awt.Color(217, 217, 217));
+        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        myButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                myButton2MouseEntered(evt);
+            }
+        });
+        myButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myButton2ActionPerformed(evt);
+            }
+        });
 
-        iconeClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/xclose.png"))); // NOI18N
+        myButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
+        myButton3.setToolTipText("");
+        myButton3.setBorderColor(new java.awt.Color(242, 242, 242));
+        myButton3.setColor(new java.awt.Color(217, 217, 217));
+        myButton3.setColorOver(new java.awt.Color(217, 217, 217));
+        myButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        myButton3.setOpaque(true);
+        myButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                myButton3MouseEntered(evt);
+            }
+        });
+        myButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(texto1)
-                .addContainerGap(103, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeClose)
-                .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeCheck)
-                .addGap(179, 179, 179))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(103, 103, 103)
+                                .addComponent(texto1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(173, 173, 173)
+                                .addComponent(myButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 97, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(iconeClose)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
                 .addComponent(texto1)
                 .addGap(18, 18, 18)
-                .addComponent(iconeCheck)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addComponent(myButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -87,7 +124,26 @@ public class PopupAltSucesso extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_myButton2ActionPerformed
+
+    private void myButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton3ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_myButton3ActionPerformed
+
+    private void myButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myButton3MouseEntered
+       Cursor cursor = new Cursor(Cursor.HAND_CURSOR);
+       myButton3.setCursor(cursor);
+    }//GEN-LAST:event_myButton3MouseEntered
+
+    private void myButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myButton2MouseEntered
+       Cursor cursor = new Cursor(Cursor.HAND_CURSOR);
+       myButton2.setCursor(cursor);
+    }//GEN-LAST:event_myButton2MouseEntered
 
     /**
      * @param args the command line arguments
@@ -125,9 +181,9 @@ public class PopupAltSucesso extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel iconeCheck;
-    private javax.swing.JLabel iconeClose;
     private javax.swing.JPanel jPanel1;
+    private GUI.swing.MyButton myButton2;
+    private GUI.swing.MyButton myButton3;
     private javax.swing.JLabel texto1;
     // End of variables declaration//GEN-END:variables
 }
