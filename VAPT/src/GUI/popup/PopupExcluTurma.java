@@ -34,6 +34,7 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         this.buscar = buscar;
         this.turma = turma;
         initComponents();
+        nomeTurma.setText("Turma "+ turma.getNome());
     }
 
     @SuppressWarnings("unchecked")
@@ -59,6 +60,7 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto1.setText("Tem certeza que deseja excluir \"");
 
+        nomeTurma.setEditable(false);
         nomeTurma.setBackground(new java.awt.Color(217, 217, 217));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeTurma.setText("Turma 6 A");

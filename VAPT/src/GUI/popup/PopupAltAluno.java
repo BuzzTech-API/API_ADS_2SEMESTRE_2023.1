@@ -63,6 +63,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto2.setText("\"");
 
+        nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(217, 217, 217));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 

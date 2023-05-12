@@ -111,6 +111,11 @@ public class CardDeTurma extends javax.swing.JPanel {
         myButton2.setMinimumSize(new java.awt.Dimension(85, 27));
         myButton2.setPreferredSize(new java.awt.Dimension(85, 27));
         myButton2.setRadius(8);
+        myButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelBordaArredondadaComLinha1Layout = new javax.swing.GroupLayout(panelBordaArredondadaComLinha1);
         panelBordaArredondadaComLinha1.setLayout(panelBordaArredondadaComLinha1Layout);

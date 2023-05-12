@@ -20,10 +20,11 @@ public class PopupExcluAtividade extends javax.swing.JFrame {
         initComponents();
     }  
     
-    public PopupExcluAtividade(Atividades atividades, VisualizarCardsAtividade visualizarCardsAtividade) {
+    public PopupExcluAtividade(Atividades atividades, VisualizarCardsAtividade visualizarCardsAtividade, int id) {
         this.atividades = atividades;
         this.visualizarCardsAtividade = visualizarCardsAtividade;
         initComponents();
+        nomeAtividade.setText("Atividade "+id);
     }
 
     @SuppressWarnings("unchecked")
@@ -52,6 +53,7 @@ public class PopupExcluAtividade extends javax.swing.JFrame {
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto1.setText("Tem certeza que deseja excluir \"");
 
+        nomeAtividade.setEditable(false);
         nomeAtividade.setBackground(new java.awt.Color(217, 217, 217));
         nomeAtividade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeAtividade.setText("Atividade 01");

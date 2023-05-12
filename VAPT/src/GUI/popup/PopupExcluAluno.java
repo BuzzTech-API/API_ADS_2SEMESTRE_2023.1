@@ -68,6 +68,7 @@ public class PopupExcluAluno extends javax.swing.JFrame {
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto1.setText("Tem certeza que deseja excluir ");
 
+        nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(217, 217, 217));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 

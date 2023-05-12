@@ -63,6 +63,7 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto2.setText("\"");
 
+        nomeAtividade.setEditable(false);
         nomeAtividade.setBackground(new java.awt.Color(217, 217, 217));
         nomeAtividade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeAtividade.setText("Atividade 01");

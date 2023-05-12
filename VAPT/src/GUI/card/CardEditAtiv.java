@@ -33,6 +33,7 @@ public class CardEditAtiv extends javax.swing.JPanel {
     public CardEditAtiv(Atividades atividades, int id, VisualizarCardsAtividade visualizarCardsAtividade) {
         this.visualizarCardsAtividade = visualizarCardsAtividade;
         this.atividades = atividades;
+        this.id = id;
         initComponents();
         setOpaque(false);
 
@@ -181,7 +182,7 @@ public class CardEditAtiv extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void excluirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirButtonActionPerformed
-        PopupExcluAtividade popup = new PopupExcluAtividade(atividades, visualizarCardsAtividade);
+        PopupExcluAtividade popup = new PopupExcluAtividade(atividades, visualizarCardsAtividade, id);
         popup.setVisible(true);
     }//GEN-LAST:event_excluirButtonActionPerformed
 

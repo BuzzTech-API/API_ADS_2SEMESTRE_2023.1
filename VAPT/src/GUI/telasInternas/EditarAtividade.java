@@ -296,8 +296,11 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         lista = turmaDao.getTurma();
         for (Turma turma : lista) {
             turmas.addItem("Turma: " + turma.getNome() + " - Escola: " + turma.getNome_escola());
+            if (turma.getId_turma()==atividade.getTurma_id_turma()) {
+                turmas.setSelectedItem("Turma: " + turma.getNome() + " - Escola: " + turma.getNome_escola());
+            }
         }
-        turmas.setSelectedIndex(atividade.getTurma_id_turma() - 1);
+        
     }
 
 }

@@ -68,6 +68,7 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto1.setText("Tem certeza que deseja cadastrar essa atividade na");
 
+        nomeTurma.setEditable(false);
         nomeTurma.setBackground(new java.awt.Color(242, 242, 242));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeTurma.setText("Turma 6 A");
