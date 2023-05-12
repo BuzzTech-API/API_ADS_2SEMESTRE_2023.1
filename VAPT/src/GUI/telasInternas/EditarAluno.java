@@ -55,8 +55,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
         excluirAlu = new javax.swing.JButton();
         salvarAlu = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
-
+        jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setBackground(new java.awt.Color(4, 210, 130));

@@ -101,10 +101,10 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         diaEntrega = new javax.swing.JFormattedTextField(mfdata);
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setOpaque(true);
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(114, 133, 165), 1, true));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N

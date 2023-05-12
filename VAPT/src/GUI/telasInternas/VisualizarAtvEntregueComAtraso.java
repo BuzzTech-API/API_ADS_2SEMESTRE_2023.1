@@ -112,36 +112,36 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         salvaEntregueAtrasada = new javax.swing.JButton();
         myButton1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(245, 245, 245));
+        setBackground(new java.awt.Color(246, 246, 249));
         setBorder(null);
         setOpaque(true);
-        setPreferredSize(new java.awt.Dimension(770, 307));
+        setPreferredSize(new java.awt.Dimension(770, 339));
 
-        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setMaximumSize(new java.awt.Dimension(770, 339));
         jPanel1.setMinimumSize(new java.awt.Dimension(770, 339));
         jPanel1.setPreferredSize(new java.awt.Dimension(770, 339));
 
+        jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
         jScrollPane1.setBorder(null);
 
-        jLayeredPane1.setBackground(new java.awt.Color(245, 245, 245));
+        jLayeredPane1.setBackground(new java.awt.Color(246, 246, 249));
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane1);
 
-        porcentagemEntregueAtrasado.setEditable(false);
-        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(245, 245, 245));
+        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(246, 246, 249));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
         porcentagemEntregueAtrasado.setOpaque(true);
         porcentagemEntregueAtrasado.setSelectionColor(new java.awt.Color(204, 204, 204));
 
-        texto5.setBackground(new java.awt.Color(236, 236, 236));
+        texto5.setBackground(new java.awt.Color(246, 246, 249));
         texto5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         texto5.setForeground(new java.awt.Color(79, 93, 117));
         texto5.setText("Atrasou:");
 
-        texto6.setBackground(new java.awt.Color(236, 236, 236));
+        texto6.setBackground(new java.awt.Color(246, 246, 249));
         texto6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         texto6.setForeground(new java.awt.Color(79, 93, 117));
         texto6.setText("das atividades ");
@@ -159,6 +159,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
 
         myButton1.setBackground(new java.awt.Color(204, 204, 204));
         myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/setaBaixo.png"))); // NOI18N
+        myButton1.setColor(new java.awt.Color(204, 204, 204));
         myButton1.setRadius(50);
         myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,12 +172,6 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 782, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(321, Short.MAX_VALUE)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(207, 207, 207)
-                .addComponent(salvaEntregueAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(texto5)
@@ -184,7 +179,13 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(480, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(202, 202, 202)
+                .addComponent(salvaEntregueAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,15 +196,13 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                     .addComponent(porcentagemEntregueAtrasado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(salvaEntregueAtrasada))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(salvaEntregueAtrasada)
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4))
         );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {myButton1, salvaEntregueAtrasada});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

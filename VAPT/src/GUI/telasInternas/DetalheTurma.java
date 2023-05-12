@@ -113,27 +113,35 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
         jLabel2.setText("Escola:");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(239, 131, 84));
         jLabel1.setText("Turma: ");
 
+        panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(246, 246, 249));
         panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(937, 532));
 
+        jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
+        jScrollPane1.setBorder(null);
+
+        atividadesPedentes1.setBackground(new java.awt.Color(246, 246, 249));
         jScrollPane1.setViewportView(atividadesPedentes1);
 
-        panelBorda2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelBorda2.setBackground(new java.awt.Color(246, 246, 249));
+
+        atividadesEntreguesComAtraso1.setBackground(new java.awt.Color(246, 246, 249));
 
         javax.swing.GroupLayout panelBorda2Layout = new javax.swing.GroupLayout(panelBorda2);
         panelBorda2.setLayout(panelBorda2Layout);
         panelBorda2Layout.setHorizontalGroup(
             panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorda2Layout.createSequentialGroup()
-                .addComponent(atividadesEntreguesComAtraso1, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addGroup(panelBorda2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(atividadesEntreguesComAtraso1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBorda2Layout.setVerticalGroup(
             panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,6 +150,8 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
                 .addComponent(atividadesEntreguesComAtraso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jLayeredPane1.setBackground(new java.awt.Color(246, 246, 249));
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -153,6 +163,8 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 126, Short.MAX_VALUE)
         );
+
+        jLayeredPane2.setBackground(new java.awt.Color(246, 246, 249));
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -192,9 +204,9 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(panelBorda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(panelBorda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
