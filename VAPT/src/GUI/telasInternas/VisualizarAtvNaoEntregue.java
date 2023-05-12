@@ -104,18 +104,19 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         texto6 = new javax.swing.JLabel();
         chamaAtvAtrasada = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(245, 245, 245));
+        setBackground(new java.awt.Color(246, 246, 249));
         setBorder(null);
         setMaximumSize(new java.awt.Dimension(770, 339));
         setMinimumSize(new java.awt.Dimension(770, 339));
         setOpaque(true);
         setPreferredSize(new java.awt.Dimension(770, 339));
 
-        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
 
+        jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
         jScrollPane1.setBorder(null);
 
-        jLayeredPane2.setBackground(new java.awt.Color(245, 245, 245));
+        jLayeredPane2.setBackground(new java.awt.Color(246, 246, 249));
         jLayeredPane2.setOpaque(true);
         jLayeredPane2.setLayout(new java.awt.FlowLayout(0, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane2);
@@ -132,7 +133,7 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         });
 
         porcentagemNaoEntregue.setEditable(false);
-        porcentagemNaoEntregue.setBackground(new java.awt.Color(245, 245, 245));
+        porcentagemNaoEntregue.setBackground(new java.awt.Color(246, 246, 249));
         porcentagemNaoEntregue.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemNaoEntregue.setForeground(new java.awt.Color(79, 93, 117));
         porcentagemNaoEntregue.setSelectionColor(new java.awt.Color(204, 204, 204));

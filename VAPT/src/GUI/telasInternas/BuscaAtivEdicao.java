@@ -54,16 +54,15 @@ public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setMaximumSize(new java.awt.Dimension(1018, 638));
         setMinimumSize(new java.awt.Dimension(1018, 638));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setMaximumSize(new java.awt.Dimension(1018, 638));
         jPanel1.setMinimumSize(new java.awt.Dimension(1018, 638));
         jPanel1.setPreferredSize(new java.awt.Dimension(1018, 638));
 
+        jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jPanel2.setMaximumSize(new java.awt.Dimension(545, 232));

@@ -128,6 +128,7 @@ public class Buscar extends javax.swing.JInternalFrame {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(242, 242, 242));
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 

@@ -75,13 +75,15 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         myButton1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(245, 245, 245));
+        setBackground(new java.awt.Color(246, 246, 249));
         setMaximumSize(new java.awt.Dimension(742, 240));
         setMinimumSize(new java.awt.Dimension(742, 240));
         setPreferredSize(new java.awt.Dimension(742, 240));
 
-        jLayeredPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
+
+        jLayeredPane1.setBackground(new java.awt.Color(246, 246, 249));
+        jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
         jScrollPane1.setViewportView(jLayeredPane1);
 
@@ -116,11 +118,11 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();

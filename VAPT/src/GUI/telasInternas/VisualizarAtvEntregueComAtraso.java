@@ -112,36 +112,36 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         salvaEntregueAtrasada = new javax.swing.JButton();
         myButton1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(245, 245, 245));
+        setBackground(new java.awt.Color(246, 246, 249));
         setBorder(null);
         setOpaque(true);
         setPreferredSize(new java.awt.Dimension(770, 307));
 
-        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setMaximumSize(new java.awt.Dimension(770, 339));
         jPanel1.setMinimumSize(new java.awt.Dimension(770, 339));
         jPanel1.setPreferredSize(new java.awt.Dimension(770, 339));
 
+        jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
         jScrollPane1.setBorder(null);
 
-        jLayeredPane1.setBackground(new java.awt.Color(245, 245, 245));
+        jLayeredPane1.setBackground(new java.awt.Color(246, 246, 249));
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane1);
 
-        porcentagemEntregueAtrasado.setEditable(false);
-        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(245, 245, 245));
+        porcentagemEntregueAtrasado.setBackground(new java.awt.Color(246, 246, 249));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
         porcentagemEntregueAtrasado.setOpaque(true);
         porcentagemEntregueAtrasado.setSelectionColor(new java.awt.Color(204, 204, 204));
 
-        texto5.setBackground(new java.awt.Color(236, 236, 236));
+        texto5.setBackground(new java.awt.Color(246, 246, 249));
         texto5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         texto5.setForeground(new java.awt.Color(79, 93, 117));
         texto5.setText("Atrasou:");
 
-        texto6.setBackground(new java.awt.Color(236, 236, 236));
+        texto6.setBackground(new java.awt.Color(246, 246, 249));
         texto6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         texto6.setForeground(new java.awt.Color(79, 93, 117));
         texto6.setText("das atividades ");

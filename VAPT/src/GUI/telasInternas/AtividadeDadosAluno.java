@@ -61,14 +61,14 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1280, 730));
         jPanel1.setPreferredSize(new java.awt.Dimension(1276, 694));
 
-        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 1, true));
         jPanel2.setMaximumSize(new java.awt.Dimension(1280, 730));
         jPanel2.setMinimumSize(new java.awt.Dimension(1280, 730));
         jPanel2.setPreferredSize(new java.awt.Dimension(1280, 730));
 
         nomeAluno.setEditable(false);
-        nomeAluno.setBackground(new java.awt.Color(245, 245, 245));
+        nomeAluno.setBackground(new java.awt.Color(246, 246, 249));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
         nomeAluno.setForeground(new java.awt.Color(239, 131, 84));
         nomeAluno.setText("Emília Luisa Garcia");
@@ -81,7 +81,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         });
 
         nomeEscola.setEditable(false);
-        nomeEscola.setBackground(new java.awt.Color(245, 245, 245));
+        nomeEscola.setBackground(new java.awt.Color(246, 246, 249));
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         nomeEscola.setText("Ana Herondina");
         nomeEscola.setBorder(null);
@@ -92,7 +92,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         });
 
         nomeTurma.setEditable(false);
-        nomeTurma.setBackground(new java.awt.Color(245, 245, 245));
+        nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         nomeTurma.setForeground(new java.awt.Color(4, 210, 130));
         nomeTurma.setText("6º A");
@@ -104,7 +104,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
             }
         });
 
-        recebeCardsAtv.setBackground(new java.awt.Color(245, 245, 245));
+        recebeCardsAtv.setBackground(new java.awt.Color(246, 246, 249));
         recebeCardsAtv.setMaximumSize(new java.awt.Dimension(770, 339));
         recebeCardsAtv.setMinimumSize(new java.awt.Dimension(770, 339));
 
@@ -119,6 +119,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
             .addGap(0, 339, Short.MAX_VALUE)
         );
 
+        jLabel2.setBackground(new java.awt.Color(246, 246, 249));
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
         jLabel2.setText("Escola:");

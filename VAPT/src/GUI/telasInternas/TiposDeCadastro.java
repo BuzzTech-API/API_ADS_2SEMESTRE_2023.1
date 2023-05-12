@@ -44,11 +44,10 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addTurma = new GUI.swing.MyButton();
         addAluno1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
         addAluno.setBackground(new java.awt.Color(239, 131, 84));
-        addAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAluno.setForeground(new java.awt.Color(255, 255, 255));
         addAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno.setText("Adicionar Aluno");
@@ -60,6 +59,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addAluno.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         addAluno.setIconTextGap(28);
         addAluno.setPreferredSize(new java.awt.Dimension(397, 76));
+        addAluno.setRadius(12);
         addAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addAlunoActionPerformed(evt);
@@ -67,7 +67,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         });
 
         addTurma.setBackground(new java.awt.Color(239, 131, 84));
-        addTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addTurma.setForeground(new java.awt.Color(255, 255, 255));
         addTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addTurma.setText("Adicionar Turma");
@@ -79,6 +79,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addTurma.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         addTurma.setIconTextGap(28);
         addTurma.setPreferredSize(new java.awt.Dimension(397, 76));
+        addTurma.setRadius(12);
         addTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addTurmaActionPerformed(evt);
@@ -86,7 +87,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         });
 
         addAluno1.setBackground(new java.awt.Color(239, 131, 84));
-        addAluno1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addAluno1.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAluno1.setForeground(new java.awt.Color(255, 255, 255));
         addAluno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno1.setText("Adicionar Atividade");
@@ -96,8 +97,9 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addAluno1.setColorOver(new java.awt.Color(4, 210, 130));
         addAluno1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         addAluno1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        addAluno1.setIconTextGap(28);
+        addAluno1.setIconTextGap(7);
         addAluno1.setPreferredSize(new java.awt.Dimension(397, 76));
+        addAluno1.setRadius(12);
         addAluno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addAluno1ActionPerformed(evt);

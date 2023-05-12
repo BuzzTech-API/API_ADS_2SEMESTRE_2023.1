@@ -99,7 +99,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel1.setText("Escola:");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, -1, 20));
 
-        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
@@ -109,7 +109,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel3.setText("Data da Solicitação:");
 
         recebDataEntrega.setEditable(false);
-        recebDataEntrega.setBackground(new java.awt.Color(245, 245, 245));
+        recebDataEntrega.setBackground(new java.awt.Color(246, 246, 249));
         try {
             recebDataEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -124,7 +124,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         });
 
         recebDataSolicitacao1.setEditable(false);
-        recebDataSolicitacao1.setBackground(new java.awt.Color(245, 245, 245));
+        recebDataSolicitacao1.setBackground(new java.awt.Color(246, 246, 249));
         try {
             recebDataSolicitacao1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -149,7 +149,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calendário (2).png"))); // NOI18N
 
-        recebNomesPend.setBackground(new java.awt.Color(245, 245, 245));
+        recebNomesPend.setBackground(new java.awt.Color(246, 246, 249));
         recebNomesPend.setMaximumSize(new java.awt.Dimension(742, 240));
         recebNomesPend.setMinimumSize(new java.awt.Dimension(742, 240));
         recebNomesPend.setOpaque(false);
