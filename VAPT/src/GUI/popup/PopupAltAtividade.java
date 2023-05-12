@@ -21,7 +21,7 @@ public class PopupAltAtividade extends javax.swing.JFrame {
     public PopupAltAtividade(Atividades atividade, String nomeDaTurma) {
         this.atividade = atividade;
         initComponents();
-        nomeAtividade.setText(nomeDaTurma);
+        nomeAtividade.setText("Atividade "+nomeDaTurma);
     }
 
     public PopupAltAtividade() {

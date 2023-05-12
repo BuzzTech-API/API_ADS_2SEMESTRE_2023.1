@@ -127,9 +127,10 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
 
         jLayeredPane1.setBackground(new java.awt.Color(246, 246, 249));
         jLayeredPane1.setOpaque(true);
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 33, 25));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane1);
 
+        porcentagemEntregueAtrasado.setEditable(false);
         porcentagemEntregueAtrasado.setBackground(new java.awt.Color(246, 246, 249));
         porcentagemEntregueAtrasado.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         porcentagemEntregueAtrasado.setForeground(new java.awt.Color(79, 93, 117));
@@ -150,7 +151,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
         salvaEntregueAtrasada.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         salvaEntregueAtrasada.setText("Salvar");
         salvaEntregueAtrasada.setToolTipText("");
-        salvaEntregueAtrasada.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        salvaEntregueAtrasada.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         salvaEntregueAtrasada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salvaEntregueAtrasadaActionPerformed(evt);

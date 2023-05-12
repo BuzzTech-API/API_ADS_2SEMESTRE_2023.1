@@ -261,7 +261,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             atividade.setData_inicio(sqlDate2);
             atividade.setData_fim(sqlDate);
 
-            PopupAltAtividade popup = new PopupAltAtividade(atividade," "+id);
+            PopupAltAtividade popup = new PopupAltAtividade(atividade," "+this.id);
             popup.setVisible(true);
 
         } catch (ParseException e) {

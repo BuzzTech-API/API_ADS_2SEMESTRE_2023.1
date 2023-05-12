@@ -28,6 +28,7 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         this.turma = turma;
         this.visualizarCardEditarTurma = visualizarCardEditarTurma;
         initComponents();
+        nomeTurma.setText("Turma "+ turma.getNome());
     }    
     
     public PopupExcluTurma(Turma turma, Buscar buscar ) {
