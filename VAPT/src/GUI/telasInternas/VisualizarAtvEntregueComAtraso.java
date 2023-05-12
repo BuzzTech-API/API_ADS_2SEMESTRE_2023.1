@@ -159,6 +159,7 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
 
         myButton1.setBackground(new java.awt.Color(204, 204, 204));
         myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/setaBaixo.png"))); // NOI18N
+        myButton1.setColor(new java.awt.Color(204, 204, 204));
         myButton1.setRadius(50);
         myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
