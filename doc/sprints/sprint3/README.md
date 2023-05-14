@@ -48,13 +48,13 @@
 
 Na terceira Sprint do projeto, o foco principal foi o desenvolvimento das funcionalidades de edição e exclusão das turmas, alunos e atividades escolares. Com essas funcionalidades, a professora poderá gerenciar de forma mais eficiente e precisa as informações cadastradas anteriormente, podendo corrigir erros ou remover dados desnecessários.
 
-Para a edição das turmas, será necessário implementar uma funcionalidade que permita à professora alterar o nome da turma, o ano escolar e a quantidade de alunos inscritos. Já para a exclusão de turmas, será necessário criar um processo de confirmação antes que a turma seja deletada, a fim de evitar a exclusão acidental.
+Para a edição das turmas, será necessário implementar uma funcionalidade que permita à professora alterar o nome da escola, nome da turma, dia da semana e horário que ela dá aula nessa turma. Já para a exclusão de turmas, será necessário criar um processo de confirmação antes que a turma seja deletada, a fim de evitar a exclusão acidental.
 
-Quanto aos alunos, a funcionalidade de edição permitirá à professora alterar o nome do aluno, a data de nascimento, o número da matrícula e a turma em que ele está matriculado. A exclusão de alunos exigirá também um processo de confirmação para evitar exclusões acidentais.
+Quanto aos alunos, a funcionalidade de edição permitirá à professora alterar o nome do aluno e a turma em que ele está matriculado. A exclusão de alunos exigirá também um processo de confirmação para evitar exclusões acidentais.
 
-Por fim, as funções de edição e exclusão de atividades escolares permitirão que a professora altere ou exclua atividades já cadastradas. Isso inclui a possibilidade de alterar o nome da atividade, a data em que ela foi atribuída aos alunos, a data de entrega e a pontuação correspondente. A exclusão de atividades também exigirá um processo de confirmação antes que a atividade seja deletada.
+Por fim, as funções de edição e exclusão de atividades escolares permitirão que a professora altere ou exclua atividades já cadastradas. Isso inclui a possibilidade de alterar o tipo de atividade, a data em que ela foi solicitada aos alunos, a data de entrega e a sua descrição detalhada. A exclusão de atividades também exigirá um processo de confirmação antes que a atividade seja deletada.
 
-Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora terá uma ferramenta mais completa e eficiente para gerenciar as informações escolares de seus alunos, permitindo que ela se concentre no ensino e no acompanhamento do progresso de seus alunos..
+Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora terá uma ferramenta mais completa e eficiente para gerenciar as informações escolares de seus alunos, permitindo que ela se concentre no ensino e no acompanhamento do progresso de seus alunos.
 
 
 <br>
@@ -82,121 +82,114 @@ Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora
 
 ## :checkered_flag: Tarefas <a id="tarefas"></a>
 
-### 1. Visualização dos Dados Estatísticos das Atividades dos Alunos </a>
+### 1. Área Editar </a>
 
-A funcionalidade de maior valor para a professora consistia em visualizar os alunos que ainda não entregaram as atividades avaliativas, bem como os alunos que entregaram as atividades com atraso.
+O programa possui quatro abas com funções específicas, sendo a aba 'Editar' uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
 
-Diante desse requisito, a equipe avaliou as possibilidades de implementação e decidiu que a melhor abordagem seria desenvolver uma visualização dos dados estatísticos das atividades dos alunos, que permitiria à professora acessar as informações de forma clara e concisa.
+Ao clicar na aba editar, é possível visualizar três áreas para edição. 
 
-Ao abrir o programa, a professora irá ver quais atividades ainda tem aluno devendo entrega. A visualização da turma será apresentada de acordo com o dia da semana e hora que foram previamente cadastrados no programa.
+* Editar Turma,
+* Editar Aluno,
+* Editar Atividade. 
 
-Na imagem podemos ver um exemplo de como seria essa visualização dos dados estatísticos no programa para uma determinada turma.
+Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telahome.png" alt="Dados Estatístico na Tela Home" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar.png" alt="Área Editar" style="zoom: 150%;" />
 
-Ao clicar em qualquer atividade, outra tela abre apresentando de forma mais detalhada a descrição da atividade solicitada, a porcentagem dos alunos que estão devendo. 
+
+<br>
+<br>
+
+### 2. Editar e Excluir Turma </a>
+
+Ao clicar no botão "Editar Turma", outra tela abre apresentando todas as turmas já cadastradas. 
+
+Na imagem, é possível ver como o botão muda de cor ao ser selecionado.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
 Na tela a seguir existem duas ações possíveis:
 
-* A primeira ação é clicar no botão em formato de lápis,
-* A segunda ação é clicar no nome do aluno. 
+* A primeira ação é clicar no botão editar,
+* A segunda ação é clicar no botão excluir. 
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_naoEntregou.png" alt="Dados Estatístico dos alunos que ainda estão Devendo entregar Atividades" style="zoom: 150%;" />
+Na imagem podemos ver um exemplo de como seria a visualização da área editar e excluir turma. <br>
+É importante destacar que essa área também pode ser acessada por meio da aba "Buscar".
 
-1ª ação: Quando clicamos no botão lápis, uma nova tela irá aparecer para que a professora marque nas respectivas checkbox quais alunos entregaram as atividades que ainda estavam pendentes ou as que foram entregues com atraso.
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox.png" alt="Marcando os alunos que entregaram Atividades" style="zoom: 150%;" />
+Ao clicar no botão "Editar", uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
 
-Depois de marcar os alunos que entregaram as atividades, é possível salvar as alterações realizadas. Ao clicar no botão de salvar, as informações serão registradas no sistema e estarão disponíveis para consulta posteriormente. Além disso, a professora poderá gerar relatórios e estatísticas com base nos dados registrados, o que contribuirá para uma análise mais completa e aprimoramento do processo de ensino.
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/atualizar_turma.png" alt="Atualizar Turma" style="zoom: 150%;" />
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
+Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
 
-Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/confirmacao_editar_turma.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telacheckbox_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
+Ao clicar no botão "Salvar", uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
 
-2ª ação: Quando clicamos no nome do aluno, uma nova tela irá aparecer indicando quais atividades que ainda não foram entregues e qual a porcentagem de atividades não entregues pelo aluno selecionado. Nessa tela, é possível marcar as caixas de seleção (checkbox) correspondentes às atividades que foram entregues e, em seguida, salvar as alterações realizadas no botão salvar. Além disso, na mesma tela, há um botão indicando a próxima página. Ao clicar nesse botão, serão exibidas as atividades que foram entregues fora do prazo.
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alteracao_editar_turma_sucesso.png" alt="Cadastro foi realizado com sucesso" style="zoom: 150%;" />
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_nomeAluno.png" alt="Atividades que o Aluno Ainda Não Entregou" style="zoom: 150%;" />
+Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a turma.
 
-Nessa tela é possível visualizar a porcentagem de atividades avaliativas entregues fora do prazo pelo aluno. Qualquer alteração pode ser salva ao clicar no botão salvar.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado.png" alt="Atividades que o Aluno Entregou Atrasado" style="zoom: 150%;" />
-
-Após clicar no botão salvar, será exibida a confirmação ou o cancelamento das alterações realizadas.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
-
-Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_turma.png" alt="Excluir Turma" style="zoom: 150%;" />
 
 
 <br>
 <br>
 
-### 2. Funcionalidade de Registro de Atividades Entregues </a>
+### 3. Editar e Excluir Aluno </a>
 
-A funcionalidade registro de atividades entregues foi desenvolvida no programa para auxiliar o cliente na gestão do desempenho de seus alunos. Com ela, é possível manter um registro atualizado das atividades entregues por cada aluno, o que contribui para uma análise mais completa do desempenho individual e coletivo da turma.
+Ao clicar no botão "Editar Aluno", outra tela abre apresentando todas as turmas já cadastradas. 
 
-Essa funcionalidade permite que a professora marque as atividades entregues pelos alunos e registre o status de cada uma delas, indicando se foram entregues dentro do prazo ou com atraso. Além disso, é possível visualizar os alunos que ainda não entregaram as atividades, o que facilita a identificação de possíveis problemas e a tomada de medidas para corrigi-los.
+Na imagem, é possível ver como o botão muda de cor ao ser selecionado.
 
-Para acessar a área de registro de atividades entregues, é necessário clicar na opção "Buscar". Em seguida, todas as turmas previamente cadastradas no programa serão exibidas na tela.
-Na imagem a seguir, podemos ver um exemplo de como seria essa visualização das turmas cadastradas no programa dentro da área de busca.
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
-   
-   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas.png" alt="Buscar Turmas" style="zoom: 150%;" />
+Na tela a seguir existem duas ações possíveis:
 
-<br>
+* A primeira ação é clicar no botão editar,
+* A segunda ação é clicar no botão excluir. 
 
-Ao clicar em qualquer turma na tela de busca, uma nova tela será exibida com informações dos alunos com atividades pendentes. Nessa nova tela, será possível visualizar a porcentagem de alunos com atividades pendentes, a porcentagem dos alunos que entregaram atrasado, quais alunos estão devendo atividades e quantas atividades estão pendentes.
+Na imagem podemos ver um exemplo de como seria a visualização da área editar e excluir turma. <br>
+É importante destacar que essa área também pode ser acessada por meio da aba "Buscar".
 
-Após realizar a mudança do status da atividade "pendente" para "entregue", as alterações serão efetuadas após clicar em "salvar".
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
-Para verificar a situação de um aluno específico da turma, basta clicar no nome do aluno que uma nova tela será aberta, exibindo informações sobre as atividades avaliativas pendentes ou entregues fora do prazo.
-   
-   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes.png" alt="Registro das Atividades" style="zoom: 150%;" />
+Ao clicar no botão "Editar", uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
 
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/atualizar_turma.png" alt="Atualizar Turma" style="zoom: 150%;" />
 
-<br>
+Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
 
-Após clicar no botão salvar, será exibida a confirmação ou o cancelamento das alterações realizadas.
-   
-   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes_salvar.png" alt="Registro das Atividades Salvas" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/confirmacao_editar_turma.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
 
-<br>
+Ao clicar no botão "Salvar", uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
 
-Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
-   
-   <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_turmas_registroAtividadesPendentes_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alteracao_editar_turma_sucesso.png" alt="Cadastro foi realizado com sucesso" style="zoom: 150%;" />
 
-<br>
+Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a turma.
 
-Quando clicamos no nome do aluno, uma nova tela irá aparecer indicando quais atividades que ainda não foram entregues e qual a porcentagem de atividades não entregues pelo aluno selecionado. Nessa tela, é possível marcar as caixas de seleção (checkbox) correspondentes às atividades que foram entregues e, em seguida, salvar as alterações realizadas no botão salvar. Além disso, na mesma tela, há um botão indicando a próxima página. Ao clicar nesse botão, serão exibidas as atividades que foram entregues fora do prazo.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_nomeAluno.png" alt="Atividades que o Aluno Ainda Não Entregou" style="zoom: 150%;" />
-
-Nessa tela é possível visualizar a porcentagem de atividades avaliativas entregues fora do prazo pelo aluno. Qualquer alteração pode ser salva ao clicar no botão salvar.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado.png" alt="Atividades que o Aluno Entregou Atrasado" style="zoom: 150%;" />
-
-Após clicar no botão salvar, será exibida a confirmação ou o cancelamento das alterações realizadas.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar.png" alt="Salvando Alterações" style="zoom: 150%;" />
-
-Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando que as alterações foram realizadas com sucesso.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_atrasado_salvar_sucesso.png" alt="Alterações Realizadas com Sucesso" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_turma.png" alt="Excluir Turma" style="zoom: 150%;" />
 
 
 <br>
 <br>
 
+### 4. Editar e Excluir Atividade </a>
 
+O programa possui quatro abas com funções específicas, sendo a aba 'Editar' uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
+
+Na imagem podemos ver um exemplo de como seria a visualização da área editar.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
+
+<br>
+<br>
 
 ## :fire: Burndown <a id='burndown'></a>
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/burndown2.png" alt="Burndown" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/burndown3.jpeg" alt="Burndown" style="zoom: 150%;" />
 
 <br>
 
