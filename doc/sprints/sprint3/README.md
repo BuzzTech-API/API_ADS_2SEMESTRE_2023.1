@@ -100,7 +100,7 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 <br>
 <br>
 
-### 2. Editar Turma </a>
+### 2. Editar e Excluir Turma </a>
 
 Ao clicar no botão "Editar Turma", outra tela abre apresentando todas as turmas já cadastradas. 
 
@@ -118,35 +118,65 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar 
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
-Ao clicar no botão 'Editar', uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
+Ao clicar no botão "Editar", uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/atualizar_turma.png" alt="Atualizar Turma" style="zoom: 150%;" />
 
-Ao clicar no botão 'Salvar', uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em 'Salvar'; se não, basta clicar em 'Cancelar'.
+Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/confirmacao_editar_turma.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
 
-Ao clicar no botão 'Salvar', uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
+Ao clicar no botão "Salvar", uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alteracao_editar_turma_sucesso.png" alt="Cadastro foi realizado com sucesso" style="zoom: 150%;" />
 
+Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a turma.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_turma.png" alt="Excluir Turma" style="zoom: 150%;" />
 
 
 <br>
 <br>
 
-### 3. Editar Aluno </a>
+### 3. Editar e Excluir Aluno </a>
 
-O programa possui quatro abas com funções específicas, sendo a aba 'Editar' uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
+Ao clicar no botão "Editar Aluno", outra tela abre apresentando todas as turmas já cadastradas. 
 
-Na imagem podemos ver um exemplo de como seria a visualização da área editar.
+Na imagem, é possível ver como o botão muda de cor ao ser selecionado.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
+
+Na tela a seguir existem duas ações possíveis:
+
+* A primeira ação é clicar no botão editar,
+* A segunda ação é clicar no botão excluir. 
+
+Na imagem podemos ver um exemplo de como seria a visualização da área editar e excluir turma. <br>
+É importante destacar que essa área também pode ser acessada por meio da aba "Buscar".
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
+Ao clicar no botão "Editar", uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/atualizar_turma.png" alt="Atualizar Turma" style="zoom: 150%;" />
+
+Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/confirmacao_editar_turma.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
+
+Ao clicar no botão "Salvar", uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alteracao_editar_turma_sucesso.png" alt="Cadastro foi realizado com sucesso" style="zoom: 150%;" />
+
+Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a turma.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_turma.png" alt="Excluir Turma" style="zoom: 150%;" />
+
+
 <br>
 <br>
 
-### 4. Editar Atividade </a>
+### 4. Editar e Excluir Atividade </a>
 
 O programa possui quatro abas com funções específicas, sendo a aba 'Editar' uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
 
