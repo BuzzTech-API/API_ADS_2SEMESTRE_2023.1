@@ -90,12 +90,11 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
 
-Ao clicar em qualquer atividade, outra tela abre apresentando de forma mais detalhada a descrição da atividade solicitada, a porcentagem dos alunos que estão devendo. 
+Ao clicar na aba editar, é possível visualizar 3 área para edição. 
 
-Na tela a seguir existem duas ações possíveis:
-
-* A primeira ação é clicar no botão em formato de lápis,
-* A segunda ação é clicar no nome do aluno. 
+* Editar Turma,
+* Editar Aluno,
+* Editar Atividade. 
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_atividade_alunosdevem_naoEntregou.png" alt="Dados Estatístico dos alunos que ainda estão Devendo entregar Atividades" style="zoom: 150%;" />
 
