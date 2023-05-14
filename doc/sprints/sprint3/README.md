@@ -114,6 +114,7 @@ Na tela a seguir existem duas ações possíveis:
 * A segunda ação é clicar no botão excluir. 
 
 Na imagem podemos ver um exemplo de como seria a visualização da área editar e excluir turma.
+É importante destacar que essa área também pode ser acessada por meio da aba "Buscar".
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
