@@ -88,7 +88,7 @@ O programa possui quatro abas com funções específicas, sendo a aba 'Editar' u
 
 Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telahome.png" alt="Dados Estatístico na Tela Home" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
 
 Ao clicar em qualquer atividade, outra tela abre apresentando de forma mais detalhada a descrição da atividade solicitada, a porcentagem dos alunos que estão devendo. 
 
