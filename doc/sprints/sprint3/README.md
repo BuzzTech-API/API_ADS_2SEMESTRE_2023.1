@@ -101,9 +101,14 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
 ### 2. Editar Turma </a>
 
-Ao clicar no botão "Editar Turma"
+Ao clicar no botão "Editar Turma", outra tela abre apresentando todas as turmas já cadastradas. 
 
-Na imagem podemos ver um exemplo de como seria a visualização da área editar.
+Na tela a seguir existem duas ações possíveis:
+
+* A primeira ação é clicar no botão editar,
+* A segunda ação é clicar no botão excluir. 
+
+Na imagem podemos ver um exemplo de como seria a visualização da área editar turma.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
