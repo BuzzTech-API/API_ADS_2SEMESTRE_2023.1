@@ -192,7 +192,7 @@ Ao confirmar que deseja salvar a alteração, outra tela irá aparecer indicando
 
 ## :fire: Burndown <a id='burndown'></a>
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/burndown2.png" alt="Burndown" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/burndown3.png" alt="Burndown" style="zoom: 150%;" />
 
 <br>
 
