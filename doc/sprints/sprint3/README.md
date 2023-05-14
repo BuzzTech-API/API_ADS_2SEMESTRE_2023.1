@@ -82,15 +82,11 @@ Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora
 
 ## :checkered_flag: Tarefas <a id="tarefas"></a>
 
-### 1. Visualização dos Dados Estatísticos das Atividades dos Alunos </a>
+### 1. Área Editar </a>
 
-A funcionalidade de maior valor para a professora consistia em visualizar os alunos que ainda não entregaram as atividades avaliativas, bem como os alunos que entregaram as atividades com atraso.
+O programa possui quatro abas com funções específicas, sendo a aba 'Editar' uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
 
-Diante desse requisito, a equipe avaliou as possibilidades de implementação e decidiu que a melhor abordagem seria desenvolver uma visualização dos dados estatísticos das atividades dos alunos, que permitiria à professora acessar as informações de forma clara e concisa.
-
-Ao abrir o programa, a professora irá ver quais atividades ainda tem aluno devendo entrega. A visualização da turma será apresentada de acordo com o dia da semana e hora que foram previamente cadastrados no programa.
-
-Na imagem podemos ver um exemplo de como seria essa visualização dos dados estatísticos no programa para uma determinada turma.
+Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/dadosestatisticos_telahome.png" alt="Dados Estatístico na Tela Home" style="zoom: 150%;" />
 
