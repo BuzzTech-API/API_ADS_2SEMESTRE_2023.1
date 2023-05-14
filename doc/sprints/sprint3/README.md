@@ -94,7 +94,7 @@ Ao clicar na aba editar, é possível visualizar três áreas para edição.
 
 Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar.png" alt="Área Editar" style="zoom: 150%;" />
 
 <br>
 <br>
