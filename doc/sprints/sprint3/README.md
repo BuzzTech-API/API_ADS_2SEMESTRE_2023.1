@@ -48,13 +48,13 @@
 
 Na terceira Sprint do projeto, o foco principal foi o desenvolvimento das funcionalidades de edição e exclusão das turmas, alunos e atividades escolares. Com essas funcionalidades, a professora poderá gerenciar de forma mais eficiente e precisa as informações cadastradas anteriormente, podendo corrigir erros ou remover dados desnecessários.
 
-Para a edição das turmas, será necessário implementar uma funcionalidade que permita à professora alterar o nome da turma, o ano escolar e a quantidade de alunos inscritos. Já para a exclusão de turmas, será necessário criar um processo de confirmação antes que a turma seja deletada, a fim de evitar a exclusão acidental.
+Para a edição das turmas, será necessário implementar uma funcionalidade que permita à professora alterar o nome da escola, nome da turma, dia da semana e horário que ela dá aula nessa turma. Já para a exclusão de turmas, será necessário criar um processo de confirmação antes que a turma seja deletada, a fim de evitar a exclusão acidental.
 
-Quanto aos alunos, a funcionalidade de edição permitirá à professora alterar o nome do aluno, a data de nascimento, o número da matrícula e a turma em que ele está matriculado. A exclusão de alunos exigirá também um processo de confirmação para evitar exclusões acidentais.
+Quanto aos alunos, a funcionalidade de edição permitirá à professora alterar o nome do aluno e a turma em que ele está matriculado. A exclusão de alunos exigirá também um processo de confirmação para evitar exclusões acidentais.
 
-Por fim, as funções de edição e exclusão de atividades escolares permitirão que a professora altere ou exclua atividades já cadastradas. Isso inclui a possibilidade de alterar o nome da atividade, a data em que ela foi atribuída aos alunos, a data de entrega e a pontuação correspondente. A exclusão de atividades também exigirá um processo de confirmação antes que a atividade seja deletada.
+Por fim, as funções de edição e exclusão de atividades escolares permitirão que a professora altere ou exclua atividades já cadastradas. Isso inclui a possibilidade de alterar o tipo de atividade, a data em que ela foi solicitada aos alunos, a data de entrega e a sua descrição detalhada. A exclusão de atividades também exigirá um processo de confirmação antes que a atividade seja deletada.
 
-Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora terá uma ferramenta mais completa e eficiente para gerenciar as informações escolares de seus alunos, permitindo que ela se concentre no ensino e no acompanhamento do progresso de seus alunos..
+Ao implementar essas funcionalidades na terceira Sprint do projeto, a professora terá uma ferramenta mais completa e eficiente para gerenciar as informações escolares de seus alunos, permitindo que ela se concentre no ensino e no acompanhamento do progresso de seus alunos.
 
 
 <br>
