@@ -101,11 +101,11 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
 ### 2. Editar Turma </a>
 
-Ao clicar no botão "Editar Turma".
+Ao clicar no botão "Editar Turma"
 
 Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
 <br>
 <br>
