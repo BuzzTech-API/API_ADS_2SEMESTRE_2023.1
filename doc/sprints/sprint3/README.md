@@ -103,6 +103,10 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
 Ao clicar no botão "Editar Turma", outra tela abre apresentando todas as turmas já cadastradas. 
 
+Na imagem podemos ver um exemplo de como botão altera de cor ao ser selecionado.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
+
 Na tela a seguir existem duas ações possíveis:
 
 * A primeira ação é clicar no botão editar,
@@ -110,7 +114,7 @@ Na tela a seguir existem duas ações possíveis:
 
 Na imagem podemos ver um exemplo de como seria a visualização da área editar turma.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
 <br>
 <br>
@@ -121,7 +125,7 @@ O programa possui quatro abas com funções específicas, sendo a aba 'Editar' u
 
 Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
 <br>
 <br>
