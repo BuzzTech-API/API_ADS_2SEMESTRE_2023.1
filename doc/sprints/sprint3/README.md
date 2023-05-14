@@ -104,7 +104,7 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar.
 
 Ao clicar no botão "Editar Turma", outra tela abre apresentando todas as turmas já cadastradas. 
 
-Na imagem, é possível observar um exemplo de como o botão muda de cor ao ser selecionado.
+Na imagem, é possível ver como o botão muda de cor ao ser selecionado.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
 
@@ -119,7 +119,16 @@ Na imagem podemos ver um exemplo de como seria a visualização da área editar 
 
 Ao clicar no botão 'Editar', uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/atualizar_turma.png" alt="Atualizar Turma" style="zoom: 150%;" />
+
+Ao clicar no botão 'Salvar', uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em 'Salvar'; se não, basta clicar em 'Cancelar'.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/confirmacao_editar_turma.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
+
+Ao clicar no botão 'Salvar', uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alteracao_editar_turma_sucesso.png" alt="Cadastro foi realizado com sucesso" style="zoom: 150%;" />
+
 
 
 <br>
