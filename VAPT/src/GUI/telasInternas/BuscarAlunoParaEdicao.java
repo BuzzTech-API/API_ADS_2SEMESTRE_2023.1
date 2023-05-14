@@ -125,11 +125,11 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
 
         jLabel3.setBackground(new java.awt.Color(246, 246, 249));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel3.setText("Por turma:");
+        jLabel3.setText("Escolha Aluno:");
 
         jLabel4.setBackground(new java.awt.Color(246, 246, 249));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel4.setText("Por nome:");
+        jLabel4.setText("Escolha Turma:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
