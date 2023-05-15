@@ -5,6 +5,7 @@
 package GUI.telasInternas;
 
 import GUI.popup.PopupConfirmCadastAtiv;
+import GUI.swing.RedmensionadorImagens;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -40,7 +41,8 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
         preecherComboBoxTurma();
-
+        dataSolicitacaoBut.setIcon(RedmensionadorImagens.iconeRedemensionado(getClass().getResource("/img/calendar.png"), 20, 20));
+        dataEntregaBut.setIcon(RedmensionadorImagens.iconeRedemensionado(getClass().getResource("/img/calendar.png"), 20, 20));
     }
 
     public JTextArea getDescAtv() {
@@ -84,6 +86,8 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooser1 = new GUI.datechooser.DateChooser();
+        dateChooser2 = new GUI.datechooser.DateChooser();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -100,6 +104,14 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         descAtv = new javax.swing.JTextArea();
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         diaEntrega = new javax.swing.JFormattedTextField(mfdata);
+        dataSolicitacaoBut = new GUI.swing.MyButton();
+        dataEntregaBut = new GUI.swing.MyButton();
+
+        dateChooser1.setForeground(new java.awt.Color(0, 0, 255));
+        dateChooser1.setTextRefernce(diaSolicitado);
+
+        dateChooser2.setForeground(new java.awt.Color(0, 0, 255));
+        dateChooser2.setTextRefernce(diaEntrega);
 
         setOpaque(true);
         setPreferredSize(new java.awt.Dimension(1018, 638));
@@ -189,6 +201,22 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             }
         });
 
+        dataSolicitacaoBut.setBorderColor(new java.awt.Color(246, 246, 249));
+        dataSolicitacaoBut.setColor(new java.awt.Color(246, 246, 249));
+        dataSolicitacaoBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataSolicitacaoButActionPerformed(evt);
+            }
+        });
+
+        dataEntregaBut.setBorderColor(new java.awt.Color(246, 246, 249));
+        dataEntregaBut.setColor(new java.awt.Color(246, 246, 249));
+        dataEntregaBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataEntregaButActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -208,24 +236,27 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(diaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel8)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel4)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)))))
+                                .addComponent(dataSolicitacaoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel7)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(diaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(dataEntregaBut, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -244,13 +275,15 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(dataSolicitacaoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel7)
-                    .addComponent(diaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dataEntregaBut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(diaEntrega, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -267,14 +300,14 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(138, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -329,6 +362,7 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
 
     private void diaSolicitadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaSolicitadoActionPerformed
         // TODO add your handling code here:
+        dateChooser1.showPopup();      
     }//GEN-LAST:event_diaSolicitadoActionPerformed
 
     private void diaEntregaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_diaEntregaFocusLost
@@ -348,10 +382,25 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
 
     private void diaEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaEntregaActionPerformed
         // TODO add your handling code here:
+        dateChooser2.showPopup();
     }//GEN-LAST:event_diaEntregaActionPerformed
+
+    private void dataSolicitacaoButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataSolicitacaoButActionPerformed
+        // TODO add your handling code here:
+        dateChooser1.showPopup(); 
+    }//GEN-LAST:event_dataSolicitacaoButActionPerformed
+
+    private void dataEntregaButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataEntregaButActionPerformed
+        // TODO add your handling code here:
+        dateChooser2.showPopup();
+    }//GEN-LAST:event_dataEntregaButActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.swing.MyButton dataEntregaBut;
+    private GUI.swing.MyButton dataSolicitacaoBut;
+    private GUI.datechooser.DateChooser dateChooser1;
+    private GUI.datechooser.DateChooser dateChooser2;
     private javax.swing.JTextArea descAtv;
     private javax.swing.JFormattedTextField diaEntrega;
     private javax.swing.JFormattedTextField diaSolicitado;

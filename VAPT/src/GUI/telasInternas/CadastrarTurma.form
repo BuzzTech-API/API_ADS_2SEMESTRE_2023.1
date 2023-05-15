@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker1">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker2">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker3">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker4">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker5">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker6">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker7">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker8">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker9">
+    </Component>
+    <Component class="GUI.timepicker.swing.TimePicker" name="timePicker10">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="d9" green="d9" red="d9" type="rgb"/>
@@ -32,10 +54,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="867" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" min="-2" pref="594" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -57,18 +76,18 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" pref="841" max="-2" attributes="0"/>
-                  <EmptySpace pref="75" max="32767" attributes="0"/>
+                  <EmptySpace pref="88" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="470" pref="470" max="-2" attributes="0"/>
-                  <EmptySpace pref="312" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" pref="451" max="-2" attributes="0"/>
+                  <EmptySpace pref="76" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,75 +114,37 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="592" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="nomeTurma" min="-2" pref="99" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="jLabel5" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel8" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel10" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="nomeDaEscola" min="-2" pref="172" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="terIni" linkSize="3" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <Component id="segIni" linkSize="3" min="-2" pref="72" max="-2" attributes="0"/>
-                                      <Component id="quaIni" linkSize="3" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                      <Component id="quiIni" linkSize="3" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                      <Component id="sexIni" linkSize="3" min="-2" pref="68" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="jLabel6" linkSize="7" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" linkSize="7" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel9" linkSize="7" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel11" linkSize="7" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel13" linkSize="7" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="sexFim" linkSize="3" alignment="2" min="-2" pref="73" max="-2" attributes="0"/>
-                                      <Component id="quiFim" linkSize="3" alignment="2" min="-2" pref="73" max="-2" attributes="0"/>
-                                      <Component id="quaFim" linkSize="3" alignment="2" min="-2" pref="73" max="-2" attributes="0"/>
-                                      <Component id="terFim" linkSize="3" alignment="2" min="-2" pref="73" max="-2" attributes="0"/>
-                                      <Component id="segFim" linkSize="3" alignment="2" min="-2" pref="73" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                          <Component id="nomeTurma" min="-2" pref="78" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                          <Component id="nomeDaEscola" min="-2" pref="172" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jButton1" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="89" pref="89" max="-2" attributes="0"/>
+                      <EmptySpace min="518" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -185,70 +166,14 @@
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel5" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="segIni" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="segFim" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel6" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel8" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="terFim" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="terIni" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel7" linkSize="8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel10" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="quaFim" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="quaIni" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabel9" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="quiFim" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel11" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel12" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="quiIni" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel14" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sexIni" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sexFim" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jLabel13" linkSize="8" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPanel4" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -284,6 +209,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="nomeTurma">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTurmaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -291,221 +219,6 @@
                   <Font name="Segoe UI" size="16" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Dias da Semana:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Segunda Feira"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox2">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Ter&#xe7;a Feira"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox3">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Quarta Feira"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox3ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox4">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Quinta Feira"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox4ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox5">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Sexta Feira"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox5ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="segIni">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="terIni">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="quaIni">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="quiIni">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="sexIni">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="16" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="segFim">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="terFim">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="quaFim">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="quiFim">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JFormattedTextField" name="sexFim">
-              <Properties>
-                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                  <Format format="##:##" subtype="-1" type="5"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
@@ -534,6 +247,576 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
             </Component>
+            <Container class="javax.swing.JPanel" name="jPanel4">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="segIni" min="-2" pref="72" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="segIniBut" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="segFim" min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="segFimBut" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="segFimBut" alignment="0" max="32767" attributes="0"/>
+                              <Component id="segFim" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel16" alignment="0" max="32767" attributes="0"/>
+                              <Component id="segIniBut" alignment="0" max="32767" attributes="0"/>
+                              <Component id="segIni" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jCheckBox1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Segunda Feira"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel15">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="segIni">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##:## ??" subtype="-1" type="5"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel16">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="segFim">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##:## ??" subtype="-1" type="5"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="GUI.swing.MyButton" name="segIniBut">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="segIniButActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="GUI.swing.MyButton" name="segFimBut">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="segFimButActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <Component id="jLabel8" linkSize="5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="terIni" linkSize="3" min="-2" pref="69" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="terIniBut" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jLabel7" linkSize="7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="terFim" linkSize="3" min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="terFimBut" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jCheckBox2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="terIniBut" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabel7" alignment="0" max="32767" attributes="0"/>
+                      <Component id="terFim" max="32767" attributes="0"/>
+                      <Component id="terFimBut" alignment="0" max="32767" attributes="0"/>
+                      <Component id="terIni" alignment="1" max="32767" attributes="0"/>
+                      <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Ter&#xe7;a Feira"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel8">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="terIni">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##:## ??" subtype="-1" type="5"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel7">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="terFim">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##:## ??" subtype="-1" type="5"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="GUI.swing.MyButton" name="terIniBut">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terIniButActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="GUI.swing.MyButton" name="terFimBut">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terFimButActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="quaIni" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="quaIniBut" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="quaFim" min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="quaFimBut" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="jPanel6" max="32767" attributes="0"/>
+                          <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jCheckBox3" max="32767" attributes="0"/>
+                              <Component id="quaIni" max="32767" attributes="0"/>
+                              <Component id="jLabel10" max="32767" attributes="0"/>
+                              <Component id="quaIniBut" max="32767" attributes="0"/>
+                              <Component id="quaFim" max="32767" attributes="0"/>
+                              <Component id="jLabel9" max="32767" attributes="0"/>
+                              <Component id="quaFimBut" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Quarta Feira"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox3ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="quaFim">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##:## ??" subtype="-1" type="5"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quaFimActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel10">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="quaIni">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##:## ??" subtype="-1" type="5"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
+                  </Properties>
+                </Component>
+                <Component class="GUI.swing.MyButton" name="quaIniBut">
+                  <Properties>
+                    <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quaIniButActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="GUI.swing.MyButton" name="quaFimBut">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quaFimButActionPerformed"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JPanel" name="jPanel6">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="quiIni" min="-2" pref="67" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="quiIniBut" min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="quiFim" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="quiFimBut" min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jCheckBox4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel12" alignment="0" max="32767" attributes="0"/>
+                          <Component id="quiIni" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
+                          <Component id="quiFimBut" alignment="0" max="32767" attributes="0"/>
+                          <Component id="quiFim" alignment="0" max="32767" attributes="0"/>
+                          <Component id="quiIniBut" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="16" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Quinta Feira"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox4ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel12">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="16" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="quiIni">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="##:## ??" subtype="-1" type="5"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel11">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="16" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="quiFim">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="##:## ??" subtype="-1" type="5"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="GUI.swing.MyButton" name="quiFimBut">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quiFimButActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="GUI.swing.MyButton" name="quiIniBut">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quiIniButActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel7">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="sexIni" min="-2" pref="68" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="sexIniBut" min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="sexFim" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="sexFimBut" min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox5" alignment="3" max="32767" attributes="0"/>
+                              <Component id="jLabel14" alignment="3" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel13" alignment="0" max="32767" attributes="0"/>
+                          <Component id="sexIniBut" alignment="0" max="32767" attributes="0"/>
+                          <Component id="sexFim" alignment="0" max="32767" attributes="0"/>
+                          <Component id="sexFimBut" alignment="0" max="32767" attributes="0"/>
+                          <Component id="sexIni" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="16" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Sexta Feira"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox5ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel14">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="16" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de In&#xed;cio:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="sexIni">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="##:## ??" subtype="-1" type="5"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel13">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="16" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Fim:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="sexFim">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="##:## ??" subtype="-1" type="5"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="GUI.swing.MyButton" name="sexIniBut">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sexIniButActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="GUI.swing.MyButton" name="sexFimBut">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sexFimButActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

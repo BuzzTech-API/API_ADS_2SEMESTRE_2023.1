@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="GUI.datechooser.DateChooser" name="dateChooser1">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="textRefernce" type="javax.swing.JTextField" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="diaSolicitado"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="GUI.datechooser.DateChooser" name="dateChooser2">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="textRefernce" type="javax.swing.JTextField" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="diaEntrega"/>
+        </Property>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="opaque" type="boolean" value="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -28,7 +50,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace pref="138" max="32767" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="142" max="32767" attributes="0"/>
+              <EmptySpace pref="141" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -37,7 +59,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="10" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -76,19 +98,16 @@
                               <Component id="jScrollPane1" min="-2" pref="590" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="diaEntrega" min="-2" pref="96" max="-2" attributes="0"/>
-                                      </Group>
                                       <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jComboBox1" min="-2" pref="251" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="diaSolicitado" alignment="1" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -97,8 +116,14 @@
                                   <Component id="tipoAtv" min="-2" pref="100" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="diaSolicitado" alignment="1" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dataSolicitacaoBut" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="diaEntrega" min="-2" pref="96" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="dataEntregaBut" min="-2" pref="37" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -124,14 +149,16 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="diaSolicitado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataSolicitacaoBut" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="diaSolicitado" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="diaEntrega" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataEntregaBut" alignment="1" max="32767" attributes="0"/>
+                      <Component id="diaEntrega" alignment="1" pref="32" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -297,6 +324,32 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JFormattedTextField(mfdata);"/>
           </AuxValues>
+        </Component>
+        <Component class="GUI.swing.MyButton" name="dataSolicitacaoBut">
+          <Properties>
+            <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f9" green="f6" red="f6" type="rgb"/>
+            </Property>
+            <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f9" green="f6" red="f6" type="rgb"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataSolicitacaoButActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="GUI.swing.MyButton" name="dataEntregaBut">
+          <Properties>
+            <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f9" green="f6" red="f6" type="rgb"/>
+            </Property>
+            <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f9" green="f6" red="f6" type="rgb"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataEntregaButActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
