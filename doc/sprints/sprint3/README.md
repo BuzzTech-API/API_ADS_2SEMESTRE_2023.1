@@ -176,11 +176,34 @@ Ao clicar no botão "Excluir Aluno(a)", uma nova tela será exibida para que a p
 
 ### 4. Editar e Excluir Atividade </a>
 
-O programa possui quatro abas com funções específicas, sendo a aba 'Editar' uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
+Na área editar, ao posicionar o cursor sobre o botão "Editar Atividade", é possível observar a mudança de cor.
 
-Na imagem podemos ver um exemplo de como seria a visualização da área editar.
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editar_atividade.png" alt="Editar Atividade" style="zoom: 150%;" />
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/aba_editar.png" alt="Área Editar" style="zoom: 150%;" />
+Após clicar no botão "Editar Atividade", uma nova tela será aberta, apresentando uma caixa de seleção para que a professora possa selecionar a turma que deseja verificar as atividades que necessitam de alguma alteração.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/buscar_atividade.png" alt="Atividade Selecionada por Turma" style="zoom: 150%;" />
+
+Ao selecionar a turma desejada e clicar no botão "Buscar", uma nova tela será aberta, apresentando a área para editar e excluir as atividades correspondentes. 
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/escolher_editar_atividade.png" alt="Área Editar ou Excluir Atividade" style="zoom: 150%;" />
+
+Ao clicar no botão "Editar", uma nova tela será exibida, permitindo que a professora escolha a turma e sua respectiva escola por meio de uma caixa de seleção. Além disso, é possível editar informações como tipo de trabalho, dia de solicitação, dia de entrega da atividade e sua descrição.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_atividade.png" alt="Área Editar Atividade" style="zoom: 150%;" />
+
+Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_atividade_salvar.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
+
+Ao clicar no botão "Salvar", uma nova tela será exibida informando que o dado foi cadastrado com sucesso.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_atividade_salvar_sucesso.png" alt="Atividade Alterada com sucesso" style="zoom: 150%;" />
+
+Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a atividade daquela turma.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_atividade.png" alt="Excluir Atividade" style="zoom: 150%;" />
+
 
 <br>
 <br>
