@@ -26,14 +26,16 @@ public class RedmensionadorImagens {
    
    public static String pmTo24(String entrada){
    if (entrada.split(":")[1].split(" ")[1].equals("PM")) {
-                    String segInicio="";
-                    segInicio+= (Integer.parseInt(entrada.split(":")[0])==12? "00":Integer.parseInt(entrada.split(":")[0])+12);
-                    segInicio+=":"+entrada.split(":")[1].split(" ")[0];
-                    return segInicio;
+                    String saida="";
+                    saida+= (Integer.parseInt(entrada.split(":")[0])==12? Integer.parseInt(entrada.split(":")[0]):Integer.parseInt(entrada.split(":")[0])+12);
+                    saida+=":"+entrada.split(":")[1].split(" ")[0];
+                    return saida;
                 } else {
-                    String segInicio="";
-                    segInicio+= entrada.split(" ")[0];
-                    return segInicio;
+
+                    String saida="";
+                    saida+= Integer.parseInt(entrada.split(":")[0])==12? "00:"+entrada.split(":")[1].split(" ")[0]:entrada.split(" ")[0];
+                    return saida;
                 }
    }
+   
 }

@@ -4,6 +4,7 @@
  */
 package GUI.popup;
 
+import GUI.swing.RedmensionadorImagens;
 import GUI.telasInternas.Editar;
 import GUI.telasInternas.EditarTurma;
 import dao.Dia_SemanaDao;
@@ -160,7 +161,6 @@ public class PopupAltTurma extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botaoSalvarActionPerformed
-        // TODO add your handling code here:
         TurmaDao turmaDao = new TurmaDao();
         turmaDao.alterar(turma);
 
@@ -169,45 +169,50 @@ public class PopupAltTurma extends javax.swing.JFrame {
         if (editarTurma.getSegundaCheck().isSelected()) {
             Dia_Semana dia_Semana = new Dia_Semana();
             dia_Semana.setTurma_id_turma(turma.getId_turma());
-            dia_Semana.setDia("Segunda");
-            dia_Semana.setHora_inicio(editarTurma.getSegIni().getText());
-            dia_Semana.setHora_fim(editarTurma.getSegFim().getText());
+            dia_Semana.setDia("Segunda");   
+            dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(editarTurma.getSegIni().getText()));
+            dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(editarTurma.getSegFim().getText()));
             dia_SemanaDao.adicionar(dia_Semana);
         }
         if (editarTurma.getTercaCheck().isSelected()) {
             Dia_Semana dia_Semana = new Dia_Semana();
             dia_Semana.setTurma_id_turma(turma.getId_turma());
             dia_Semana.setDia("Terça");
-            dia_Semana.setHora_inicio(editarTurma.getTerIni().getText());
-            dia_Semana.setHora_fim(editarTurma.getTerFim().getText());
+            dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(editarTurma.getTerIni().getText()));
+            dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(editarTurma.getTerFim().getText()));
             dia_SemanaDao.adicionar(dia_Semana);
         }
         if (editarTurma.getQuartaCheck().isSelected()) {
             Dia_Semana dia_Semana = new Dia_Semana();
             dia_Semana.setTurma_id_turma(turma.getId_turma());
             dia_Semana.setDia("Quarta");
-            dia_Semana.setHora_inicio(editarTurma.getQuaIni().getText());
-            dia_Semana.setHora_fim(editarTurma.getQuaFim().getText());
+            dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(editarTurma.getQuaIni().getText()));
+            dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(editarTurma.getQuaFim().getText()));
             dia_SemanaDao.adicionar(dia_Semana);
         }
         if (editarTurma.getQuintaCheck().isSelected()) {
             Dia_Semana dia_Semana = new Dia_Semana();
             dia_Semana.setTurma_id_turma(turma.getId_turma());
             dia_Semana.setDia("Quinta");
-            dia_Semana.setHora_inicio(editarTurma.getQuiIni().getText());
-            dia_Semana.setHora_fim(editarTurma.getQuiFim().getText());
+            dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(editarTurma.getQuiIni().getText()));
+            dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(editarTurma.getQuiFim().getText()));
             dia_SemanaDao.adicionar(dia_Semana);
         }
         if (editarTurma.getSextaCheck().isSelected()) {
             Dia_Semana dia_Semana = new Dia_Semana();
             dia_Semana.setTurma_id_turma(turma.getId_turma());
             dia_Semana.setDia("Sexta");
-            dia_Semana.setHora_inicio(editarTurma.getSexIni().getText());
-            dia_Semana.setHora_fim(editarTurma.getSexFim().getText());
+            dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(editarTurma.getSexIni().getText()));
+            dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(editarTurma.getSexFim().getText()));
             dia_SemanaDao.adicionar(dia_Semana);
         }
         editarTurma.preencherDiaSemana();
         this.dispose();
+    
+        
+        
+        
+        
     }// GEN-LAST:event_botaoSalvarActionPerformed
 
     private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botaoCancelarActionPerformed

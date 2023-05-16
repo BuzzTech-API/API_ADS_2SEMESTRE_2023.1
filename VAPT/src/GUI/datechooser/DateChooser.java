@@ -454,9 +454,9 @@ public final class DateChooser extends javax.swing.JPanel {
     public void setSelectedDate(Date date) {
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String d = df.format(date);
-        DAY = Integer.valueOf(d.split("-")[0]);
-        MONTH = Integer.valueOf(d.split("-")[1]);
-        YEAR = Integer.valueOf(d.split("-")[2]);
+        DAY = Integer.valueOf(d.split("/")[0]);
+        MONTH = Integer.valueOf(d.split("/")[1]);
+        YEAR = Integer.valueOf(d.split("/")[2]);
         selectedDate.setDay(DAY);
         selectedDate.setMonth(MONTH);
         selectedDate.setYear(YEAR);

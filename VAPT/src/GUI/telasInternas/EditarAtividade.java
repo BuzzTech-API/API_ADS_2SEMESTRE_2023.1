@@ -5,6 +5,7 @@
 package GUI.telasInternas;
 
 import GUI.popup.PopupAltAtividade;
+import GUI.swing.RedmensionadorImagens;
 
 import java.sql.Date;
 import java.text.DateFormat;
@@ -36,7 +37,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
         ui.setNorthPane(null);
-
+        dataSolicitacaoBut.setIcon(RedmensionadorImagens.iconeRedemensionado(getClass().getResource("/img/calendar.png"), 20, 20));
+        dataEntregaBut.setIcon(RedmensionadorImagens.iconeRedemensionado(getClass().getResource("/img/calendar.png"), 20, 20));
         
         editarAtiv();
         preecherComboBoxTurma();
@@ -53,6 +55,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
 
         tipoAtv.setText(this.atividade.getTipo());
         descAtv.setText(this.atividade.getDescricao());
+        dateChooser1.setSelectedDate(this.atividade.getData_inicio());
+        dateChooser2.setSelectedDate(this.atividade.getData_fim());
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
             diaSolicitado.setText(sdf.format(this.atividade.getData_inicio()));
@@ -64,6 +68,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooser2 = new GUI.datechooser.DateChooser();
+        dateChooser1 = new GUI.datechooser.DateChooser();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -79,7 +85,15 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         descAtv = new javax.swing.JTextArea();
         diaEntregue = new javax.swing.JFormattedTextField();
-        diaSolicitado = new javax.swing.JFormattedTextField();
+        diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
+        dataSolicitacaoBut = new GUI.swing.MyButton();
+        dataEntregaBut = new GUI.swing.MyButton();
+
+        dateChooser2.setForeground(new java.awt.Color(0, 0, 255));
+        dateChooser2.setTextRefernce(diaEntregue);
+
+        dateChooser1.setForeground(new java.awt.Color(0, 0, 255));
+        dateChooser1.setTextRefernce(diaSolicitado);
 
         jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(114, 133, 165), 1, true));
@@ -139,6 +153,11 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         diaEntregue.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        diaEntregue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                diaEntregueActionPerformed(evt);
+            }
+        });
 
         try {
             diaSolicitado.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -146,6 +165,27 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         diaSolicitado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        diaSolicitado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                diaSolicitadoActionPerformed(evt);
+            }
+        });
+
+        dataSolicitacaoBut.setBorderColor(new java.awt.Color(246, 246, 249));
+        dataSolicitacaoBut.setColor(new java.awt.Color(246, 246, 249));
+        dataSolicitacaoBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataSolicitacaoButActionPerformed(evt);
+            }
+        });
+
+        dataEntregaBut.setBorderColor(new java.awt.Color(246, 246, 249));
+        dataEntregaBut.setColor(new java.awt.Color(246, 246, 249));
+        dataEntregaBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataEntregaButActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -162,30 +202,39 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel6)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(turmas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(134, 134, 134)
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel7)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(diaEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(128, 128, 128)))
-                                .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addComponent(turmas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGap(134, 134, 134)
+                                                .addComponent(jLabel3))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                        .addComponent(jLabel7)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(diaEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(dataEntregaBut, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jLabel8)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                        .addComponent(jLabel4)
+                                                        .addGap(120, 120, 120)
+                                                        .addComponent(dataSolicitacaoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                .addComponent(tipoAtv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -202,22 +251,24 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(diaSolicitado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(diaSolicitado, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dataSolicitacaoBut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(diaEntregue, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dataEntregaBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(diaEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -234,7 +285,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -273,8 +324,32 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void dataSolicitacaoButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataSolicitacaoButActionPerformed
+        // TODO add your handling code here:
+        dateChooser1.showPopup();
+    }//GEN-LAST:event_dataSolicitacaoButActionPerformed
+
+    private void dataEntregaButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataEntregaButActionPerformed
+        // TODO add your handling code here:
+        dateChooser2.showPopup();
+    }//GEN-LAST:event_dataEntregaButActionPerformed
+
+    private void diaSolicitadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaSolicitadoActionPerformed
+        // TODO add your handling code here:
+        dateChooser1.showPopup();
+    }//GEN-LAST:event_diaSolicitadoActionPerformed
+
+    private void diaEntregueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaEntregueActionPerformed
+        // TODO add your handling code here:
+        dateChooser2.showPopup();
+    }//GEN-LAST:event_diaEntregueActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.swing.MyButton dataEntregaBut;
+    private GUI.swing.MyButton dataSolicitacaoBut;
+    private GUI.datechooser.DateChooser dateChooser1;
+    private GUI.datechooser.DateChooser dateChooser2;
     private javax.swing.JTextArea descAtv;
     private javax.swing.JFormattedTextField diaEntregue;
     private javax.swing.JFormattedTextField diaSolicitado;
