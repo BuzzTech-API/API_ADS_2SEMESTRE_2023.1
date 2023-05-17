@@ -32,7 +32,7 @@
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="buscarAluno" min="-2" pref="511" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="myButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="myButton1" min="-2" pref="147" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -88,9 +88,9 @@
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="21" style="1"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="radius" type="int" value="8"/>
+        <Property name="radius" type="int" value="10"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myButton1ActionPerformed"/>

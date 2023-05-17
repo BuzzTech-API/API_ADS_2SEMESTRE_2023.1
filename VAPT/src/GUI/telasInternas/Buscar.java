@@ -120,8 +120,8 @@ public class Buscar extends javax.swing.JInternalFrame {
         myButton1.setText("Pesquisar");
         myButton1.setColor(new java.awt.Color(239, 131, 84));
         myButton1.setColorOver(new java.awt.Color(204, 204, 204));
-        myButton1.setFont(new java.awt.Font("Arial", 1, 21)); // NOI18N
-        myButton1.setRadius(8);
+        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myButton1.setRadius(10);
         myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 myButton1ActionPerformed(evt);
@@ -148,7 +148,7 @@ public class Buscar extends javax.swing.JInternalFrame {
                 .addGap(65, 65, 65)
                 .addComponent(buscarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

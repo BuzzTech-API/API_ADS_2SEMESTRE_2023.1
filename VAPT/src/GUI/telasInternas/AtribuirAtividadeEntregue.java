@@ -87,51 +87,38 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
         jScrollPane1.setViewportView(jLayeredPane1);
 
-        myButton1.setBackground(new java.awt.Color(255, 129, 76));
-        myButton1.setBorder(null);
+        myButton1.setBackground(new java.awt.Color(239, 131, 84));
+        myButton1.setForeground(new java.awt.Color(2, 30, 54));
         myButton1.setText("Salvar");
-        myButton1.setToolTipText("");
-        myButton1.setAlignmentY(0.0F);
-        myButton1.setBorderColor(new java.awt.Color(0, 0, 0));
-        myButton1.setColor(new java.awt.Color(255, 129, 76));
-        myButton1.setColorClicked(new java.awt.Color(255, 158, 71));
-        myButton1.setColorOver(new java.awt.Color(255, 147, 80));
         myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        myButton1.setRadius(15);
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
-            }
-        });
+        myButton1.setMaximumSize(new java.awt.Dimension(157, 40));
+        myButton1.setMinimumSize(new java.awt.Dimension(157, 40));
+        myButton1.setPreferredSize(new java.awt.Dimension(157, 40));
+        myButton1.setRadius(10);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(58, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addGap(18, 18, 18)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-            
-        
-    }//GEN-LAST:event_myButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
