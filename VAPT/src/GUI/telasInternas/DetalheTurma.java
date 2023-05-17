@@ -128,6 +128,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jScrollPane1.setBorder(null);
 
         atividadesPedentes1.setBackground(new java.awt.Color(246, 246, 249));
+        atividadesPedentes1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jScrollPane1.setViewportView(atividadesPedentes1);
 
         panelBorda2.setBackground(new java.awt.Color(246, 246, 249));
@@ -152,6 +153,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         );
 
         jLayeredPane1.setBackground(new java.awt.Color(246, 246, 249));
+        jLayeredPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -161,10 +163,11 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 126, Short.MAX_VALUE)
+            .addGap(0, 122, Short.MAX_VALUE)
         );
 
         jLayeredPane2.setBackground(new java.awt.Color(246, 246, 249));
+        jLayeredPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -181,19 +184,19 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLayeredPane2)
-                    .addComponent(jLayeredPane1))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addContainerGap(126, Short.MAX_VALUE)
                 .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -218,7 +221,8 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelBorda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(15, 15, 15))
@@ -231,8 +235,11 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         myButton2.setColor(new java.awt.Color(239, 131, 84));
         myButton2.setColorClicked(new java.awt.Color(204, 204, 204));
         myButton2.setColorOver(new java.awt.Color(255, 139, 89));
-        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        myButton2.setRadius(8);
+        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myButton2.setMaximumSize(new java.awt.Dimension(157, 40));
+        myButton2.setMinimumSize(new java.awt.Dimension(157, 40));
+        myButton2.setPreferredSize(new java.awt.Dimension(157, 40));
+        myButton2.setRadius(10);
         myButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 myButton2ActionPerformed(evt);
@@ -243,25 +250,23 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         panelBorda1.setLayout(panelBorda1Layout);
         panelBorda1Layout.setHorizontalGroup(
             panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorda1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58))
-            .addGroup(panelBorda1Layout.createSequentialGroup()
-                .addGroup(panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBorda1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBorda1Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(43, Short.MAX_VALUE))
             .addGroup(panelBorda1Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(366, 366, 366))
+            .addGroup(panelBorda1Layout.createSequentialGroup()
+                .addGroup(panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelBorda1Layout.createSequentialGroup()
+                            .addGap(19, 19, 19)
+                            .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelBorda1Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         panelBorda1Layout.setVerticalGroup(
             panelBorda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,9 +279,9 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

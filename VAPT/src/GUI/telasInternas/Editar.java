@@ -61,9 +61,9 @@ public class Editar extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
         editarTurma.setBackground(new java.awt.Color(239, 131, 84));
-        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         editarTurma.setForeground(new java.awt.Color(255, 255, 255));
-        editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarTurma.setText("Editar Turma");
         editarTurma.setBorderPainted(false);
         editarTurma.setColor(new java.awt.Color(239, 131, 84));
@@ -72,8 +72,12 @@ public class Editar extends javax.swing.JInternalFrame {
         editarTurma.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         editarTurma.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         editarTurma.setIconTextGap(28);
-        editarTurma.setPreferredSize(new java.awt.Dimension(397, 78));
+        editarTurma.setMargin(new java.awt.Insets(2, 30, 2, 14));
+        editarTurma.setMaximumSize(new java.awt.Dimension(405, 78));
+        editarTurma.setMinimumSize(new java.awt.Dimension(405, 78));
+        editarTurma.setPreferredSize(new java.awt.Dimension(405, 78));
         editarTurma.setRadius(12);
+        editarTurma.setRolloverEnabled(false);
         editarTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarTurmaActionPerformed(evt);
@@ -81,9 +85,9 @@ public class Editar extends javax.swing.JInternalFrame {
         });
 
         editarAtividade.setBackground(new java.awt.Color(239, 131, 84));
-        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         editarAtividade.setForeground(new java.awt.Color(255, 255, 255));
-        editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAtividade.setText("Editar Atividade");
         editarAtividade.setBorderPainted(false);
         editarAtividade.setColor(new java.awt.Color(239, 131, 84));
@@ -92,6 +96,7 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAtividade.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         editarAtividade.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         editarAtividade.setIconTextGap(28);
+        editarAtividade.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAtividade.setPreferredSize(new java.awt.Dimension(397, 78));
         editarAtividade.setRadius(12);
         editarAtividade.addActionListener(new java.awt.event.ActionListener() {
@@ -101,9 +106,9 @@ public class Editar extends javax.swing.JInternalFrame {
         });
 
         editarAluno.setBackground(new java.awt.Color(239, 131, 84));
-        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         editarAluno.setForeground(new java.awt.Color(255, 255, 255));
-        editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAluno.setText("Editar Aluno");
         editarAluno.setBorderPainted(false);
         editarAluno.setColor(new java.awt.Color(239, 131, 84));
@@ -112,6 +117,7 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         editarAluno.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         editarAluno.setIconTextGap(28);
+        editarAluno.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAluno.setPreferredSize(new java.awt.Dimension(397, 78));
         editarAluno.setRadius(12);
         editarAluno.addActionListener(new java.awt.event.ActionListener() {

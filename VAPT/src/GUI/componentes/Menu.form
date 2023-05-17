@@ -28,15 +28,18 @@
           <Component id="editarBtn" alignment="0" max="32767" attributes="0"/>
           <Component id="homeBtn" alignment="0" max="32767" attributes="0"/>
           <Component id="buscarBtn" alignment="0" max="32767" attributes="0"/>
-          <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jLabel2" alignment="0" pref="252" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="winButton" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="winButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -48,17 +51,17 @@
               <Component id="winButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               <Component id="homeBtn" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="buscarBtn" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="cadastrarBtn" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="editarBtn" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="93" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -67,12 +70,12 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="24" style="1"/>
+          <Font name="Century Gothic" size="30" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Bem-Vindo!"/>
+        <Property name="text" type="java.lang.String" value="Bem-vindo!"/>
       </Properties>
     </Component>
     <Component class="GUI.swing.MyButton" name="homeBtn">
@@ -87,8 +90,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="18" style="1"/>
         </Property>
+        <Property name="iconTextGap" type="int" value="15"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-          <Insets value="[2, -4, 3, 14]"/>
+          <Insets value="[3, -4, 3, 14]"/>
         </Property>
         <Property name="radius" type="int" value="15"/>
       </Properties>
@@ -103,14 +107,15 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/img/cadastrar2.png"/>
+          <Image iconType="3" name="/img/plus1semfundo45px.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="18" style="1"/>
         </Property>
+        <Property name="iconTextGap" type="int" value="15"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-          <Insets value="[2, 26, 3, 14]"/>
+          <Insets value="[3, 26, 3, 14]"/>
         </Property>
         <Property name="radius" type="int" value="15"/>
       </Properties>
@@ -125,15 +130,15 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/img/editar2.png"/>
+          <Image iconType="3" name="/img/lapisbranco30px.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Editar"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="18" style="1"/>
         </Property>
-        <Property name="iconTextGap" type="int" value="9"/>
+        <Property name="iconTextGap" type="int" value="15"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-          <Insets value="[2, 0, 3, 14]"/>
+          <Insets value="[3, 0, 3, 14]"/>
         </Property>
         <Property name="radius" type="int" value="15"/>
       </Properties>
@@ -154,8 +159,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="18" style="1"/>
         </Property>
+        <Property name="iconTextGap" type="int" value="15"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-          <Insets value="[2, 0, 3, 14]"/>
+          <Insets value="[3, 0, 3, 14]"/>
         </Property>
         <Property name="radius" type="int" value="15"/>
       </Properties>

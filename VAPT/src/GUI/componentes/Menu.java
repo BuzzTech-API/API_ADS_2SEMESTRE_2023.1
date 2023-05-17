@@ -68,15 +68,16 @@ public class Menu extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Bem-Vindo!");
+        jLabel1.setText("Bem-vindo!");
 
         homeBtn.setForeground(new java.awt.Color(255, 255, 255));
         homeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home2.png"))); // NOI18N
         homeBtn.setText("Home");
         homeBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        homeBtn.setMargin(new java.awt.Insets(2, -4, 3, 14));
+        homeBtn.setIconTextGap(15);
+        homeBtn.setMargin(new java.awt.Insets(3, -4, 3, 14));
         homeBtn.setRadius(15);
         homeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -90,10 +91,11 @@ public class Menu extends javax.swing.JPanel {
         });
 
         cadastrarBtn.setForeground(new java.awt.Color(255, 255, 255));
-        cadastrarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cadastrar2.png"))); // NOI18N
+        cadastrarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/plus1semfundo45px.png"))); // NOI18N
         cadastrarBtn.setText("Cadastrar");
         cadastrarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        cadastrarBtn.setMargin(new java.awt.Insets(2, 26, 3, 14));
+        cadastrarBtn.setIconTextGap(15);
+        cadastrarBtn.setMargin(new java.awt.Insets(3, 26, 3, 14));
         cadastrarBtn.setRadius(15);
         cadastrarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -107,11 +109,11 @@ public class Menu extends javax.swing.JPanel {
         });
 
         editarBtn.setForeground(new java.awt.Color(255, 255, 255));
-        editarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar2.png"))); // NOI18N
+        editarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco30px.png"))); // NOI18N
         editarBtn.setText("Editar");
         editarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        editarBtn.setIconTextGap(9);
-        editarBtn.setMargin(new java.awt.Insets(2, 0, 3, 14));
+        editarBtn.setIconTextGap(15);
+        editarBtn.setMargin(new java.awt.Insets(3, 0, 3, 14));
         editarBtn.setRadius(15);
         editarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -128,7 +130,8 @@ public class Menu extends javax.swing.JPanel {
         buscarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pesquisa2.png"))); // NOI18N
         buscarBtn.setText("Buscar");
         buscarBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        buscarBtn.setMargin(new java.awt.Insets(2, 0, 3, 14));
+        buscarBtn.setIconTextGap(15);
+        buscarBtn.setMargin(new java.awt.Insets(3, 0, 3, 14));
         buscarBtn.setRadius(15);
         buscarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -153,14 +156,15 @@ public class Menu extends javax.swing.JPanel {
             .addComponent(editarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(homeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(buscarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(58, 58, 58))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(winButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(winButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -170,17 +174,17 @@ public class Menu extends javax.swing.JPanel {
                 .addComponent(winButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addGap(100, 100, 100)
+                .addGap(70, 70, 70)
                 .addComponent(homeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(40, 40, 40)
                 .addComponent(buscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(40, 40, 40)
                 .addComponent(cadastrarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(40, 40, 40)
                 .addComponent(editarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
