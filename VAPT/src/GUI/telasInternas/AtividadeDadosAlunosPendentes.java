@@ -109,7 +109,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLabel3.setText("Data da Solicitação:");
 
         recebDataEntrega.setEditable(false);
-        recebDataEntrega.setBackground(new java.awt.Color(246, 246, 249));
+        recebDataEntrega.setBackground(new java.awt.Color(255, 255, 255));
         try {
             recebDataEntrega.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -124,7 +124,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         });
 
         recebDataSolicitacao1.setEditable(false);
-        recebDataSolicitacao1.setBackground(new java.awt.Color(246, 246, 249));
+        recebDataSolicitacao1.setBackground(new java.awt.Color(255, 255, 255));
         try {
             recebDataSolicitacao1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {

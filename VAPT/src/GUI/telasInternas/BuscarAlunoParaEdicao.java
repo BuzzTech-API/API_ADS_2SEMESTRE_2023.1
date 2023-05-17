@@ -97,9 +97,9 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
         myButton1.setColorClicked(new java.awt.Color(204, 204, 204));
         myButton1.setColorOver(new java.awt.Color(244, 244, 244));
         myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        myButton1.setMaximumSize(new java.awt.Dimension(98, 30));
-        myButton1.setMinimumSize(new java.awt.Dimension(98, 30));
-        myButton1.setPreferredSize(new java.awt.Dimension(98, 30));
+        myButton1.setMaximumSize(new java.awt.Dimension(157, 40));
+        myButton1.setMinimumSize(new java.awt.Dimension(157, 40));
+        myButton1.setPreferredSize(new java.awt.Dimension(157, 40));
         myButton1.setRadius(10);
         myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,8 +177,8 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(26, 26, 26)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
 

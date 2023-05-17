@@ -69,7 +69,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
 
         nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(246, 246, 249));
-        nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
+        nomeAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         nomeAluno.setForeground(new java.awt.Color(239, 131, 84));
         nomeAluno.setText("Emília Luisa Garcia");
         nomeAluno.setBorder(null);
@@ -149,7 +149,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(65, 65, 65)
                 .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
