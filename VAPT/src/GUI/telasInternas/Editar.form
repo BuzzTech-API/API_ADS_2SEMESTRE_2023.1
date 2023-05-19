@@ -40,9 +40,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
               <Component id="editarTurma" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="130" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
               <Component id="editarAluno" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="130" max="32767" attributes="0"/>
+              <EmptySpace pref="89" max="32767" attributes="0"/>
               <Component id="editarAtividade" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
           </Group>
@@ -80,7 +80,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="28" style="1"/>
         </Property>
-        <Property name="horizontalAlignment" type="int" value="10"/>
         <Property name="iconTextGap" type="int" value="28"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[2, 30, 2, 14]"/>
@@ -131,7 +130,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="28" style="1"/>
         </Property>
-        <Property name="horizontalAlignment" type="int" value="10"/>
         <Property name="iconTextGap" type="int" value="28"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[2, 30, 2, 14]"/>
@@ -175,7 +173,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="28" style="1"/>
         </Property>
-        <Property name="horizontalAlignment" type="int" value="10"/>
         <Property name="iconTextGap" type="int" value="28"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[2, 30, 2, 14]"/>

@@ -10,6 +10,7 @@ import GUI.telasInternas.EditarAtividade;
 import GUI.telasInternas.EditarTurma;
 import GUI.telasInternas.VisualizarCardEditarTurma;
 import dao.TurmaDao;
+import java.awt.Cursor;
 import javax.swing.JDesktopPane;
 import modelo.Turma;
 
@@ -34,8 +35,8 @@ public class CardDeTurma extends javax.swing.JPanel {
         this.turma = turma;
         initComponents();
         setOpaque(false);
-        jLabel1.setText("Turma "+ turma.getNome());
-        jLabel3.setText(turma.getNome_escola());
+        nomeTurma.setText("Turma "+ turma.getNome());
+        nomeEscola.setText(turma.getNome_escola());
     }
     
     public CardDeTurma(Turma turma, VisualizarCardEditarTurma visualizarCardEditarTurma) {
@@ -43,8 +44,8 @@ public class CardDeTurma extends javax.swing.JPanel {
         this.turma = turma;
         initComponents();
         setOpaque(false);
-        jLabel1.setText("Turma "+turma.getNome());
-        jLabel3.setText(turma.getNome_escola());
+        nomeTurma.setText("Turma "+turma.getNome());
+        nomeEscola.setText(turma.getNome_escola());
     }
 
   
@@ -53,11 +54,11 @@ public class CardDeTurma extends javax.swing.JPanel {
     private void initComponents() {
 
         panelBordaArredondadaComLinha1 = new GUI.swing.PanelBordaArredondadaComLinha();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        myButton1 = new GUI.swing.MyButton();
-        myButton2 = new GUI.swing.MyButton();
+        nomeTurma = new javax.swing.JLabel();
+        escola = new javax.swing.JLabel();
+        nomeEscola = new javax.swing.JLabel();
+        excluiBut = new GUI.swing.MyButton();
+        editBut = new GUI.swing.MyButton();
 
         setMaximumSize(new java.awt.Dimension(220, 240));
         setName(""); // NOI18N
@@ -69,51 +70,67 @@ public class CardDeTurma extends javax.swing.JPanel {
         panelBordaArredondadaComLinha1.setMinimumSize(new java.awt.Dimension(220, 191));
         panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(220, 191));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(239, 131, 84));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Turma: 7º D");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nomeTurma.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        nomeTurma.setForeground(new java.awt.Color(239, 131, 84));
+        nomeTurma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nomeTurma.setText("Turma: 7º D");
+        nomeTurma.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
-        jLabel2.setText("Escola:");
+        escola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        escola.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        escola.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/schoolred.png"))); // NOI18N
+        escola.setText("Escola:");
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("EEF João Macedo");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        nomeEscola.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nomeEscola.setText("EEF João Macedo");
+        nomeEscola.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        myButton1.setBackground(new java.awt.Color(252, 252, 252));
-        myButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        myButton1.setForeground(new java.awt.Color(51, 51, 51));
-        myButton1.setText("Excluir");
-        myButton1.setColor(new java.awt.Color(252, 252, 252));
-        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        myButton1.setMaximumSize(new java.awt.Dimension(85, 27));
-        myButton1.setMinimumSize(new java.awt.Dimension(85, 27));
-        myButton1.setPreferredSize(new java.awt.Dimension(85, 27));
-        myButton1.setRadius(8);
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
+        excluiBut.setBackground(new java.awt.Color(252, 252, 252));
+        excluiBut.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        excluiBut.setForeground(new java.awt.Color(51, 51, 51));
+        excluiBut.setText("Excluir");
+        excluiBut.setColor(new java.awt.Color(252, 252, 252));
+        excluiBut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        excluiBut.setMaximumSize(new java.awt.Dimension(85, 27));
+        excluiBut.setMinimumSize(new java.awt.Dimension(85, 27));
+        excluiBut.setPreferredSize(new java.awt.Dimension(85, 27));
+        excluiBut.setRadius(8);
+        excluiBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                excluiButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                excluiButMouseExited(evt);
+            }
+        });
+        excluiBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
+                excluiButActionPerformed(evt);
             }
         });
 
-        myButton2.setBackground(new java.awt.Color(252, 252, 252));
-        myButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        myButton2.setForeground(new java.awt.Color(4, 210, 130));
-        myButton2.setText("Editar");
-        myButton2.setColor(new java.awt.Color(252, 252, 252));
-        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        myButton2.setMaximumSize(new java.awt.Dimension(85, 27));
-        myButton2.setMinimumSize(new java.awt.Dimension(85, 27));
-        myButton2.setPreferredSize(new java.awt.Dimension(85, 27));
-        myButton2.setRadius(8);
-        myButton2.addActionListener(new java.awt.event.ActionListener() {
+        editBut.setBackground(new java.awt.Color(252, 252, 252));
+        editBut.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        editBut.setForeground(new java.awt.Color(4, 210, 130));
+        editBut.setText("Editar");
+        editBut.setColor(new java.awt.Color(252, 252, 252));
+        editBut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        editBut.setMaximumSize(new java.awt.Dimension(85, 27));
+        editBut.setMinimumSize(new java.awt.Dimension(85, 27));
+        editBut.setPreferredSize(new java.awt.Dimension(85, 27));
+        editBut.setRadius(8);
+        editBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                editButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                editButMouseExited(evt);
+            }
+        });
+        editBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton2ActionPerformed(evt);
+                editButActionPerformed(evt);
             }
         });
 
@@ -125,44 +142,44 @@ public class CardDeTurma extends javax.swing.JPanel {
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(nomeEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                         .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
-                                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(excluiBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(editBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(escola, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jLabel1)
+                .addComponent(nomeTurma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(escola)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(nomeEscola)
                 .addGap(29, 29, 29)
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(excluiBut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editBut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         add(panelBordaArredondadaComLinha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 240));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+    private void excluiButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluiButActionPerformed
         
         if (buscar == null) {
             PopupExcluTurma popup = new PopupExcluTurma(turma, visualizarCardEditarTurma);
@@ -175,9 +192,9 @@ public class CardDeTurma extends javax.swing.JPanel {
 
         
 
-    }//GEN-LAST:event_myButton1ActionPerformed
+    }//GEN-LAST:event_excluiButActionPerformed
 
-    private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
+    private void editButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButActionPerformed
         // TODO add your handling code here:
         if (buscar == null) {
             JDesktopPane desktopPane =  visualizarCardEditarTurma.getJDesktopPane();
@@ -191,15 +208,31 @@ public class CardDeTurma extends javax.swing.JPanel {
             desktopPane.removeAll();
             desktopPane.add(editarturma).setVisible(true);
         }
-    }//GEN-LAST:event_myButton2ActionPerformed
+    }//GEN-LAST:event_editButActionPerformed
+
+    private void excluiButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_excluiButMouseEntered
+        excluiBut.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_excluiButMouseEntered
+
+    private void excluiButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_excluiButMouseExited
+        excluiBut.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_excluiButMouseExited
+
+    private void editButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editButMouseEntered
+        editBut.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_editButMouseEntered
+
+    private void editButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editButMouseExited
+        editBut.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_editButMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private GUI.swing.MyButton myButton1;
-    private GUI.swing.MyButton myButton2;
+    private GUI.swing.MyButton editBut;
+    private javax.swing.JLabel escola;
+    private GUI.swing.MyButton excluiBut;
+    private javax.swing.JLabel nomeEscola;
+    private javax.swing.JLabel nomeTurma;
     private GUI.swing.PanelBordaArredondadaComLinha panelBordaArredondadaComLinha1;
     // End of variables declaration//GEN-END:variables
 }

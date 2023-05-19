@@ -70,7 +70,6 @@ public class Editar extends javax.swing.JInternalFrame {
         editarTurma.setColorClicked(new java.awt.Color(4, 210, 130));
         editarTurma.setColorOver(new java.awt.Color(4, 210, 130));
         editarTurma.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        editarTurma.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         editarTurma.setIconTextGap(28);
         editarTurma.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarTurma.setMaximumSize(new java.awt.Dimension(405, 78));
@@ -94,7 +93,6 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAtividade.setColorClicked(new java.awt.Color(4, 210, 130));
         editarAtividade.setColorOver(new java.awt.Color(4, 210, 130));
         editarAtividade.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        editarAtividade.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         editarAtividade.setIconTextGap(28);
         editarAtividade.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAtividade.setPreferredSize(new java.awt.Dimension(397, 78));
@@ -115,7 +113,6 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAluno.setColorClicked(new java.awt.Color(4, 210, 130));
         editarAluno.setColorOver(new java.awt.Color(4, 210, 130));
         editarAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        editarAluno.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         editarAluno.setIconTextGap(28);
         editarAluno.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAluno.setPreferredSize(new java.awt.Dimension(397, 78));
@@ -146,9 +143,9 @@ public class Editar extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addGap(89, 89, 89)
                 .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100))
         );

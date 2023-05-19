@@ -32,7 +32,7 @@
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="buscarAluno" min="-2" pref="511" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="myButton1" min="-2" pref="147" max="-2" attributes="0"/>
+              <Component id="pesquisaBut" min="-2" pref="147" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -43,7 +43,7 @@
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="buscarAluno" max="32767" attributes="0"/>
-                  <Component id="myButton1" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="pesquisaBut" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="431" max="-2" attributes="0"/>
@@ -75,7 +75,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarAlunoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="GUI.swing.MyButton" name="myButton1">
+    <Component class="GUI.swing.MyButton" name="pesquisaBut">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="54" green="83" red="ef" type="rgb"/>
@@ -93,7 +93,9 @@
         <Property name="radius" type="int" value="10"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myButton1ActionPerformed"/>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pesquisaButMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pesquisaButMouseExited"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisaButActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">

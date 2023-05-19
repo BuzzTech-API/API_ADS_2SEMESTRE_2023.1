@@ -18,6 +18,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
 import modelo.Turma;
+import java.awt.Cursor;
 
 /**
  *
@@ -86,6 +87,14 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         editAlunosPendesntes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnEditar.png"))); // NOI18N
         editAlunosPendesntes.setBorder(null);
         editAlunosPendesntes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        editAlunosPendesntes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                editAlunosPendesntesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                editAlunosPendesntesMouseExited(evt);
+            }
+        });
         editAlunosPendesntes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editAlunosPendesntesActionPerformed(evt);
@@ -142,7 +151,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(455, 256));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(0));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +181,14 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
     private void recebPorcentagemAlunosPendentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recebPorcentagemAlunosPendentesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_recebPorcentagemAlunosPendentesActionPerformed
+
+    private void editAlunosPendesntesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAlunosPendesntesMouseEntered
+        editAlunosPendesntes.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_editAlunosPendesntesMouseEntered
+
+    private void editAlunosPendesntesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAlunosPendesntesMouseExited
+        editAlunosPendesntes.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_editAlunosPendesntesMouseExited
  
     private void prencherTextArea(){
       int contador=0;
