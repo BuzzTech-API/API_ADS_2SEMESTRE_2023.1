@@ -93,6 +93,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jButton1.setBackground(new java.awt.Color(239, 131, 84));
         jButton1.setForeground(new java.awt.Color(2, 30, 54));
         jButton1.setText("Cadastrar");
+        jButton1.setColor(new java.awt.Color(239, 131, 84));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setMaximumSize(new java.awt.Dimension(157, 40));
         jButton1.setMinimumSize(new java.awt.Dimension(157, 40));
