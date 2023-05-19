@@ -21,9 +21,9 @@ public class MyButton extends JButton {
     
     public MyButton() {
         
-        setColor(new java.awt.Color(2, 30, 54));
-        colorOver = new java.awt.Color(2,65,75);
-        colorClicked = new java.awt.Color(2,65,90);
+        setColor(new java.awt.Color(239,131,84));
+        colorOver = new java.awt.Color(4,210,130);
+        colorClicked = new java.awt.Color(4,171,69);
         borderColor = new java.awt.Color(2, 30, 54, 20);
         setContentAreaFilled(false);
         addMouseListener(new MouseAdapter() {
