@@ -15,6 +15,9 @@ import java.awt.RenderingHints;
  * @author Fatec
  */
 public class DashboardNova extends javax.swing.JFrame {
+    
+     private int positionX;
+     private int positionY;
 
     public DashboardNova() {
         initComponents();
@@ -34,6 +37,7 @@ public class DashboardNova extends javax.swing.JFrame {
         panelBorda1 = new GUI.swing.PanelBorda();
         panelBorda2 = new GUI.swing.PanelBorda();
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
         menu = new GUI.componentes.Menu(jDesktopPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,19 +61,45 @@ public class DashboardNova extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel1MouseDragged(evt);
+            }
+        });
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel1MouseEntered(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 43, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout panelBorda2Layout = new javax.swing.GroupLayout(panelBorda2);
         panelBorda2.setLayout(panelBorda2Layout);
         panelBorda2Layout.setHorizontalGroup(
             panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorda2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jDesktopPane1)
+                .addGroup(panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jDesktopPane1)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panelBorda2Layout.setVerticalGroup(
             panelBorda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorda2Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jDesktopPane1)
                 .addContainerGap())
         );
@@ -103,6 +133,17 @@ public class DashboardNova extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered
+        positionX= evt.getX();
+        positionY = evt.getY();
+    }//GEN-LAST:event_jPanel1MouseEntered
+
+    private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
+        int x=evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        setLocation(x-positionX,y-positionY);
+    }//GEN-LAST:event_jPanel1MouseDragged
 
     @Override
     public void paintComponents(Graphics grphcs) {
@@ -152,6 +193,7 @@ public class DashboardNova extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JPanel jPanel1;
     private GUI.componentes.Menu menu;
     private GUI.swing.PanelBorda panelBorda1;
     private GUI.swing.PanelBorda panelBorda2;

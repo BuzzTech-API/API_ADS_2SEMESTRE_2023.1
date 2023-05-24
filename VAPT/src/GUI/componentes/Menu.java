@@ -39,6 +39,18 @@ public class Menu extends javax.swing.JPanel {
     public Menu(JDesktopPane jDesktopPanel) {
         this.jDesktopPanel = jDesktopPanel;
         initComponents();
+        buscarBtn.setColor(new java.awt.Color(2, 30, 54));
+        buscarBtn.setColorOver(new java.awt.Color(2,65,75));
+        buscarBtn.setColorClicked(new java.awt.Color(2,65,90));
+        cadastrarBtn.setColor(new java.awt.Color(2, 30, 54));
+        cadastrarBtn.setColorOver(new java.awt.Color(2,65,75));
+        cadastrarBtn.setColorClicked(new java.awt.Color(2,65,90));
+        editarBtn.setColor(new java.awt.Color(2, 30, 54));
+        editarBtn.setColorOver(new java.awt.Color(2,65,75));
+        editarBtn.setColorClicked(new java.awt.Color(2,65,90));
+        homeBtn.setColor(new java.awt.Color(2, 30, 54));
+        homeBtn.setColorOver(new java.awt.Color(2,65,75));
+        homeBtn.setColorClicked(new java.awt.Color(2,65,90));
     }
 
     
