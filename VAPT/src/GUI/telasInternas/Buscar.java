@@ -63,6 +63,14 @@ public class Buscar extends javax.swing.JInternalFrame {
                     jDesktopPane.removeAll();
                     jDesktopPane.add(detalheTurma).setVisible(true);
                 }
+                public void mouseEntered(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    cardDeTurma.setBackground(new Color(204,204,204));
+                }
+                public void mouseExited(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+                    cardDeTurma.setBackground(new Color(252,252,252));
+                }
             });
             jLayeredPane1.add(cardDeTurma);
             contador++;
@@ -84,6 +92,16 @@ public class Buscar extends javax.swing.JInternalFrame {
                     DetalheTurma detalheTurma = new DetalheTurma(turma.getId_turma(), jDesktopPane);
                     jDesktopPane.removeAll();
                     jDesktopPane.add(detalheTurma).setVisible(true);
+                }
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    cardDeTurma.setBackground(new Color(204,204,204));
+                }
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+                    cardDeTurma.setBackground(new Color(252,252,252));
                 }
             });
             jLayeredPane1.add(cardDeTurma);

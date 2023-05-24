@@ -10,6 +10,7 @@ import GUI.telasInternas.EditarAtividade;
 import GUI.telasInternas.EditarTurma;
 import GUI.telasInternas.VisualizarCardEditarTurma;
 import dao.TurmaDao;
+import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.JDesktopPane;
 import modelo.Turma;
@@ -220,10 +221,12 @@ public class CardDeTurma extends javax.swing.JPanel {
 
     private void editButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editButMouseEntered
         editBut.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        editBut.setForeground(new Color(41,41,41));
     }//GEN-LAST:event_editButMouseEntered
 
     private void editButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editButMouseExited
         editBut.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        editBut.setForeground(new Color(4,210,130));
     }//GEN-LAST:event_editButMouseExited
 
 
