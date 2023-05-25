@@ -46,15 +46,12 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        addAluno.setBackground(new java.awt.Color(239, 131, 84));
         addAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAluno.setForeground(new java.awt.Color(255, 255, 255));
         addAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno.setText("Adicionar Aluno");
         addAluno.setBorderPainted(false);
-        addAluno.setColor(new java.awt.Color(239, 131, 84));
         addAluno.setColorClicked(new java.awt.Color(4, 210, 130));
-        addAluno.setColorOver(new java.awt.Color(4, 210, 130));
         addAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         addAluno.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         addAluno.setIconTextGap(28);
@@ -66,15 +63,12 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        addTurma.setBackground(new java.awt.Color(239, 131, 84));
         addTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addTurma.setForeground(new java.awt.Color(255, 255, 255));
         addTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addTurma.setText("Adicionar Turma");
         addTurma.setBorderPainted(false);
-        addTurma.setColor(new java.awt.Color(239, 131, 84));
         addTurma.setColorClicked(new java.awt.Color(4, 210, 130));
-        addTurma.setColorOver(new java.awt.Color(4, 210, 130));
         addTurma.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         addTurma.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         addTurma.setIconTextGap(28);
@@ -86,15 +80,12 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        addAluno1.setBackground(new java.awt.Color(239, 131, 84));
         addAluno1.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAluno1.setForeground(new java.awt.Color(255, 255, 255));
         addAluno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno1.setText("Adicionar Atividade");
         addAluno1.setBorderPainted(false);
-        addAluno1.setColor(new java.awt.Color(239, 131, 84));
         addAluno1.setColorClicked(new java.awt.Color(4, 210, 130));
-        addAluno1.setColorOver(new java.awt.Color(4, 210, 130));
         addAluno1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         addAluno1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         addAluno1.setIconTextGap(7);
@@ -124,11 +115,11 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(90, 90, 90)
+                .addGap(50, 50, 50)
                 .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(addAluno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100))
         );

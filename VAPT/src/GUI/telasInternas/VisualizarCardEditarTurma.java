@@ -80,7 +80,7 @@ public class VisualizarCardEditarTurma extends javax.swing.JInternalFrame {
         jScrollPane1.setMinimumSize(new java.awt.Dimension(1018, 638));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(20, 27, 75));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(20, 27, 25));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
