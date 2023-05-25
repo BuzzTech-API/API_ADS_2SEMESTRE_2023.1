@@ -100,7 +100,7 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, -1, 20));
 
         jPanel2.setBackground(new java.awt.Color(246, 246, 249));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 1, true));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel2.setText("Data da Entrega:");

@@ -64,7 +64,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
         jPanel2.setBackground(new java.awt.Color(246, 246, 249));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(114, 133, 165)));
 
         jLabel1.setBackground(new java.awt.Color(4, 210, 130));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -77,10 +77,13 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Turma:");
 
+        alunoNomeTextField.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         alunoNomeTextField.setMaximumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setMinimumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setPreferredSize(new java.awt.Dimension(64, 25));
 
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jComboBox1.setMaximumSize(new java.awt.Dimension(72, 25));
         jComboBox1.setMinimumSize(new java.awt.Dimension(72, 25));
         jComboBox1.setPreferredSize(new java.awt.Dimension(72, 25));
@@ -90,10 +93,8 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
         jButton1.setForeground(new java.awt.Color(2, 30, 54));
         jButton1.setText("Cadastrar");
-        jButton1.setColor(new java.awt.Color(239, 131, 84));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setMaximumSize(new java.awt.Dimension(157, 40));
         jButton1.setMinimumSize(new java.awt.Dimension(157, 40));
@@ -115,15 +116,13 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(alunoNomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(35, 35, 35))))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(alunoNomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,16 +151,16 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(189, Short.MAX_VALUE)
+                .addGap(189, 189, 189)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addGap(204, 204, 204))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(190, Short.MAX_VALUE)
+                .addGap(130, 130, 130)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addGap(204, 204, 204))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

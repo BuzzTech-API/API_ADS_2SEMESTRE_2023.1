@@ -83,7 +83,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(246, 246, 249));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.black));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setMaximumSize(new java.awt.Dimension(545, 232));
         jPanel1.setMinimumSize(new java.awt.Dimension(545, 232));
         jPanel1.setPreferredSize(new java.awt.Dimension(545, 232));
@@ -197,9 +197,9 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(190, 190, 190)
+                .addGap(130, 130, 130)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
 
         pack();
