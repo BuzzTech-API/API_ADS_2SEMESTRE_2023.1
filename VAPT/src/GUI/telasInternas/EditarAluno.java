@@ -93,7 +93,6 @@ public class EditarAluno extends javax.swing.JInternalFrame {
             }
         });
 
-        salvarAlu.setBackground(new java.awt.Color(239, 131, 84));
         salvarAlu.setForeground(new java.awt.Color(2, 30, 54));
         salvarAlu.setText("Salvar");
         salvarAlu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N

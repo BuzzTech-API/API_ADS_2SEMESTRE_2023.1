@@ -215,9 +215,6 @@
             </Component>
             <Component class="GUI.swing.MyButton" name="salvarAlu">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="54" green="83" red="ef" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="36" green="1e" red="2" type="rgb"/>
                 </Property>
