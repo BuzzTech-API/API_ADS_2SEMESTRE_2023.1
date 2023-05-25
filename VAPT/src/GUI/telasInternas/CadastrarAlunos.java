@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import dao.AlunoDao;
 import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
+import java.awt.Color;
+import java.awt.Cursor;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -54,28 +56,28 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        CadastrarAluno = new javax.swing.JLabel();
+        NomeAluno = new javax.swing.JLabel();
+        Turma = new javax.swing.JLabel();
         alunoNomeTextField = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new GUI.swing.MyButton();
+        cadBut = new GUI.swing.MyButton();
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
         jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setBackground(new java.awt.Color(4, 210, 130));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(4, 210, 130));
-        jLabel1.setText("Cadastrar Aluno:");
+        CadastrarAluno.setBackground(new java.awt.Color(4, 210, 130));
+        CadastrarAluno.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        CadastrarAluno.setForeground(new java.awt.Color(4, 210, 130));
+        CadastrarAluno.setText("Cadastrar Aluno:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel2.setText("Nome aluno:");
+        NomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        NomeAluno.setText("Nome aluno:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel3.setText("Turma:");
+        Turma.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        Turma.setText("Turma:");
 
         alunoNomeTextField.setMaximumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setMinimumSize(new java.awt.Dimension(64, 25));
@@ -90,18 +92,21 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
-        jButton1.setForeground(new java.awt.Color(2, 30, 54));
-        jButton1.setText("Cadastrar");
-        jButton1.setColor(new java.awt.Color(239, 131, 84));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setMaximumSize(new java.awt.Dimension(157, 40));
-        jButton1.setMinimumSize(new java.awt.Dimension(157, 40));
-        jButton1.setPreferredSize(new java.awt.Dimension(157, 40));
-        jButton1.setRadius(10);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cadBut.setForeground(new java.awt.Color(2, 30, 54));
+        cadBut.setText("Cadastrar");
+        cadBut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        cadBut.setMaximumSize(new java.awt.Dimension(157, 40));
+        cadBut.setMinimumSize(new java.awt.Dimension(157, 40));
+        cadBut.setPreferredSize(new java.awt.Dimension(157, 40));
+        cadBut.setRadius(10);
+        cadBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cadButMouseEntered(evt);
+            }
+        });
+        cadBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cadButActionPerformed(evt);
             }
         });
 
@@ -112,38 +117,37 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(CadastrarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NomeAluno)
+                            .addComponent(Turma))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(alunoNomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 260, Short.MAX_VALUE)
+                                .addComponent(cadBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(alunoNomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(35, 35, 35))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 251, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CadastrarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(NomeAluno)
                     .addComponent(alunoNomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(Turma)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cadBut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
 
@@ -185,7 +189,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cadButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadButActionPerformed
         
         int id = jComboBox1.getSelectedIndex();
         Aluno aluno = new Aluno();
@@ -198,16 +202,21 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         PopupConfirmCadastAluno popup = new PopupConfirmCadastAluno(aluno, this, turma.getNome(), listaAtividades);
         popup.setVisible(true);
             
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cadButActionPerformed
+
+    private void cadButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadButMouseEntered
+       cadBut.setCursor(new Cursor(Cursor.HAND_CURSOR));
+       cadBut.setBackground(new Color(4,210,130));
+    }//GEN-LAST:event_cadButMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CadastrarAluno;
+    private javax.swing.JLabel NomeAluno;
+    private javax.swing.JLabel Turma;
     private javax.swing.JTextField alunoNomeTextField;
-    private GUI.swing.MyButton jButton1;
+    private GUI.swing.MyButton cadBut;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

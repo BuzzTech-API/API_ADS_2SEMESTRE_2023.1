@@ -5,6 +5,7 @@
 package GUI.telasInternas;
 
 import dao.AtividadesDao;
+import java.awt.Cursor;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -59,7 +60,11 @@ public class Editar extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
+<<<<<<< Updated upstream
         editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
+=======
+        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+>>>>>>> Stashed changes
         editarTurma.setForeground(new java.awt.Color(255, 255, 255));
         editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarTurma.setText("Editar Turma");
@@ -73,13 +78,25 @@ public class Editar extends javax.swing.JInternalFrame {
         editarTurma.setPreferredSize(new java.awt.Dimension(405, 78));
         editarTurma.setRadius(12);
         editarTurma.setRolloverEnabled(false);
+        editarTurma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                editarTurmaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                editarTurmaMouseExited(evt);
+            }
+        });
         editarTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarTurmaActionPerformed(evt);
             }
         });
 
+<<<<<<< Updated upstream
         editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
+=======
+        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+>>>>>>> Stashed changes
         editarAtividade.setForeground(new java.awt.Color(255, 255, 255));
         editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAtividade.setText("Editar Atividade");
@@ -91,13 +108,25 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAtividade.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAtividade.setPreferredSize(new java.awt.Dimension(397, 78));
         editarAtividade.setRadius(12);
+        editarAtividade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                editarAtividadeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                editarAtividadeMouseExited(evt);
+            }
+        });
         editarAtividade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarAtividadeActionPerformed(evt);
             }
         });
 
+<<<<<<< Updated upstream
         editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
+=======
+        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+>>>>>>> Stashed changes
         editarAluno.setForeground(new java.awt.Color(255, 255, 255));
         editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAluno.setText("Editar Aluno");
@@ -109,6 +138,14 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAluno.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAluno.setPreferredSize(new java.awt.Dimension(397, 78));
         editarAluno.setRadius(12);
+        editarAluno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                editarAlunoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                editarAlunoMouseExited(evt);
+            }
+        });
         editarAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarAlunoActionPerformed(evt);
@@ -137,7 +174,11 @@ public class Editar extends javax.swing.JInternalFrame {
                 .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                 .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< Updated upstream
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+=======
+                .addGap(89, 89, 89)
+>>>>>>> Stashed changes
                 .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100))
         );
@@ -166,6 +207,30 @@ public class Editar extends javax.swing.JInternalFrame {
         jDesktopPanel.removeAll();
         jDesktopPanel.add( buscaAluEdit).setVisible(true);
     }//GEN-LAST:event_editarAlunoActionPerformed
+
+    private void editarTurmaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarTurmaMouseEntered
+        editarTurma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_editarTurmaMouseEntered
+
+    private void editarTurmaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarTurmaMouseExited
+        editarTurma.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_editarTurmaMouseExited
+
+    private void editarAlunoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarAlunoMouseEntered
+        editarAluno.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_editarAlunoMouseEntered
+
+    private void editarAlunoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarAlunoMouseExited
+        editarAluno.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_editarAlunoMouseExited
+
+    private void editarAtividadeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarAtividadeMouseEntered
+        editarAtividade.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_editarAtividadeMouseEntered
+
+    private void editarAtividadeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editarAtividadeMouseExited
+        editarAtividade.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_editarAtividadeMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -4,6 +4,7 @@
  */
 package GUI.telasInternas;
 
+import java.awt.Cursor;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -42,11 +43,15 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
 
         addAluno = new GUI.swing.MyButton();
         addTurma = new GUI.swing.MyButton();
-        addAluno1 = new GUI.swing.MyButton();
+        addAtividade = new GUI.swing.MyButton();
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
+<<<<<<< Updated upstream
         addAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
+=======
+        addAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+>>>>>>> Stashed changes
         addAluno.setForeground(new java.awt.Color(255, 255, 255));
         addAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno.setText("Adicionar Aluno");
@@ -57,13 +62,25 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addAluno.setIconTextGap(28);
         addAluno.setPreferredSize(new java.awt.Dimension(397, 76));
         addAluno.setRadius(12);
+        addAluno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addAlunoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addAlunoMouseExited(evt);
+            }
+        });
         addAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addAlunoActionPerformed(evt);
             }
         });
 
+<<<<<<< Updated upstream
         addTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
+=======
+        addTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+>>>>>>> Stashed changes
         addTurma.setForeground(new java.awt.Color(255, 255, 255));
         addTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addTurma.setText("Adicionar Turma");
@@ -74,12 +91,21 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addTurma.setIconTextGap(28);
         addTurma.setPreferredSize(new java.awt.Dimension(397, 76));
         addTurma.setRadius(12);
+        addTurma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addTurmaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addTurmaMouseExited(evt);
+            }
+        });
         addTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addTurmaActionPerformed(evt);
             }
         });
 
+<<<<<<< Updated upstream
         addAluno1.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAluno1.setForeground(new java.awt.Color(255, 255, 255));
         addAluno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
@@ -92,8 +118,30 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         addAluno1.setPreferredSize(new java.awt.Dimension(397, 76));
         addAluno1.setRadius(12);
         addAluno1.addActionListener(new java.awt.event.ActionListener() {
+=======
+        addAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addAtividade.setForeground(new java.awt.Color(255, 255, 255));
+        addAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
+        addAtividade.setText("Adicionar Atividade");
+        addAtividade.setBorderPainted(false);
+        addAtividade.setColorClicked(new java.awt.Color(4, 210, 130));
+        addAtividade.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        addAtividade.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        addAtividade.setIconTextGap(7);
+        addAtividade.setPreferredSize(new java.awt.Dimension(397, 76));
+        addAtividade.setRadius(12);
+        addAtividade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addAtividadeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addAtividadeMouseExited(evt);
+            }
+        });
+        addAtividade.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addAluno1ActionPerformed(evt);
+                addAtividadeActionPerformed(evt);
             }
         });
 
@@ -104,13 +152,13 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(310, 310, 310)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(addAluno1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(291, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addAluno, addAluno1, addTurma});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addAluno, addAtividade, addTurma});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,12 +167,17 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
                 .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< Updated upstream
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(addAluno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> Stashed changes
                 .addGap(100, 100, 100))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addAluno, addAluno1, addTurma});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addAluno, addAtividade, addTurma});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -141,16 +194,40 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         jDesktopPanel.add(cadastrarTurma).setVisible(true);
     }//GEN-LAST:event_addTurmaActionPerformed
 
-    private void addAluno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAluno1ActionPerformed
+    private void addAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAtividadeActionPerformed
          AtividadesCadastradas atividadesCadastradas = new AtividadesCadastradas();
       jDesktopPanel.removeAll();
       jDesktopPanel.add( atividadesCadastradas).setVisible(true);
-    }//GEN-LAST:event_addAluno1ActionPerformed
+    }//GEN-LAST:event_addAtividadeActionPerformed
+
+    private void addTurmaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addTurmaMouseEntered
+        addTurma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_addTurmaMouseEntered
+
+    private void addTurmaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addTurmaMouseExited
+        addTurma.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_addTurmaMouseExited
+
+    private void addAlunoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addAlunoMouseEntered
+        addAluno.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_addAlunoMouseEntered
+
+    private void addAlunoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addAlunoMouseExited
+        addAluno.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_addAlunoMouseExited
+
+    private void addAtividadeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addAtividadeMouseEntered
+        addAtividade.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_addAtividadeMouseEntered
+
+    private void addAtividadeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addAtividadeMouseExited
+        addAtividade.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_addAtividadeMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.swing.MyButton addAluno;
-    private GUI.swing.MyButton addAluno1;
+    private GUI.swing.MyButton addAtividade;
     private GUI.swing.MyButton addTurma;
     // End of variables declaration//GEN-END:variables
 }

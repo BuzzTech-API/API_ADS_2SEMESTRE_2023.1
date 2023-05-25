@@ -42,7 +42,11 @@
               <Component id="editarTurma" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="102" max="32767" attributes="0"/>
               <Component id="editarAluno" linkSize="2" min="-2" max="-2" attributes="0"/>
+<<<<<<< Updated upstream
               <EmptySpace pref="101" max="32767" attributes="0"/>
+=======
+              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+>>>>>>> Stashed changes
               <Component id="editarAtividade" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
           </Group>
@@ -86,6 +90,8 @@
         <Property name="rolloverEnabled" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editarTurmaMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editarTurmaMouseExited"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarTurmaActionPerformed"/>
       </Events>
     </Component>
@@ -121,6 +127,8 @@
         <Property name="radius" type="int" value="12"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editarAtividadeMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editarAtividadeMouseExited"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarAtividadeActionPerformed"/>
       </Events>
     </Component>
@@ -156,6 +164,8 @@
         <Property name="radius" type="int" value="12"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editarAlunoMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editarAlunoMouseExited"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarAlunoActionPerformed"/>
       </Events>
     </Component>
