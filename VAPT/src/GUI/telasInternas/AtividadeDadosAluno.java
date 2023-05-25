@@ -9,6 +9,7 @@ import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
 import modelo.Turma;
+import GUI.telasInternas.AtividadeDadosAlunosPendentes;
 
 /**
  *
@@ -53,7 +54,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         nomeTurma = new javax.swing.JTextField();
         recebeCardsAtv = new javax.swing.JDesktopPane();
         jLabel2 = new javax.swing.JLabel();
-        myButton1 = new GUI.swing.MyButton();
+        btnVoltar = new GUI.swing.MyButton();
 
         setMaximumSize(new java.awt.Dimension(1280, 730));
         setMinimumSize(new java.awt.Dimension(1280, 730));
@@ -158,19 +159,19 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        myButton1.setBackground(new java.awt.Color(242, 242, 242));
-        myButton1.setBorder(null);
-        myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vector.png"))); // NOI18N
-        myButton1.setBorderColor(new java.awt.Color(242, 242, 242));
-        myButton1.setBorderPainted(false);
-        myButton1.setColor(new java.awt.Color(242, 242, 242));
-        myButton1.setColorClicked(new java.awt.Color(102, 102, 102));
-        myButton1.setColorOver(new java.awt.Color(204, 204, 204));
-        myButton1.setPreferredSize(new java.awt.Dimension(30, 30));
-        myButton1.setRadius(30);
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltar.setBackground(new java.awt.Color(242, 242, 242));
+        btnVoltar.setBorder(null);
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vector.png"))); // NOI18N
+        btnVoltar.setBorderColor(new java.awt.Color(242, 242, 242));
+        btnVoltar.setBorderPainted(false);
+        btnVoltar.setColor(new java.awt.Color(242, 242, 242));
+        btnVoltar.setColorClicked(new java.awt.Color(102, 102, 102));
+        btnVoltar.setColorOver(new java.awt.Color(204, 204, 204));
+        btnVoltar.setPreferredSize(new java.awt.Dimension(30, 30));
+        btnVoltar.setRadius(30);
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
+                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -192,7 +193,7 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -224,17 +225,18 @@ public class AtividadeDadosAluno extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeTurmaActionPerformed
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        CardLayout cardLayout = (CardLayout) getParent().getLayout();
-        cardLayout.previous(getParent());
-    }//GEN-LAST:event_myButton1ActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        DetalheTurma detalheTurma = new DetalheTurma(aluno.getId_turma(), jDesktopPanel);
+        jDesktopPanel.add(detalheTurma).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.swing.MyButton btnVoltar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private GUI.swing.MyButton myButton1;
     private javax.swing.JTextField nomeAluno;
     private javax.swing.JTextField nomeEscola;
     private javax.swing.JTextField nomeTurma;
