@@ -89,15 +89,15 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
 
         nomeEscola.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         nomeEscola.setText("jLabel4");
-        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, -1, -1));
+        jPanel3.add(nomeEscola, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/escola.png"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 120, 80));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 120, 80));
 
         jLabel1.setBackground(new java.awt.Color(217, 217, 217));
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel1.setText("Escola:");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, -1, 20));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 40, -1, 20));
 
         jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 1, true));
@@ -219,27 +219,31 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 880, 480));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 880, 480));
 
         ativNum.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         ativNum.setForeground(new java.awt.Color(4, 210, 130));
         ativNum.setText("Atividade ");
-        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+        jPanel3.add(ativNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, -1));
 
         turma.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         turma.setForeground(new java.awt.Color(239, 131, 84));
         turma.setText("Turma: ");
-        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
+        jPanel3.add(turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(308, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 134, Short.MAX_VALUE))
         );
 
         pack();
