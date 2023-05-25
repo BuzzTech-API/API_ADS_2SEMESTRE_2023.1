@@ -12,6 +12,7 @@ import GUI.card.CardDeTurma;
 import GUI.swing.ScrollBarCustom;
 import dao.TurmaDao;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
@@ -62,6 +63,14 @@ public class Buscar extends javax.swing.JInternalFrame {
                     jDesktopPane.removeAll();
                     jDesktopPane.add(detalheTurma).setVisible(true);
                 }
+                public void mouseEntered(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    cardDeTurma.setBackground(new Color(204,204,204));
+                }
+                public void mouseExited(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+                    cardDeTurma.setBackground(new Color(252,252,252));
+                }
             });
             jLayeredPane1.add(cardDeTurma);
             contador++;
@@ -84,6 +93,16 @@ public class Buscar extends javax.swing.JInternalFrame {
                     jDesktopPane.removeAll();
                     jDesktopPane.add(detalheTurma).setVisible(true);
                 }
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    cardDeTurma.setBackground(new Color(204,204,204));
+                }
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    cardDeTurma.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+                    cardDeTurma.setBackground(new Color(252,252,252));
+                }
             });
             jLayeredPane1.add(cardDeTurma);
             contador++;
@@ -99,7 +118,7 @@ public class Buscar extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         buscarAluno = new javax.swing.JTextField();
-        myButton1 = new GUI.swing.MyButton();
+        pesquisaBut = new GUI.swing.MyButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
@@ -116,13 +135,23 @@ public class Buscar extends javax.swing.JInternalFrame {
             }
         });
 
-        myButton1.setText("Pesquisar");
-        myButton1.setColorOver(new java.awt.Color(204, 204, 204));
-        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        myButton1.setRadius(10);
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
+        pesquisaBut.setBackground(new java.awt.Color(239, 131, 84));
+        pesquisaBut.setText("Pesquisar");
+        pesquisaBut.setColor(new java.awt.Color(239, 131, 84));
+        pesquisaBut.setColorOver(new java.awt.Color(204, 204, 204));
+        pesquisaBut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pesquisaBut.setRadius(10);
+        pesquisaBut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pesquisaButMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pesquisaButMouseExited(evt);
+            }
+        });
+        pesquisaBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
+                pesquisaButActionPerformed(evt);
             }
         });
 
@@ -132,7 +161,7 @@ public class Buscar extends javax.swing.JInternalFrame {
 
         jLayeredPane1.setMinimumSize(new java.awt.Dimension(923, 481));
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(1006, 0));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 15, 15));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 15, 15));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -146,19 +175,19 @@ public class Buscar extends javax.swing.JInternalFrame {
                 .addGap(65, 65, 65)
                 .addComponent(buscarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pesquisaBut, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(buscarAluno)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pesquisaBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
@@ -177,7 +206,7 @@ public class Buscar extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_buscarAlunoActionPerformed
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+    private void pesquisaButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisaButActionPerformed
         TurmaDao turmaDao = new TurmaDao();
         jLayeredPane1.removeAll();
         jLayeredPane1.revalidate();
@@ -187,14 +216,22 @@ public class Buscar extends javax.swing.JInternalFrame {
         } else {
             preencherPane(turmaDao.buscarPorNome(buscarAluno.getText()));
         }
-    }//GEN-LAST:event_myButton1ActionPerformed
+    }//GEN-LAST:event_pesquisaButActionPerformed
+
+    private void pesquisaButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesquisaButMouseEntered
+        pesquisaBut.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_pesquisaButMouseEntered
+
+    private void pesquisaButMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesquisaButMouseExited
+        pesquisaBut.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_pesquisaButMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField buscarAluno;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JScrollPane jScrollPane1;
-    private GUI.swing.MyButton myButton1;
+    private GUI.swing.MyButton pesquisaBut;
     // End of variables declaration//GEN-END:variables
 
     public JDesktopPane getJDesktopPane() {

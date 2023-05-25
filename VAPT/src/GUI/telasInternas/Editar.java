@@ -60,7 +60,11 @@ public class Editar extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+        editarTurma.setBackground(new java.awt.Color(239, 131, 84));
+>>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
         editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
 =======
         editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -69,8 +73,10 @@ public class Editar extends javax.swing.JInternalFrame {
         editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarTurma.setText("Editar Turma");
         editarTurma.setBorderPainted(false);
+        editarTurma.setColor(new java.awt.Color(239, 131, 84));
+        editarTurma.setColorClicked(new java.awt.Color(4, 171, 69));
+        editarTurma.setColorOver(new java.awt.Color(4, 210, 130));
         editarTurma.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        editarTurma.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         editarTurma.setIconTextGap(28);
         editarTurma.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarTurma.setMaximumSize(new java.awt.Dimension(405, 78));
@@ -92,7 +98,11 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+        editarAtividade.setBackground(new java.awt.Color(239, 131, 84));
+>>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
         editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
 =======
         editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -101,10 +111,11 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAtividade.setText("Editar Atividade");
         editarAtividade.setBorderPainted(false);
+        editarAtividade.setColor(new java.awt.Color(239, 131, 84));
         editarAtividade.setColorClicked(new java.awt.Color(4, 210, 130));
+        editarAtividade.setColorOver(new java.awt.Color(4, 210, 130));
         editarAtividade.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        editarAtividade.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        editarAtividade.setIconTextGap(25);
+        editarAtividade.setIconTextGap(28);
         editarAtividade.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAtividade.setPreferredSize(new java.awt.Dimension(397, 78));
         editarAtividade.setRadius(12);
@@ -122,7 +133,11 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+        editarAluno.setBackground(new java.awt.Color(239, 131, 84));
+>>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
         editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
 =======
         editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -131,9 +146,10 @@ public class Editar extends javax.swing.JInternalFrame {
         editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAluno.setText("Editar Aluno");
         editarAluno.setBorderPainted(false);
+        editarAluno.setColor(new java.awt.Color(239, 131, 84));
         editarAluno.setColorClicked(new java.awt.Color(4, 210, 130));
+        editarAluno.setColorOver(new java.awt.Color(4, 210, 130));
         editarAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        editarAluno.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         editarAluno.setIconTextGap(28);
         editarAluno.setMargin(new java.awt.Insets(2, 30, 2, 14));
         editarAluno.setPreferredSize(new java.awt.Dimension(397, 78));
@@ -170,15 +186,19 @@ public class Editar extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(90, 90, 90)
                 .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addGap(89, 89, 89)
                 .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
 =======
                 .addGap(89, 89, 89)
 >>>>>>> Stashed changes
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+>>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
                 .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100))
         );
