@@ -4,6 +4,7 @@
  */
 package GUI.telasInternas;
 
+import GUI.swing.ScrollBarCustom;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.swing.JDesktopPane;
@@ -11,6 +12,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import dao.AtividadesDao;
 import dao.TurmaDao;
+import java.awt.Color;
 import java.util.Locale;
 import modelo.Aluno_Atividade;
 import modelo.Atividades;
@@ -53,6 +55,12 @@ public class AtividadeDadosAlunosPendentes extends javax.swing.JInternalFrame {
         VisuAtivDadosAlunosPendentes visuAluPendente = new VisuAtivDadosAlunosPendentes(atividade, recebNomesPend, jDesktopPanel);
         recebNomesPend.removeAll();
         recebNomesPend.add(visuAluPendente).setVisible(true);
+        
+         //Cria a scrollbar customizada vertical
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
         
         
     }
