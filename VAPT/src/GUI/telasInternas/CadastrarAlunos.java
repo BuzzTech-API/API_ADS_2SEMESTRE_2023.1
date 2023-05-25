@@ -77,7 +77,6 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Turma:");
 
-        alunoNomeTextField.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         alunoNomeTextField.setMaximumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setMinimumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setPreferredSize(new java.awt.Dimension(64, 25));
