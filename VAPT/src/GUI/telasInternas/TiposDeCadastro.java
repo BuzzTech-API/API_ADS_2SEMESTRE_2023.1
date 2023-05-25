@@ -47,15 +47,9 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
+
         addAluno.setBackground(new java.awt.Color(239, 131, 84));
->>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
         addAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
-=======
-        addAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
->>>>>>> Stashed changes
         addAluno.setForeground(new java.awt.Color(255, 255, 255));
         addAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno.setText("Adicionar Aluno");
@@ -82,15 +76,9 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
+
         addTurma.setBackground(new java.awt.Color(239, 131, 84));
->>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
         addTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
-=======
-        addTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
->>>>>>> Stashed changes
         addTurma.setForeground(new java.awt.Color(255, 255, 255));
         addTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addTurma.setText("Adicionar Turma");
@@ -117,26 +105,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-        addAluno1.setBackground(new java.awt.Color(239, 131, 84));
->>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
-        addAluno1.setBorder(new javax.swing.border.SoftBevelBorder(0));
-        addAluno1.setForeground(new java.awt.Color(255, 255, 255));
-        addAluno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
-        addAluno1.setText("Adicionar Atividade");
-        addAluno1.setBorderPainted(false);
-        addAluno1.setColor(new java.awt.Color(239, 131, 84));
-        addAluno1.setColorClicked(new java.awt.Color(4, 210, 130));
-        addAluno1.setColorOver(new java.awt.Color(4, 210, 130));
-        addAluno1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        addAluno1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        addAluno1.setIconTextGap(7);
-        addAluno1.setPreferredSize(new java.awt.Dimension(397, 76));
-        addAluno1.setRadius(12);
-        addAluno1.addActionListener(new java.awt.event.ActionListener() {
-=======
+
         addAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addAtividade.setForeground(new java.awt.Color(255, 255, 255));
         addAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
@@ -157,7 +126,6 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
         addAtividade.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addAtividadeActionPerformed(evt);
             }
@@ -185,17 +153,8 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
                 .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-=======
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
->>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
-                .addComponent(addAluno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> Stashed changes
                 .addGap(100, 100, 100))
         );
 

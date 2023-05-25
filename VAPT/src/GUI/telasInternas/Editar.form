@@ -42,15 +42,9 @@
               <Component id="editarTurma" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
               <Component id="editarAluno" linkSize="2" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+
               <EmptySpace pref="101" max="32767" attributes="0"/>
-=======
               <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
->>>>>>> Stashed changes
-=======
-              <EmptySpace pref="89" max="32767" attributes="0"/>
->>>>>>> parent of 9b56c5c (Merge branch 'main' of https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1)
               <Component id="editarAtividade" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
           </Group>
