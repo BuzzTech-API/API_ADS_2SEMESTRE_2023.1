@@ -78,7 +78,7 @@ public class CardAtviNaoEntregue extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(170, 190));
         setPreferredSize(new java.awt.Dimension(170, 190));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setForeground(new java.awt.Color(204, 204, 204));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setMaximumSize(new java.awt.Dimension(170, 190));
