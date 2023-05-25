@@ -211,6 +211,8 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dias da Semana:");
 
+        jPanel4.setBackground(new java.awt.Color(246, 246, 249));
+
         jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox1.setText("Segunda Feira");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -291,6 +293,8 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
                     .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
+
+        jPanel3.setBackground(new java.awt.Color(246, 246, 249));
 
         jCheckBox2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox2.setText("Terça Feira");
@@ -373,6 +377,8 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel5.setBackground(new java.awt.Color(246, 246, 249));
+
         jCheckBox3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox3.setText("Quarta Feira");
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -422,6 +428,8 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
                 quaFimButActionPerformed(evt);
             }
         });
+
+        jPanel6.setBackground(new java.awt.Color(246, 246, 249));
 
         jCheckBox4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox4.setText("Quinta Feira");
@@ -500,6 +508,8 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addComponent(quiFim)
             .addComponent(quiIniBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jPanel7.setBackground(new java.awt.Color(246, 246, 249));
 
         jCheckBox5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox5.setText("Sexta Feira");
