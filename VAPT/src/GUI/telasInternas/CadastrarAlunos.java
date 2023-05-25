@@ -23,6 +23,7 @@ import modelo.Turma;
  *
  * @author Fatec
  */
+import modelo.LengthRestrictedDocument;
 public class CadastrarAlunos extends javax.swing.JInternalFrame {
      private ArrayList<Turma> lista = new ArrayList<>();
 
@@ -77,6 +78,7 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Turma:");
 
+        alunoNomeTextField.setDocument(new LengthRestrictedDocument(45));
         alunoNomeTextField.setMaximumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setMinimumSize(new java.awt.Dimension(64, 25));
         alunoNomeTextField.setPreferredSize(new java.awt.Dimension(64, 25));
@@ -90,10 +92,8 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
         jButton1.setForeground(new java.awt.Color(2, 30, 54));
         jButton1.setText("Cadastrar");
-        jButton1.setColor(new java.awt.Color(239, 131, 84));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setMaximumSize(new java.awt.Dimension(157, 40));
         jButton1.setMinimumSize(new java.awt.Dimension(157, 40));

@@ -84,6 +84,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         descAtv = new javax.swing.JTextArea();
+        descAtv.setLineWrap(true);
+        descAtv.setWrapStyleWord(true);
         diaEntregue = new javax.swing.JFormattedTextField();
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         dataSolicitacaoBut = new GUI.swing.MyButton();

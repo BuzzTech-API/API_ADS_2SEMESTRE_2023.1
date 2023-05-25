@@ -21,6 +21,7 @@ import dao.TurmaDao;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import modelo.Atividades;
+import modelo.LengthRestrictedDocument;
 import modelo.Turma;
 
 /**
@@ -101,6 +102,8 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         descAtv = new javax.swing.JTextArea();
+        descAtv.setLineWrap(true);
+        descAtv.setWrapStyleWord(true);
         diaSolicitado = new javax.swing.JFormattedTextField(mfdata);
         diaEntrega = new javax.swing.JFormattedTextField(mfdata);
         dataSolicitacaoBut = new GUI.swing.MyButton();
@@ -142,9 +145,15 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setText("Data da Solicitação:");
 
+        tipoAtv.setDocument(new LengthRestrictedDocument(30));
         tipoAtv.setMaximumSize(new java.awt.Dimension(64, 25));
         tipoAtv.setMinimumSize(new java.awt.Dimension(64, 25));
         tipoAtv.setPreferredSize(new java.awt.Dimension(64, 25));
+        tipoAtv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tipoAtvActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dia:");
@@ -159,9 +168,10 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jLabel8.setText("Descrição:");
 
         descAtv.setColumns(20);
+        descAtv.setDocument(new LengthRestrictedDocument(300));
         descAtv.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         descAtv.setRows(5);
-        descAtv.setText("Pronto, Danilo");
+        descAtv.setMaximumSize(new java.awt.Dimension(702, 171));
         jScrollPane1.setViewportView(descAtv);
 
         try {
@@ -220,7 +230,6 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
         jButton1.setForeground(new java.awt.Color(2, 30, 54));
         jButton1.setText("Cadastrar");
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -415,6 +424,10 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tipoAtvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoAtvActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tipoAtvActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
