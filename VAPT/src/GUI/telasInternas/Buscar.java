@@ -135,9 +135,7 @@ public class Buscar extends javax.swing.JInternalFrame {
             }
         });
 
-        pesquisaBut.setBackground(new java.awt.Color(239, 131, 84));
         pesquisaBut.setText("Pesquisar");
-        pesquisaBut.setColor(new java.awt.Color(239, 131, 84));
         pesquisaBut.setColorOver(new java.awt.Color(204, 204, 204));
         pesquisaBut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         pesquisaBut.setRadius(10);
@@ -181,13 +179,13 @@ public class Buscar extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(buscarAluno)
                     .addComponent(pesquisaBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();

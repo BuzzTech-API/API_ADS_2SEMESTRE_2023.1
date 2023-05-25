@@ -182,13 +182,12 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         sexFimBut = new GUI.swing.MyButton();
         myButton1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setMinimumSize(new java.awt.Dimension(587, 348));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 730));
 
+        jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(114, 133, 165), 1, true));
         jPanel2.setMinimumSize(new java.awt.Dimension(587, 348));
         jPanel2.setPreferredSize(new java.awt.Dimension(510, 486));
