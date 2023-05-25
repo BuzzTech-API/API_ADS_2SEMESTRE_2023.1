@@ -228,11 +228,9 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
                 .addGap(15, 15, 15))
         );
 
-        myButton2.setBackground(new java.awt.Color(239, 131, 84));
         myButton2.setBorder(null);
         myButton2.setForeground(new java.awt.Color(2, 30, 54));
         myButton2.setText("Salvar");
-        myButton2.setColor(new java.awt.Color(239, 131, 84));
         myButton2.setColorClicked(new java.awt.Color(204, 204, 204));
         myButton2.setColorOver(new java.awt.Color(255, 139, 89));
         myButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -281,7 +279,7 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
                 .addComponent(panelBordaArredondadaComLinha1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
