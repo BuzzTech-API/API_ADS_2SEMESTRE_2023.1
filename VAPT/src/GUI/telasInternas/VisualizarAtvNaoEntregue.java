@@ -98,11 +98,11 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane2 = new javax.swing.JLayeredPane();
-        jButton1 = new javax.swing.JButton();
         porcentagemNaoEntregue = new javax.swing.JTextField();
         texto5 = new javax.swing.JLabel();
         texto6 = new javax.swing.JLabel();
         chamaAtvAtrasada = new GUI.swing.MyButton();
+        jButton1 = new GUI.swing.MyButton();
 
         setBackground(new java.awt.Color(246, 246, 249));
         setBorder(null);
@@ -118,19 +118,8 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
 
         jLayeredPane2.setBackground(new java.awt.Color(246, 246, 249));
         jLayeredPane2.setOpaque(true);
-        jLayeredPane2.setLayout(new java.awt.FlowLayout(0, 33, 25));
+        jLayeredPane2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 33, 25));
         jScrollPane1.setViewportView(jLayeredPane2);
-
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
-        jButton1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jButton1.setText("Salvar");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(0));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         porcentagemNaoEntregue.setEditable(false);
         porcentagemNaoEntregue.setBackground(new java.awt.Color(246, 246, 249));
@@ -162,6 +151,19 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton1.setForeground(new java.awt.Color(1, 30, 54));
+        jButton1.setText("Salvar");
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setMaximumSize(new java.awt.Dimension(157, 40));
+        jButton1.setMinimumSize(new java.awt.Dimension(157, 40));
+        jButton1.setPreferredSize(new java.awt.Dimension(157, 40));
+        jButton1.setRadius(10);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -169,10 +171,10 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(207, 207, 207)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(183, 183, 183)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(texto5)
@@ -191,11 +193,11 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
                     .addComponent(porcentagemNaoEntregue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(chamaAtvAtrasada, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -213,18 +215,6 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     for (int i = 0; i < jLayeredPane2.getComponentCount(); i++) {
-                CardAtviNaoEntregue checkBoxContainer = (CardAtviNaoEntregue) jLayeredPane2.getComponent(i);
-                checkBoxContainer.atualizCards();
-    }
-    preencherAtvNaoEntregue();
-                
-                
-                
-                
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void porcentagemNaoEntregueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_porcentagemNaoEntregueActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_porcentagemNaoEntregueActionPerformed
@@ -235,10 +225,20 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         recebeCardsAtv.add(visuAtvAtraso).setVisible(true);
     }//GEN-LAST:event_chamaAtvAtrasadaActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+    for (int i = 0; i < jLayeredPane2.getComponentCount(); i++) {
+                CardAtviNaoEntregue checkBoxContainer = (CardAtviNaoEntregue) jLayeredPane2.getComponent(i);
+                checkBoxContainer.atualizCards();
+    }
+    preencherAtvNaoEntregue();    
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.swing.MyButton chamaAtvAtrasada;
-    private javax.swing.JButton jButton1;
+    private GUI.swing.MyButton jButton1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

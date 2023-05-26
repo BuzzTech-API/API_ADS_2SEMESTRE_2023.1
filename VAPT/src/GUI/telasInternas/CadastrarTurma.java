@@ -183,18 +183,17 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         sexFimBut = new GUI.swing.MyButton();
         myButton1 = new GUI.swing.MyButton();
 
-        setBackground(new java.awt.Color(217, 217, 217));
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setMinimumSize(new java.awt.Dimension(587, 348));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 730));
 
+        jPanel2.setBackground(new java.awt.Color(246, 246, 249));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(114, 133, 165), 1, true));
         jPanel2.setMinimumSize(new java.awt.Dimension(587, 348));
         jPanel2.setPreferredSize(new java.awt.Dimension(510, 486));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 26)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
         jLabel1.setText("Cadastrar Turma:");
 
@@ -216,6 +215,9 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dias da Semana:");
 
+        jPanel4.setBackground(new java.awt.Color(246, 246, 249));
+
+        jCheckBox1.setBackground(new java.awt.Color(246, 246, 249));
         jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox1.setText("Segunda Feira");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -228,23 +230,31 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel15.setText("Horário de Início:");
 
         segIni.setEditable(false);
+        segIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             segIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         segIni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        segIni.setMaximumSize(new java.awt.Dimension(76, 22));
+        segIni.setMinimumSize(new java.awt.Dimension(76, 22));
+        segIni.setPreferredSize(new java.awt.Dimension(76, 22));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel16.setText("Horário de Fim:");
 
         segFim.setEditable(false);
+        segFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             segFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         segFim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        segFim.setMaximumSize(new java.awt.Dimension(76, 22));
+        segFim.setMinimumSize(new java.awt.Dimension(76, 22));
+        segFim.setPreferredSize(new java.awt.Dimension(76, 22));
 
         segIniBut.setBackground(new java.awt.Color(204, 204, 204));
         segIniBut.setColor(new java.awt.Color(204, 204, 204));
@@ -267,19 +277,19 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(80, 80, 80)
                 .addComponent(jCheckBox1)
-                .addGap(30, 30, 30)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel15)
                 .addGap(18, 18, 18)
-                .addComponent(segIni, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(segIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(segIniBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel16)
                 .addGap(18, 18, 18)
-                .addComponent(segFim, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(segFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(segFimBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -288,14 +298,16 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(segFimBut, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(segFim, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(segFim, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(segIniBut, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(segIni, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(segIni, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
+
+        jPanel3.setBackground(new java.awt.Color(246, 246, 249));
 
         jCheckBox2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox2.setText("Terça Feira");
@@ -309,23 +321,31 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel8.setText("Horário de Início:");
 
         terIni.setEditable(false);
+        terIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             terIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         terIni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        terIni.setMaximumSize(new java.awt.Dimension(76, 22));
+        terIni.setMinimumSize(new java.awt.Dimension(76, 22));
+        terIni.setPreferredSize(new java.awt.Dimension(76, 22));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel7.setText("Horário de Fim:");
 
         terFim.setEditable(false);
+        terFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             terFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         terFim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        terFim.setMaximumSize(new java.awt.Dimension(76, 22));
+        terFim.setMinimumSize(new java.awt.Dimension(76, 22));
+        terFim.setPreferredSize(new java.awt.Dimension(76, 22));
 
         terIniBut.setBackground(new java.awt.Color(204, 204, 204));
         terIniBut.setColor(new java.awt.Color(204, 204, 204));
@@ -348,19 +368,19 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(80, 80, 80)
                 .addComponent(jCheckBox2)
-                .addGap(54, 54, 54)
+                .addGap(55, 55, 55)
                 .addComponent(jLabel8)
                 .addGap(18, 18, 18)
-                .addComponent(terIni, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(terIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(terIniBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
-                .addComponent(terFim, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(terFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(terFimBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -372,11 +392,13 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(terIniBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(terFim)
+            .addComponent(terFim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(terFimBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(terIni, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(terIni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jPanel5.setBackground(new java.awt.Color(246, 246, 249));
 
         jCheckBox3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox3.setText("Quarta Feira");
@@ -387,12 +409,16 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         });
 
         quaFim.setEditable(false);
+        quaFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quaFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         quaFim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        quaFim.setMaximumSize(new java.awt.Dimension(76, 22));
+        quaFim.setMinimumSize(new java.awt.Dimension(76, 22));
+        quaFim.setPreferredSize(new java.awt.Dimension(76, 22));
         quaFim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quaFimActionPerformed(evt);
@@ -403,12 +429,16 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel10.setText("Horário de Início:");
 
         quaIni.setEditable(false);
+        quaIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quaIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         quaIni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        quaIni.setMaximumSize(new java.awt.Dimension(76, 22));
+        quaIni.setMinimumSize(new java.awt.Dimension(76, 22));
+        quaIni.setPreferredSize(new java.awt.Dimension(76, 22));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel9.setText("Horário de Fim:");
@@ -428,6 +458,8 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             }
         });
 
+        jPanel6.setBackground(new java.awt.Color(246, 246, 249));
+
         jCheckBox4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox4.setText("Quinta Feira");
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
@@ -440,23 +472,31 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel12.setText("Horário de Início:");
 
         quiIni.setEditable(false);
+        quiIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quiIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         quiIni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        quiIni.setMaximumSize(new java.awt.Dimension(76, 22));
+        quiIni.setMinimumSize(new java.awt.Dimension(76, 22));
+        quiIni.setPreferredSize(new java.awt.Dimension(76, 22));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel11.setText("Horário de Fim:");
 
         quiFim.setEditable(false);
+        quiFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quiFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         quiFim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        quiFim.setMaximumSize(new java.awt.Dimension(76, 22));
+        quiFim.setMinimumSize(new java.awt.Dimension(76, 22));
+        quiFim.setPreferredSize(new java.awt.Dimension(76, 22));
 
         quiFimBut.setBackground(new java.awt.Color(204, 204, 204));
         quiFimBut.setColor(new java.awt.Color(204, 204, 204));
@@ -479,19 +519,19 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(80, 80, 80)
                 .addComponent(jCheckBox4)
-                .addGap(46, 46, 46)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel12)
                 .addGap(18, 18, 18)
-                .addComponent(quiIni, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(quiIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(quiIniBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
-                .addComponent(quiFim, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(quiFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(quiFimBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -499,12 +539,14 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(quiIni, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(quiIni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(quiFimBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(quiFim)
+            .addComponent(quiFim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(quiIniBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jPanel7.setBackground(new java.awt.Color(246, 246, 249));
 
         jCheckBox5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jCheckBox5.setText("Sexta Feira");
@@ -518,23 +560,31 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jLabel14.setText("Horário de Início:");
 
         sexIni.setEditable(false);
+        sexIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             sexIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         sexIni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sexIni.setMaximumSize(new java.awt.Dimension(76, 22));
+        sexIni.setMinimumSize(new java.awt.Dimension(76, 22));
+        sexIni.setPreferredSize(new java.awt.Dimension(76, 22));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel13.setText("Horário de Fim:");
 
         sexFim.setEditable(false);
+        sexFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             sexFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         sexFim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sexFim.setMaximumSize(new java.awt.Dimension(76, 22));
+        sexFim.setMinimumSize(new java.awt.Dimension(76, 22));
+        sexFim.setPreferredSize(new java.awt.Dimension(76, 22));
 
         sexIniBut.setBackground(new java.awt.Color(204, 204, 204));
         sexIniBut.setColor(new java.awt.Color(204, 204, 204));
@@ -557,19 +607,19 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(80, 80, 80)
                 .addComponent(jCheckBox5)
-                .addGap(56, 56, 56)
+                .addGap(55, 55, 55)
                 .addComponent(jLabel14)
                 .addGap(18, 18, 18)
-                .addComponent(sexIni, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(sexIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(sexIniBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel13)
                 .addGap(18, 18, 18)
-                .addComponent(sexFim, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(sexFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(sexFimBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -580,9 +630,9 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
                 .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(sexIniBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(sexFim)
+            .addComponent(sexFim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(sexFimBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(sexIni)
+            .addComponent(sexIni, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -590,19 +640,19 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(80, 80, 80)
                 .addComponent(jCheckBox3)
                 .addGap(44, 44, 44)
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
-                .addComponent(quaIni, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(quaIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(quaIniBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
-                .addComponent(quaFim, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(quaFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(quaFimBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -614,10 +664,10 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(quaIni)
+                    .addComponent(quaIni, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(quaIniBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(quaFim)
+                    .addComponent(quaFim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(quaFimBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -627,7 +677,13 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        myButton1.setText("Salvar");
+        myButton1.setForeground(new java.awt.Color(2, 30, 54));
+        myButton1.setText("Cadastrar");
+        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myButton1.setMaximumSize(new java.awt.Dimension(157, 40));
+        myButton1.setMinimumSize(new java.awt.Dimension(157, 40));
+        myButton1.setPreferredSize(new java.awt.Dimension(157, 40));
+        myButton1.setRadius(10);
         myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 myButton1ActionPerformed(evt);
@@ -641,10 +697,10 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(50, 50, 50)
                         .addComponent(jLabel1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(50, 50, 50)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -660,16 +716,16 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
+                .addGap(0, 0, 0)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
-                .addGap(29, 29, 29)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(nomeDaEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -685,9 +741,9 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -697,14 +753,14 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 841, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(88, 88, 88))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(76, 76, 76))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -844,13 +900,16 @@ public class CadastrarTurma extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_sexFimButActionPerformed
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        // TODO add your handling code here:
+        
+        
         Turma turma = new Turma();
         turma.setNome(nomeTurma.getText());
         turma.setNome_escola(nomeDaEscola.getText());
         
         PopupConfirmCadastrar popup = new PopupConfirmCadastrar(turma, this);
         popup.setVisible(true);
+   
+        
     }//GEN-LAST:event_myButton1ActionPerformed
 
 

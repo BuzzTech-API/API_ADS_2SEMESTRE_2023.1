@@ -2,6 +2,7 @@
 package GUI.swing;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -29,6 +30,7 @@ public class MyButton extends JButton {
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
                 setBackground(colorOver);
                 over=true;
 
@@ -36,6 +38,7 @@ public class MyButton extends JButton {
 
             @Override
             public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
                 setBackground(color);
                 over=false;
             }

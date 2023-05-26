@@ -92,7 +92,7 @@ public class CardAtivEntregue extends javax.swing.JPanel {
         dataQEntrega1 = new javax.swing.JLabel();
         checkBoxCustom1 = new GUI.swing.CheckBoxCustom();
 
-        setBackground(new java.awt.Color(252, 252, 252));
+        setBackground(new java.awt.Color(255, 255, 255));
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(170, 190));

@@ -10,6 +10,8 @@ import GUI.swing.CheckBoxCustom;
 import GUI.telasInternas.AtividadeDadosAluno;
 import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
+import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -111,6 +113,19 @@ public class AtividadesPedentes extends javax.swing.JPanel {
                     jDesktopPane.removeAll();
                     jDesktopPane.add(new AtividadeDadosAluno(aluno, jDesktopPane)).setVisible(true);
                 }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    checkBoxContainer.getjLabel1().setForeground(Color.red);
+                    checkBoxContainer.getjLabel1().setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    checkBoxContainer.getjLabel1().setForeground(Color.black);
+                    checkBoxContainer.getjLabel1().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                }
+                
                 
             });
             jLayeredPane1.add(checkBoxContainer);

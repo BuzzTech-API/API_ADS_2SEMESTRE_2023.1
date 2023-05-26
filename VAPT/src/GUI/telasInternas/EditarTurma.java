@@ -146,7 +146,6 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         nomeTurma = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         segundaCheck = new javax.swing.JCheckBox();
         jLabel15 = new javax.swing.JLabel();
@@ -187,6 +186,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         quiFim = new javax.swing.JFormattedTextField();
         quiFimBut = new GUI.swing.MyButton();
         quiIniBut = new GUI.swing.MyButton();
+        jButton1 = new GUI.swing.MyButton();
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
@@ -199,7 +199,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(841, 451));
         jPanel2.setPreferredSize(new java.awt.Dimension(841, 451));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 26)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
         jLabel1.setText("Atualizar Turma:");
 
@@ -221,19 +221,6 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dias da Semana:");
 
-        jButton1.setBackground(new java.awt.Color(239, 131, 84));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(2, 30, 54));
-        jButton1.setText("Salvar");
-        jButton1.setMaximumSize(new java.awt.Dimension(98, 30));
-        jButton1.setMinimumSize(new java.awt.Dimension(98, 30));
-        jButton1.setPreferredSize(new java.awt.Dimension(98, 30));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jPanel4.setBackground(new java.awt.Color(246, 246, 249));
 
         segundaCheck.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -248,17 +235,22 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel15.setText("Horário de Início:");
 
         segIni.setEditable(false);
+        segIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             segIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         segIni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        segIni.setMaximumSize(new java.awt.Dimension(76, 22));
+        segIni.setMinimumSize(new java.awt.Dimension(76, 22));
+        segIni.setPreferredSize(new java.awt.Dimension(76, 22));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel16.setText("Horário de Fim:");
 
         segFim.setEditable(false);
+        segFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             segFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -292,7 +284,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
                 .addGap(31, 31, 31)
                 .addComponent(jLabel15)
                 .addGap(18, 18, 18)
-                .addComponent(segIni, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(segIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(segIniBut, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
@@ -311,7 +303,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
                     .addComponent(segFim, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(segIniBut, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(segIni, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(segIni, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(segundaCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -331,6 +323,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel8.setText("Horário de Início:");
 
         terIni.setEditable(false);
+        terIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             terIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -347,6 +340,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel7.setText("Horário de Fim:");
 
         terFim.setEditable(false);
+        terFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             terFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -413,6 +407,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         });
 
         quaFim.setEditable(false);
+        quaFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quaFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -429,6 +424,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel10.setText("Horário de Início:");
 
         quaIni.setEditable(false);
+        quaIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quaIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -503,6 +499,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel14.setText("Horário de Início:");
 
         sexIni.setEditable(false);
+        sexIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             sexIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -514,6 +511,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel13.setText("Horário de Fim:");
 
         sexFim.setEditable(false);
+        sexFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             sexFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -584,6 +582,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel12.setText("Horário de Início:");
 
         quiIni.setEditable(false);
+        quiIni.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quiIni.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -595,6 +594,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel11.setText("Horário de Fim:");
 
         quiFim.setEditable(false);
+        quiFim.setBackground(new java.awt.Color(255, 255, 255));
         try {
             quiFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## ??")));
         } catch (java.text.ParseException ex) {
@@ -650,6 +650,19 @@ public class EditarTurma extends javax.swing.JInternalFrame {
             .addComponent(quiIniBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jButton1.setForeground(new java.awt.Color(2, 30, 54));
+        jButton1.setText("Salvar");
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setMaximumSize(new java.awt.Dimension(157, 40));
+        jButton1.setMinimumSize(new java.awt.Dimension(157, 40));
+        jButton1.setPreferredSize(new java.awt.Dimension(157, 40));
+        jButton1.setRadius(10);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -659,12 +672,8 @@ public class EditarTurma extends javax.swing.JInternalFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -677,13 +686,17 @@ public class EditarTurma extends javax.swing.JInternalFrame {
                         .addComponent(nomeDaEscola, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(nomeDaEscola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -693,19 +706,19 @@ public class EditarTurma extends javax.swing.JInternalFrame {
                     .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(6, 6, 6)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addGap(6, 6, 6)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addGap(6, 6, 6)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addGap(6, 6, 6)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addGap(6, 6, 6)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -745,15 +758,6 @@ public class EditarTurma extends javax.swing.JInternalFrame {
     private void nomeTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTurmaActionPerformed
 
     }//GEN-LAST:event_nomeTurmaActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           
-        turma.setNome(nomeTurma.getText());
-        turma.setNome_escola(nomeDaEscola.getText());
-
-        PopupAltTurma popupAltTurma = new PopupAltTurma(turma, this);
-        popupAltTurma.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void segundaCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaCheckActionPerformed
         // TODO add your handling code here:
@@ -874,9 +878,21 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_terIniActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        
+        turma.setNome(nomeTurma.getText());
+        turma.setNome_escola(nomeDaEscola.getText());
+
+        PopupAltTurma popupAltTurma = new PopupAltTurma(turma, this);
+        popupAltTurma.setVisible(true);
+          
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private GUI.swing.MyButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

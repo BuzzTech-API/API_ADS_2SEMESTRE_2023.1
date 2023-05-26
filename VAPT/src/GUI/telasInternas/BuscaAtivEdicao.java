@@ -63,7 +63,7 @@ public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1018, 638));
 
         jPanel2.setBackground(new java.awt.Color(246, 246, 249));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(114, 133, 165)));
         jPanel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jPanel2.setMaximumSize(new java.awt.Dimension(545, 232));
         jPanel2.setMinimumSize(new java.awt.Dimension(545, 232));
@@ -151,9 +151,9 @@ public class BuscaAtivEdicao extends javax.swing.JInternalFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(203, 203, 203)
+                .addGap(130, 130, 130)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

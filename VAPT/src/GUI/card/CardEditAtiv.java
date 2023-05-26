@@ -72,6 +72,7 @@ public class CardEditAtiv extends javax.swing.JPanel {
         setOpaque(false);
         setPreferredSize(new java.awt.Dimension(204, 269));
 
+        panelBordaArredondadaComLinha1.setBackground(new java.awt.Color(246, 246, 249));
         panelBordaArredondadaComLinha1.setPreferredSize(new java.awt.Dimension(204, 269));
 
         atvNum1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -79,10 +80,11 @@ public class CardEditAtiv extends javax.swing.JPanel {
         atvNum1.setText("Atividade ");
 
         jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
         jLabel1.setText("Descrição");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 15)); // NOI18N
@@ -94,11 +96,15 @@ public class CardEditAtiv extends javax.swing.JPanel {
         dataDeEntrega.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         dataDeEntrega.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        excluirButton.setForeground(new java.awt.Color(2, 30, 54));
         excluirButton.setText("Excluir");
-        excluirButton.setColor(new java.awt.Color(255, 51, 51));
+        excluirButton.setColor(new java.awt.Color(246, 246, 249));
         excluirButton.setColorClicked(new java.awt.Color(153, 0, 51));
         excluirButton.setColorOver(new java.awt.Color(255, 51, 102));
-        excluirButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        excluirButton.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        excluirButton.setMaximumSize(new java.awt.Dimension(78, 30));
+        excluirButton.setMinimumSize(new java.awt.Dimension(78, 30));
+        excluirButton.setPreferredSize(new java.awt.Dimension(78, 30));
         excluirButton.setRadius(10);
         excluirButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,11 +112,14 @@ public class CardEditAtiv extends javax.swing.JPanel {
             }
         });
 
+        editarButton.setForeground(new java.awt.Color(2, 30, 54));
         editarButton.setText("Editar");
-        editarButton.setColor(new java.awt.Color(51, 204, 0));
         editarButton.setColorClicked(new java.awt.Color(0, 102, 0));
         editarButton.setColorOver(new java.awt.Color(102, 204, 0));
-        editarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        editarButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        editarButton.setMaximumSize(new java.awt.Dimension(78, 30));
+        editarButton.setMinimumSize(new java.awt.Dimension(78, 30));
+        editarButton.setPreferredSize(new java.awt.Dimension(78, 30));
         editarButton.setRadius(10);
         editarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,36 +134,37 @@ public class CardEditAtiv extends javax.swing.JPanel {
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
+                        .addGap(65, 65, 65)
                         .addComponent(jLabel1))
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
+                        .addGap(50, 50, 50)
                         .addComponent(atvNum1))
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2))
+                    .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(excluirButton, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dataDeEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(excluirButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18))
+                        .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dataDeEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(atvNum1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(5, 5, 5)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
@@ -162,9 +172,9 @@ public class CardEditAtiv extends javax.swing.JPanel {
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dataDeEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(15, 15, 15)
                 .addGroup(panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(excluirButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(excluirButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
         );

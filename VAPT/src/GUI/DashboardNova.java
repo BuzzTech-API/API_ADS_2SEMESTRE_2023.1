@@ -44,11 +44,7 @@ public class DashboardNova extends javax.swing.JFrame {
         setBackground(new java.awt.Color(217, 217, 217));
         setUndecorated(true);
 
-        panelBorda1.setBackground(new java.awt.Color(255, 255, 255));
-
-        panelBorda2.setBackground(new java.awt.Color(217, 217, 217));
-
-        jDesktopPane1.setBackground(new java.awt.Color(217, 217, 217));
+        jDesktopPane1.setBackground(new java.awt.Color(242, 242, 242));
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);

@@ -84,7 +84,7 @@ public class TelaHome extends javax.swing.JInternalFrame {
 
         jLayeredPane1.setBackground(new java.awt.Color(242, 242, 242));
         jLayeredPane1.setName(""); // NOI18N
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(3, 22, 15));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 22, 15));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
@@ -114,13 +114,13 @@ public class TelaHome extends javax.swing.JInternalFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(5, 5, 5)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
