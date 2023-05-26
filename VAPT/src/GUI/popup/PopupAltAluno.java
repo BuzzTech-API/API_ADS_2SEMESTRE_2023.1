@@ -52,7 +52,6 @@ public class PopupAltAluno extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
@@ -64,7 +63,6 @@ public class PopupAltAluno extends javax.swing.JFrame {
         texto2.setText("\"");
 
         nomeAluno.setEditable(false);
-        nomeAluno.setBackground(new java.awt.Color(217, 217, 217));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         texto3.setBackground(new java.awt.Color(217, 217, 217));
@@ -75,9 +73,9 @@ public class PopupAltAluno extends javax.swing.JFrame {
         botaoSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoSalvar.setForeground(new java.awt.Color(1, 30, 54));
         botaoSalvar.setText("Salvar");
-        botaoSalvar.setMaximumSize(new java.awt.Dimension(95, 27));
-        botaoSalvar.setMinimumSize(new java.awt.Dimension(95, 27));
-        botaoSalvar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoSalvar.setMaximumSize(new java.awt.Dimension(100, 35));
+        botaoSalvar.setMinimumSize(new java.awt.Dimension(100, 35));
+        botaoSalvar.setPreferredSize(new java.awt.Dimension(100, 35));
         botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoSalvarActionPerformed(evt);
@@ -87,9 +85,9 @@ public class PopupAltAluno extends javax.swing.JFrame {
         botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
         botaoCancelar.setText("Cancelar");
-        botaoCancelar.setMaximumSize(new java.awt.Dimension(95, 27));
-        botaoCancelar.setMinimumSize(new java.awt.Dimension(95, 27));
-        botaoCancelar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoCancelar.setMaximumSize(new java.awt.Dimension(100, 35));
+        botaoCancelar.setMinimumSize(new java.awt.Dimension(100, 35));
+        botaoCancelar.setPreferredSize(new java.awt.Dimension(105, 32));
         botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCancelarActionPerformed(evt);
@@ -131,7 +129,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
                         .addComponent(texto2)
                         .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(texto3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()

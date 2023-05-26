@@ -164,9 +164,9 @@ public class CardDeTurma extends javax.swing.JPanel {
         panelBordaArredondadaComLinha1Layout.setVerticalGroup(
             panelBordaArredondadaComLinha1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBordaArredondadaComLinha1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(40, 40, 40)
                 .addComponent(nomeTurma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(17, 17, 17)
                 .addComponent(escola)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeEscola)
