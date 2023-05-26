@@ -70,10 +70,14 @@ public class EditarAluno extends javax.swing.JInternalFrame {
         jLabel3.setText("Turma:");
 
         alunoNome.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        alunoNome.setPreferredSize(new java.awt.Dimension(64, 25));
+        alunoNome.setMaximumSize(new java.awt.Dimension(64, 30));
+        alunoNome.setMinimumSize(new java.awt.Dimension(64, 30));
+        alunoNome.setPreferredSize(new java.awt.Dimension(64, 30));
 
         turmaAlu.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        turmaAlu.setPreferredSize(new java.awt.Dimension(72, 25));
+        turmaAlu.setMaximumSize(new java.awt.Dimension(64, 30));
+        turmaAlu.setMinimumSize(new java.awt.Dimension(64, 30));
+        turmaAlu.setPreferredSize(new java.awt.Dimension(64, 30));
         turmaAlu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turmaAluActionPerformed(evt);
@@ -82,7 +86,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
 
         excluirAlu.setBackground(new java.awt.Color(255, 255, 255));
         excluirAlu.setForeground(new java.awt.Color(2, 30, 54));
-        excluirAlu.setText("Excluir aluno(a)");
+        excluirAlu.setText("Excluir  aluno(a)");
         excluirAlu.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         excluirAlu.setMaximumSize(new java.awt.Dimension(157, 40));
         excluirAlu.setMinimumSize(new java.awt.Dimension(157, 40));
@@ -147,7 +151,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(turmaAlu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(excluirAlu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(salvarAlu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

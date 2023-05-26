@@ -109,9 +109,10 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
-        turmas.setMaximumSize(new java.awt.Dimension(430, 25));
-        turmas.setMinimumSize(new java.awt.Dimension(430, 25));
-        turmas.setPreferredSize(new java.awt.Dimension(430, 25));
+        turmas.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        turmas.setMaximumSize(new java.awt.Dimension(430, 30));
+        turmas.setMinimumSize(new java.awt.Dimension(430, 30));
+        turmas.setPreferredSize(new java.awt.Dimension(430, 30));
         turmas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turmasActionPerformed(evt);
@@ -124,9 +125,10 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setText("Data da Solicitação:");
 
-        tipoAtv.setMaximumSize(new java.awt.Dimension(139, 25));
-        tipoAtv.setMinimumSize(new java.awt.Dimension(139, 25));
-        tipoAtv.setPreferredSize(new java.awt.Dimension(139, 25));
+        tipoAtv.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tipoAtv.setMaximumSize(new java.awt.Dimension(139, 30));
+        tipoAtv.setMinimumSize(new java.awt.Dimension(139, 30));
+        tipoAtv.setPreferredSize(new java.awt.Dimension(139, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dia:");
@@ -141,6 +143,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jLabel8.setText("Descrição:");
 
         descAtv.setColumns(20);
+        descAtv.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         descAtv.setRows(5);
         descAtv.setMaximumSize(new java.awt.Dimension(292, 114));
         descAtv.setMinimumSize(new java.awt.Dimension(292, 114));
@@ -153,6 +156,9 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         diaEntregue.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        diaEntregue.setMaximumSize(new java.awt.Dimension(72, 28));
+        diaEntregue.setMinimumSize(new java.awt.Dimension(72, 28));
+        diaEntregue.setPreferredSize(new java.awt.Dimension(72, 28));
         diaEntregue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 diaEntregueActionPerformed(evt);
@@ -165,7 +171,9 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         diaSolicitado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        diaSolicitado.setPreferredSize(new java.awt.Dimension(72, 25));
+        diaSolicitado.setMaximumSize(new java.awt.Dimension(72, 28));
+        diaSolicitado.setMinimumSize(new java.awt.Dimension(72, 28));
+        diaSolicitado.setPreferredSize(new java.awt.Dimension(72, 28));
         diaSolicitado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 diaSolicitadoActionPerformed(evt);
@@ -277,7 +285,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
