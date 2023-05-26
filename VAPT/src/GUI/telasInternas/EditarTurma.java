@@ -27,6 +27,7 @@ import dao.Dia_SemanaDao;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import modelo.LengthRestrictedDocument;
 import modelo.Turma;
 
 /**
@@ -205,9 +206,12 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Nome da Escola:");
 
+        nomeDaEscola.setDocument(new LengthRestrictedDocument(45));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
+        nomeTurma.setDocument(new LengthRestrictedDocument(45));
         nomeTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTurmaActionPerformed(evt);

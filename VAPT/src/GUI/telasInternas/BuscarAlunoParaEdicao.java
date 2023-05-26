@@ -45,6 +45,8 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
      */
 
     public void prencherComboBox2(Turma turma) {
+        
+        this.aluno = new Aluno();
         jComboBox2.removeAllItems();
         int idTurma = turma.getId_turma();
         AlunoDao alunoDao = new AlunoDao();
@@ -231,7 +233,11 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
         int id = jComboBox1.getSelectedIndex();
-        this.aluno = this.listaAluno.get(id);
+        if (listaAluno.isEmpty()) {
+            this.aluno = this.listaAluno.get(id);
+        } else {
+        }
+        
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
 

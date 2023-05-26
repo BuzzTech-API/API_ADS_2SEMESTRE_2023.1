@@ -4,7 +4,6 @@
  */
 package GUI.popup;
 
-import GUI.swing.RedmensionadorImagens;
 import GUI.telasInternas.CadastrarTurma;
 import dao.Dia_SemanaDao;
 import dao.TurmaDao;
@@ -182,40 +181,40 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
                 Dia_Semana dia_Semana = new Dia_Semana();
                 dia_Semana.setTurma_id_turma(turma.getId_turma());
                 dia_Semana.setDia("Segunda");   
-                dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(cadastrarTurma.getSegIni().getText()));
-                dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(cadastrarTurma.getSegFim().getText()));
+                dia_Semana.setHora_inicio(cadastrarTurma.getSegIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getSegFim().getText());
                 dia_SemanaDao.adicionar(dia_Semana);
             }
             if (cadastrarTurma.getjCheckBox2().isSelected()) {
                 Dia_Semana dia_Semana = new Dia_Semana();
                 dia_Semana.setTurma_id_turma(turma.getId_turma());
                 dia_Semana.setDia("Terça");
-                dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(cadastrarTurma.getTerIni().getText()));
-                dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(cadastrarTurma.getTerFim().getText()));
+                dia_Semana.setHora_inicio(cadastrarTurma.getTerIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getTerFim().getText());
                 dia_SemanaDao.adicionar(dia_Semana);
             }
             if (cadastrarTurma.getjCheckBox3().isSelected()) {
                 Dia_Semana dia_Semana = new Dia_Semana();
                 dia_Semana.setTurma_id_turma(turma.getId_turma());
                 dia_Semana.setDia("Quarta");
-                dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(cadastrarTurma.getQuaIni().getText()));
-                dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(cadastrarTurma.getQuaFim().getText()));
+                dia_Semana.setHora_inicio(cadastrarTurma.getQuaIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getQuaFim().getText());
                 dia_SemanaDao.adicionar(dia_Semana);
             }
             if (cadastrarTurma.getjCheckBox4().isSelected()) {
                 Dia_Semana dia_Semana = new Dia_Semana();
                 dia_Semana.setTurma_id_turma(turma.getId_turma());
                 dia_Semana.setDia("Quinta");
-                dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(cadastrarTurma.getQuiIni().getText()));
-                dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(cadastrarTurma.getQuiFim().getText()));
+                dia_Semana.setHora_inicio(cadastrarTurma.getQuiIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getQuiFim().getText());
                 dia_SemanaDao.adicionar(dia_Semana);
             }
             if (cadastrarTurma.getjCheckBox5().isSelected()) {
                 Dia_Semana dia_Semana = new Dia_Semana();
                 dia_Semana.setTurma_id_turma(turma.getId_turma());
                 dia_Semana.setDia("Sexta");
-                dia_Semana.setHora_inicio(RedmensionadorImagens.pmTo24(cadastrarTurma.getSexIni().getText()));
-                dia_Semana.setHora_fim(RedmensionadorImagens.pmTo24(cadastrarTurma.getSexFim().getText()));
+                dia_Semana.setHora_inicio(cadastrarTurma.getSexIni().getText());
+                dia_Semana.setHora_fim(cadastrarTurma.getSexFim().getText());
                 dia_SemanaDao.adicionar(dia_Semana);
             }
         } 

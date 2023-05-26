@@ -231,6 +231,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tipoAtv">
+          <Properties>
+            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new LengthRestrictedDocument(45)" type="code"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -300,6 +305,9 @@
             <Component class="javax.swing.JTextArea" name="descAtv">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
+                <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new LengthRestrictedDocument(300)" type="code"/>
+                </Property>
                 <Property name="rows" type="int" value="5"/>
               </Properties>
               <AuxValues>

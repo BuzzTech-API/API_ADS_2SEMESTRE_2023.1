@@ -60,16 +60,11 @@ public class Editar extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-
-        editarTurma.setBackground(new java.awt.Color(239, 131, 84));
-        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         editarTurma.setForeground(new java.awt.Color(255, 255, 255));
         editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarTurma.setText("Editar Turma");
         editarTurma.setBorderPainted(false);
-        editarTurma.setColor(new java.awt.Color(239, 131, 84));
-        editarTurma.setColorClicked(new java.awt.Color(4, 171, 69));
-        editarTurma.setColorOver(new java.awt.Color(4, 210, 130));
         editarTurma.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         editarTurma.setIconTextGap(28);
         editarTurma.setMargin(new java.awt.Insets(2, 30, 2, 14));
@@ -92,16 +87,12 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
-
-        editarAtividade.setBackground(new java.awt.Color(239, 131, 84));
-        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         editarAtividade.setForeground(new java.awt.Color(255, 255, 255));
         editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAtividade.setText("Editar Atividade");
         editarAtividade.setBorderPainted(false);
-        editarAtividade.setColor(new java.awt.Color(239, 131, 84));
         editarAtividade.setColorClicked(new java.awt.Color(4, 210, 130));
-        editarAtividade.setColorOver(new java.awt.Color(4, 210, 130));
         editarAtividade.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         editarAtividade.setIconTextGap(28);
         editarAtividade.setMargin(new java.awt.Insets(2, 30, 2, 14));
@@ -121,16 +112,12 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
-
-        editarAluno.setBackground(new java.awt.Color(239, 131, 84));
-        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         editarAluno.setForeground(new java.awt.Color(255, 255, 255));
         editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAluno.setText("Editar Aluno");
         editarAluno.setBorderPainted(false);
-        editarAluno.setColor(new java.awt.Color(239, 131, 84));
         editarAluno.setColorClicked(new java.awt.Color(4, 210, 130));
-        editarAluno.setColorOver(new java.awt.Color(4, 210, 130));
         editarAluno.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         editarAluno.setIconTextGap(28);
         editarAluno.setMargin(new java.awt.Insets(2, 30, 2, 14));
@@ -170,10 +157,9 @@ public class Editar extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-                .addGap(89, 89, 89)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100))
         );

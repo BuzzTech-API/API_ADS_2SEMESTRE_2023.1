@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
 import modelo.Atividades;
+import modelo.LengthRestrictedDocument;
 import modelo.Turma;
 
 
@@ -69,7 +70,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Turma:");
 
-        alunoNome.setText("Pronto, Danilo");
+        alunoNome.setDocument(new LengthRestrictedDocument(45));
         alunoNome.setPreferredSize(new java.awt.Dimension(64, 25));
 
         turmaAlu.setPreferredSize(new java.awt.Dimension(72, 25));
@@ -93,7 +94,6 @@ public class EditarAluno extends javax.swing.JInternalFrame {
             }
         });
 
-        salvarAlu.setBackground(new java.awt.Color(239, 131, 84));
         salvarAlu.setForeground(new java.awt.Color(2, 30, 54));
         salvarAlu.setText("Salvar");
         salvarAlu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N

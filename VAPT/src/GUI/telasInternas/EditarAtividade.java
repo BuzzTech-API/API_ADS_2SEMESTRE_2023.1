@@ -20,6 +20,7 @@ import modelo.Atividades;
 import modelo.Turma;
 
 import dao.TurmaDao;
+import modelo.LengthRestrictedDocument;
 
 public class EditarAtividade extends javax.swing.JInternalFrame {
 
@@ -120,6 +121,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setText("Data da Solicitação:");
 
+        tipoAtv.setDocument(new LengthRestrictedDocument(45));
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dia:");
 
@@ -146,6 +149,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         });
 
         descAtv.setColumns(20);
+        descAtv.setDocument(new LengthRestrictedDocument(300));
         descAtv.setRows(5);
         jScrollPane1.setViewportView(descAtv);
 

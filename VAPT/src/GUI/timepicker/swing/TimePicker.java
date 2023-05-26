@@ -1,5 +1,6 @@
 package GUI.timepicker.swing;
 
+import GUI.swing.RedmensionadorImagens;
 import GUI.timepicker.event.EventTimeChange;
 import GUI.timepicker.event.EventTimePicker;
 import GUI.timepicker.event.EventTimeSelected;
@@ -79,6 +80,7 @@ public class TimePicker extends javax.swing.JPanel {
     private void displayOnText() {
         if (displayText != null) {
             displayText.setText(cmdHour.getText() + ":" + cmdMinute.getText() + " " + (cmdAM.getForeground() == Color.WHITE ? "AM" : "PM"));
+            displayText.setText(RedmensionadorImagens.pmTo24(displayText.getText()));
         }
     }
 
