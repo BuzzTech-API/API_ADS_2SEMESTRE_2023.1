@@ -51,25 +51,30 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         texto1 = new javax.swing.JLabel();
         nomeTurma = new javax.swing.JTextField();
         texto3 = new javax.swing.JLabel();
-        botaoCancelar = new GUI.swing.MyButton();
-        botaoCadastrar = new GUI.swing.MyButton();
         texto4 = new javax.swing.JLabel();
+        botaoCadastrar = new GUI.swing.MyButton();
+        botaoCancelar = new GUI.swing.MyButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
+        setMaximumSize(new java.awt.Dimension(410, 173));
+        setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(410, 173));
 
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
         jPanel1.setForeground(new java.awt.Color(79, 83, 117));
         jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
         jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setPreferredSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        texto1.setText("Tem certeza que deseja cadastrar essa atividade na");
+        texto1.setText("Tem certeza que deseja adicionar essa atividade para");
 
         nomeTurma.setEditable(false);
-        nomeTurma.setBackground(new java.awt.Color(242, 242, 242));
+        nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeTurma.setText("Turma 6 A");
 
@@ -77,63 +82,57 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         texto3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto3.setText("?\"");
 
-        botaoCancelar.setBackground(new java.awt.Color(255, 255, 255));
-        botaoCancelar.setForeground(new java.awt.Color(2, 30, 54));
-        botaoCancelar.setText("Cancelar");
-        botaoCancelar.setColor(new java.awt.Color(255, 255, 255));
-        botaoCancelar.setColorOver(new java.awt.Color(204, 204, 204));
-        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCancelar.setMaximumSize(new java.awt.Dimension(98, 30));
-        botaoCancelar.setMinimumSize(new java.awt.Dimension(98, 30));
-        botaoCancelar.setPreferredSize(new java.awt.Dimension(98, 30));
-        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCancelarActionPerformed(evt);
-            }
-        });
+        texto4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        texto4.setText("\"");
 
-        botaoCadastrar.setBackground(new java.awt.Color(239, 131, 84));
-        botaoCadastrar.setBorder(null);
         botaoCadastrar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCadastrar.setText("Cadastrar");
-        botaoCadastrar.setColor(new java.awt.Color(239, 131, 84));
-        botaoCadastrar.setColorOver(new java.awt.Color(204, 204, 204));
-        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCadastrar.setMaximumSize(new java.awt.Dimension(98, 30));
-        botaoCadastrar.setMinimumSize(new java.awt.Dimension(98, 30));
-        botaoCadastrar.setPreferredSize(new java.awt.Dimension(98, 30));
+        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoCadastrar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoCadastrar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoCadastrar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoCadastrar.setRadius(10);
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastrarActionPerformed(evt);
             }
         });
 
-        texto4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        texto4.setText("\"");
+        botaoCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        botaoCancelar.setForeground(new java.awt.Color(2, 30, 54));
+        botaoCancelar.setText("Cancelar");
+        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoCancelar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setRadius(10);
+        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(texto1)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(104, 104, 104)
-                                .addComponent(texto4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(texto3))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                        .addGap(104, 104, 104)
+                        .addComponent(texto4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(texto3))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(texto1)))
+                .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,11 +144,11 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
                     .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto3)
                     .addComponent(texto4))
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                    .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -160,7 +159,7 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
         );
 
         pack();
@@ -168,6 +167,7 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
+        
         AtividadesDao atividadesDao = new AtividadesDao();
         Turma turma = new TurmaDao().buscarPorId(atividade.getTurma_id_turma());
         atividadesDao.adicionar(atividade);
@@ -187,10 +187,13 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         atividadesCadastradas.getDiaEntrega().setText("");
         atividadesCadastradas.getDescAtv().setText("");
         this.dispose();
+        
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
+        
         this.dispose();
+        
     }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**

@@ -113,18 +113,20 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
         jLabel1.setForeground(new java.awt.Color(4, 210, 130));
         jLabel1.setText("Buscar aluno para edição:");
 
-        jComboBox1.setMaximumSize(new java.awt.Dimension(72, 25));
-        jComboBox1.setMinimumSize(new java.awt.Dimension(72, 25));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(72, 25));
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox1.setMaximumSize(new java.awt.Dimension(72, 30));
+        jComboBox1.setMinimumSize(new java.awt.Dimension(72, 30));
+        jComboBox1.setPreferredSize(new java.awt.Dimension(72, 30));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jComboBox2.setMaximumSize(new java.awt.Dimension(72, 25));
-        jComboBox2.setMinimumSize(new java.awt.Dimension(72, 25));
-        jComboBox2.setPreferredSize(new java.awt.Dimension(72, 25));
+        jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox2.setMaximumSize(new java.awt.Dimension(72, 30));
+        jComboBox2.setMinimumSize(new java.awt.Dimension(72, 30));
+        jComboBox2.setPreferredSize(new java.awt.Dimension(72, 30));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -152,7 +154,7 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -164,8 +166,8 @@ public class BuscarAlunoParaEdicao extends javax.swing.JInternalFrame {
                                             .addGap(81, 81, 81)
                                             .addComponent(jLabel2))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                            .addGap(8, 8, 8)
+                                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))))
                 .addGap(47, 47, 47))
         );
         jPanel1Layout.setVerticalGroup(

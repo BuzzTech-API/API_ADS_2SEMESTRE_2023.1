@@ -79,15 +79,16 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
         jLabel3.setText("Turma:");
 
         alunoNomeTextField.setDocument(new LengthRestrictedDocument(45));
-        alunoNomeTextField.setMaximumSize(new java.awt.Dimension(64, 25));
-        alunoNomeTextField.setMinimumSize(new java.awt.Dimension(64, 25));
-        alunoNomeTextField.setPreferredSize(new java.awt.Dimension(64, 25));
+        alunoNomeTextField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        alunoNomeTextField.setMaximumSize(new java.awt.Dimension(72, 30));
+        alunoNomeTextField.setMinimumSize(new java.awt.Dimension(72, 30));
+        alunoNomeTextField.setPreferredSize(new java.awt.Dimension(72, 30));
 
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jComboBox1.setMaximumSize(new java.awt.Dimension(72, 25));
-        jComboBox1.setMinimumSize(new java.awt.Dimension(72, 25));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(72, 25));
+        jComboBox1.setMaximumSize(new java.awt.Dimension(72, 30));
+        jComboBox1.setMinimumSize(new java.awt.Dimension(72, 30));
+        jComboBox1.setPreferredSize(new java.awt.Dimension(72, 30));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -141,11 +142,11 @@ public class CadastrarAlunos extends javax.swing.JInternalFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(alunoNomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)))
+                        .addComponent(alunoNomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))

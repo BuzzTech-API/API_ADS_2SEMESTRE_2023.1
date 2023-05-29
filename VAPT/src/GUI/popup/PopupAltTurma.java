@@ -16,10 +16,6 @@ import modelo.Turma;
  */
 public class PopupAltTurma extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopupAltTurma
-     */
-
     private Turma turma;
     private EditarTurma editarTurma;
 
@@ -51,15 +47,21 @@ public class PopupAltTurma extends javax.swing.JFrame {
         texto3 = new javax.swing.JLabel();
         nomeTurma = new javax.swing.JTextField();
         texto2 = new javax.swing.JLabel();
-        botaoSalvar = new javax.swing.JButton();
-        botaoCancelar = new javax.swing.JButton();
+        botaoSalvar = new GUI.swing.MyButton();
+        myButton1 = new GUI.swing.MyButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
+        setMaximumSize(new java.awt.Dimension(410, 173));
+        setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(410, 173));
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setPreferredSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -69,7 +71,7 @@ public class PopupAltTurma extends javax.swing.JFrame {
         texto3.setText("\"? ");
 
         nomeTurma.setEditable(false);
-        nomeTurma.setBackground(new java.awt.Color(217, 217, 217));
+        nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeTurma.setText("Turma 6 A");
 
@@ -77,28 +79,30 @@ public class PopupAltTurma extends javax.swing.JFrame {
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto2.setText("\"");
 
-        botaoSalvar.setBackground(new java.awt.Color(236, 131, 84));
-        botaoSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoSalvar.setForeground(new java.awt.Color(1, 30, 54));
+        botaoSalvar.setForeground(new java.awt.Color(2, 30, 54));
         botaoSalvar.setText("Salvar");
-        botaoSalvar.setMaximumSize(new java.awt.Dimension(95, 27));
-        botaoSalvar.setMinimumSize(new java.awt.Dimension(95, 27));
-        botaoSalvar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoSalvar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoSalvar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoSalvar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoSalvar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoSalvar.setRadius(10);
         botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoSalvarActionPerformed(evt);
             }
         });
 
-        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
-        botaoCancelar.setText("Cancelar");
-        botaoCancelar.setMaximumSize(new java.awt.Dimension(95, 27));
-        botaoCancelar.setMinimumSize(new java.awt.Dimension(95, 27));
-        botaoCancelar.setPreferredSize(new java.awt.Dimension(95, 27));
-        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+        myButton1.setBackground(new java.awt.Color(255, 255, 255));
+        myButton1.setForeground(new java.awt.Color(2, 30, 54));
+        myButton1.setText("Cancelar");
+        myButton1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        myButton1.setMaximumSize(new java.awt.Dimension(117, 35));
+        myButton1.setMinimumSize(new java.awt.Dimension(117, 35));
+        myButton1.setPreferredSize(new java.awt.Dimension(117, 35));
+        myButton1.setRadius(10);
+        myButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCancelarActionPerformed(evt);
+                myButton1ActionPerformed(evt);
             }
         });
 
@@ -106,25 +110,26 @@ public class PopupAltTurma extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(texto1)
-                        .addGap(67, 67, 67))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(texto2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(texto3)
-                        .addGap(143, 143, 143))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(143, 143, 143))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(texto1)
+                        .addGap(67, 67, 67)))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,11 +141,11 @@ public class PopupAltTurma extends javax.swing.JFrame {
                     .addComponent(texto3)
                     .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto2))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,14 +156,15 @@ public class PopupAltTurma extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botaoSalvarActionPerformed
+    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
+        
         TurmaDao turmaDao = new TurmaDao();
         turmaDao.alterar(turma);
 
@@ -206,21 +212,15 @@ public class PopupAltTurma extends javax.swing.JFrame {
         }
         editarTurma.preencherDiaSemana();
         this.dispose();
-    
-        
-        
-        
-        
-    }// GEN-LAST:event_botaoSalvarActionPerformed
+       
+    }//GEN-LAST:event_botaoSalvarActionPerformed
 
-    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botaoCancelarActionPerformed
-        // TODO add your handling code here:
+    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+        
         this.dispose();
-    }// GEN-LAST:event_botaoCancelarActionPerformed
+        
+    }//GEN-LAST:event_myButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
@@ -262,9 +262,9 @@ public class PopupAltTurma extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCancelar;
-    private javax.swing.JButton botaoSalvar;
+    private GUI.swing.MyButton botaoSalvar;
     private javax.swing.JPanel jPanel1;
+    private GUI.swing.MyButton myButton1;
     private javax.swing.JTextField nomeTurma;
     private javax.swing.JLabel texto1;
     private javax.swing.JLabel texto2;

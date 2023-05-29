@@ -52,7 +52,7 @@ public class Editar extends javax.swing.JInternalFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         editarTurma = new GUI.swing.MyButton();
@@ -61,8 +61,7 @@ public class Editar extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
         editarTurma.setForeground(new java.awt.Color(255, 255, 255));
         editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarTurma.setText("Editar Turma");
@@ -79,7 +78,6 @@ public class Editar extends javax.swing.JInternalFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 editarTurmaMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 editarTurmaMouseExited(evt);
             }
@@ -90,7 +88,7 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
-        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
         editarAtividade.setForeground(new java.awt.Color(255, 255, 255));
         editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAtividade.setText("Editar Atividade");
@@ -105,7 +103,6 @@ public class Editar extends javax.swing.JInternalFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 editarAtividadeMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 editarAtividadeMouseExited(evt);
             }
@@ -116,7 +113,7 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
-        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
         editarAluno.setForeground(new java.awt.Color(255, 255, 255));
         editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAluno.setText("Editar Aluno");
@@ -131,7 +128,6 @@ public class Editar extends javax.swing.JInternalFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 editarAlunoMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 editarAlunoMouseExited(evt);
             }
@@ -145,39 +141,31 @@ public class Editar extends javax.swing.JInternalFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(300, 300, 300)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                        .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 405,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 405,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 405,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(291, 291, 291)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(300, 300, 300)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(291, 291, 291))
+        );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
-                new java.awt.Component[] { editarAluno, editarAtividade, editarTurma });
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {editarAluno, editarAtividade, editarTurma});
 
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(89, 89, 89)
-                                .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101,
-                                        Short.MAX_VALUE)
-                                .addGap(89, 89, 89)
-                                .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(31, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(editarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105)
+                .addComponent(editarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105)
+                .addComponent(editarAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
+        );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL,
-                new java.awt.Component[] { editarAluno, editarAtividade, editarTurma });
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {editarAluno, editarAtividade, editarTurma});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
