@@ -93,7 +93,6 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(136, 276));
-        setOpaque(false);
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 formMouseEntered(evt);
@@ -105,7 +104,6 @@ public class CardAtividadesAlunosDevendo extends javax.swing.JPanel {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
-        jScrollPane1.setOpaque(false);
 
         nomesArea.setEditable(false);
         nomesArea.setBackground(new java.awt.Color(252, 252, 252));
