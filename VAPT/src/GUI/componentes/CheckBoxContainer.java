@@ -108,10 +108,12 @@ public class CheckBoxContainer extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
+        setBackground(new java.awt.Color(246, 246, 249));
+
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 3, 5));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(1, 3, 5));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

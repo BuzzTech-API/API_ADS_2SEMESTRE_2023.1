@@ -76,10 +76,15 @@ public class AtividadesEntreguesComAtraso extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(246, 246, 249));
+
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(1, 30, 54));
         jLabel1.setText("Entregues Atrasados:");
 
+        jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
+
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setLayout(new java.awt.GridLayout(0, 1, 0, 5));
         jScrollPane1.setViewportView(jPanel1);
 

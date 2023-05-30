@@ -127,13 +127,10 @@ public class DetalheTurma extends javax.swing.JInternalFrame {
         jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
         jScrollPane1.setBorder(null);
 
-        atividadesPedentes1.setBackground(new java.awt.Color(246, 246, 249));
-        atividadesPedentes1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        atividadesPedentes1.setOpaque(true);
         jScrollPane1.setViewportView(atividadesPedentes1);
 
         panelBorda2.setBackground(new java.awt.Color(246, 246, 249));
-
-        atividadesEntreguesComAtraso1.setBackground(new java.awt.Color(246, 246, 249));
 
         javax.swing.GroupLayout panelBorda2Layout = new javax.swing.GroupLayout(panelBorda2);
         panelBorda2.setLayout(panelBorda2Layout);
