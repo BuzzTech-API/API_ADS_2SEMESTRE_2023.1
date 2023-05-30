@@ -44,7 +44,11 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         ScrollBarCustom spHorizontal = new ScrollBarCustom();
         spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
         spHorizontal.setUnitIncrement(20);
-        spHorizontal.setForeground(new Color(4, 210, 130));
+        spHorizontal.setForeground(new Color(4, 210, 130)); 
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
         jScrollPane1.setHorizontalScrollBar(spHorizontal);
       
         preencherAtvNaoEntregue();
