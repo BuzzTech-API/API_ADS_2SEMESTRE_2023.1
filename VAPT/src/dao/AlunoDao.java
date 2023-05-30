@@ -319,7 +319,7 @@ public class AlunoDao {
          } catch (SQLException exception) {
             // TODO: handle exception
             
-            JOptionPane.showMessageDialog(null, exception);
+            JOptionPane.showMessageDialog(null, "Inválido. Tente novamente.");
         }
     }
 
