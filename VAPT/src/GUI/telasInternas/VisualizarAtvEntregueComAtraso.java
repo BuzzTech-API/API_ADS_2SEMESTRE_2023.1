@@ -80,8 +80,8 @@ public class VisualizarAtvEntregueComAtraso extends javax.swing.JInternalFrame {
                 }
             
             }}
-           
-        float porcentagem = (float) contador / listaAlunoAtividade.size();
+        int total = !listaAlunoAtividade.isEmpty()? listaAlunoAtividade.size():1;
+        float porcentagem = (float) contador / total;
         porcentagem *= 100;
         if(porcentagem == 0.0){
         porcentagemEntregueAtrasado.setText("0%");
