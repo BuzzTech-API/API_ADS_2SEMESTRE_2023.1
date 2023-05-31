@@ -1,4 +1,5 @@
 package dao;
+import GUI.popup.PopupAltSucesso;
 import GUI.popup.PopupCadasrSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -88,8 +89,8 @@ public class TurmaDao {
             stmt.setInt(3, turma.getId_turma());
             stmt.execute();
             stmt.close();
-            PopupCadasrSucesso popup = new PopupCadasrSucesso();
-            popup.setVisible(true);
+            PopupAltSucesso popup = new PopupAltSucesso();
+            popup.setVisible(true);;
 
          } catch (SQLException exception) {
             // TODO: handle exception

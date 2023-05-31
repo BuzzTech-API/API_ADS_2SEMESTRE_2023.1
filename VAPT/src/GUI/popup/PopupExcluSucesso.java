@@ -35,18 +35,25 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
+        setMaximumSize(new java.awt.Dimension(410, 173));
+        setMinimumSize(new java.awt.Dimension(410, 173));
+        setPreferredSize(new java.awt.Dimension(410, 173));
 
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setPreferredSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         texto1.setText("Dado excluido com sucesso!");
 
-        myButton2.setBackground(new java.awt.Color(242, 242, 242));
+        myButton2.setBackground(new java.awt.Color(246, 246, 249));
         myButton2.setText("X");
         myButton2.setToolTipText("");
-        myButton2.setBorderColor(new java.awt.Color(242, 242, 242));
-        myButton2.setColor(new java.awt.Color(242, 242, 242));
+        myButton2.setBorderColor(new java.awt.Color(246, 246, 249));
+        myButton2.setColor(new java.awt.Color(246, 246, 249));
         myButton2.setColorOver(new java.awt.Color(217, 217, 217));
         myButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         myButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -60,10 +67,10 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
             }
         });
 
-        myButton3.setBackground(new java.awt.Color(242, 242, 242));
+        myButton3.setBackground(new java.awt.Color(246, 246, 249));
         myButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
         myButton3.setToolTipText("");
-        myButton3.setBorderColor(new java.awt.Color(242, 242, 242));
+        myButton3.setBorderColor(new java.awt.Color(246, 246, 249));
         myButton3.setColor(new java.awt.Color(242, 242, 242));
         myButton3.setColorOver(new java.awt.Color(217, 217, 217));
         myButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -83,7 +90,7 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
+                .addContainerGap(106, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(texto1)

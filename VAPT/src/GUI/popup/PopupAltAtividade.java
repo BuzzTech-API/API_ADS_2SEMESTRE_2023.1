@@ -44,16 +44,20 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         texto2 = new javax.swing.JLabel();
         nomeAtividade = new javax.swing.JTextField();
         texto3 = new javax.swing.JLabel();
-        botaoSalvar = new javax.swing.JButton();
-        botaoCancelar = new javax.swing.JButton();
+        botaoSalvar = new GUI.swing.MyButton();
+        botaoCancelar = new GUI.swing.MyButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(217, 217, 217));
+        setBackground(new java.awt.Color(246, 246, 249));
+        setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 91, 117), 2, true));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setPreferredSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -64,7 +68,7 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         texto2.setText("\"");
 
         nomeAtividade.setEditable(false);
-        nomeAtividade.setBackground(new java.awt.Color(217, 217, 217));
+        nomeAtividade.setBackground(new java.awt.Color(246, 246, 249));
         nomeAtividade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeAtividade.setText("Atividade 01");
 
@@ -72,22 +76,27 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         texto3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto3.setText("\"?");
 
-        botaoSalvar.setBackground(new java.awt.Color(239, 131, 84));
-        botaoSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoSalvar.setForeground(new java.awt.Color(1, 30, 54));
+        botaoSalvar.setForeground(new java.awt.Color(2, 30, 54));
         botaoSalvar.setText("Salvar");
-        botaoSalvar.setMaximumSize(new java.awt.Dimension(95, 27));
-        botaoSalvar.setMinimumSize(new java.awt.Dimension(95, 27));
-        botaoSalvar.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoSalvar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoSalvar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoSalvar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoSalvar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoSalvar.setRadius(10);
         botaoSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoSalvarActionPerformed(evt);
             }
         });
 
-        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
+        botaoCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        botaoCancelar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCancelar.setText("Cancelar");
+        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoCancelar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setRadius(10);
         botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCancelarActionPerformed(evt);
@@ -101,22 +110,21 @@ public class PopupAltAtividade extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(texto1)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(texto2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomeAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(texto3)
-                        .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(botaoCancelar)
-                        .addGap(53, 53, 53)
-                        .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83))))
+                .addComponent(texto2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(texto3)
+                .addGap(140, 140, 140))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,11 +136,11 @@ public class PopupAltAtividade extends javax.swing.JFrame {
                     .addComponent(texto2)
                     .addComponent(nomeAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto3))
-                .addGap(26, 26, 26)
+                .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCancelar))
-                .addContainerGap(28, Short.MAX_VALUE))
+                    .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,13 +159,17 @@ public class PopupAltAtividade extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
+        
         AtividadesDao atividadesDao = new AtividadesDao();
         atividadesDao.alterar(atividade);
-        this.dispose();
+        this.dispose(); 
+        
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
     private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
-         this.dispose();
+        
+        this.dispose();
+         
     }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**
@@ -196,8 +208,8 @@ public class PopupAltAtividade extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCancelar;
-    private javax.swing.JButton botaoSalvar;
+    private GUI.swing.MyButton botaoCancelar;
+    private GUI.swing.MyButton botaoSalvar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nomeAtividade;
     private javax.swing.JLabel texto1;

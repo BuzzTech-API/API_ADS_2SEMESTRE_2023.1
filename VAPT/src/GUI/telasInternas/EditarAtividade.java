@@ -113,7 +113,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
-        turmas.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        turmas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         turmas.setMaximumSize(new java.awt.Dimension(430, 30));
         turmas.setMinimumSize(new java.awt.Dimension(430, 30));
         turmas.setPreferredSize(new java.awt.Dimension(430, 30));
@@ -129,7 +129,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setText("Data da Solicitação:");
 
-        tipoAtv.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        tipoAtv.setDocument(new LengthRestrictedDocument(45));
+        tipoAtv.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tipoAtv.setMaximumSize(new java.awt.Dimension(139, 30));
         tipoAtv.setMinimumSize(new java.awt.Dimension(139, 30));
         tipoAtv.setPreferredSize(new java.awt.Dimension(139, 30));
@@ -149,7 +150,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
 
         descAtv.setColumns(20);
         descAtv.setDocument(new LengthRestrictedDocument(300));
-        descAtv.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        descAtv.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         descAtv.setRows(5);
         descAtv.setMaximumSize(new java.awt.Dimension(292, 114));
         descAtv.setMinimumSize(new java.awt.Dimension(292, 114));
@@ -329,13 +330,8 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60))
-        );
-
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
 //         Buscar buscar = new Buscar(jDesktopPane);;

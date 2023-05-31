@@ -12,6 +12,7 @@ import dao.Aluno_AtividadeDao;
 import dao.TurmaDao;
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -73,10 +74,14 @@ public class AtividadesPedentes extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
+        setBackground(new java.awt.Color(246, 246, 249));
+
+        jLabel1.setBackground(new java.awt.Color(246, 246, 249));
         jLabel1.setFont(new java.awt.Font("Arial", 1, 19)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(2, 31, 54));
         jLabel1.setText("Atividades Pendentes:");
 
+        jLayeredPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jLayeredPane1.setLayout(new java.awt.GridLayout(0, 1, 0, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -107,6 +112,7 @@ public class AtividadesPedentes extends javax.swing.JPanel {
         ArrayList<Aluno> listaAluno = turma.getAlunosDaTurma();
         for (Aluno aluno : listaAluno) {
             CheckBoxContainer checkBoxContainer = new CheckBoxContainer(aluno);
+            checkBoxContainer.getjLabel1().setPreferredSize(new Dimension(240, 20));
             checkBoxContainer.getjLabel1().addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -131,7 +137,7 @@ public class AtividadesPedentes extends javax.swing.JPanel {
             jLayeredPane1.add(checkBoxContainer);
         }
         String atividadesNumeros = jLabel1.getText();
-        for (int i = atividadesNumeros.length(); i < 36; i++) {
+        for (int i = atividadesNumeros.length(); i < 32; i++) {
             atividadesNumeros+=" ";
         }
         for (int i = 1; i <= turma.getAtividadesDaTurma().size(); i++) {

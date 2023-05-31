@@ -46,23 +46,27 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         texto1 = new javax.swing.JLabel();
         nomeTurma = new javax.swing.JTextField();
         texto2 = new javax.swing.JLabel();
-        botaoExcluir = new javax.swing.JButton();
-        botaoCancelar = new javax.swing.JButton();
+        botaoExcluir = new GUI.swing.MyButton();
+        myButton2 = new GUI.swing.MyButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
+        setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(410, 173));
 
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
+        jPanel1.setMinimumSize(new java.awt.Dimension(410, 173));
 
         texto1.setBackground(new java.awt.Color(217, 217, 217));
         texto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto1.setText("Tem certeza que deseja excluir \"");
 
         nomeTurma.setEditable(false);
-        nomeTurma.setBackground(new java.awt.Color(217, 217, 217));
+        nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeTurma.setText("Turma 6 A");
 
@@ -70,25 +74,29 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto2.setText("\"?");
 
-        botaoExcluir.setBackground(new java.awt.Color(239, 131, 84));
-        botaoExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoExcluir.setForeground(new java.awt.Color(1, 30, 54));
+        botaoExcluir.setForeground(new java.awt.Color(2, 30, 54));
         botaoExcluir.setText("Excluir");
-        botaoExcluir.setMaximumSize(new java.awt.Dimension(95, 27));
-        botaoExcluir.setMinimumSize(new java.awt.Dimension(95, 27));
-        botaoExcluir.setPreferredSize(new java.awt.Dimension(95, 27));
+        botaoExcluir.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoExcluir.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoExcluir.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoExcluir.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoExcluir.setRadius(10);
         botaoExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoExcluirActionPerformed(evt);
             }
         });
 
-        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCancelar.setForeground(new java.awt.Color(1, 30, 54));
-        botaoCancelar.setText("Cancelar");
-        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+        myButton2.setBackground(new java.awt.Color(255, 255, 255));
+        myButton2.setText("Cancelar");
+        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        myButton2.setMaximumSize(new java.awt.Dimension(117, 35));
+        myButton2.setMinimumSize(new java.awt.Dimension(117, 35));
+        myButton2.setPreferredSize(new java.awt.Dimension(117, 35));
+        myButton2.setRadius(10);
+        myButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCancelarActionPerformed(evt);
+                myButton2ActionPerformed(evt);
             }
         });
 
@@ -97,20 +105,19 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(56, 56, 56)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
+                        .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(botaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(texto1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(texto2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(botaoCancelar)
-                        .addGap(53, 53, 53)
-                        .addComponent(botaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(texto2)
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,11 +127,11 @@ public class PopupExcluTurma extends javax.swing.JFrame {
                     .addComponent(texto1)
                     .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto2))
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCancelar))
-                .addContainerGap(44, Short.MAX_VALUE))
+                    .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,6 +150,7 @@ public class PopupExcluTurma extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
+        
         TurmaDao turmadao = new TurmaDao();
         turmadao.deletarTurma(turma.getId_turma());
         if (buscar==null) {
@@ -152,11 +160,14 @@ public class PopupExcluTurma extends javax.swing.JFrame {
         }
         
         this.dispose();
+              
     }//GEN-LAST:event_botaoExcluirActionPerformed
 
-    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
+    private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
+        
         this.dispose();
-    }//GEN-LAST:event_botaoCancelarActionPerformed
+        
+    }//GEN-LAST:event_myButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,9 +205,9 @@ public class PopupExcluTurma extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCancelar;
-    private javax.swing.JButton botaoExcluir;
+    private GUI.swing.MyButton botaoExcluir;
     private javax.swing.JPanel jPanel1;
+    private GUI.swing.MyButton myButton2;
     private javax.swing.JTextField nomeTurma;
     private javax.swing.JLabel texto1;
     private javax.swing.JLabel texto2;

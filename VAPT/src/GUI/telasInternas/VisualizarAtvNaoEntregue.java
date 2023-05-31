@@ -44,7 +44,11 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
         ScrollBarCustom spHorizontal = new ScrollBarCustom();
         spHorizontal.setOrientation(JScrollBar.HORIZONTAL);
         spHorizontal.setUnitIncrement(20);
-        spHorizontal.setForeground(new Color(4, 210, 130));
+        spHorizontal.setForeground(new Color(4, 210, 130)); 
+        ScrollBarCustom sp = new ScrollBarCustom();
+        sp.setUnitIncrement(20);
+        sp.setForeground(new Color(4, 210, 130));
+        jScrollPane1.setVerticalScrollBar(sp);
         jScrollPane1.setHorizontalScrollBar(spHorizontal);
       
         preencherAtvNaoEntregue();
@@ -77,8 +81,8 @@ public class VisualizarAtvNaoEntregue extends javax.swing.JInternalFrame {
 
         }
         
-        
-        float porcentagem = (float) contador / listaAlunoAtividade.size();
+        int total = !listaAlunoAtividade.isEmpty()? listaAlunoAtividade.size():1;
+        float porcentagem = (float) contador / total;
         porcentagem *= 100;
         if(porcentagem == 0.0){
         porcentagemNaoEntregue.setText("0%");

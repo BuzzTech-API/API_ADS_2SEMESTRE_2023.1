@@ -131,7 +131,7 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Turma:");
 
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setLightWeightPopupEnabled(false);
         jComboBox1.setMaximumSize(new java.awt.Dimension(72, 30));
         jComboBox1.setMinimumSize(new java.awt.Dimension(72, 30));
@@ -149,6 +149,7 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
         jLabel5.setText("Data da Solicitação:");
 
         tipoAtv.setDocument(new LengthRestrictedDocument(30));
+        tipoAtv.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tipoAtv.setMaximumSize(new java.awt.Dimension(139, 30));
         tipoAtv.setMinimumSize(new java.awt.Dimension(139, 30));
         tipoAtv.setPreferredSize(new java.awt.Dimension(139, 30));
@@ -172,7 +173,7 @@ public class AtividadesCadastradas extends javax.swing.JInternalFrame {
 
         descAtv.setColumns(20);
         descAtv.setDocument(new LengthRestrictedDocument(300));
-        descAtv.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        descAtv.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         descAtv.setRows(5);
         descAtv.setText("\n");
         descAtv.setMaximumSize(new java.awt.Dimension(292, 114));

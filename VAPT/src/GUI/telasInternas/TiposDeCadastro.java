@@ -40,7 +40,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         addAluno = new GUI.swing.MyButton();
@@ -49,7 +49,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        addAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAluno.setForeground(new java.awt.Color(255, 255, 255));
         addAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAluno.setText("Adicionar Aluno");
@@ -64,7 +64,6 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 addAlunoMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 addAlunoMouseExited(evt);
             }
@@ -75,7 +74,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        addTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addTurma.setForeground(new java.awt.Color(255, 255, 255));
         addTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addTurma.setText("Adicionar Turma");
@@ -90,7 +89,6 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 addTurmaMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 addTurmaMouseExited(evt);
             }
@@ -101,7 +99,7 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        addAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
         addAtividade.setForeground(new java.awt.Color(255, 255, 255));
         addAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus2.png"))); // NOI18N
         addAtividade.setText("Adicionar Atividade");
@@ -116,7 +114,6 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 addAtividadeMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 addAtividadeMouseExited(evt);
             }
@@ -130,39 +127,31 @@ public class TiposDeCadastro extends javax.swing.JInternalFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(298, 298, 298)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                        .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 405,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 405,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 405,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(303, 303, 303)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(298, 298, 298)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(303, 303, 303))
+        );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
-                new java.awt.Component[] { addAluno, addAtividade, addTurma });
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addAluno, addAtividade, addTurma});
 
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109,
-                                        Short.MAX_VALUE)
-                                .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108,
-                                        Short.MAX_VALUE)
-                                .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(99, 99, 99)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(addTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(addAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(addAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
+        );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL,
-                new java.awt.Component[] { addAluno, addAtividade, addTurma });
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addAluno, addAtividade, addTurma});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

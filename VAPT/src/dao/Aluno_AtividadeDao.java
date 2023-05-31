@@ -1,5 +1,6 @@
 package dao;
 
+import GUI.popup.PopupAltSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -105,6 +106,7 @@ public class Aluno_AtividadeDao {
             
             //Executar a query
             stmt.execute();
+            
             
         }catch(Exception e){
             e.printStackTrace();

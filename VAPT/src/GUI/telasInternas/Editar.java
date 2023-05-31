@@ -61,7 +61,7 @@ public class Editar extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarTurma.setBorder(new javax.swing.border.SoftBevelBorder(0));
         editarTurma.setForeground(new java.awt.Color(255, 255, 255));
         editarTurma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarTurma.setText("Editar Turma");
@@ -88,7 +88,7 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
-        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarAtividade.setBorder(new javax.swing.border.SoftBevelBorder(0));
         editarAtividade.setForeground(new java.awt.Color(255, 255, 255));
         editarAtividade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAtividade.setText("Editar Atividade");
@@ -113,7 +113,7 @@ public class Editar extends javax.swing.JInternalFrame {
             }
         });
 
-        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        editarAluno.setBorder(new javax.swing.border.SoftBevelBorder(0));
         editarAluno.setForeground(new java.awt.Color(255, 255, 255));
         editarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapisbranco40px.png"))); // NOI18N
         editarAluno.setText("Editar Aluno");

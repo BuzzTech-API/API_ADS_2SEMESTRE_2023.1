@@ -46,6 +46,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
     private void initComponents() {
 
         myButton1 = new GUI.swing.MyButton();
+        myButton2 = new GUI.swing.MyButton();
         jPanel1 = new javax.swing.JPanel();
         texto1 = new javax.swing.JLabel();
         nomeTurma = new javax.swing.JTextField();
@@ -55,10 +56,13 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
 
         myButton1.setText("myButton1");
 
+        myButton2.setText("myButton2");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
         setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
         jPanel1.setForeground(new java.awt.Color(79, 93, 117));
         jPanel1.setMaximumSize(new java.awt.Dimension(410, 173));
@@ -68,7 +72,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         texto1.setText("Tem certeza que deseja cadastrar \"");
 
         nomeTurma.setEditable(false);
-        nomeTurma.setBackground(new java.awt.Color(242, 242, 242));
+        nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nomeTurma.setText("Turma 6 A");
         nomeTurma.addActionListener(new java.awt.event.ActionListener() {
@@ -81,16 +85,13 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         texto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         texto2.setText("\" ? ");
 
-        botaoCadastrar.setBackground(new java.awt.Color(239, 131, 84));
         botaoCadastrar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCadastrar.setText("Cadastrar");
-        botaoCadastrar.setColor(new java.awt.Color(239, 131, 84));
-        botaoCadastrar.setColorOver(new java.awt.Color(204, 204, 204));
-        botaoCadastrar.setFocusPainted(false);
-        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCadastrar.setMaximumSize(new java.awt.Dimension(98, 30));
-        botaoCadastrar.setMinimumSize(new java.awt.Dimension(98, 30));
-        botaoCadastrar.setPreferredSize(new java.awt.Dimension(98, 30));
+        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoCadastrar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoCadastrar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoCadastrar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoCadastrar.setRadius(10);
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastrarActionPerformed(evt);
@@ -98,14 +99,12 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         });
 
         botaoCancelar.setBackground(new java.awt.Color(255, 255, 255));
-        botaoCancelar.setForeground(new java.awt.Color(2, 30, 54));
         botaoCancelar.setText("Cancelar");
-        botaoCancelar.setColor(new java.awt.Color(255, 255, 255));
-        botaoCancelar.setColorOver(new java.awt.Color(204, 204, 204));
-        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoCancelar.setMaximumSize(new java.awt.Dimension(98, 30));
-        botaoCancelar.setMinimumSize(new java.awt.Dimension(98, 30));
-        botaoCancelar.setPreferredSize(new java.awt.Dimension(98, 30));
+        botaoCancelar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        botaoCancelar.setMaximumSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setMinimumSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setPreferredSize(new java.awt.Dimension(117, 35));
+        botaoCancelar.setRadius(10);
         botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCancelarActionPerformed(evt);
@@ -117,20 +116,19 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
                         .addComponent(texto1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(texto2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(texto2)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,11 +138,11 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
                     .addComponent(texto1)
                     .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(texto2))
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                    .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -155,7 +153,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -166,11 +164,8 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeTurmaActionPerformed
 
-    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_botaoCancelarActionPerformed
-
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
+        
         TurmaDao turmaDao = new TurmaDao();
         if (!turmaDao.jaExisteTurma(turma)) {
             turmaDao.adicionar(turma);
@@ -218,6 +213,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
                 dia_SemanaDao.adicionar(dia_Semana);
             }
         } 
+        
         cadastrarTurma.getNomeTurma().setText("");
         cadastrarTurma.getNomeDaEscola().setText("");
         cadastrarTurma.getjCheckBox1().setSelected(false);
@@ -239,6 +235,11 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_botaoCadastrarActionPerformed
+
+    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
+        
+        this.dispose();
+    }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,6 +281,7 @@ public class PopupConfirmCadastrar extends javax.swing.JFrame {
     private GUI.swing.MyButton botaoCancelar;
     private javax.swing.JPanel jPanel1;
     private GUI.swing.MyButton myButton1;
+    private GUI.swing.MyButton myButton2;
     private javax.swing.JTextField nomeTurma;
     private javax.swing.JLabel texto1;
     private javax.swing.JLabel texto2;

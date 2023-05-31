@@ -124,7 +124,7 @@ public class Buscar extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
-        buscarAluno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        buscarAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         buscarAluno.setForeground(new java.awt.Color(102, 102, 102));
         buscarAluno.setToolTipText("Buscar Aluno");
         buscarAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 122, 163), 1, true));
@@ -159,7 +159,7 @@ public class Buscar extends javax.swing.JInternalFrame {
 
         jLayeredPane1.setMinimumSize(new java.awt.Dimension(923, 481));
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(1006, 0));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 15, 15));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(0, 15, 15));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
