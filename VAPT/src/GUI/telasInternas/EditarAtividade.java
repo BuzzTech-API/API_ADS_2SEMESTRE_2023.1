@@ -66,7 +66,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         dateChooser2 = new GUI.datechooser.DateChooser();
@@ -331,9 +331,10 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60))
+                .addGap(60, 60, 60))));
+    }
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+   private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
 //         Buscar buscar = new Buscar(jDesktopPane);;
 //        jDesktopPane.removeAll();
 //        jDesktopPane.add(buscar).setVisible(true);
