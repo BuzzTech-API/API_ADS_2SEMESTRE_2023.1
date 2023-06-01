@@ -66,7 +66,7 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         dateChooser2 = new GUI.datechooser.DateChooser();
@@ -91,7 +91,6 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         dataSolicitacaoBut = new GUI.swing.MyButton();
         dataEntregaBut = new GUI.swing.MyButton();
         jButton1 = new GUI.swing.MyButton();
-        myButton1 = new GUI.swing.MyButton();
 
         dateChooser2.setForeground(new java.awt.Color(0, 0, 255));
         dateChooser2.setTextRefernce(diaEntregue);
@@ -134,7 +133,6 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
         tipoAtv.setMaximumSize(new java.awt.Dimension(139, 30));
         tipoAtv.setMinimumSize(new java.awt.Dimension(139, 30));
         tipoAtv.setPreferredSize(new java.awt.Dimension(139, 30));
-        tipoAtv.setDocument(new LengthRestrictedDocument(45));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Dia:");
@@ -296,30 +294,12 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        myButton1.setBackground(new java.awt.Color(242, 242, 242));
-        myButton1.setBorder(null);
-        myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vector.png"))); // NOI18N
-        myButton1.setBorderColor(new java.awt.Color(242, 242, 242));
-        myButton1.setBorderPainted(false);
-        myButton1.setColor(new java.awt.Color(242, 242, 242));
-        myButton1.setColorClicked(new java.awt.Color(102, 102, 102));
-        myButton1.setColorOver(new java.awt.Color(204, 204, 204));
-        myButton1.setPreferredSize(new java.awt.Dimension(30, 30));
-        myButton1.setRadius(30);
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(75, 75, 75)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(141, 141, 141))
         );
@@ -327,18 +307,12 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60))));
-    }
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-   private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-//         Buscar buscar = new Buscar(jDesktopPane);;
-//        jDesktopPane.removeAll();
-//        jDesktopPane.add(buscar).setVisible(true);
-    }//GEN-LAST:event_myButton1ActionPerformed
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void turmasActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_turmasActionPerformed
 
@@ -409,7 +383,6 @@ public class EditarAtividade extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private GUI.swing.MyButton myButton1;
     private javax.swing.JTextField tipoAtv;
     private javax.swing.JComboBox<String> turmas;
     // End of variables declaration//GEN-END:variables
