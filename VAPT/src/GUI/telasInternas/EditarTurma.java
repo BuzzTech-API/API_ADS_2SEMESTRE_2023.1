@@ -27,6 +27,7 @@ import dao.Dia_SemanaDao;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import javax.swing.JDesktopPane;
 import modelo.LengthRestrictedDocument;
 import modelo.Turma;
 
@@ -101,10 +102,31 @@ public class EditarTurma extends javax.swing.JInternalFrame {
 
     private Turma turma;
     private ArrayList<Dia_Semana> lista;
+    private JDesktopPane jDesktopPane;
+    private Buscar buscar;
+    private VisualizarCardEditarTurma visuCard;
     // private ArrayList<Turma> turmaAtualizada;
 
-    public EditarTurma(Turma turma) {
+    public EditarTurma(Turma turma, JDesktopPane jDesktopPane, Buscar buscar) {
+        this.buscar = buscar;
         this.turma = turma;
+        this.jDesktopPane = jDesktopPane;
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
+        ui.setNorthPane(null);
+
+        // Nome da escola e turma
+        nomeDaEscola.setText(turma.getNome_escola());
+        nomeTurma.setText(turma.getNome());
+        configurarTela();
+        
+        preencherDiaSemana();
+    }
+    public EditarTurma(Turma turma, JDesktopPane jDesktopPane, VisualizarCardEditarTurma visuCard) {
+        this.visuCard = visuCard;
+        this.turma = turma;
+        this.jDesktopPane = jDesktopPane;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
@@ -187,6 +209,7 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         quiFimBut = new GUI.swing.MyButton();
         quiIniBut = new GUI.swing.MyButton();
         jButton1 = new GUI.swing.MyButton();
+        btnVoltar3 = new GUI.swing.MyButton();
 
         setPreferredSize(new java.awt.Dimension(1018, 638));
 
@@ -721,19 +744,42 @@ public class EditarTurma extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28))
         );
 
+        btnVoltar3.setBackground(new java.awt.Color(242, 242, 242));
+        btnVoltar3.setBorder(null);
+        btnVoltar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vector.png"))); // NOI18N
+        btnVoltar3.setBorderColor(new java.awt.Color(242, 242, 242));
+        btnVoltar3.setBorderPainted(false);
+        btnVoltar3.setColor(new java.awt.Color(242, 242, 242));
+        btnVoltar3.setColorClicked(new java.awt.Color(102, 102, 102));
+        btnVoltar3.setColorOver(new java.awt.Color(204, 204, 204));
+        btnVoltar3.setPreferredSize(new java.awt.Dimension(30, 30));
+        btnVoltar3.setRadius(30);
+        btnVoltar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltar3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(btnVoltar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(88, 88, 88))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(19, 19, 19)
+                .addComponent(btnVoltar3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(106, 106, 106))
         );
@@ -890,8 +936,20 @@ public class EditarTurma extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnVoltar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar3ActionPerformed
+        if (visuCard==null) {
+            jDesktopPane.removeAll();
+            jDesktopPane.add(buscar).setVisible(true);
+        } else {
+            jDesktopPane.removeAll();
+            jDesktopPane.add(visuCard).setVisible(true);
+        }
+
+    }//GEN-LAST:event_btnVoltar3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private GUI.swing.MyButton btnVoltar3;
     private GUI.swing.MyButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

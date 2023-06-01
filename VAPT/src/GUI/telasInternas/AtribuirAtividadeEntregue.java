@@ -74,12 +74,11 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         myButton1 = new GUI.swing.MyButton();
-        myButton2 = new GUI.swing.MyButton();
 
         setBackground(new java.awt.Color(246, 246, 249));
-        setMaximumSize(new java.awt.Dimension(742, 240));
-        setMinimumSize(new java.awt.Dimension(742, 240));
-        setPreferredSize(new java.awt.Dimension(742, 240));
+        setMaximumSize(new java.awt.Dimension(740, 240));
+        setMinimumSize(new java.awt.Dimension(740, 240));
+        setPreferredSize(new java.awt.Dimension(740, 240));
 
         jScrollPane1.setBackground(new java.awt.Color(246, 246, 249));
 
@@ -89,7 +88,7 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jLayeredPane1);
 
         myButton1.setForeground(new java.awt.Color(2, 30, 54));
-        myButton1.setText("X");
+        myButton1.setText("Salvar e Sair");
         myButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         myButton1.setMaximumSize(new java.awt.Dimension(157, 40));
         myButton1.setMinimumSize(new java.awt.Dimension(157, 40));
@@ -101,48 +100,27 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
             }
         });
 
-        myButton2.setForeground(new java.awt.Color(2, 30, 54));
-        myButton2.setText("Salvar");
-        myButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        myButton2.setMaximumSize(new java.awt.Dimension(157, 40));
-        myButton2.setMinimumSize(new java.awt.Dimension(157, 40));
-        myButton2.setPreferredSize(new java.awt.Dimension(157, 40));
-        myButton2.setRadius(10);
-        myButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(159, 159, 159)
-                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(543, Short.MAX_VALUE)
-                    .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(30, 30, 30)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(166, Short.MAX_VALUE)
-                    .addComponent(myButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 181, Short.MAX_VALUE)
+                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         pack();
@@ -152,16 +130,11 @@ public class AtribuirAtividadeEntregue extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_myButton1ActionPerformed
 
-    private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_myButton2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JScrollPane jScrollPane1;
     private GUI.swing.MyButton myButton1;
-    private GUI.swing.MyButton myButton2;
     // End of variables declaration//GEN-END:variables
 
 }

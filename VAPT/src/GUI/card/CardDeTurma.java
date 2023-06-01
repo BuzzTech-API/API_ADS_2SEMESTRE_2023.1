@@ -199,13 +199,13 @@ public class CardDeTurma extends javax.swing.JPanel {
         // TODO add your handling code here:
         if (buscar == null) {
             JDesktopPane desktopPane =  visualizarCardEditarTurma.getJDesktopPane();
-            EditarTurma editarturma = new EditarTurma(turma);
+            EditarTurma editarturma = new EditarTurma(turma, desktopPane, visualizarCardEditarTurma);
             desktopPane.removeAll();
             desktopPane.add(editarturma).setVisible(true);
         } 
         else {
             JDesktopPane desktopPane =  buscar.getJDesktopPane();
-            EditarTurma editarturma = new EditarTurma(turma);
+            EditarTurma editarturma = new EditarTurma(turma, desktopPane, buscar);
             desktopPane.removeAll();
             desktopPane.add(editarturma).setVisible(true);
         }
