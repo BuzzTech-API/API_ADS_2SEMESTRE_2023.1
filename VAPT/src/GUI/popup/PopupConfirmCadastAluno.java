@@ -146,7 +146,6 @@ public class PopupConfirmCadastAluno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
-        setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
 
@@ -213,23 +212,21 @@ public class PopupConfirmCadastAluno extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(texto1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(146, 146, 146)
-                                .addComponent(texto3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(100, 100, 100)
+                        .addComponent(texto3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(texto4)
-                            .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(texto4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81)
+                        .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(texto1)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -271,12 +268,13 @@ public class PopupConfirmCadastAluno extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void nomeTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTurmaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTurmaActionPerformed
+    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+
+        this.dispose();
+    }//GEN-LAST:event_myButton1ActionPerformed
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
-        
+
         AlunoDao alunoDao = new AlunoDao();
         alunoDao.adicionar(aluno);
         cadastrarAlunos.getAlunoNomeTextField().setText("");
@@ -290,14 +288,11 @@ public class PopupConfirmCadastAluno extends javax.swing.JFrame {
             aluno_AtividadeDao.adicionar(aluno_Atividade);
         }
         this.dispose();
-        
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
-        
-        this.dispose();
-        
-    }//GEN-LAST:event_myButton1ActionPerformed
+    private void nomeTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTurmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTurmaActionPerformed
 
     /**
      * @param args the command line arguments
