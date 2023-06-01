@@ -10,22 +10,23 @@ import GUI.popup.PopupExcluAluno;
 
 import dao.TurmaDao;
 import java.util.ArrayList;
+import javax.swing.JDesktopPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import modelo.Aluno;
 import modelo.Atividades;
 import modelo.LengthRestrictedDocument;
 import modelo.Turma;
+import GUI.telasInternas.BuscarAlunoParaEdicao;
 
 public class EditarAluno extends javax.swing.JInternalFrame {
 
     private Aluno aluno = new Aluno();
     private EditarAluno editarAluno;
     private ArrayList<Turma> lista = new ArrayList<>();
-
+    private JDesktopPane jDesktopPane;
+    
     public EditarAluno(Aluno aluno) {
-
         this.aluno = aluno;
-
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI ui = (BasicInternalFrameUI) this.getUI();
@@ -35,9 +36,7 @@ public class EditarAluno extends javax.swing.JInternalFrame {
     }
 
     public void editAlu() {
-
         alunoNome.setText(this.aluno.getNome());
-
     }
 
     @SuppressWarnings("unchecked")
@@ -241,4 +240,5 @@ public class EditarAluno extends javax.swing.JInternalFrame {
         }
     }
 
+ 
 }

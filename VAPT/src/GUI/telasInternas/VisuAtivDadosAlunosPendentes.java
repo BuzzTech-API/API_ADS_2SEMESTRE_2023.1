@@ -209,6 +209,18 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
                         jDesktopPanePrincipal.removeAll();
                         jDesktopPanePrincipal.add(atividadeDadosAluno).setVisible(true);
                     }
+
+                    @Override
+                    public void mouseEntered(MouseEvent e) {
+                      jlabel.setCursor(new Cursor(Cursor.HAND_CURSOR)); 
+                      jlabel.setForeground(Color.red);                    }
+
+                    @Override
+                    public void mouseExited(MouseEvent e) {
+                      jlabel.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));  
+                      jlabel.setForeground(Color.black);
+                    }
+                    
                     
                 });
                 
