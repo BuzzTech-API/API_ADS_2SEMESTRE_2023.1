@@ -5,6 +5,8 @@
 package GUI.popup;
 
 import java.awt.Cursor;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -149,6 +151,19 @@ public class PopupAltSucesso extends javax.swing.JFrame {
        myButton2.setCursor(cursor);
     }//GEN-LAST:event_myButton2MouseEntered
 
+    
+    public void fechar(){
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                dispose();
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(task, 5000);  
+    }
+    
+    
     /**
      * @param args the command line arguments
      */

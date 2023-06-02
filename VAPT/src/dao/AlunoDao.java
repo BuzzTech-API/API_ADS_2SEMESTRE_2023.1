@@ -315,6 +315,7 @@ public class AlunoDao {
             stmt.close();
             PopupAltSucesso popup = new PopupAltSucesso();
             popup.setVisible(true);
+            popup.fechar();
 
          } catch (SQLException exception) {
             // TODO: handle exception
