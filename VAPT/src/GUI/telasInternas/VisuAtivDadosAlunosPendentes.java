@@ -19,6 +19,7 @@ import modelo.Aluno_Atividade;
 import modelo.Atividades;
 import modelo.Turma;
 import java.awt.Cursor;
+import java.awt.Dimension;
 
 /**
  *
@@ -151,7 +152,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
         jLayeredPane1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(455, 256));
-        jLayeredPane1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jLayeredPane1.setLayout(new java.awt.FlowLayout(0));
         jScrollPane1.setViewportView(jLayeredPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -228,7 +229,7 @@ public class VisuAtivDadosAlunosPendentes extends javax.swing.JInternalFrame {
                 contador++;
             }
         } 
-        
+        jLayeredPane1.setPreferredSize(new Dimension(457, 30*contador));
          float porcentagem = (float) contador / listaAluno_Atividades.size();
         porcentagem *= 100;
         if(porcentagem == 0.0){
