@@ -69,6 +69,7 @@ public class PopupAltAtividade extends javax.swing.JFrame {
         nomeAtividade.setEditable(false);
         nomeAtividade.setBackground(new java.awt.Color(246, 246, 249));
         nomeAtividade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        nomeAtividade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nomeAtividade.setText("Atividade 01");
 
         texto3.setBackground(new java.awt.Color(217, 217, 217));

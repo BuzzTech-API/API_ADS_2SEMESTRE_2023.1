@@ -71,7 +71,7 @@ public class PopupAltSucesso extends javax.swing.JFrame {
         myButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
         myButton3.setToolTipText("");
         myButton3.setBorderColor(new java.awt.Color(246, 246, 249));
-        myButton3.setColor(new java.awt.Color(217, 217, 217));
+        myButton3.setColor(new java.awt.Color(246, 246, 249));
         myButton3.setColorOver(new java.awt.Color(217, 217, 217));
         myButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         myButton3.setOpaque(true);
@@ -160,7 +160,7 @@ public class PopupAltSucesso extends javax.swing.JFrame {
             }
         };
         Timer timer = new Timer();
-        timer.schedule(task, 5000);  
+        timer.schedule(task, 3000);  
     }
     
     

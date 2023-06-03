@@ -5,6 +5,8 @@
 package GUI.popup;
 
 import java.awt.Cursor;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -37,7 +39,7 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
         setBackground(new java.awt.Color(217, 217, 217));
         setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
-        setPreferredSize(new java.awt.Dimension(410, 173));
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
@@ -67,7 +69,6 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
             }
         });
 
-        myButton3.setBackground(new java.awt.Color(246, 246, 249));
         myButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png"))); // NOI18N
         myButton3.setToolTipText("");
         myButton3.setBorderColor(new java.awt.Color(246, 246, 249));
@@ -129,6 +130,7 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void myButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myButton2MouseEntered
@@ -149,6 +151,18 @@ public class PopupExcluSucesso extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_myButton3ActionPerformed
 
+    
+     public void fechar(){
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                dispose();
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(task, 3000);  
+    }
+    
     /**
      * @param args the command line arguments
      */

@@ -52,10 +52,8 @@ public class PopupAltTurma extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
-        setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(410, 173));
 
         jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
@@ -73,6 +71,7 @@ public class PopupAltTurma extends javax.swing.JFrame {
         nomeTurma.setEditable(false);
         nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        nomeTurma.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nomeTurma.setText("Turma 6 A");
 
         texto2.setBackground(new java.awt.Color(217, 217, 217));
@@ -151,7 +150,7 @@ public class PopupAltTurma extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())

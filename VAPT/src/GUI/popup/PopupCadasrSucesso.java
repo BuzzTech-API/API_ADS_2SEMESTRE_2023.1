@@ -5,6 +5,8 @@
 package GUI.popup;
 
 import java.awt.Cursor;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class PopupCadasrSucesso extends javax.swing.JFrame {
 
@@ -149,6 +151,18 @@ public class PopupCadasrSucesso extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_myButton3ActionPerformed
 
+    
+     public void fechar(){
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                dispose();
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(task, 3000);  
+    }
+    
     /**
      * @param args the command line arguments
      */

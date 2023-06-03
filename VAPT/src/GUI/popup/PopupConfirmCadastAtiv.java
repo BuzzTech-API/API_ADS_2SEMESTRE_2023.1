@@ -57,10 +57,8 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(217, 217, 217));
-        setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(410, 173));
 
         jPanel1.setBackground(new java.awt.Color(246, 246, 249));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(79, 93, 117), 2, true));
@@ -76,6 +74,7 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
         nomeTurma.setEditable(false);
         nomeTurma.setBackground(new java.awt.Color(246, 246, 249));
         nomeTurma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        nomeTurma.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nomeTurma.setText("Turma 6 A");
 
         texto3.setBackground(new java.awt.Color(217, 217, 217));
@@ -126,10 +125,10 @@ public class PopupConfirmCadastAtiv extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(texto1)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(50, 50, 50)
+                            .addGap(62, 62, 62)
                             .addComponent(texto4)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(texto3))))
                 .addContainerGap(37, Short.MAX_VALUE))

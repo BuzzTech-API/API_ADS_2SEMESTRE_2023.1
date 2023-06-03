@@ -45,7 +45,6 @@ public class PopupAltAluno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(246, 246, 249));
-        setMaximumSize(new java.awt.Dimension(410, 173));
         setMinimumSize(new java.awt.Dimension(410, 173));
         setUndecorated(true);
 
@@ -67,6 +66,7 @@ public class PopupAltAluno extends javax.swing.JFrame {
         nomeAluno.setEditable(false);
         nomeAluno.setBackground(new java.awt.Color(246, 246, 249));
         nomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        nomeAluno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         texto3.setBackground(new java.awt.Color(217, 217, 217));
         texto3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

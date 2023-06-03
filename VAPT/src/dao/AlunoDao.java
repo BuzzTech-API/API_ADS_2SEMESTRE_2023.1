@@ -2,6 +2,7 @@
 package dao;
 import GUI.popup.PopupAltSucesso;
 import GUI.popup.PopupCadasrSucesso;
+import GUI.popup.PopupExcluSucesso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -67,6 +68,7 @@ public class AlunoDao {
             stmt.close();
             PopupCadasrSucesso popup = new PopupCadasrSucesso();
             popup.setVisible(true);
+            popup.fechar();
 
         } catch (SQLException exception) {
             
@@ -199,6 +201,10 @@ public class AlunoDao {
             // Executa e fecha o Statement
             stmt.execute();
             stmt.close();
+            
+            PopupExcluSucesso popup = new PopupExcluSucesso();
+            popup.setVisible(true);
+            popup.fechar();
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
