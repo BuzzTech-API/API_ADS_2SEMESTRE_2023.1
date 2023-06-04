@@ -206,7 +206,7 @@ Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora
 
 ## :fire: Burndown <a id='burndown'></a>
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/burndow4n.jpeg" alt="Burndown" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/burndown4.jpeg" alt="Burndown" style="zoom: 150%;" />
 
 <br>
 
