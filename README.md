@@ -43,7 +43,7 @@
 <br>
 <br>
 
-> Status do Projeto: Em andamento! :construction:
+> Status do Projeto: Concluído! :white_check_mark:
 
 <br>
 
@@ -143,7 +143,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Concluído :white_check_mark:
 
-🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Em construção :construction:
+🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Concluído :white_check_mark:
 
 <br>
 
@@ -169,7 +169,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :white_check_mark: |
 |   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :white_check_mark: |
 |  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :construction: |
+|  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :white_check_mark: |
 
 
 <br>
