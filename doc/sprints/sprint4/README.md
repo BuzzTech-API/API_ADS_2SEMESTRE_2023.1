@@ -80,122 +80,84 @@ Através dessas melhorias implementadas durante a quarta e última sprint, estam
 
 ### 1. Correção das Porcentagens </a>
 
-O programa exibe a porcentagem de alunos que ainda não entregaram as atividades, bem como a porcentagem de alunos que entregaram as atividades com atraso.
+O programa exibe a porcentagem de alunos da turma que ainda não entregaram as atividades, bem como a porcentagem que entregaram as atividades com atraso.
 
 Essa parte do programa exigiu várias ajustes antes de apresentar as porcentagens corretamente. Foram necessárias iterações e refinamentos para garantir que os cálculos e exibições das porcentagens estivessem precisos e coerentes com os dados dos alunos e suas entregas de atividades. A equipe trabalhou diligentemente para resolver quaisquer problemas ou erros, a fim de fornecer resultados confiáveis e precisos. Agora, o programa está configurado corretamente e é capaz de mostrar com exatidão a porcentagem de alunos que ainda não entregaram as atividades e a porcentagem de alunos que entregaram com atraso. 
 
 Na imagem podemos ver um exemplo de como aparece as porcentagens das atividades não entregues e entregues com atraso.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/correcao_porcentagem_01.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/correcao_porcentagem_001%20.png" alt="Porcentagem da turma que não entregou ou atrasou." style="zoom: 150%;" />
+
+O programa apresenta a porcentagem de atividades não entregues pelo aluno selecionado. 
+Na imagem fornecida, podemos visualizar um exemplo de como as porcentagens das atividades não entregues são exibidas.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/correcao_porcentagem_002.png" alt="Porcentagem que o aluno não entregou." style="zoom: 150%;" />
 
 
-<br>
-<br>
+O programa exibe a porcentagem de atividades entregues com atraso pelo aluno selecionado. 
+Na imagem fornecida, é possível visualizar um exemplo de como as porcentagens das atividades entregues com atraso são apresentadas.
 
-### 2. Editar e Excluir Turma </a>
-
-Ao clicar no botão "Editar Turma", outra tela abre apresentando todas as turmas já cadastradas. 
-
-Na imagem, é possível ver como o botão muda de cor ao ser selecionado.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/botao_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
-
-Na tela a seguir existem duas ações possíveis:
-
-* A primeira ação é clicar no botão editar,
-* A segunda ação é clicar no botão excluir. 
-
-Na imagem podemos ver um exemplo de como seria a visualização da área editar e excluir turma. <br>
-É importante destacar que essa área também pode ser acessada por meio da aba "Buscar".
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_turma.png" alt="Área Editar" style="zoom: 150%;" />
-
-Ao clicar no botão "Editar", uma nova tela será exibida para que a professora possa alterar o nome da escola, turma, dia da semana, além de corrigir o horário de início e fim das aulas que ministra.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/atualizar_turma.png" alt="Atualizar Turma" style="zoom: 150%;" />
-
-Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/confirmacao_editar_turma.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
-
-Ao clicar no botão "Salvar", uma nova tela será exibida informando que o cadastro foi realizado com sucesso.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alteracao_editar_turma_sucesso.png" alt="Cadastro foi realizado com sucesso" style="zoom: 150%;" />
-
-Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a turma.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_turma.png" alt="Excluir Turma" style="zoom: 150%;" />
-
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/correcao_porcentagem_003.png" alt="Porcentagem que o aluno atrasou." style="zoom: 150%;" />
 
 <br>
 <br>
 
-### 3. Editar e Excluir Aluno </a>
+### 2. Alinhamento das Colunas do Checkbox </a>
 
-Ao clicar no botão "Editar Aluno", uma nova tela será aberta, apresentando duas caixas de seleção: uma com todas as turmas já cadastradas e outra com os alunos cadastrados em suas respectivas turmas.
+No software, foi implementado um recurso para alinhar as colunas dos checkboxes, proporcionando uma melhor organização visual. Esse alinhamento das colunas permite que os checkboxes fiquem dispostos de forma ordenada e harmoniosa, facilitando a leitura e a seleção das opções pelos usuários.
+O foco principal do alinhamento das colunas dos checkboxes é demonstrar o cuidado com a usabilidade e a experiência do usuário, tornando a interação mais intuitiva e eficiente. Ao visualizar os checkboxes organizados em colunas alinhadas, os usuários podem facilmente identificar e selecionar as opções desejadas, melhorando a eficácia do software como um todo.
 
-Na imagem, é possível ver como o botão muda de cor ao ser selecionado.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editar_aluno.png" alt="Editar Aluno" style="zoom: 150%;" />
-
-Na imagem, é possível ver a área com as caixas de seleção das turmas e alunos.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editar_nome_aluno.png" alt="Buscar Aluno para Edição" style="zoom: 150%;" />
-
-Ao clicar no botão "Buscar", uma nova tela será exibida para que a professora possa realizar alterações no nome do aluno.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_nome_aluno.png" alt="Alterar Nome do Aluno" style="zoom: 150%;" />
-
-Caso necessário, a professora poderá mudar qual turma o aluno deve ser registrado ao clicar na caixa de seleção "Turma".
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editar_aluno_turma.png" alt="Alterar Turma do Aluno" style="zoom: 150%;" />
-
-Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_nome_aluno_salvar.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
-
-Ao clicar no botão "Salvar", uma nova tela será exibida informando que o dado foi alterado com sucesso.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_nome_aluno_salvar_sucesso.png" alt="Dado alterado com sucesso" style="zoom: 150%;" />
-
-Ao clicar no botão "Excluir Aluno(a)", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir o aluno.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_nome_aluno.png" alt="Excluir Aluno" style="zoom: 150%;" />
-
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/alinhamento_colunas_checkbox.png" alt="Alinhamento das colunas do checkbox." style="zoom: 150%;" />
 
 <br>
 <br>
 
-### 4. Editar e Excluir Atividade </a>
+### 3. Efeito Hover </a>
+
+No software, foi implementado o efeito hover para melhorar a interação e fornecer feedback visual ao usuário. O efeito hover é ativado quando o cursor do mouse é posicionado sobre um elemento interativo, como um botão, link ou ícone, criando uma resposta visual imediata.
+
+Esse efeito é utilizado para realçar elementos e indicar que eles estão interativos, permitindo que o usuário identifique facilmente quais elementos podem ser acionados. Ao passar o mouse sobre um item com o efeito hover, é comum observar uma alteração na aparência do elemento, como a mudança de cor nos botões desse software.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/hover.png" alt="Efeito Hover" style="zoom: 150%;" />
+
+<br>
+<br>
+
+### 4. Data Chooser </a>
+
+O Data Chooser é um recurso presente em várias linguagens de programação, bibliotecas ou frameworks, como Java, que permite aos usuários selecionarem datas de forma conveniente e intuitiva. Ele oferece uma interface gráfica que facilita a escolha de datas específicas, como data de nascimento, data de agendamento, prazos, entre outros.
+
+O Data Chooser geralmente é implementado por meio de uma janela ou um widget interativo, onde o usuário pode navegar por diferentes meses e anos, selecionar um dia específico e até mesmo ajustar o formato de exibição da data conforme necessário.
+
+Ao utilizar o Data Chooser, o usuário pode evitar erros de digitação ou formatação incorreta das datas, garantindo a precisão e a consistência dos dados inseridos.
+
+O Data Chooser é uma ferramenta valiosa para desenvolvedores de software, pois facilita a criação de interfaces de usuário amigáveis e eficientes, oferecendo ao usuário uma maneira intuitiva de selecionar e manipular datas. É uma solução prática para melhorar a experiência do usuário ao lidar com tarefas relacionadas a datas em um software.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/data_chooser.png" alt="Data Chooser" style="zoom: 150%;" />
+
+<br>
+<br>
+
+### 5. Time Picker </a>
+
+O Time Picker é um recurso comumente utilizado em linguagens de programação, bibliotecas ou frameworks, como Java, para permitir ao usuário selecionar horários de forma fácil e precisa. Ele fornece uma interface gráfica que facilita a escolha de horas e minutos específicos.
+
+O Time Picker é implementado geralmente como uma janela, diálogo ou widget interativo, onde o usuário pode selecionar a hora desejada usando uma série de controles, como um seletor de horas e um seletor de minutos. Isso permite que o usuário escolha com precisão os horários desejados.
+
+Ao utilizar o Time Picker, o usuário pode evitar erros de digitação ou formatação incorreta dos horários, garantindo a acurácia e consistência dos dados inseridos.
+
+O Time Picker é uma ferramenta útil para desenvolvedores de software, pois facilita a criação de interfaces de usuário intuitivas e eficientes para selecionar horários. Com essa funcionalidade, o usuário pode interagir de maneira mais amigável com o software, garantindo uma experiência aprimorada ao lidar com tarefas que envolvem o tempo.
+
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/time_picker.png" alt="Time Picker" style="zoom: 150%;" />
+
+<br>
+<br>
+
+### 6. Instalador do Software </a>
 
 Na área editar, ao posicionar o cursor sobre o botão "Editar Atividade", é possível observar a mudança de cor.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editar_atividade.png" alt="Editar Atividade" style="zoom: 150%;" />
-
-Após clicar no botão "Editar Atividade", uma nova tela será aberta, apresentando uma caixa de seleção para que a professora possa selecionar a turma que deseja verificar as atividades que necessitam de alguma alteração.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/buscar_atividade.png" alt="Atividade Selecionada por Turma" style="zoom: 150%;" />
-
-Ao selecionar a turma desejada e clicar no botão "Buscar", uma nova tela será aberta, apresentando a área para editar e excluir as atividades correspondentes. 
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/escolher_editar_atividade.png" alt="Área Editar ou Excluir Atividade" style="zoom: 150%;" />
-
-Ao clicar no botão "Editar", uma nova tela será exibida, permitindo que a professora escolha a turma e sua respectiva escola por meio de uma caixa de seleção. Além disso, é possível editar informações como tipo de trabalho, dia de solicitação, dia de entrega da atividade e sua descrição.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar_atividade.png" alt="Área Editar Atividade" style="zoom: 150%;" />
-
-Ao clicar no botão "Salvar", uma nova tela será exibida perguntando se a alteração deve ser confirmada. Se sim, basta clicar em "Salvar"; se não, basta clicar em "Cancelar".
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_atividade_salvar.png" alt="Alteração deve ser confirmada" style="zoom: 150%;" />
-
-Ao clicar no botão "Salvar", uma nova tela será exibida informando que o dado foi cadastrado com sucesso.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/editando_atividade_salvar_sucesso.png" alt="Atividade Alterada com sucesso" style="zoom: 150%;" />
-
-Ao clicar no botão "Excluir", uma nova tela será exibida para que a professora possa confirmar se deseja ou não excluir a atividade daquela turma.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/excluir_atividade.png" alt="Excluir Atividade" style="zoom: 150%;" />
-
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/time_picker.png" alt="Time Picke" style="zoom: 150%;" />
 
 <br>
 <br>
