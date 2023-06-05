@@ -155,9 +155,19 @@ O Time Picker é uma ferramenta útil para desenvolvedores de software, pois fac
 
 ### 6. Instalador do Software </a>
 
-Na área editar, ao posicionar o cursor sobre o botão "Editar Atividade", é possível observar a mudança de cor.
+A necessidade de um instalador para o software desenvolvido em Java surge devido a vários motivos importantes. Tais como:
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/time_picker.png" alt="Time Picke" style="zoom: 150%;" />
++ Facilidade de instalação: Um instalador simplifica o processo de implantação do software para o usuário final. Em vez de exigir que o usuário execute manualmente várias etapas complexas, como configurar o ambiente Java, copiar arquivos e definir variáveis de ambiente, um instalador automatiza todo o processo, fornecendo uma experiência de instalação mais simples e intuitiva.
+
++ Garantia de configuração correta: Um instalador bem projetado garante que todas as dependências e requisitos do software sejam configurados corretamente no sistema do usuário. Isso inclui a instalação e configuração do ambiente Java, bibliotecas adicionais, drivers ou qualquer outro componente necessário para o funcionamento adequado do software.
+
++ Manutenção simplificada: Com um instalador, é mais fácil aplicar atualizações, correções de bugs ou novas versões do software. O usuário pode simplesmente executar o instalador novamente para atualizar o software existente sem a necessidade de realizar manualmente as etapas de atualização.
+
+Portanto, um instalador para o software desenvolvido em Java é necessário para simplificar o processo de implantação, garantir a configuração correta, facilitar a manutenção, melhorar a integração com o sistema operacional e fornecer uma experiência do usuário mais agradável. Ele desempenha um papel importante na distribuição eficiente e no uso bem-sucedido do software pelos usuários finais.
+
+https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/instalador_VAPT.png" alt="Instalador do Software" style="zoom: 150%;" />
+
+Para download do software, clique aqui ().
 
 <br>
 <br>
