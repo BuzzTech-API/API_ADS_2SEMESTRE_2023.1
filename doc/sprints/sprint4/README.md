@@ -82,9 +82,9 @@ Através dessas melhorias implementadas durante a quarta e última sprint, estam
 
 O programa exibe a porcentagem de alunos da turma que ainda não entregaram as atividades, bem como a porcentagem que entregaram as atividades com atraso.
 
-Essa parte do programa exigiu várias ajustes antes de apresentar as porcentagens corretamente. Foram necessárias iterações e refinamentos para garantir que os cálculos e exibições das porcentagens estivessem precisos e coerentes com os dados dos alunos e suas entregas de atividades. A equipe trabalhou diligentemente para resolver quaisquer problemas ou erros, a fim de fornecer resultados confiáveis e precisos. Agora, o programa está configurado corretamente e é capaz de mostrar com exatidão a porcentagem de alunos que ainda não entregaram as atividades e a porcentagem de alunos que entregaram com atraso. 
+Essa parte do programa exigiu vários ajustes antes de apresentar as porcentagens corretamente. Foram necessárias iterações e refinamentos para garantir que os cálculos e exibições das porcentagens estivessem precisos e coerentes com os dados dos alunos e suas entregas de atividades. A equipe trabalhou diligentemente para resolver quaisquer problemas ou erros, a fim de fornecer resultados confiáveis e precisos. Agora, o programa está configurado corretamente e é capaz de mostrar com exatidão a porcentagem de alunos que ainda não entregaram as atividades e a porcentagem de alunos que entregaram com atraso. 
 
-Na imagem podemos ver um exemplo de como aparece as porcentagens das atividades não entregues e entregues com atraso.
+Na imagem podemos ver um exemplo de como aparecem as porcentagens das atividades não entregues e entregues com atraso.
 
 <img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/correcao_porcentagem_001%20.png" alt="Porcentagem da turma que não entregou ou atrasou." style="zoom: 150%;" />
 
