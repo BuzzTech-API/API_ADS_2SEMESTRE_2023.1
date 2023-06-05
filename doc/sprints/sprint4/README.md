@@ -78,19 +78,15 @@ Através dessas melhorias implementadas durante a quarta e última sprint, estam
 
 ## :checkered_flag: Tarefas <a id="tarefas"></a>
 
-### 1. Área Editar </a>
+### 1. Correção das Porcentagens </a>
 
-O programa possui quatro abas com funções específicas, sendo a aba "Editar" uma área reservada para a professora realizar a edição da turma, dos alunos ou das atividades.
+O programa exibe a porcentagem de alunos que ainda não entregaram as atividades, bem como a porcentagem de alunos que entregaram as atividades com atraso.
 
-Ao clicar na aba editar, é possível visualizar três áreas para edição. 
+Essa parte do programa exigiu várias ajustes antes de apresentar as porcentagens corretamente. Foram necessárias iterações e refinamentos para garantir que os cálculos e exibições das porcentagens estivessem precisos e coerentes com os dados dos alunos e suas entregas de atividades. A equipe trabalhou diligentemente para resolver quaisquer problemas ou erros, a fim de fornecer resultados confiáveis e precisos. Agora, o programa está configurado corretamente e é capaz de mostrar com exatidão a porcentagem de alunos que ainda não entregaram as atividades e a porcentagem de alunos que entregaram com atraso. 
 
-* Editar Turma,
-* Editar Aluno,
-* Editar Atividade. 
+Na imagem podemos ver um exemplo de como aparece as porcentagens das atividades não entregues e entregues com atraso.
 
-Na imagem podemos ver um exemplo de como seria a visualização da área editar.
-
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/area_editar.png" alt="Área Editar" style="zoom: 150%;" />
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/correcao_porcentagem_01.png" alt="Área Editar" style="zoom: 150%;" />
 
 
 <br>
