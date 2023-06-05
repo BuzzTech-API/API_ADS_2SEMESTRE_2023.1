@@ -165,9 +165,7 @@ A necessidade de um instalador para o software desenvolvido em Java surge devido
 
 Portanto, um instalador para o software desenvolvido em Java é necessário para simplificar o processo de implantação, garantir a configuração correta, facilitar a manutenção, melhorar a integração com o sistema operacional e fornecer uma experiência do usuário mais agradável. Ele desempenha um papel importante na distribuição eficiente e no uso bem-sucedido do software pelos usuários finais.
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/instalador_VAPT.png" alt="Instalador do Software" style="zoom: 150%;" />
-
-Para fazer o download do software [clique aqui](https://fatecspgov-my.sharepoint.com/:u:/g/personal/isaque_silva20_fatec_sp_gov_br/ETw-2N79tohFhhP2csww4ooB4GTILGziEDL94uZryC6PHw?e=uVBthb).
+<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/instalador_VAPT.png" alt="Instalador do Software" style="zoom: 150%;" /> Para fazer o download do software [clique aqui](https://fatecspgov-my.sharepoint.com/:u:/g/personal/isaque_silva20_fatec_sp_gov_br/ETw-2N79tohFhhP2csww4ooB4GTILGziEDL94uZryC6PHw?e=uVBthb).
 
 <br>
 <br>
